@@ -1,0 +1,5 @@
+c:\users\usuario\source\repos\Planilla\Core.Common.Contracts\bin\Debug\Core.Common.Contracts.dll
+c:\users\usuario\source\repos\Planilla\Core.Common.Contracts\bin\Debug\Core.Common.Contracts.pdb
+c:\users\usuario\source\repos\Planilla\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.csproj.CoreCompileInputs.cache
+c:\users\usuario\source\repos\Planilla\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.dll
+c:\users\usuario\source\repos\Planilla\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.pdb

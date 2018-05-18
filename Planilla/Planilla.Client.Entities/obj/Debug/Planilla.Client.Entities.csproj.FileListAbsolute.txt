@@ -1,0 +1,11 @@
+c:\users\usuario\source\repos\Planilla\Planilla.Client.Entities\bin\Debug\Planilla.Client.Entities.dll
+c:\users\usuario\source\repos\Planilla\Planilla.Client.Entities\bin\Debug\Planilla.Client.Entities.pdb
+c:\users\usuario\source\repos\Planilla\Planilla.Client.Entities\bin\Debug\FluentValidation.dll
+c:\users\usuario\source\repos\Planilla\Planilla.Client.Entities\bin\Debug\System.ComponentModel.Annotations.dll
+c:\users\usuario\source\repos\Planilla\Planilla.Client.Entities\bin\Debug\System.ComponentModel.Primitives.dll
+c:\users\usuario\source\repos\Planilla\Planilla.Client.Entities\bin\Debug\FluentValidation.xml
+c:\users\usuario\source\repos\Planilla\Planilla.Client.Entities\obj\Debug\Planilla.Client.Entities.csprojResolveAssemblyReference.cache
+c:\users\usuario\source\repos\Planilla\Planilla.Client.Entities\obj\Debug\Planilla.Client.Entities.csproj.CoreCompileInputs.cache
+c:\users\usuario\source\repos\Planilla\Planilla.Client.Entities\obj\Debug\Planilla.Client.Entities.csproj.CopyComplete
+c:\users\usuario\source\repos\Planilla\Planilla.Client.Entities\obj\Debug\Planilla.Client.Entities.dll
+c:\users\usuario\source\repos\Planilla\Planilla.Client.Entities\obj\Debug\Planilla.Client.Entities.pdb

@@ -1,0 +1,1450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PoliclinicoNuevoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AporteEmpleador">
+          <Key>
+            <PropertyRef Name="IdAporteEmpleador" />
+          </Key>
+          <Property Name="IdAporteEmpleador" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodApo" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="Aporte" Type="varchar" MaxLength="20" />
+          <Property Name="Porcentaje" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="AreaAnalisis">
+          <Key>
+            <PropertyRef Name="IdAreaAnalisis" />
+          </Key>
+          <Property Name="IdAreaAnalisis" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodArea" Type="varchar" MaxLength="4" />
+          <Property Name="AreaAnalisis" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="AreaLaboratorio">
+          <Key>
+            <PropertyRef Name="IdAreaLaboratorio" />
+          </Key>
+          <Property Name="IdAreaLaboratorio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodAre" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="AreaLab" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="AreaServicio">
+          <Key>
+            <PropertyRef Name="IdAreaServicio" />
+          </Key>
+          <Property Name="IdAreaServicio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodAre" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="Area" Type="varchar" MaxLength="40" />
+          <Property Name="Estado" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="Cargo">
+          <Key>
+            <PropertyRef Name="IdCargo" />
+          </Key>
+          <Property Name="IdCargo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodCar" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="Cargo" Type="varchar" MaxLength="50" />
+          <Property Name="Estado" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="DiasLaborables">
+          <Key>
+            <PropertyRef Name="IdDiasLaborables" />
+          </Key>
+          <Property Name="IdDiasLaborables" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodMes" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="Mes" Type="varchar" MaxLength="12" />
+          <Property Name="Año" Type="int" />
+          <Property Name="DiasLab" Type="tinyint" />
+          <Property Name="Cerrado" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Especialidad">
+          <Key>
+            <PropertyRef Name="IdEspecialidad" />
+          </Key>
+          <Property Name="IdEspecialidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodEsp" Type="varchar" MaxLength="4" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="PrecioConsulta" Type="smallmoney" Nullable="false" />
+          <Property Name="MontoMedico" Type="smallmoney" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FondoPensiones">
+          <Key>
+            <PropertyRef Name="IdFondoPen" />
+          </Key>
+          <Property Name="IdFondoPen" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodFon" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="Entidad" Type="varchar" MaxLength="30" />
+          <Property Name="ApoOblF" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="ComVarF" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="PriSegF" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="ApoOblM" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="ComVarM" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="PriSegM" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="PorONP" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="Estado" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="Medico">
+          <Key>
+            <PropertyRef Name="IdMedico" />
+          </Key>
+          <Property Name="IdMedico" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodMed" Type="varchar" MaxLength="4" />
+          <Property Name="DNI" Type="varchar" MaxLength="8" />
+          <Property Name="ApePaterno" Type="varchar" MaxLength="60" />
+          <Property Name="ApeMaterno" Type="varchar" MaxLength="60" />
+          <Property Name="Nombre" Type="varchar" MaxLength="60" />
+          <Property Name="Direccion" Type="varchar" MaxLength="80" />
+          <Property Name="IdUbigeo" Type="int" />
+          <Property Name="CodDistrito" Type="varchar" MaxLength="6" />
+          <Property Name="FecNac" Type="datetime" />
+          <Property Name="Telefono" Type="varchar" MaxLength="10" />
+          <Property Name="Celular" Type="varchar" MaxLength="10" />
+          <Property Name="Email" Type="varchar" MaxLength="40" />
+          <Property Name="RUC" Type="varchar" MaxLength="11" />
+          <Property Name="FecIngreso" Type="smalldatetime" />
+          <Property Name="Grado" Type="varchar" MaxLength="5" />
+          <Property Name="NumCol" Type="varchar" MaxLength="6" />
+          <Property Name="Sit" Type="varchar" MaxLength="1" />
+          <Property Name="RNE" Type="varchar" MaxLength="6" />
+          <Property Name="IdEspecialidad1" Type="int" />
+          <Property Name="CodEsp1" Type="varchar" MaxLength="4" />
+          <Property Name="IdEspecialidad2" Type="int" />
+          <Property Name="CodEsp2" Type="varchar" MaxLength="4" />
+          <Property Name="Estado" Type="varchar" MaxLength="1" />
+          <Property Name="Tipo" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Personal">
+          <Key>
+            <PropertyRef Name="IdPersonal" />
+          </Key>
+          <Property Name="IdPersonal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodPer" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="DNI" Type="varchar" MaxLength="8" />
+          <Property Name="ApePaterno" Type="varchar" MaxLength="60" />
+          <Property Name="ApeMaterno" Type="varchar" MaxLength="60" />
+          <Property Name="Nombre" Type="varchar" MaxLength="60" />
+          <Property Name="Direccion" Type="varchar" MaxLength="100" />
+          <Property Name="IdUbigeo" Type="int" />
+          <Property Name="CodDistrito" Type="varchar" MaxLength="8" />
+          <Property Name="FecNac" Type="smalldatetime" />
+          <Property Name="Telefono" Type="varchar" MaxLength="15" />
+          <Property Name="Celular" Type="varchar" MaxLength="15" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Sex" Type="varchar" MaxLength="1" />
+          <Property Name="EstadoCivil" Type="varchar" MaxLength="1" />
+          <Property Name="NumHij" Type="tinyint" />
+          <Property Name="FecIngreso" Type="smalldatetime" />
+          <Property Name="Estudios" Type="varchar" MaxLength="25" />
+          <Property Name="Grado" Type="varchar" MaxLength="30" />
+          <Property Name="NumCol" Type="varchar" MaxLength="6" />
+          <Property Name="IdAreaServicio" Type="int" />
+          <Property Name="CodAre" Type="varchar" MaxLength="3" />
+          <Property Name="IdCargo" Type="int" />
+          <Property Name="CodCar" Type="varchar" MaxLength="3" />
+          <Property Name="IdFondoPen" Type="int" />
+          <Property Name="CodFon" Type="varchar" MaxLength="3" />
+          <Property Name="TipComAFP" Type="varchar" MaxLength="1" />
+          <Property Name="CUSPP" Type="varchar" MaxLength="12" />
+          <Property Name="EVida" Type="varchar" MaxLength="1" />
+          <Property Name="RemBas" Type="smallmoney" />
+          <Property Name="AsiFam" Type="smallmoney" />
+          <Property Name="RieCaj" Type="smallmoney" />
+          <Property Name="SCTR" Type="char" MaxLength="1" />
+          <Property Name="HorLab" Type="int" />
+          <Property Name="Observacion" Type="varchar" MaxLength="100" />
+          <Property Name="Estado" Type="char" MaxLength="1" />
+          <Property Name="FecBaja" Type="datetime" />
+          <Property Name="EntidadCTS" Type="varchar" MaxLength="50" />
+          <Property Name="NumCtaCTS" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="PlanillasRem">
+          <Key>
+            <PropertyRef Name="IdPlanilla" />
+          </Key>
+          <Property Name="IdPlanilla" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Periodo" Type="varchar" MaxLength="6" />
+          <Property Name="IdPersonal" Type="int" />
+          <Property Name="CodPer" Type="varchar" MaxLength="4" />
+          <Property Name="IdCargo" Type="int" />
+          <Property Name="CodCar" Type="varchar" MaxLength="3" />
+          <Property Name="IdFondoPen" Type="int" />
+          <Property Name="CodFon" Type="varchar" MaxLength="3" />
+          <Property Name="TipComAFP" Type="varchar" MaxLength="1" />
+          <Property Name="RemBas" Type="smallmoney" />
+          <Property Name="AsiFam" Type="smallmoney" />
+          <Property Name="Subsidio" Type="smallmoney" />
+          <Property Name="Gratif" Type="smallmoney" />
+          <Property Name="RemVac" Type="smallmoney" />
+          <Property Name="RieCaj" Type="smallmoney" />
+          <Property Name="Reinte" Type="smallmoney" />
+          <Property Name="HE" Type="smallmoney" />
+          <Property Name="OtrIng" Type="smallmoney" />
+          <Property Name="TotIng" Type="smallmoney" />
+          <Property Name="PorONP" Type="smallmoney" />
+          <Property Name="PorApoObl" Type="smallmoney" />
+          <Property Name="PorPriSeg" Type="smallmoney" />
+          <Property Name="PorComVar" Type="smallmoney" />
+          <Property Name="ONP" Type="smallmoney" />
+          <Property Name="ApoObl" Type="smallmoney" />
+          <Property Name="PriSeg" Type="smallmoney" />
+          <Property Name="ComVar" Type="smallmoney" />
+          <Property Name="Quinta" Type="smallmoney" />
+          <Property Name="OtrDes" Type="smallmoney" />
+          <Property Name="TotDes" Type="smallmoney" />
+          <Property Name="Neto" Type="smallmoney" />
+          <Property Name="PorEssalud" Type="smallmoney" />
+          <Property Name="PorSCTR" Type="smallmoney" />
+          <Property Name="Essalud" Type="smallmoney" />
+          <Property Name="SCTR" Type="smallmoney" />
+          <Property Name="TotApo" Type="smallmoney" />
+          <Property Name="DiasLab" Type="int" />
+          <Property Name="HorasLab" Type="int" />
+          <Property Name="IniVac" Type="datetime" />
+          <Property Name="FinVac" Type="datetime" />
+          <Property Name="DiasVac" Type="int" />
+          <Property Name="IniIncapacidad" Type="datetime" />
+          <Property Name="FinIncapacidad" Type="datetime" />
+          <Property Name="DiasIncapacidad" Type="int" />
+          <Property Name="InicioSinGoceHaber" Type="datetime" />
+          <Property Name="FinSinGoceHaber" Type="datetime" />
+          <Property Name="DiasSinGoceHaber" Type="int" />
+          <Property Name="Cerrado" Type="varchar" MaxLength="1" />
+          <Property Name="TipoPlan" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Procedimiento">
+          <Key>
+            <PropertyRef Name="IdProcedimiento" />
+          </Key>
+          <Property Name="IdProcedimiento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodPro" Type="varchar" MaxLength="4" />
+          <Property Name="TipPro" Type="varchar" MaxLength="1" />
+          <Property Name="Procedimiento" Type="varchar" MaxLength="100" />
+          <Property Name="IdEspecialidad" Type="int" />
+          <Property Name="CodEsp" Type="varchar" MaxLength="4" />
+          <Property Name="PrecioProcedimiento" Type="smallmoney" />
+          <Property Name="MontoMedico" Type="smallmoney" />
+          <Property Name="Observacion" Type="varchar" MaxLength="150" />
+          <Property Name="ProImprimir" Type="varchar" MaxLength="30" />
+          <Property Name="IdAreaLaboratorio" Type="int" />
+          <Property Name="AreaLaboratorio" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="TablaAnalisis">
+          <Key>
+            <PropertyRef Name="IdAnalisis" />
+          </Key>
+          <Property Name="IdAnalisis" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodAna" Type="varchar" MaxLength="5" />
+          <Property Name="Analisis" Type="varchar" MaxLength="100" />
+          <Property Name="Unidad" Type="varchar" MaxLength="30" />
+          <Property Name="Titulo" Type="varchar" MaxLength="1" />
+          <Property Name="IdProcedimiento" Type="int" />
+          <Property Name="CodPro" Type="varchar" MaxLength="4" />
+          <Property Name="Procedimiento" Type="varchar" MaxLength="100" />
+          <Property Name="AreaLaboratorio" Type="varchar" MaxLength="30" />
+          <Property Name="AreaAnalisis" Type="varchar" MaxLength="30" />
+          <Property Name="TituloPerfil" Type="varchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="TablaAnalisisVR">
+          <Key>
+            <PropertyRef Name="IdValReferencial" />
+          </Key>
+          <Property Name="IdValReferencial" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodVal" Type="varchar" MaxLength="5" />
+          <Property Name="ValReferencial" Type="varchar" MaxLength="35" />
+          <Property Name="IdAnalisis" Type="int" />
+          <Property Name="CodAna" Type="varchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="Ubigeo">
+          <Key>
+            <PropertyRef Name="IdUbigeo" />
+          </Key>
+          <Property Name="IdUbigeo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMDIS" Type="varchar" MaxLength="50" />
+          <Property Name="NOMPRO" Type="varchar" MaxLength="50" />
+          <Property Name="NOMDEP" Type="varchar" MaxLength="50" />
+          <Property Name="CODDIS" Type="varchar" MaxLength="6" />
+          <Property Name="CODPRO" Type="varchar" MaxLength="4" />
+          <Property Name="CODDEP" Type="varchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="Vacaciones">
+          <Key>
+            <PropertyRef Name="IdVacaciones" />
+          </Key>
+          <Property Name="IdVacaciones" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Año" Type="int" />
+          <Property Name="IdPersonal" Type="int" />
+          <Property Name="CodPer" Type="varchar" MaxLength="4" />
+          <Property Name="IniProg" Type="datetime" />
+          <Property Name="FinProg" Type="datetime" />
+          <Property Name="IniEje1" Type="datetime" />
+          <Property Name="FinEje1" Type="datetime" />
+          <Property Name="IniEje2" Type="datetime" />
+          <Property Name="FinEje2" Type="datetime" />
+          <Property Name="IniEje3" Type="datetime" />
+          <Property Name="FinEje3" Type="datetime" />
+          <Property Name="Completo" Type="varchar" MaxLength="1" />
+          <Property Name="Obs" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK__Medico__IdEspeci__5629CD9C">
+          <End Role="Especialidad" Type="Self.Especialidad" Multiplicity="0..1" />
+          <End Role="Medico" Type="Self.Medico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Especialidad">
+              <PropertyRef Name="IdEspecialidad" />
+            </Principal>
+            <Dependent Role="Medico">
+              <PropertyRef Name="IdEspecialidad1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Medico__IdEspeci__571DF1D5">
+          <End Role="Especialidad" Type="Self.Especialidad" Multiplicity="0..1" />
+          <End Role="Medico" Type="Self.Medico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Especialidad">
+              <PropertyRef Name="IdEspecialidad" />
+            </Principal>
+            <Dependent Role="Medico">
+              <PropertyRef Name="IdEspecialidad2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Medico__IdUbigeo__5535A963">
+          <End Role="Ubigeo" Type="Self.Ubigeo" Multiplicity="0..1" />
+          <End Role="Medico" Type="Self.Medico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ubigeo">
+              <PropertyRef Name="IdUbigeo" />
+            </Principal>
+            <Dependent Role="Medico">
+              <PropertyRef Name="IdUbigeo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Personal__IdArea__412EB0B6">
+          <End Role="AreaServicio" Type="Self.AreaServicio" Multiplicity="0..1" />
+          <End Role="Personal" Type="Self.Personal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AreaServicio">
+              <PropertyRef Name="IdAreaServicio" />
+            </Principal>
+            <Dependent Role="Personal">
+              <PropertyRef Name="IdAreaServicio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Personal__IdCarg__4222D4EF">
+          <End Role="Cargo" Type="Self.Cargo" Multiplicity="0..1" />
+          <End Role="Personal" Type="Self.Personal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargo">
+              <PropertyRef Name="IdCargo" />
+            </Principal>
+            <Dependent Role="Personal">
+              <PropertyRef Name="IdCargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Personal__IdFond__4316F928">
+          <End Role="FondoPensiones" Type="Self.FondoPensiones" Multiplicity="0..1" />
+          <End Role="Personal" Type="Self.Personal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FondoPensiones">
+              <PropertyRef Name="IdFondoPen" />
+            </Principal>
+            <Dependent Role="Personal">
+              <PropertyRef Name="IdFondoPen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Personal__IdUbig__403A8C7D">
+          <End Role="Ubigeo" Type="Self.Ubigeo" Multiplicity="0..1" />
+          <End Role="Personal" Type="Self.Personal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ubigeo">
+              <PropertyRef Name="IdUbigeo" />
+            </Principal>
+            <Dependent Role="Personal">
+              <PropertyRef Name="IdUbigeo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Planillas__IdCar__5DCAEF64">
+          <End Role="Cargo" Type="Self.Cargo" Multiplicity="0..1" />
+          <End Role="PlanillasRem" Type="Self.PlanillasRem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargo">
+              <PropertyRef Name="IdCargo" />
+            </Principal>
+            <Dependent Role="PlanillasRem">
+              <PropertyRef Name="IdCargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Planillas__IdFon__5CD6CB2B">
+          <End Role="FondoPensiones" Type="Self.FondoPensiones" Multiplicity="0..1" />
+          <End Role="PlanillasRem" Type="Self.PlanillasRem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FondoPensiones">
+              <PropertyRef Name="IdFondoPen" />
+            </Principal>
+            <Dependent Role="PlanillasRem">
+              <PropertyRef Name="IdFondoPen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Planillas__IdPer__5BE2A6F2">
+          <End Role="Personal" Type="Self.Personal" Multiplicity="0..1" />
+          <End Role="PlanillasRem" Type="Self.PlanillasRem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personal">
+              <PropertyRef Name="IdPersonal" />
+            </Principal>
+            <Dependent Role="PlanillasRem">
+              <PropertyRef Name="IdPersonal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Procedimi__IdAre__276EDEB3">
+          <End Role="AreaLaboratorio" Type="Self.AreaLaboratorio" Multiplicity="0..1" />
+          <End Role="Procedimiento" Type="Self.Procedimiento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AreaLaboratorio">
+              <PropertyRef Name="IdAreaLaboratorio" />
+            </Principal>
+            <Dependent Role="Procedimiento">
+              <PropertyRef Name="IdAreaLaboratorio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Procedimi__IdEsp__267ABA7A">
+          <End Role="Especialidad" Type="Self.Especialidad" Multiplicity="0..1" />
+          <End Role="Procedimiento" Type="Self.Procedimiento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Especialidad">
+              <PropertyRef Name="IdEspecialidad" />
+            </Principal>
+            <Dependent Role="Procedimiento">
+              <PropertyRef Name="IdEspecialidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TablaAnal__IdAna__35BCFE0A">
+          <End Role="TablaAnalisis" Type="Self.TablaAnalisis" Multiplicity="0..1" />
+          <End Role="TablaAnalisisVR" Type="Self.TablaAnalisisVR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TablaAnalisis">
+              <PropertyRef Name="IdAnalisis" />
+            </Principal>
+            <Dependent Role="TablaAnalisisVR">
+              <PropertyRef Name="IdAnalisis" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TablaAnal__IdPro__2B3F6F97">
+          <End Role="Procedimiento" Type="Self.Procedimiento" Multiplicity="0..1" />
+          <End Role="TablaAnalisis" Type="Self.TablaAnalisis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Procedimiento">
+              <PropertyRef Name="IdProcedimiento" />
+            </Principal>
+            <Dependent Role="TablaAnalisis">
+              <PropertyRef Name="IdProcedimiento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vacacione__IdPer__4CA06362">
+          <End Role="Personal" Type="Self.Personal" Multiplicity="0..1" />
+          <End Role="Vacaciones" Type="Self.Vacaciones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personal">
+              <PropertyRef Name="IdPersonal" />
+            </Principal>
+            <Dependent Role="Vacaciones">
+              <PropertyRef Name="IdPersonal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PoliclinicoNuevoModelStoreContainer">
+          <EntitySet Name="AporteEmpleador" EntityType="Self.AporteEmpleador" Schema="Planilla" store:Type="Tables" />
+          <EntitySet Name="AreaAnalisis" EntityType="Self.AreaAnalisis" Schema="Planilla" store:Type="Tables" />
+          <EntitySet Name="AreaLaboratorio" EntityType="Self.AreaLaboratorio" Schema="Planilla" store:Type="Tables" />
+          <EntitySet Name="AreaServicio" EntityType="Self.AreaServicio" Schema="Planilla" store:Type="Tables" />
+          <EntitySet Name="Cargo" EntityType="Self.Cargo" Schema="Planilla" store:Type="Tables" />
+          <EntitySet Name="DiasLaborables" EntityType="Self.DiasLaborables" Schema="Planilla" store:Type="Tables" />
+          <EntitySet Name="Especialidad" EntityType="Self.Especialidad" Schema="Planilla" store:Type="Tables" />
+          <EntitySet Name="FondoPensiones" EntityType="Self.FondoPensiones" Schema="Planilla" store:Type="Tables" />
+          <EntitySet Name="Medico" EntityType="Self.Medico" Schema="Planilla" store:Type="Tables" />
+          <EntitySet Name="Personal" EntityType="Self.Personal" Schema="Planilla" store:Type="Tables" />
+          <EntitySet Name="PlanillasRem" EntityType="Self.PlanillasRem" Schema="Planilla" store:Type="Tables" />
+          <EntitySet Name="Procedimiento" EntityType="Self.Procedimiento" Schema="Planilla" store:Type="Tables" />
+          <EntitySet Name="TablaAnalisis" EntityType="Self.TablaAnalisis" Schema="Planilla" store:Type="Tables" />
+          <EntitySet Name="TablaAnalisisVR" EntityType="Self.TablaAnalisisVR" Schema="Planilla" store:Type="Tables" />
+          <EntitySet Name="Ubigeo" EntityType="Self.Ubigeo" Schema="Planilla" store:Type="Tables" />
+          <EntitySet Name="Vacaciones" EntityType="Self.Vacaciones" Schema="Planilla" store:Type="Tables" />
+          <AssociationSet Name="FK__Medico__IdEspeci__5629CD9C" Association="Self.FK__Medico__IdEspeci__5629CD9C">
+            <End Role="Especialidad" EntitySet="Especialidad" />
+            <End Role="Medico" EntitySet="Medico" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Medico__IdEspeci__571DF1D5" Association="Self.FK__Medico__IdEspeci__571DF1D5">
+            <End Role="Especialidad" EntitySet="Especialidad" />
+            <End Role="Medico" EntitySet="Medico" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Medico__IdUbigeo__5535A963" Association="Self.FK__Medico__IdUbigeo__5535A963">
+            <End Role="Ubigeo" EntitySet="Ubigeo" />
+            <End Role="Medico" EntitySet="Medico" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Personal__IdArea__412EB0B6" Association="Self.FK__Personal__IdArea__412EB0B6">
+            <End Role="AreaServicio" EntitySet="AreaServicio" />
+            <End Role="Personal" EntitySet="Personal" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Personal__IdCarg__4222D4EF" Association="Self.FK__Personal__IdCarg__4222D4EF">
+            <End Role="Cargo" EntitySet="Cargo" />
+            <End Role="Personal" EntitySet="Personal" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Personal__IdFond__4316F928" Association="Self.FK__Personal__IdFond__4316F928">
+            <End Role="FondoPensiones" EntitySet="FondoPensiones" />
+            <End Role="Personal" EntitySet="Personal" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Personal__IdUbig__403A8C7D" Association="Self.FK__Personal__IdUbig__403A8C7D">
+            <End Role="Ubigeo" EntitySet="Ubigeo" />
+            <End Role="Personal" EntitySet="Personal" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Planillas__IdCar__5DCAEF64" Association="Self.FK__Planillas__IdCar__5DCAEF64">
+            <End Role="Cargo" EntitySet="Cargo" />
+            <End Role="PlanillasRem" EntitySet="PlanillasRem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Planillas__IdFon__5CD6CB2B" Association="Self.FK__Planillas__IdFon__5CD6CB2B">
+            <End Role="FondoPensiones" EntitySet="FondoPensiones" />
+            <End Role="PlanillasRem" EntitySet="PlanillasRem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Planillas__IdPer__5BE2A6F2" Association="Self.FK__Planillas__IdPer__5BE2A6F2">
+            <End Role="Personal" EntitySet="Personal" />
+            <End Role="PlanillasRem" EntitySet="PlanillasRem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Procedimi__IdAre__276EDEB3" Association="Self.FK__Procedimi__IdAre__276EDEB3">
+            <End Role="AreaLaboratorio" EntitySet="AreaLaboratorio" />
+            <End Role="Procedimiento" EntitySet="Procedimiento" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Procedimi__IdEsp__267ABA7A" Association="Self.FK__Procedimi__IdEsp__267ABA7A">
+            <End Role="Especialidad" EntitySet="Especialidad" />
+            <End Role="Procedimiento" EntitySet="Procedimiento" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TablaAnal__IdAna__35BCFE0A" Association="Self.FK__TablaAnal__IdAna__35BCFE0A">
+            <End Role="TablaAnalisis" EntitySet="TablaAnalisis" />
+            <End Role="TablaAnalisisVR" EntitySet="TablaAnalisisVR" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TablaAnal__IdPro__2B3F6F97" Association="Self.FK__TablaAnal__IdPro__2B3F6F97">
+            <End Role="Procedimiento" EntitySet="Procedimiento" />
+            <End Role="TablaAnalisis" EntitySet="TablaAnalisis" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vacacione__IdPer__4CA06362" Association="Self.FK__Vacacione__IdPer__4CA06362">
+            <End Role="Personal" EntitySet="Personal" />
+            <End Role="Vacaciones" EntitySet="Vacaciones" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PoliclinicoNuevoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AporteEmpleador">
+          <Key>
+            <PropertyRef Name="IdAporteEmpleador" />
+          </Key>
+          <Property Name="IdAporteEmpleador" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodApo" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Aporte" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Porcentaje" Type="Decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="AreaAnalisi">
+          <Key>
+            <PropertyRef Name="IdAreaAnalisis" />
+          </Key>
+          <Property Name="IdAreaAnalisis" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodArea" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="AreaAnalisis" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="AreaLaboratorio">
+          <Key>
+            <PropertyRef Name="IdAreaLaboratorio" />
+          </Key>
+          <Property Name="IdAreaLaboratorio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodAre" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AreaLab" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Procedimientoes" Relationship="Self.FK__Procedimi__IdAre__276EDEB3" FromRole="AreaLaboratorio" ToRole="Procedimiento" />
+        </EntityType>
+        <EntityType Name="AreaServicio">
+          <Key>
+            <PropertyRef Name="IdAreaServicio" />
+          </Key>
+          <Property Name="IdAreaServicio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodAre" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Area" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Byte" />
+          <NavigationProperty Name="Personals" Relationship="Self.FK__Personal__IdArea__412EB0B6" FromRole="AreaServicio" ToRole="Personal" />
+        </EntityType>
+        <EntityType Name="Cargo">
+          <Key>
+            <PropertyRef Name="IdCargo" />
+          </Key>
+          <Property Name="IdCargo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodCar" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Cargo1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Byte" />
+          <NavigationProperty Name="Personals" Relationship="Self.FK__Personal__IdCarg__4222D4EF" FromRole="Cargo" ToRole="Personal" />
+          <NavigationProperty Name="PlanillasRems" Relationship="Self.FK__Planillas__IdCar__5DCAEF64" FromRole="Cargo" ToRole="PlanillasRem" />
+        </EntityType>
+        <EntityType Name="DiasLaborable">
+          <Key>
+            <PropertyRef Name="IdDiasLaborables" />
+          </Key>
+          <Property Name="IdDiasLaborables" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodMes" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Mes" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="Año" Type="Int32" />
+          <Property Name="DiasLab" Type="Byte" />
+          <Property Name="Cerrado" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Especialidad">
+          <Key>
+            <PropertyRef Name="IdEspecialidad" />
+          </Key>
+          <Property Name="IdEspecialidad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodEsp" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PrecioConsulta" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+          <Property Name="MontoMedico" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+          <NavigationProperty Name="Medicos" Relationship="Self.FK__Medico__IdEspeci__5629CD9C" FromRole="Especialidad" ToRole="Medico" />
+          <NavigationProperty Name="Medicos1" Relationship="Self.FK__Medico__IdEspeci__571DF1D5" FromRole="Especialidad" ToRole="Medico" />
+          <NavigationProperty Name="Procedimientoes" Relationship="Self.FK__Procedimi__IdEsp__267ABA7A" FromRole="Especialidad" ToRole="Procedimiento" />
+        </EntityType>
+        <EntityType Name="FondoPensione">
+          <Key>
+            <PropertyRef Name="IdFondoPen" />
+          </Key>
+          <Property Name="IdFondoPen" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodFon" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Entidad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ApoOblF" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="ComVarF" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="PriSegF" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="ApoOblM" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="ComVarM" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="PriSegM" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="PorONP" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Estado" Type="Byte" />
+          <NavigationProperty Name="Personals" Relationship="Self.FK__Personal__IdFond__4316F928" FromRole="FondoPensiones" ToRole="Personal" />
+          <NavigationProperty Name="PlanillasRems" Relationship="Self.FK__Planillas__IdFon__5CD6CB2B" FromRole="FondoPensiones" ToRole="PlanillasRem" />
+        </EntityType>
+        <EntityType Name="Medico">
+          <Key>
+            <PropertyRef Name="IdMedico" />
+          </Key>
+          <Property Name="IdMedico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodMed" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="DNI" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="ApePaterno" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="ApeMaterno" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Direccion" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="IdUbigeo" Type="Int32" />
+          <Property Name="CodDistrito" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="FecNac" Type="DateTime" Precision="3" />
+          <Property Name="Telefono" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Celular" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="RUC" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="FecIngreso" Type="DateTime" Precision="0" />
+          <Property Name="Grado" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="NumCol" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="Sit" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="RNE" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="IdEspecialidad1" Type="Int32" />
+          <Property Name="CodEsp1" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="IdEspecialidad2" Type="Int32" />
+          <Property Name="CodEsp2" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Tipo" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Especialidad" Relationship="Self.FK__Medico__IdEspeci__5629CD9C" FromRole="Medico" ToRole="Especialidad" />
+          <NavigationProperty Name="Especialidad1" Relationship="Self.FK__Medico__IdEspeci__571DF1D5" FromRole="Medico" ToRole="Especialidad" />
+          <NavigationProperty Name="Ubigeo" Relationship="Self.FK__Medico__IdUbigeo__5535A963" FromRole="Medico" ToRole="Ubigeo" />
+        </EntityType>
+        <EntityType Name="Personal">
+          <Key>
+            <PropertyRef Name="IdPersonal" />
+          </Key>
+          <Property Name="IdPersonal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodPer" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DNI" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="ApePaterno" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="ApeMaterno" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Direccion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IdUbigeo" Type="Int32" />
+          <Property Name="CodDistrito" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="FecNac" Type="DateTime" Precision="0" />
+          <Property Name="Telefono" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Celular" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Sex" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="EstadoCivil" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="NumHij" Type="Byte" />
+          <Property Name="FecIngreso" Type="DateTime" Precision="0" />
+          <Property Name="Estudios" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Grado" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="NumCol" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="IdAreaServicio" Type="Int32" />
+          <Property Name="CodAre" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="IdCargo" Type="Int32" />
+          <Property Name="CodCar" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="IdFondoPen" Type="Int32" />
+          <Property Name="CodFon" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="TipComAFP" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CUSPP" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="EVida" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="RemBas" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="AsiFam" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="RieCaj" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="SCTR" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="HorLab" Type="Int32" />
+          <Property Name="Observacion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="FecBaja" Type="DateTime" Precision="3" />
+          <Property Name="EntidadCTS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NumCtaCTS" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="AreaServicio" Relationship="Self.FK__Personal__IdArea__412EB0B6" FromRole="Personal" ToRole="AreaServicio" />
+          <NavigationProperty Name="Cargo" Relationship="Self.FK__Personal__IdCarg__4222D4EF" FromRole="Personal" ToRole="Cargo" />
+          <NavigationProperty Name="FondoPensione" Relationship="Self.FK__Personal__IdFond__4316F928" FromRole="Personal" ToRole="FondoPensiones" />
+          <NavigationProperty Name="Ubigeo" Relationship="Self.FK__Personal__IdUbig__403A8C7D" FromRole="Personal" ToRole="Ubigeo" />
+          <NavigationProperty Name="PlanillasRems" Relationship="Self.FK__Planillas__IdPer__5BE2A6F2" FromRole="Personal" ToRole="PlanillasRem" />
+          <NavigationProperty Name="Vacaciones" Relationship="Self.FK__Vacacione__IdPer__4CA06362" FromRole="Personal" ToRole="Vacaciones" />
+        </EntityType>
+        <EntityType Name="PlanillasRem">
+          <Key>
+            <PropertyRef Name="IdPlanilla" />
+          </Key>
+          <Property Name="IdPlanilla" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Periodo" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="IdPersonal" Type="Int32" />
+          <Property Name="CodPer" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="IdCargo" Type="Int32" />
+          <Property Name="CodCar" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="IdFondoPen" Type="Int32" />
+          <Property Name="CodFon" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="TipComAFP" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="RemBas" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="AsiFam" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Subsidio" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Gratif" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="RemVac" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="RieCaj" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Reinte" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="HE" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="OtrIng" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="TotIng" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="PorONP" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="PorApoObl" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="PorPriSeg" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="PorComVar" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="ONP" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="ApoObl" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="PriSeg" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="ComVar" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Quinta" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="OtrDes" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="TotDes" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Neto" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="PorEssalud" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="PorSCTR" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Essalud" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="SCTR" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="TotApo" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="DiasLab" Type="Int32" />
+          <Property Name="HorasLab" Type="Int32" />
+          <Property Name="IniVac" Type="DateTime" Precision="3" />
+          <Property Name="FinVac" Type="DateTime" Precision="3" />
+          <Property Name="DiasVac" Type="Int32" />
+          <Property Name="IniIncapacidad" Type="DateTime" Precision="3" />
+          <Property Name="FinIncapacidad" Type="DateTime" Precision="3" />
+          <Property Name="DiasIncapacidad" Type="Int32" />
+          <Property Name="InicioSinGoceHaber" Type="DateTime" Precision="3" />
+          <Property Name="FinSinGoceHaber" Type="DateTime" Precision="3" />
+          <Property Name="DiasSinGoceHaber" Type="Int32" />
+          <Property Name="Cerrado" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="TipoPlan" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Cargo" Relationship="Self.FK__Planillas__IdCar__5DCAEF64" FromRole="PlanillasRem" ToRole="Cargo" />
+          <NavigationProperty Name="FondoPensione" Relationship="Self.FK__Planillas__IdFon__5CD6CB2B" FromRole="PlanillasRem" ToRole="FondoPensiones" />
+          <NavigationProperty Name="Personal" Relationship="Self.FK__Planillas__IdPer__5BE2A6F2" FromRole="PlanillasRem" ToRole="Personal" />
+        </EntityType>
+        <EntityType Name="Procedimiento">
+          <Key>
+            <PropertyRef Name="IdProcedimiento" />
+          </Key>
+          <Property Name="IdProcedimiento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodPro" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="TipPro" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Procedimiento1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IdEspecialidad" Type="Int32" />
+          <Property Name="CodEsp" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="PrecioProcedimiento" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="MontoMedico" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Observacion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="ProImprimir" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="IdAreaLaboratorio" Type="Int32" />
+          <Property Name="AreaLaboratorio" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="AreaLaboratorio1" Relationship="Self.FK__Procedimi__IdAre__276EDEB3" FromRole="Procedimiento" ToRole="AreaLaboratorio" />
+          <NavigationProperty Name="Especialidad" Relationship="Self.FK__Procedimi__IdEsp__267ABA7A" FromRole="Procedimiento" ToRole="Especialidad" />
+          <NavigationProperty Name="TablaAnalisis" Relationship="Self.FK__TablaAnal__IdPro__2B3F6F97" FromRole="Procedimiento" ToRole="TablaAnalisis" />
+        </EntityType>
+        <EntityType Name="TablaAnalisi">
+          <Key>
+            <PropertyRef Name="IdAnalisis" />
+          </Key>
+          <Property Name="IdAnalisis" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodAna" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Analisis" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Unidad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Titulo" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="IdProcedimiento" Type="Int32" />
+          <Property Name="CodPro" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Procedimiento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AreaLaboratorio" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="AreaAnalisis" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="TituloPerfil" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Procedimiento1" Relationship="Self.FK__TablaAnal__IdPro__2B3F6F97" FromRole="TablaAnalisis" ToRole="Procedimiento" />
+          <NavigationProperty Name="TablaAnalisisVRs" Relationship="Self.FK__TablaAnal__IdAna__35BCFE0A" FromRole="TablaAnalisis" ToRole="TablaAnalisisVR" />
+        </EntityType>
+        <EntityType Name="TablaAnalisisVR">
+          <Key>
+            <PropertyRef Name="IdValReferencial" />
+          </Key>
+          <Property Name="IdValReferencial" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodVal" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="ValReferencial" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="IdAnalisis" Type="Int32" />
+          <Property Name="CodAna" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TablaAnalisi" Relationship="Self.FK__TablaAnal__IdAna__35BCFE0A" FromRole="TablaAnalisisVR" ToRole="TablaAnalisis" />
+        </EntityType>
+        <EntityType Name="Ubigeo">
+          <Key>
+            <PropertyRef Name="IdUbigeo" />
+          </Key>
+          <Property Name="IdUbigeo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMDIS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NOMPRO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NOMDEP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CODDIS" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="CODPRO" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="CODDEP" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Medicos" Relationship="Self.FK__Medico__IdUbigeo__5535A963" FromRole="Ubigeo" ToRole="Medico" />
+          <NavigationProperty Name="Personals" Relationship="Self.FK__Personal__IdUbig__403A8C7D" FromRole="Ubigeo" ToRole="Personal" />
+        </EntityType>
+        <EntityType Name="Vacacione">
+          <Key>
+            <PropertyRef Name="IdVacaciones" />
+          </Key>
+          <Property Name="IdVacaciones" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Año" Type="Int32" />
+          <Property Name="IdPersonal" Type="Int32" />
+          <Property Name="CodPer" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="IniProg" Type="DateTime" Precision="3" />
+          <Property Name="FinProg" Type="DateTime" Precision="3" />
+          <Property Name="IniEje1" Type="DateTime" Precision="3" />
+          <Property Name="FinEje1" Type="DateTime" Precision="3" />
+          <Property Name="IniEje2" Type="DateTime" Precision="3" />
+          <Property Name="FinEje2" Type="DateTime" Precision="3" />
+          <Property Name="IniEje3" Type="DateTime" Precision="3" />
+          <Property Name="FinEje3" Type="DateTime" Precision="3" />
+          <Property Name="Completo" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Obs" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Personal" Relationship="Self.FK__Vacacione__IdPer__4CA06362" FromRole="Vacaciones" ToRole="Personal" />
+        </EntityType>
+        <Association Name="FK__Procedimi__IdAre__276EDEB3">
+          <End Role="AreaLaboratorio" Type="Self.AreaLaboratorio" Multiplicity="0..1" />
+          <End Role="Procedimiento" Type="Self.Procedimiento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AreaLaboratorio">
+              <PropertyRef Name="IdAreaLaboratorio" />
+            </Principal>
+            <Dependent Role="Procedimiento">
+              <PropertyRef Name="IdAreaLaboratorio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Personal__IdArea__412EB0B6">
+          <End Role="AreaServicio" Type="Self.AreaServicio" Multiplicity="0..1" />
+          <End Role="Personal" Type="Self.Personal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AreaServicio">
+              <PropertyRef Name="IdAreaServicio" />
+            </Principal>
+            <Dependent Role="Personal">
+              <PropertyRef Name="IdAreaServicio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Personal__IdCarg__4222D4EF">
+          <End Role="Cargo" Type="Self.Cargo" Multiplicity="0..1" />
+          <End Role="Personal" Type="Self.Personal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargo">
+              <PropertyRef Name="IdCargo" />
+            </Principal>
+            <Dependent Role="Personal">
+              <PropertyRef Name="IdCargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Planillas__IdCar__5DCAEF64">
+          <End Role="Cargo" Type="Self.Cargo" Multiplicity="0..1" />
+          <End Role="PlanillasRem" Type="Self.PlanillasRem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargo">
+              <PropertyRef Name="IdCargo" />
+            </Principal>
+            <Dependent Role="PlanillasRem">
+              <PropertyRef Name="IdCargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Medico__IdEspeci__5629CD9C">
+          <End Role="Especialidad" Type="Self.Especialidad" Multiplicity="0..1" />
+          <End Role="Medico" Type="Self.Medico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Especialidad">
+              <PropertyRef Name="IdEspecialidad" />
+            </Principal>
+            <Dependent Role="Medico">
+              <PropertyRef Name="IdEspecialidad1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Medico__IdEspeci__571DF1D5">
+          <End Role="Especialidad" Type="Self.Especialidad" Multiplicity="0..1" />
+          <End Role="Medico" Type="Self.Medico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Especialidad">
+              <PropertyRef Name="IdEspecialidad" />
+            </Principal>
+            <Dependent Role="Medico">
+              <PropertyRef Name="IdEspecialidad2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Procedimi__IdEsp__267ABA7A">
+          <End Role="Especialidad" Type="Self.Especialidad" Multiplicity="0..1" />
+          <End Role="Procedimiento" Type="Self.Procedimiento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Especialidad">
+              <PropertyRef Name="IdEspecialidad" />
+            </Principal>
+            <Dependent Role="Procedimiento">
+              <PropertyRef Name="IdEspecialidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Personal__IdFond__4316F928">
+          <End Role="FondoPensiones" Type="Self.FondoPensione" Multiplicity="0..1" />
+          <End Role="Personal" Type="Self.Personal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FondoPensiones">
+              <PropertyRef Name="IdFondoPen" />
+            </Principal>
+            <Dependent Role="Personal">
+              <PropertyRef Name="IdFondoPen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Planillas__IdFon__5CD6CB2B">
+          <End Role="FondoPensiones" Type="Self.FondoPensione" Multiplicity="0..1" />
+          <End Role="PlanillasRem" Type="Self.PlanillasRem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FondoPensiones">
+              <PropertyRef Name="IdFondoPen" />
+            </Principal>
+            <Dependent Role="PlanillasRem">
+              <PropertyRef Name="IdFondoPen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Medico__IdUbigeo__5535A963">
+          <End Role="Ubigeo" Type="Self.Ubigeo" Multiplicity="0..1" />
+          <End Role="Medico" Type="Self.Medico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ubigeo">
+              <PropertyRef Name="IdUbigeo" />
+            </Principal>
+            <Dependent Role="Medico">
+              <PropertyRef Name="IdUbigeo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Personal__IdUbig__403A8C7D">
+          <End Role="Ubigeo" Type="Self.Ubigeo" Multiplicity="0..1" />
+          <End Role="Personal" Type="Self.Personal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ubigeo">
+              <PropertyRef Name="IdUbigeo" />
+            </Principal>
+            <Dependent Role="Personal">
+              <PropertyRef Name="IdUbigeo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Planillas__IdPer__5BE2A6F2">
+          <End Role="Personal" Type="Self.Personal" Multiplicity="0..1" />
+          <End Role="PlanillasRem" Type="Self.PlanillasRem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personal">
+              <PropertyRef Name="IdPersonal" />
+            </Principal>
+            <Dependent Role="PlanillasRem">
+              <PropertyRef Name="IdPersonal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Vacacione__IdPer__4CA06362">
+          <End Role="Personal" Type="Self.Personal" Multiplicity="0..1" />
+          <End Role="Vacaciones" Type="Self.Vacacione" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personal">
+              <PropertyRef Name="IdPersonal" />
+            </Principal>
+            <Dependent Role="Vacaciones">
+              <PropertyRef Name="IdPersonal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TablaAnal__IdPro__2B3F6F97">
+          <End Role="Procedimiento" Type="Self.Procedimiento" Multiplicity="0..1" />
+          <End Role="TablaAnalisis" Type="Self.TablaAnalisi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Procedimiento">
+              <PropertyRef Name="IdProcedimiento" />
+            </Principal>
+            <Dependent Role="TablaAnalisis">
+              <PropertyRef Name="IdProcedimiento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TablaAnal__IdAna__35BCFE0A">
+          <End Role="TablaAnalisis" Type="Self.TablaAnalisi" Multiplicity="0..1" />
+          <End Role="TablaAnalisisVR" Type="Self.TablaAnalisisVR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TablaAnalisis">
+              <PropertyRef Name="IdAnalisis" />
+            </Principal>
+            <Dependent Role="TablaAnalisisVR">
+              <PropertyRef Name="IdAnalisis" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PoliclinicoNuevoEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AporteEmpleadors" EntityType="Self.AporteEmpleador" />
+          <EntitySet Name="AreaAnalisis" EntityType="Self.AreaAnalisi" />
+          <EntitySet Name="AreaLaboratorios" EntityType="Self.AreaLaboratorio" />
+          <EntitySet Name="AreaServicios" EntityType="Self.AreaServicio" />
+          <EntitySet Name="Cargoes" EntityType="Self.Cargo" />
+          <EntitySet Name="DiasLaborables" EntityType="Self.DiasLaborable" />
+          <EntitySet Name="Especialidads" EntityType="Self.Especialidad" />
+          <EntitySet Name="FondoPensiones" EntityType="Self.FondoPensione" />
+          <EntitySet Name="Medicos" EntityType="Self.Medico" />
+          <EntitySet Name="Personals" EntityType="Self.Personal" />
+          <EntitySet Name="PlanillasRems" EntityType="Self.PlanillasRem" />
+          <EntitySet Name="Procedimientoes" EntityType="Self.Procedimiento" />
+          <EntitySet Name="TablaAnalisis" EntityType="Self.TablaAnalisi" />
+          <EntitySet Name="TablaAnalisisVRs" EntityType="Self.TablaAnalisisVR" />
+          <EntitySet Name="Ubigeos" EntityType="Self.Ubigeo" />
+          <EntitySet Name="Vacaciones" EntityType="Self.Vacacione" />
+          <AssociationSet Name="FK__Procedimi__IdAre__276EDEB3" Association="Self.FK__Procedimi__IdAre__276EDEB3">
+            <End Role="AreaLaboratorio" EntitySet="AreaLaboratorios" />
+            <End Role="Procedimiento" EntitySet="Procedimientoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Personal__IdArea__412EB0B6" Association="Self.FK__Personal__IdArea__412EB0B6">
+            <End Role="AreaServicio" EntitySet="AreaServicios" />
+            <End Role="Personal" EntitySet="Personals" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Personal__IdCarg__4222D4EF" Association="Self.FK__Personal__IdCarg__4222D4EF">
+            <End Role="Cargo" EntitySet="Cargoes" />
+            <End Role="Personal" EntitySet="Personals" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Planillas__IdCar__5DCAEF64" Association="Self.FK__Planillas__IdCar__5DCAEF64">
+            <End Role="Cargo" EntitySet="Cargoes" />
+            <End Role="PlanillasRem" EntitySet="PlanillasRems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Medico__IdEspeci__5629CD9C" Association="Self.FK__Medico__IdEspeci__5629CD9C">
+            <End Role="Especialidad" EntitySet="Especialidads" />
+            <End Role="Medico" EntitySet="Medicos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Medico__IdEspeci__571DF1D5" Association="Self.FK__Medico__IdEspeci__571DF1D5">
+            <End Role="Especialidad" EntitySet="Especialidads" />
+            <End Role="Medico" EntitySet="Medicos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Procedimi__IdEsp__267ABA7A" Association="Self.FK__Procedimi__IdEsp__267ABA7A">
+            <End Role="Especialidad" EntitySet="Especialidads" />
+            <End Role="Procedimiento" EntitySet="Procedimientoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Personal__IdFond__4316F928" Association="Self.FK__Personal__IdFond__4316F928">
+            <End Role="FondoPensiones" EntitySet="FondoPensiones" />
+            <End Role="Personal" EntitySet="Personals" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Planillas__IdFon__5CD6CB2B" Association="Self.FK__Planillas__IdFon__5CD6CB2B">
+            <End Role="FondoPensiones" EntitySet="FondoPensiones" />
+            <End Role="PlanillasRem" EntitySet="PlanillasRems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Medico__IdUbigeo__5535A963" Association="Self.FK__Medico__IdUbigeo__5535A963">
+            <End Role="Ubigeo" EntitySet="Ubigeos" />
+            <End Role="Medico" EntitySet="Medicos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Personal__IdUbig__403A8C7D" Association="Self.FK__Personal__IdUbig__403A8C7D">
+            <End Role="Ubigeo" EntitySet="Ubigeos" />
+            <End Role="Personal" EntitySet="Personals" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Planillas__IdPer__5BE2A6F2" Association="Self.FK__Planillas__IdPer__5BE2A6F2">
+            <End Role="Personal" EntitySet="Personals" />
+            <End Role="PlanillasRem" EntitySet="PlanillasRems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Vacacione__IdPer__4CA06362" Association="Self.FK__Vacacione__IdPer__4CA06362">
+            <End Role="Personal" EntitySet="Personals" />
+            <End Role="Vacaciones" EntitySet="Vacaciones" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TablaAnal__IdPro__2B3F6F97" Association="Self.FK__TablaAnal__IdPro__2B3F6F97">
+            <End Role="Procedimiento" EntitySet="Procedimientoes" />
+            <End Role="TablaAnalisis" EntitySet="TablaAnalisis" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TablaAnal__IdAna__35BCFE0A" Association="Self.FK__TablaAnal__IdAna__35BCFE0A">
+            <End Role="TablaAnalisis" EntitySet="TablaAnalisis" />
+            <End Role="TablaAnalisisVR" EntitySet="TablaAnalisisVRs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PoliclinicoNuevoModelStoreContainer" CdmEntityContainer="PoliclinicoNuevoEntities2">
+          <EntitySetMapping Name="AporteEmpleadors">
+            <EntityTypeMapping TypeName="PoliclinicoNuevoModel.AporteEmpleador">
+              <MappingFragment StoreEntitySet="AporteEmpleador">
+                <ScalarProperty Name="IdAporteEmpleador" ColumnName="IdAporteEmpleador" />
+                <ScalarProperty Name="CodApo" ColumnName="CodApo" />
+                <ScalarProperty Name="Aporte" ColumnName="Aporte" />
+                <ScalarProperty Name="Porcentaje" ColumnName="Porcentaje" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AreaAnalisis">
+            <EntityTypeMapping TypeName="PoliclinicoNuevoModel.AreaAnalisi">
+              <MappingFragment StoreEntitySet="AreaAnalisis">
+                <ScalarProperty Name="IdAreaAnalisis" ColumnName="IdAreaAnalisis" />
+                <ScalarProperty Name="CodArea" ColumnName="CodArea" />
+                <ScalarProperty Name="AreaAnalisis" ColumnName="AreaAnalisis" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AreaLaboratorios">
+            <EntityTypeMapping TypeName="PoliclinicoNuevoModel.AreaLaboratorio">
+              <MappingFragment StoreEntitySet="AreaLaboratorio">
+                <ScalarProperty Name="IdAreaLaboratorio" ColumnName="IdAreaLaboratorio" />
+                <ScalarProperty Name="CodAre" ColumnName="CodAre" />
+                <ScalarProperty Name="AreaLab" ColumnName="AreaLab" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AreaServicios">
+            <EntityTypeMapping TypeName="PoliclinicoNuevoModel.AreaServicio">
+              <MappingFragment StoreEntitySet="AreaServicio">
+                <ScalarProperty Name="IdAreaServicio" ColumnName="IdAreaServicio" />
+                <ScalarProperty Name="CodAre" ColumnName="CodAre" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cargoes">
+            <EntityTypeMapping TypeName="PoliclinicoNuevoModel.Cargo">
+              <MappingFragment StoreEntitySet="Cargo">
+                <ScalarProperty Name="IdCargo" ColumnName="IdCargo" />
+                <ScalarProperty Name="CodCar" ColumnName="CodCar" />
+                <ScalarProperty Name="Cargo1" ColumnName="Cargo" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DiasLaborables">
+            <EntityTypeMapping TypeName="PoliclinicoNuevoModel.DiasLaborable">
+              <MappingFragment StoreEntitySet="DiasLaborables">
+                <ScalarProperty Name="IdDiasLaborables" ColumnName="IdDiasLaborables" />
+                <ScalarProperty Name="CodMes" ColumnName="CodMes" />
+                <ScalarProperty Name="Mes" ColumnName="Mes" />
+                <ScalarProperty Name="Año" ColumnName="Año" />
+                <ScalarProperty Name="DiasLab" ColumnName="DiasLab" />
+                <ScalarProperty Name="Cerrado" ColumnName="Cerrado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Especialidads">
+            <EntityTypeMapping TypeName="PoliclinicoNuevoModel.Especialidad">
+              <MappingFragment StoreEntitySet="Especialidad">
+                <ScalarProperty Name="IdEspecialidad" ColumnName="IdEspecialidad" />
+                <ScalarProperty Name="CodEsp" ColumnName="CodEsp" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="PrecioConsulta" ColumnName="PrecioConsulta" />
+                <ScalarProperty Name="MontoMedico" ColumnName="MontoMedico" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FondoPensiones">
+            <EntityTypeMapping TypeName="PoliclinicoNuevoModel.FondoPensione">
+              <MappingFragment StoreEntitySet="FondoPensiones">
+                <ScalarProperty Name="IdFondoPen" ColumnName="IdFondoPen" />
+                <ScalarProperty Name="CodFon" ColumnName="CodFon" />
+                <ScalarProperty Name="Entidad" ColumnName="Entidad" />
+                <ScalarProperty Name="ApoOblF" ColumnName="ApoOblF" />
+                <ScalarProperty Name="ComVarF" ColumnName="ComVarF" />
+                <ScalarProperty Name="PriSegF" ColumnName="PriSegF" />
+                <ScalarProperty Name="ApoOblM" ColumnName="ApoOblM" />
+                <ScalarProperty Name="ComVarM" ColumnName="ComVarM" />
+                <ScalarProperty Name="PriSegM" ColumnName="PriSegM" />
+                <ScalarProperty Name="PorONP" ColumnName="PorONP" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Medicos">
+            <EntityTypeMapping TypeName="PoliclinicoNuevoModel.Medico">
+              <MappingFragment StoreEntitySet="Medico">
+                <ScalarProperty Name="IdMedico" ColumnName="IdMedico" />
+                <ScalarProperty Name="CodMed" ColumnName="CodMed" />
+                <ScalarProperty Name="DNI" ColumnName="DNI" />
+                <ScalarProperty Name="ApePaterno" ColumnName="ApePaterno" />
+                <ScalarProperty Name="ApeMaterno" ColumnName="ApeMaterno" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="IdUbigeo" ColumnName="IdUbigeo" />
+                <ScalarProperty Name="CodDistrito" ColumnName="CodDistrito" />
+                <ScalarProperty Name="FecNac" ColumnName="FecNac" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Celular" ColumnName="Celular" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="RUC" ColumnName="RUC" />
+                <ScalarProperty Name="FecIngreso" ColumnName="FecIngreso" />
+                <ScalarProperty Name="Grado" ColumnName="Grado" />
+                <ScalarProperty Name="NumCol" ColumnName="NumCol" />
+                <ScalarProperty Name="Sit" ColumnName="Sit" />
+                <ScalarProperty Name="RNE" ColumnName="RNE" />
+                <ScalarProperty Name="IdEspecialidad1" ColumnName="IdEspecialidad1" />
+                <ScalarProperty Name="CodEsp1" ColumnName="CodEsp1" />
+                <ScalarProperty Name="IdEspecialidad2" ColumnName="IdEspecialidad2" />
+                <ScalarProperty Name="CodEsp2" ColumnName="CodEsp2" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Personals">
+            <EntityTypeMapping TypeName="PoliclinicoNuevoModel.Personal">
+              <MappingFragment StoreEntitySet="Personal">
+                <ScalarProperty Name="IdPersonal" ColumnName="IdPersonal" />
+                <ScalarProperty Name="CodPer" ColumnName="CodPer" />
+                <ScalarProperty Name="DNI" ColumnName="DNI" />
+                <ScalarProperty Name="ApePaterno" ColumnName="ApePaterno" />
+                <ScalarProperty Name="ApeMaterno" ColumnName="ApeMaterno" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="IdUbigeo" ColumnName="IdUbigeo" />
+                <ScalarProperty Name="CodDistrito" ColumnName="CodDistrito" />
+                <ScalarProperty Name="FecNac" ColumnName="FecNac" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Celular" ColumnName="Celular" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="EstadoCivil" ColumnName="EstadoCivil" />
+                <ScalarProperty Name="NumHij" ColumnName="NumHij" />
+                <ScalarProperty Name="FecIngreso" ColumnName="FecIngreso" />
+                <ScalarProperty Name="Estudios" ColumnName="Estudios" />
+                <ScalarProperty Name="Grado" ColumnName="Grado" />
+                <ScalarProperty Name="NumCol" ColumnName="NumCol" />
+                <ScalarProperty Name="IdAreaServicio" ColumnName="IdAreaServicio" />
+                <ScalarProperty Name="CodAre" ColumnName="CodAre" />
+                <ScalarProperty Name="IdCargo" ColumnName="IdCargo" />
+                <ScalarProperty Name="CodCar" ColumnName="CodCar" />
+                <ScalarProperty Name="IdFondoPen" ColumnName="IdFondoPen" />
+                <ScalarProperty Name="CodFon" ColumnName="CodFon" />
+                <ScalarProperty Name="TipComAFP" ColumnName="TipComAFP" />
+                <ScalarProperty Name="CUSPP" ColumnName="CUSPP" />
+                <ScalarProperty Name="EVida" ColumnName="EVida" />
+                <ScalarProperty Name="RemBas" ColumnName="RemBas" />
+                <ScalarProperty Name="AsiFam" ColumnName="AsiFam" />
+                <ScalarProperty Name="RieCaj" ColumnName="RieCaj" />
+                <ScalarProperty Name="SCTR" ColumnName="SCTR" />
+                <ScalarProperty Name="HorLab" ColumnName="HorLab" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FecBaja" ColumnName="FecBaja" />
+                <ScalarProperty Name="EntidadCTS" ColumnName="EntidadCTS" />
+                <ScalarProperty Name="NumCtaCTS" ColumnName="NumCtaCTS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PlanillasRems">
+            <EntityTypeMapping TypeName="PoliclinicoNuevoModel.PlanillasRem">
+              <MappingFragment StoreEntitySet="PlanillasRem">
+                <ScalarProperty Name="IdPlanilla" ColumnName="IdPlanilla" />
+                <ScalarProperty Name="Periodo" ColumnName="Periodo" />
+                <ScalarProperty Name="IdPersonal" ColumnName="IdPersonal" />
+                <ScalarProperty Name="CodPer" ColumnName="CodPer" />
+                <ScalarProperty Name="IdCargo" ColumnName="IdCargo" />
+                <ScalarProperty Name="CodCar" ColumnName="CodCar" />
+                <ScalarProperty Name="IdFondoPen" ColumnName="IdFondoPen" />
+                <ScalarProperty Name="CodFon" ColumnName="CodFon" />
+                <ScalarProperty Name="TipComAFP" ColumnName="TipComAFP" />
+                <ScalarProperty Name="RemBas" ColumnName="RemBas" />
+                <ScalarProperty Name="AsiFam" ColumnName="AsiFam" />
+                <ScalarProperty Name="Subsidio" ColumnName="Subsidio" />
+                <ScalarProperty Name="Gratif" ColumnName="Gratif" />
+                <ScalarProperty Name="RemVac" ColumnName="RemVac" />
+                <ScalarProperty Name="RieCaj" ColumnName="RieCaj" />
+                <ScalarProperty Name="Reinte" ColumnName="Reinte" />
+                <ScalarProperty Name="HE" ColumnName="HE" />
+                <ScalarProperty Name="OtrIng" ColumnName="OtrIng" />
+                <ScalarProperty Name="TotIng" ColumnName="TotIng" />
+                <ScalarProperty Name="PorONP" ColumnName="PorONP" />
+                <ScalarProperty Name="PorApoObl" ColumnName="PorApoObl" />
+                <ScalarProperty Name="PorPriSeg" ColumnName="PorPriSeg" />
+                <ScalarProperty Name="PorComVar" ColumnName="PorComVar" />
+                <ScalarProperty Name="ONP" ColumnName="ONP" />
+                <ScalarProperty Name="ApoObl" ColumnName="ApoObl" />
+                <ScalarProperty Name="PriSeg" ColumnName="PriSeg" />
+                <ScalarProperty Name="ComVar" ColumnName="ComVar" />
+                <ScalarProperty Name="Quinta" ColumnName="Quinta" />
+                <ScalarProperty Name="OtrDes" ColumnName="OtrDes" />
+                <ScalarProperty Name="TotDes" ColumnName="TotDes" />
+                <ScalarProperty Name="Neto" ColumnName="Neto" />
+                <ScalarProperty Name="PorEssalud" ColumnName="PorEssalud" />
+                <ScalarProperty Name="PorSCTR" ColumnName="PorSCTR" />
+                <ScalarProperty Name="Essalud" ColumnName="Essalud" />
+                <ScalarProperty Name="SCTR" ColumnName="SCTR" />
+                <ScalarProperty Name="TotApo" ColumnName="TotApo" />
+                <ScalarProperty Name="DiasLab" ColumnName="DiasLab" />
+                <ScalarProperty Name="HorasLab" ColumnName="HorasLab" />
+                <ScalarProperty Name="IniVac" ColumnName="IniVac" />
+                <ScalarProperty Name="FinVac" ColumnName="FinVac" />
+                <ScalarProperty Name="DiasVac" ColumnName="DiasVac" />
+                <ScalarProperty Name="IniIncapacidad" ColumnName="IniIncapacidad" />
+                <ScalarProperty Name="FinIncapacidad" ColumnName="FinIncapacidad" />
+                <ScalarProperty Name="DiasIncapacidad" ColumnName="DiasIncapacidad" />
+                <ScalarProperty Name="InicioSinGoceHaber" ColumnName="InicioSinGoceHaber" />
+                <ScalarProperty Name="FinSinGoceHaber" ColumnName="FinSinGoceHaber" />
+                <ScalarProperty Name="DiasSinGoceHaber" ColumnName="DiasSinGoceHaber" />
+                <ScalarProperty Name="Cerrado" ColumnName="Cerrado" />
+                <ScalarProperty Name="TipoPlan" ColumnName="TipoPlan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Procedimientoes">
+            <EntityTypeMapping TypeName="PoliclinicoNuevoModel.Procedimiento">
+              <MappingFragment StoreEntitySet="Procedimiento">
+                <ScalarProperty Name="IdProcedimiento" ColumnName="IdProcedimiento" />
+                <ScalarProperty Name="CodPro" ColumnName="CodPro" />
+                <ScalarProperty Name="TipPro" ColumnName="TipPro" />
+                <ScalarProperty Name="Procedimiento1" ColumnName="Procedimiento" />
+                <ScalarProperty Name="IdEspecialidad" ColumnName="IdEspecialidad" />
+                <ScalarProperty Name="CodEsp" ColumnName="CodEsp" />
+                <ScalarProperty Name="PrecioProcedimiento" ColumnName="PrecioProcedimiento" />
+                <ScalarProperty Name="MontoMedico" ColumnName="MontoMedico" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+                <ScalarProperty Name="ProImprimir" ColumnName="ProImprimir" />
+                <ScalarProperty Name="IdAreaLaboratorio" ColumnName="IdAreaLaboratorio" />
+                <ScalarProperty Name="AreaLaboratorio" ColumnName="AreaLaboratorio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TablaAnalisis">
+            <EntityTypeMapping TypeName="PoliclinicoNuevoModel.TablaAnalisi">
+              <MappingFragment StoreEntitySet="TablaAnalisis">
+                <ScalarProperty Name="IdAnalisis" ColumnName="IdAnalisis" />
+                <ScalarProperty Name="CodAna" ColumnName="CodAna" />
+                <ScalarProperty Name="Analisis" ColumnName="Analisis" />
+                <ScalarProperty Name="Unidad" ColumnName="Unidad" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="IdProcedimiento" ColumnName="IdProcedimiento" />
+                <ScalarProperty Name="CodPro" ColumnName="CodPro" />
+                <ScalarProperty Name="Procedimiento" ColumnName="Procedimiento" />
+                <ScalarProperty Name="AreaLaboratorio" ColumnName="AreaLaboratorio" />
+                <ScalarProperty Name="AreaAnalisis" ColumnName="AreaAnalisis" />
+                <ScalarProperty Name="TituloPerfil" ColumnName="TituloPerfil" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TablaAnalisisVRs">
+            <EntityTypeMapping TypeName="PoliclinicoNuevoModel.TablaAnalisisVR">
+              <MappingFragment StoreEntitySet="TablaAnalisisVR">
+                <ScalarProperty Name="IdValReferencial" ColumnName="IdValReferencial" />
+                <ScalarProperty Name="CodVal" ColumnName="CodVal" />
+                <ScalarProperty Name="ValReferencial" ColumnName="ValReferencial" />
+                <ScalarProperty Name="IdAnalisis" ColumnName="IdAnalisis" />
+                <ScalarProperty Name="CodAna" ColumnName="CodAna" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ubigeos">
+            <EntityTypeMapping TypeName="PoliclinicoNuevoModel.Ubigeo">
+              <MappingFragment StoreEntitySet="Ubigeo">
+                <ScalarProperty Name="IdUbigeo" ColumnName="IdUbigeo" />
+                <ScalarProperty Name="NOMDIS" ColumnName="NOMDIS" />
+                <ScalarProperty Name="NOMPRO" ColumnName="NOMPRO" />
+                <ScalarProperty Name="NOMDEP" ColumnName="NOMDEP" />
+                <ScalarProperty Name="CODDIS" ColumnName="CODDIS" />
+                <ScalarProperty Name="CODPRO" ColumnName="CODPRO" />
+                <ScalarProperty Name="CODDEP" ColumnName="CODDEP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vacaciones">
+            <EntityTypeMapping TypeName="PoliclinicoNuevoModel.Vacacione">
+              <MappingFragment StoreEntitySet="Vacaciones">
+                <ScalarProperty Name="IdVacaciones" ColumnName="IdVacaciones" />
+                <ScalarProperty Name="Año" ColumnName="Año" />
+                <ScalarProperty Name="IdPersonal" ColumnName="IdPersonal" />
+                <ScalarProperty Name="CodPer" ColumnName="CodPer" />
+                <ScalarProperty Name="IniProg" ColumnName="IniProg" />
+                <ScalarProperty Name="FinProg" ColumnName="FinProg" />
+                <ScalarProperty Name="IniEje1" ColumnName="IniEje1" />
+                <ScalarProperty Name="FinEje1" ColumnName="FinEje1" />
+                <ScalarProperty Name="IniEje2" ColumnName="IniEje2" />
+                <ScalarProperty Name="FinEje2" ColumnName="FinEje2" />
+                <ScalarProperty Name="IniEje3" ColumnName="IniEje3" />
+                <ScalarProperty Name="FinEje3" ColumnName="FinEje3" />
+                <ScalarProperty Name="Completo" ColumnName="Completo" />
+                <ScalarProperty Name="Obs" ColumnName="Obs" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

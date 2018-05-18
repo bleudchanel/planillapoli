@@ -1,0 +1,5 @@
+c:\users\usuario\source\repos\Planilla\Core.Common.ServiceModel\bin\Debug\Core.Common.ServiceModel.dll
+c:\users\usuario\source\repos\Planilla\Core.Common.ServiceModel\bin\Debug\Core.Common.ServiceModel.pdb
+c:\users\usuario\source\repos\Planilla\Core.Common.ServiceModel\obj\Debug\Core.Common.ServiceModel.csproj.CoreCompileInputs.cache
+c:\users\usuario\source\repos\Planilla\Core.Common.ServiceModel\obj\Debug\Core.Common.ServiceModel.dll
+c:\users\usuario\source\repos\Planilla\Core.Common.ServiceModel\obj\Debug\Core.Common.ServiceModel.pdb
