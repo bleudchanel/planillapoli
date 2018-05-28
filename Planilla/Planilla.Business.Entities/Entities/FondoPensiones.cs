@@ -14,6 +14,25 @@ namespace Planilla.Business.Entities
     [Table("FondoPensiones", Schema = "Planilla")]
     public class FondoPensiones : EntityBase, IIdentifiableEntity
     {
+        public FondoPensiones()
+        {
+
+        }
+
+        public FondoPensiones(string codFon, string entidad, decimal? apoOblF, decimal? comVarF, decimal? priSegF, decimal? apoOblM, decimal? comVarM, decimal? priSegM, decimal? porONP)
+        {
+            CodFon = codFon;
+            Entidad = entidad;
+            ApoOblF = apoOblF;
+            ComVarF = comVarF;
+            PriSegF = priSegF;
+            ApoOblM = apoOblM;
+            ComVarM = comVarM;
+            PriSegM = priSegM;
+            PorONP = porONP;
+            Estado = 1;            
+        }
+
         [DataMember]
         public int IdFondoPen { get; set; }
         [DataMember]

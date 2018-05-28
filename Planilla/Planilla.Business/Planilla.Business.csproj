@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business Engine\PersonalEngine.cs" />
     <Compile Include="Business Engine\PlanillaEngine.cs" />
     <Compile Include="BusinessEngineFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

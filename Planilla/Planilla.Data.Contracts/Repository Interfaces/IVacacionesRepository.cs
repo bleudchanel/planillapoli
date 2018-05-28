@@ -12,5 +12,7 @@ namespace Planilla.Data.Contracts
     {
         Vacaciones GetVacacionesInicioPeriodoPersona(int IdPersonal, int Anio, int Mes);
         Vacaciones GetVacacionesFinPeriodoPersona(int IdPersonal, int Anio, int Mes);
+        IEnumerable<VacacionesPersona> GetVacacionesPorPeriodo(int Anio);
+        Vacaciones GetVacacionesPorPeriodoPersona(int Anio, int IdPersonal);
     }
 }

@@ -1,4 +1,5 @@
-﻿using Planilla.Business.Entities;
+﻿using Core.Common.Utils;
+using Planilla.Business.Entities;
 using Planilla.Data.Contracts;
 using System;
 using System.Collections.Generic;
@@ -39,6 +40,28 @@ namespace Planilla.Data
             return (from e in entityContext.EspecialidadSet
                     where e.IdEspecialidad == entity.IdEspecialidad
                     select e).FirstOrDefault();
+        }
+
+        public Especialidad AddEspecialidadComplete(Especialidad entity)
+        {
+            using (PlanillaContext entityContext = new PlanillaContext())
+            {
+                string newCodEsp = "E001";
+                var topEspecialidad = (from e in entityContext.EspecialidadSet
+                                       orderby e.CodEsp descending
+                                       select e).FirstOrDefault();
+                if (topEspecialidad != null)
+                {
+                    newCodEsp = topEspecialidad.CodEsp.Substring(1, topEspecialidad.CodEsp.Length - 1);
+                    int Cod = Convert.ToInt32(newCodEsp) + 1;
+                    newCodEsp = 'E' + Utiles.CerosIzquierda(Cod.ToString(), 3);
+                }
+
+                entity.CodEsp = newCodEsp;
+
+                return Add(entity);
+
+            }
         }
     }
 }

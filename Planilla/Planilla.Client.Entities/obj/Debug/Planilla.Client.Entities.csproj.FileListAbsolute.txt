@@ -9,3 +9,14 @@ c:\users\usuario\source\repos\Planilla\Planilla.Client.Entities\obj\Debug\Planil
 c:\users\usuario\source\repos\Planilla\Planilla.Client.Entities\obj\Debug\Planilla.Client.Entities.csproj.CopyComplete
 c:\users\usuario\source\repos\Planilla\Planilla.Client.Entities\obj\Debug\Planilla.Client.Entities.dll
 c:\users\usuario\source\repos\Planilla\Planilla.Client.Entities\obj\Debug\Planilla.Client.Entities.pdb
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Entities\bin\Debug\Planilla.Client.Entities.dll
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Entities\bin\Debug\Planilla.Client.Entities.pdb
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Entities\bin\Debug\FluentValidation.dll
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Entities\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Entities\bin\Debug\System.ComponentModel.Primitives.dll
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Entities\bin\Debug\FluentValidation.xml
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Entities\obj\Debug\Planilla.Client.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Entities\obj\Debug\Planilla.Client.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Entities\obj\Debug\Planilla.Client.Entities.csproj.CopyComplete
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Entities\obj\Debug\Planilla.Client.Entities.dll
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Entities\obj\Debug\Planilla.Client.Entities.pdb

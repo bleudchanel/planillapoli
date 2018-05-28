@@ -10,6 +10,6 @@ namespace Planilla.Data.Contracts
 {
     public interface IFondoPensionesRepository : IDataRepository<FondoPensiones>
     {
-
+        FondoPensiones AddFondoPensionesComplete(FondoPensiones entity);
     }
 }

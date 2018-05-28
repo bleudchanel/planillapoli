@@ -14,6 +14,21 @@ namespace Planilla.Business.Entities
     [Table("Especialidad", Schema = "Planilla")]
     public class Especialidad : EntityBase, IIdentifiableEntity
     {
+        public Especialidad()
+        {
+
+        }
+
+        public Especialidad(int idEspecialidad, string codEsp, string descripcion, decimal precioConsulta, decimal montoMedico, int entityId)
+        {
+            IdEspecialidad = idEspecialidad;
+            CodEsp = codEsp;
+            Descripcion = descripcion;
+            PrecioConsulta = precioConsulta;
+            MontoMedico = montoMedico;
+            EntityId = entityId;
+        }
+
         [DataMember]
         public int IdEspecialidad { get; set; }
         [DataMember]

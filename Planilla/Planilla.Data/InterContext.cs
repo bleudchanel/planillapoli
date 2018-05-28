@@ -60,6 +60,26 @@ namespace Planilla.Data
             modelBuilder.Entity<Ubigeo>().HasKey<int>(e => e.IdUbigeo).Ignore(e => e.EntityId);
             modelBuilder.Entity<Vacaciones>().HasKey<int>(e => e.IdVacaciones).Ignore(e => e.EntityId);
 
+            modelBuilder.Entity<PlanillaRemuneracion>().Ignore(e => e.NombrePersona);
+            modelBuilder.Entity<PlanillaRemuneracion>().Ignore(e => e.VacacionesPeriodo);
+            modelBuilder.Entity<PlanillaRemuneracion>().Ignore(e => e.ApellidoMaterno);
+            modelBuilder.Entity<PlanillaRemuneracion>().Ignore(e => e.ApellidoPaterno);
+            modelBuilder.Entity<PlanillaRemuneracion>().Ignore(e => e.Nombre);
+            modelBuilder.Entity<PlanillaRemuneracion>().Ignore(e => e.CUSPP);
+            modelBuilder.Entity<PlanillaRemuneracion>().Ignore(e => e.Dni);
+            modelBuilder.Entity<PlanillaRemuneracion>().Ignore(e => e.AFP);
+
+
+            modelBuilder.Entity<PlanillaRemuneracion>().Property(e => e.PorApoObl).HasPrecision(18, 4);
+            modelBuilder.Entity<PlanillaRemuneracion>().Property(e => e.PorComVar).HasPrecision(18, 4);
+            modelBuilder.Entity<PlanillaRemuneracion>().Property(e => e.PorPriSeg).HasPrecision(18, 4);
+            modelBuilder.Entity<PlanillaRemuneracion>().Property(e => e.PorONP).HasPrecision(18, 4);
+            modelBuilder.Entity<PlanillaRemuneracion>().Property(e => e.PorSCTR).HasPrecision(18, 4);
+            //modelBuilder.Entity<PlanillaRemuneracion>().Property(e => e.PorApoObl).HasColumnType("decimal(18,4)");
+            //modelBuilder.Entity<PlanillaRemuneracion>().Property(e => e.PorComVar).HasColumnType("decimal(18,4)");
+            //modelBuilder.Entity<PlanillaRemuneracion>().Property(e => e.PorPriSeg).HasColumnType("decimal(18,4)");
+            //modelBuilder.Entity<PlanillaRemuneracion>().Property(e => e.PorONP).HasColumnType("decimal(18,4)");
+            //modelBuilder.Entity<PlanillaRemuneracion>().Property(e => e.PorSCTR).HasColumnType("decimal(18,4)");
             //modelBuilder.Entity<CatalogoSistema>().ToTable("ws_CatalogoSistema");
             //modelBuilder.Entity<Log>().ToTable("ws_LogBCP");
             //modelBuilder.Entity<Operacion>().ToTable("Operacion");

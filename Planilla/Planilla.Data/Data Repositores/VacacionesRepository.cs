@@ -1,4 +1,5 @@
-﻿using Planilla.Business.Entities;
+﻿using Core.Common.Extensions;
+using Planilla.Business.Entities;
 using Planilla.Data.Contracts;
 using System;
 using System.Collections.Generic;
@@ -62,6 +63,55 @@ namespace Planilla.Data.Data_Repositores
                         && e.Año == Anio
                         && e.FinProg.Value.Month == Mes
                         select e).FirstOrDefault();
+            }
+        }
+
+        public Vacaciones GetVacacionesPorPeriodoPersona(int Anio, int IdPersonal)
+        {
+            Vacaciones resultado = new Vacaciones();
+            using(PlanillaContext entityContext = new PlanillaContext())
+            {
+                resultado = (from e in entityContext.VacacionesSet
+                        where e.Año == Anio && e.IdPersonal == IdPersonal
+                        select e).FirstOrDefault();
+                return resultado;
+            }
+        }
+
+        public IEnumerable<VacacionesPersona> GetVacacionesPorPeriodo(int Anio)
+        {
+            using (PlanillaContext entityContext = new PlanillaContext())
+            {
+                List<VacacionesPersona> resultado = new List<VacacionesPersona>();
+                var lista = (from vacaciones in entityContext.VacacionesSet
+                        join personal in entityContext.PersonalSet on vacaciones.IdPersonal equals personal.IdPersonal
+                        join area in entityContext.AreaServicioSet on personal.IdAreaServicio equals area.IdAreaServicio
+                        where vacaciones.Año == Anio
+                        select new
+                        {
+                            vacaciones.IdVacaciones,
+                            vacaciones.Año,
+                            vacaciones.IdPersonal,
+                            personal.CodPer,
+                            NombrePersona = personal.ApePaterno + " " + personal.ApeMaterno + ", " + personal.Nombre,
+                            area.Area,
+                            vacaciones.IniProg,
+                            vacaciones.FinProg,
+                            vacaciones.IniEje1,
+                            vacaciones.FinEje1,
+                            vacaciones.IniEje2,
+                            vacaciones.FinEje2,
+                            vacaciones.IniEje3,
+                            vacaciones.FinEje3,
+                            vacaciones.Completo,
+                            vacaciones.Obs
+                        });
+                foreach(var unico in lista)
+                {
+                    resultado.Add(new VacacionesPersona(unico.IdVacaciones, unico.Año, unico.IdPersonal, unico.CodPer, unico.NombrePersona, unico.Area, unico.IniProg, unico.FinProg, unico.IniEje1, unico.FinEje1, unico.IniEje2, unico.FinEje2, unico.IniEje3, unico.FinEje3, "", ""));
+                }
+
+                return resultado;
             }
         }
 

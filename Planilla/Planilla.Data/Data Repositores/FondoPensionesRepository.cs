@@ -1,4 +1,5 @@
-﻿using Planilla.Business.Entities;
+﻿using Core.Common.Utils;
+using Planilla.Business.Entities;
 using Planilla.Data.Contracts;
 using System;
 using System.Collections.Generic;
@@ -39,6 +40,29 @@ namespace Planilla.Data
             return (from e in entityContext.FondoPensionesSet
                     where e.IdFondoPen == entity.IdFondoPen
                     select e).FirstOrDefault();
+        }
+
+
+        public FondoPensiones AddFondoPensionesComplete(FondoPensiones entity)
+        {
+            using (PlanillaContext entityContext = new PlanillaContext())
+            {
+                string nCodFon = "F01";
+                var topFondo = (from e in entityContext.FondoPensionesSet
+                                       orderby e.CodFon descending
+                                       select e).FirstOrDefault();
+                if (topFondo != null)
+                {
+                    nCodFon = topFondo.CodFon.Substring(1, topFondo.CodFon.Length - 1);
+                    int Cod = Convert.ToInt32(nCodFon) + 1;
+                    nCodFon = 'F' + Utiles.CerosIzquierda(Cod.ToString(), 2);
+                }
+
+                entity.CodFon = nCodFon;
+
+                return Add(entity);
+
+            }
         }
     }
 }

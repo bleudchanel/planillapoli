@@ -14,7 +14,15 @@ namespace Planilla.Business.Entities
     [Table("PlanillasRem", Schema = "Planilla")]
     public class PlanillaRemuneracion : EntityBase, IIdentifiableEntity
     {
-        public PlanillaRemuneracion(int idPlanilla, string periodo, int? idPersonal, string codPer, int? idCargo, string codCar, int? idFondoPen, string codFon, string tipComAFP, decimal? remBas, decimal? asiFam, decimal? subsidio, decimal? gratif, decimal? remVac, decimal? rieCaj, decimal? reinte, decimal? hE, decimal? otrIng, decimal? totIng, decimal? porONP, decimal? porApoObl, decimal? porPriSeg, decimal? porComVar, decimal? oNP, decimal? apoObl, decimal? priSeg, decimal? comVar, decimal? quinta, decimal? otrDes, decimal? totDes, decimal? neto, decimal? porEssalud, decimal? porSCTR, decimal? essalud, decimal? sCTR, decimal? totApo, int? diasLab, int? horasLab, DateTime? iniVac, DateTime? finVac, int? diasVac, DateTime? iniIncapacidad, DateTime? finIncapacidad, int? diasIncapacidad, DateTime? inicioSinGoceHaber, DateTime? finSinGoceHaber, int? diasSinGoceHaber, string cerrado, string tipoPlan, int entityId)
+        public PlanillaRemuneracion(int idPlanilla, 
+            string periodo, int? idPersonal, string codPer, int? idCargo, string codCar, int? idFondoPen, string codFon, string tipComAFP, 
+            decimal? remBas, decimal? asiFam, decimal? subsidio, decimal? gratif, decimal? remVac, decimal? rieCaj, decimal? reinte, decimal? hE, decimal? otrIng, 
+            decimal? porONP, decimal? porApoObl, decimal? porPriSeg, decimal? porComVar, decimal? quinta, decimal? otrDes, decimal? 
+            porEssalud, decimal? porSCTR, int? 
+            diasLab, int? horasLab, DateTime? iniVac, DateTime? finVac, int? diasVac, 
+            DateTime? iniIncapacidad, DateTime? finIncapacidad, int? diasIncapacidad, 
+            DateTime? inicioSinGoceHaber, DateTime? finSinGoceHaber, int? diasSinGoceHaber, 
+            string cerrado, string tipoPlan)
         {
             IdPlanilla = idPlanilla;
             Periodo = periodo;
@@ -25,6 +33,7 @@ namespace Planilla.Business.Entities
             IdFondoPen = idFondoPen;
             CodFon = codFon;
             TipComAFP = tipComAFP;
+            // Ingresos
             RemBas = remBas;
             AsiFam = asiFam;
             Subsidio = subsidio;
@@ -34,24 +43,31 @@ namespace Planilla.Business.Entities
             Reinte = reinte;
             HE = hE;
             OtrIng = otrIng;
-            TotIng = totIng;
+            TotIng = (RemBas + AsiFam + Subsidio + Gratif + RemVac + RieCaj + Reinte + HE + OtrIng);
+
+            //Descuentos
             PorONP = porONP;
             PorApoObl = porApoObl;
             PorPriSeg = porPriSeg;
             PorComVar = porComVar;
-            ONP = oNP;
-            ApoObl = apoObl;
-            PriSeg = priSeg;
-            ComVar = comVar;
+            ONP = Math.Round((TotIng ?? 0) * (PorONP ?? 0),2,MidpointRounding.AwayFromZero);
+            ApoObl = Math.Round((TotIng ?? 0) * (PorApoObl ?? 0), 2, MidpointRounding.AwayFromZero);
+            PriSeg = Math.Round((TotIng ?? 0) * (PorPriSeg ?? 0), 2, MidpointRounding.AwayFromZero);
+            ComVar = Math.Round((TotIng ?? 0) * (PorComVar ?? 0), 2, MidpointRounding.AwayFromZero);
             Quinta = quinta;
             OtrDes = otrDes;
-            TotDes = totDes;
-            Neto = neto;
+            TotDes = (ONP + ApoObl + PriSeg + ComVar + Quinta + OtrDes);
+
+
+            Neto = TotIng - TotDes;
+
+            //Aportes
             PorEssalud = porEssalud;
             PorSCTR = porSCTR;
-            Essalud = essalud;
-            SCTR = sCTR;
-            TotApo = totApo;
+            Essalud = Math.Round((TotIng ?? 0) * (PorEssalud ?? 0), 2, MidpointRounding.AwayFromZero);
+            SCTR = Math.Round((TotIng ?? 0) * (PorSCTR ?? 0), 2, MidpointRounding.AwayFromZero);
+            TotApo = Essalud + SCTR;
+
             DiasLab = diasLab;
             HorasLab = horasLab;
             IniVac = iniVac;
@@ -65,11 +81,152 @@ namespace Planilla.Business.Entities
             DiasSinGoceHaber = diasSinGoceHaber;
             Cerrado = cerrado;
             TipoPlan = tipoPlan;
-            EntityId = entityId;
         }
 
         public PlanillaRemuneracion()
         {
+
+        }
+
+        public PlanillaRemuneracion(PlanillaRemuneracion planillaBase)
+        {
+            IdPlanilla = planillaBase.IdPlanilla;
+            Periodo = planillaBase.Periodo;
+            IdPersonal = planillaBase.IdPersonal;
+            CodPer = planillaBase.CodPer;
+            IdCargo = planillaBase.IdCargo;
+            CodCar = planillaBase.CodCar;
+            IdFondoPen = planillaBase.IdFondoPen;
+            CodFon = planillaBase.CodFon;
+            TipComAFP = planillaBase.TipComAFP;
+            RemBas = planillaBase.RemBas;
+            AsiFam = planillaBase.AsiFam;
+            Subsidio = planillaBase.Subsidio;
+            Gratif = planillaBase.Gratif;
+            RemVac = planillaBase.RemVac;
+            RieCaj = planillaBase.RieCaj;
+            Reinte = planillaBase.Reinte;
+            HE = planillaBase.HE;
+            OtrIng = planillaBase.OtrIng;
+            TotIng = planillaBase.TotIng;
+            PorONP = planillaBase.PorONP;
+            PorApoObl = planillaBase.PorApoObl;
+            PorPriSeg = planillaBase.PorPriSeg;
+            PorComVar = planillaBase.PorComVar;
+            ONP = planillaBase.ONP;
+            ApoObl = planillaBase.ApoObl;
+            PriSeg = planillaBase.PriSeg;
+            ComVar = planillaBase.ComVar;
+            Quinta = planillaBase.Quinta;
+            OtrDes = planillaBase.OtrDes;
+            TotDes = planillaBase.TotDes;
+            Neto = planillaBase.Neto;
+            PorEssalud = planillaBase.PorEssalud;
+            PorSCTR = planillaBase.PorSCTR;
+            Essalud = planillaBase.Essalud;
+            SCTR = planillaBase.SCTR;
+            TotApo = planillaBase.TotApo;
+            DiasLab = planillaBase.DiasLab;
+            HorasLab = planillaBase.HorasLab;
+            IniVac = planillaBase.IniVac;
+            FinVac = planillaBase.FinVac;
+            DiasVac = planillaBase.DiasVac;
+            IniIncapacidad = planillaBase.IniIncapacidad;
+            FinIncapacidad = planillaBase.FinIncapacidad;
+            DiasIncapacidad = planillaBase.DiasIncapacidad;
+            InicioSinGoceHaber = planillaBase.InicioSinGoceHaber;
+            FinSinGoceHaber = planillaBase.FinSinGoceHaber;
+            DiasSinGoceHaber = planillaBase.DiasSinGoceHaber;
+            Cerrado = planillaBase.Cerrado;
+            TipoPlan = planillaBase.TipoPlan;
+            NombrePersona = planillaBase.NombrePersona;
+            VacacionesPeriodo = planillaBase.VacacionesPeriodo;
+        }
+
+        public void SetRemBas(decimal remBas)
+        {
+            this.RemBas = remBas;
+            Recalc();
+        }
+
+        public void SetAsiFam(decimal asiFam)
+        {
+            this.AsiFam = asiFam;
+            Recalc();
+        }
+
+        public void SetSubsidio(decimal subsidio)
+        {
+            this.Subsidio = subsidio;
+            Recalc();
+        }
+
+        public void SetGratif(decimal gratif)
+        {
+            this.Gratif = gratif;
+            Recalc();
+        }
+
+        public void SetRemVac(decimal remVac)
+        {
+            this.RemVac = remVac;
+            Recalc();
+        }
+
+        public void SetRieCaj(decimal rieCaj)
+        {
+            this.RieCaj = rieCaj;
+            Recalc();
+        }
+
+        public void SetReinte(decimal reinte)
+        {
+            this.Reinte = reinte;
+            Recalc();
+        }
+
+        public void SetHE(decimal he)
+        {
+            this.HE = he;
+            Recalc();
+        }
+
+        public void SetOtroIng(decimal otroIng)
+        {
+            this.OtrIng = otroIng;
+            Recalc();
+        }
+
+        public void SetOtroDescuento(decimal otroDes)
+        {
+            this.OtrDes = otroDes;
+            this.TotDes = (ONP + ApoObl + PriSeg + ComVar + Quinta + OtrDes);
+            this.Neto = TotIng - TotDes;
+        }
+
+        public void SetQuinta(decimal quinta)
+        {
+            this.Quinta = quinta;
+            this.TotDes = (ONP + ApoObl + PriSeg + ComVar + Quinta + OtrDes);
+            this.Neto = TotIng - TotDes;
+        }
+
+        private void Recalc()
+        {
+            TotIng = (RemBas + AsiFam + Subsidio + Gratif + RemVac + RieCaj + Reinte + HE + OtrIng);
+
+            ONP = Math.Round((TotIng ?? 0) * (PorONP ?? 0), 2, MidpointRounding.AwayFromZero);
+            ApoObl = Math.Round((TotIng ?? 0) * (PorApoObl ?? 0), 2, MidpointRounding.AwayFromZero);
+            PriSeg = Math.Round((TotIng ?? 0) * (PorPriSeg ?? 0), 2, MidpointRounding.AwayFromZero);
+            ComVar = Math.Round((TotIng ?? 0) * (PorComVar ?? 0), 2, MidpointRounding.AwayFromZero);
+
+            TotDes = (ONP + ApoObl + PriSeg + ComVar + Quinta + OtrDes);
+
+            Neto = TotIng - TotDes;
+
+            Essalud = Math.Round((TotIng ?? 0) * (PorEssalud ?? 0), 2, MidpointRounding.AwayFromZero);
+            SCTR = Math.Round((TotIng ?? 0) * (PorSCTR ?? 0), 2, MidpointRounding.AwayFromZero);
+            TotApo = Essalud + SCTR;
 
         }
 
@@ -171,6 +328,16 @@ namespace Planilla.Business.Entities
         public string Cerrado { get; set; }
         [DataMember]
         public string TipoPlan { get; set; }
+
+        public string NombrePersona { get; set; }
+        public string ApellidoPaterno { get; set; }
+        public string ApellidoMaterno { get; set; }
+        public string Nombre { get; set; }
+        public string CUSPP { get; set; }
+        public string Dni { get; set; }
+        public string AFP { get; set; }
+
+        public Vacaciones VacacionesPeriodo { get; set; }
 
         public int EntityId { get => IdPlanilla; set => IdPlanilla = value; }
     }

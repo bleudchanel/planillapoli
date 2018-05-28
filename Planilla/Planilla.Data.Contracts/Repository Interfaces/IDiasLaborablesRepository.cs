@@ -11,5 +11,6 @@ namespace Planilla.Data.Contracts
     public interface IDiasLaborablesRepository : IDataRepository<DiasLaborables>
     {
         DiasLaborables GetDiasPorPeriodo(string CodMes);
+        IEnumerable<DiasLaborables> GetDiasPorPeriodo(int Anio);
     }
 }

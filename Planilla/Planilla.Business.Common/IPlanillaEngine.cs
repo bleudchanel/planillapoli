@@ -11,5 +11,6 @@ namespace Planilla.Business.Common
     public interface IPlanillaEngine : IBusinessEngine
     {
         IEnumerable<PlanillaRemuneracion> GenerarPlanilla(string Periodo);
+        IEnumerable<PlanillaRemuneracion> GetPlanillaNormalPorPeriodo(int Anio, int Mes);
     }
 }

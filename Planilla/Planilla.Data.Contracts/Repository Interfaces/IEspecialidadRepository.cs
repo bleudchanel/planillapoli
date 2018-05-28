@@ -10,6 +10,6 @@ namespace Planilla.Data.Contracts
 {
     public interface IEspecialidadRepository : IDataRepository<Especialidad>
     {
-
+        Especialidad AddEspecialidadComplete(Especialidad entity);
     }
 }

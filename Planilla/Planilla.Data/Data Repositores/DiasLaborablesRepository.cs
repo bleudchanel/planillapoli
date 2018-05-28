@@ -1,4 +1,5 @@
-﻿using Planilla.Business.Entities;
+﻿using Core.Common.Extensions;
+using Planilla.Business.Entities;
 using Planilla.Data.Contracts;
 using System;
 using System.Collections.Generic;
@@ -60,6 +61,39 @@ namespace Planilla.Data
             }
 
             return dias;
+        }
+
+        public IEnumerable<DiasLaborables> GetDiasPorPeriodo(int Anio)
+        {
+
+            using(PlanillaContext entityContext = new PlanillaContext())
+            {
+                var lab = (from e in entityContext.DiasLaborablesSet
+                           where e.Año == Anio
+                           orderby e.CodMes ascending
+                           select e).ToFullyLoaded();
+                if (lab != null && lab.Count() > 0)
+                {
+                    return lab;
+                }
+                else
+                {
+                    Add(new DiasLaborables("01", "01 ENERO", Anio, 0, "F"));
+                    Add(new DiasLaborables("02", "02 FEBRERO", Anio, 0, "F"));
+                    Add(new DiasLaborables("03", "03 MARZO", Anio, 0, "F"));
+                    Add(new DiasLaborables("04", "04 ABRIL", Anio, 0, "F"));
+                    Add(new DiasLaborables("05", "05 MAYO", Anio, 0, "F"));
+                    Add(new DiasLaborables("06", "06 JUNIO", Anio, 0, "F"));
+                    Add(new DiasLaborables("07", "07 JULIO", Anio, 0, "F"));
+                    Add(new DiasLaborables("08", "08 AGOSTO", Anio, 0, "F"));
+                    Add(new DiasLaborables("09", "09 SETIEMBRE", Anio, 0, "F"));
+                    Add(new DiasLaborables("10", "10 OCTUBRE", Anio, 0, "F"));
+                    Add(new DiasLaborables("11", "11 NOVIEMBRE", Anio, 0, "F"));
+                    Add(new DiasLaborables("12", "12 DICIEMBRE", Anio, 0, "F"));
+
+                    return GetDiasPorPeriodo(Anio);
+                }
+            }
         }
     }
 }

@@ -14,6 +14,28 @@ namespace Planilla.Business.Entities
     [Table("Vacaciones", Schema = "Planilla")]
     public class Vacaciones : EntityBase, IIdentifiableEntity
     {
+        public Vacaciones(int? año, int? idPersonal, string codPer, string completo, string obs)
+        {
+            Año = año;
+            IdPersonal = idPersonal;
+            CodPer = codPer;
+            IniProg = null;
+            FinProg = null;
+            IniEje1 = null;
+            FinEje1 = null;
+            IniEje2 = null;
+            FinEje2 = null;
+            IniEje3 = null;
+            FinEje3 = null;
+            Completo = completo;
+            Obs = obs;
+        }
+
+        public Vacaciones()
+        {
+
+        }
+
         [DataMember]
         public int IdVacaciones { get; set; }
         [DataMember]

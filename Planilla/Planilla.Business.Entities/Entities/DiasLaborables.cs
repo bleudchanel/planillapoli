@@ -14,6 +14,20 @@ namespace Planilla.Business.Entities
     [Table("DiasLaborables", Schema = "Planilla")]
     public class DiasLaborables : EntityBase, IIdentifiableEntity
     {
+        public DiasLaborables()
+        {
+
+        }
+
+        public DiasLaborables(string codMes, string mes, int? año, byte? diasLab, string cerrado)
+        {            
+            CodMes = codMes;
+            Mes = mes;
+            Año = año;
+            DiasLab = diasLab;
+            Cerrado = cerrado;
+        }
+
         [DataMember]
         public int IdDiasLaborables { get; set; }
         [DataMember]

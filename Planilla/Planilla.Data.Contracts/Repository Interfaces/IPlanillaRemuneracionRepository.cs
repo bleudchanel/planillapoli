@@ -10,6 +10,6 @@ namespace Planilla.Data.Contracts
 {
     public interface IPlanillaRemuneracionRepository : IDataRepository<PlanillaRemuneracion>
     {
-
+        IEnumerable<PlanillaRemuneracion> GetPlanillaPorPeriodo(string Periodo);
     }
 }

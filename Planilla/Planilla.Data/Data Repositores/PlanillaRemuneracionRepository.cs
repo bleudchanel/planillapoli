@@ -1,4 +1,5 @@
-﻿using Planilla.Business.Entities;
+﻿using Core.Common.Extensions;
+using Planilla.Business.Entities;
 using Planilla.Data.Contracts;
 using System;
 using System.Collections.Generic;
@@ -39,6 +40,17 @@ namespace Planilla.Data
             return (from e in entityContext.PlanillaRemuneracionSet
                     where e.IdPlanilla == entity.IdPlanilla
                     select e).FirstOrDefault();
+        }
+
+        public IEnumerable<PlanillaRemuneracion> GetPlanillaPorPeriodo(string Periodo)
+        {
+            using (PlanillaContext entityContext = new PlanillaContext())
+            {
+                return (from e in entityContext.PlanillaRemuneracionSet
+                        where e.Periodo == Periodo && e.TipoPlan == "N"
+                        orderby e.CodPer ascending
+                        select e).ToFullyLoaded();
+            }
         }
     }
 }

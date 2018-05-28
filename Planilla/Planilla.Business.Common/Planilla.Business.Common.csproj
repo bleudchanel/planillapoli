@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IPersonalEngine.cs" />
     <Compile Include="IPlanillaEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -51,6 +52,10 @@
     <ProjectReference Include="..\Planilla.Business.Entities\Planilla.Business.Entities.csproj">
       <Project>{AA990CF5-32B5-474A-9DB5-9B295600B18A}</Project>
       <Name>Planilla.Business.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Planilla.Data.Contracts\Planilla.Data.Contracts.csproj">
+      <Project>{8E671975-30D3-4C1C-9019-C7E299291489}</Project>
+      <Name>Planilla.Data.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
