@@ -18,7 +18,8 @@ namespace Planilla.Business.Entities
         public int IdCargo { get; set; }
         [DataMember]
         public string CodCar { get; set; }
-        [DataMember]
+        [DataMember(Name = "Cargo")] 
+        [Column("Cargo")]
         public string Cargo1 { get; set; }
         [DataMember]
         public Nullable<byte> Estado { get; set; }

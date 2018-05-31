@@ -14,6 +14,52 @@ namespace Planilla.Business.Entities
     [Table("Personal", Schema = "Planilla")]
     public class Personal : EntityBase, IIdentifiableEntity
     {
+        public Personal(string dNI, string apePaterno, string apeMaterno, string nombre, string direccion, int? idUbigeo, string codDistrito, DateTime? fecNac, string telefono, string celular, string email, string sex, string estadoCivil, byte? numHij, DateTime? fecIngreso, string estudios, string grado, string numCol, int? idAreaServicio, string codAre, int? idCargo, string codCar, int? idFondoPen, string codFon, string tipComAFP, string cUSPP, string eVida, decimal? remBas, decimal? asiFam, decimal? rieCaj, string sCTR, int? horLab, string observacion, string estado, DateTime? fecBaja, string entidadCTS, string numCtaCTS)
+        {
+            DNI = dNI;
+            ApePaterno = apePaterno;
+            ApeMaterno = apeMaterno;
+            Nombre = nombre;
+            Direccion = direccion;
+            IdUbigeo = idUbigeo;
+            CodDistrito = codDistrito;
+            FecNac = fecNac;
+            Telefono = telefono;
+            Celular = celular;
+            Email = email;
+            Sex = sex;
+            EstadoCivil = estadoCivil;
+            NumHij = numHij;
+            FecIngreso = fecIngreso;
+            Estudios = estudios;
+            Grado = grado;
+            NumCol = numCol;
+            IdAreaServicio = idAreaServicio;
+            CodAre = codAre;
+            IdCargo = idCargo;
+            CodCar = codCar;
+            IdFondoPen = idFondoPen;
+            CodFon = codFon;
+            TipComAFP = tipComAFP;
+            CUSPP = cUSPP;
+            EVida = eVida;
+            RemBas = remBas;
+            AsiFam = asiFam;
+            RieCaj = rieCaj;
+            SCTR = sCTR;
+            HorLab = horLab;
+            Observacion = observacion;
+            Estado = estado;
+            FecBaja = fecBaja;
+            EntidadCTS = entidadCTS;
+            NumCtaCTS = numCtaCTS;
+        }
+
+        public Personal()
+        {
+
+        }
+
         [DataMember]
         public int IdPersonal { get; set; }
         [DataMember]

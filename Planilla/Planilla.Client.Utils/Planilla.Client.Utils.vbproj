@@ -1119,6 +1119,14 @@
     <Content Include="iconos\zoom_out.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Core.Common\Core.Common.csproj">
+      <Project>{A4A41185-DF19-4AE1-B572-4122A34C1575}</Project>
+      <Name>Core.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Planilla.Business.Entities\Planilla.Business.Entities.csproj">
+      <Project>{AA990CF5-32B5-474A-9DB5-9B295600B18A}</Project>
+      <Name>Planilla.Business.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Planilla.Business\Planilla.Business.csproj">
       <Project>{4d182511-3f1f-4c1f-be1c-12db40997d79}</Project>
       <Name>Planilla.Business</Name>

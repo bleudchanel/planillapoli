@@ -10,6 +10,6 @@ namespace Planilla.Data.Contracts
 {
     public interface IProcedimientoRepository : IDataRepository<Procedimiento>
     {
-
+        Procedimiento AddProcedimientoComplete(Procedimiento entity);
     }
 }

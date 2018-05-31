@@ -14,6 +14,27 @@ namespace Planilla.Business.Entities
     [Table("Procedimiento", Schema = "Planilla")]
     public class Procedimiento : EntityBase, IIdentifiableEntity
     {
+        public Procedimiento(string tipPro, string procedimiento1, 
+            int? idEspecialidad, string codEsp, decimal? precioProcedimiento,
+            decimal? montoMedico, string observacion, string proImprimir)
+        {            
+            TipPro = tipPro;
+            Procedimiento1 = procedimiento1;
+            IdEspecialidad = idEspecialidad;
+            CodEsp = codEsp;
+            PrecioProcedimiento = precioProcedimiento;
+            MontoMedico = montoMedico;
+            Observacion = observacion;
+            ProImprimir = proImprimir;
+            IdAreaLaboratorio = null;
+            AreaLaboratorio = null;
+        }
+
+        public Procedimiento()
+        {
+
+        }
+
         [DataMember]
         public int IdProcedimiento { get; set; }
         [DataMember]
@@ -21,6 +42,7 @@ namespace Planilla.Business.Entities
         [DataMember]
         public string TipPro { get; set; }
         [DataMember(Name = "Procedimiento")]
+        [Column("Procedimiento")]
         public string Procedimiento1 { get; set; }
         [DataMember]
         public Nullable<int> IdEspecialidad { get; set; }

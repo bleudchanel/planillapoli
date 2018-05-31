@@ -1,4 +1,5 @@
-﻿using Planilla.Business.Entities;
+﻿using Core.Common.Utils;
+using Planilla.Business.Entities;
 using Planilla.Data.Contracts;
 using System;
 using System.Collections.Generic;
@@ -40,5 +41,28 @@ namespace Planilla.Data
                     where e.IdProcedimiento == entity.IdProcedimiento
                     select e).FirstOrDefault();
         }
+
+        public Procedimiento AddProcedimientoComplete(Procedimiento entity)
+        {
+            using (PlanillaContext entityContext = new PlanillaContext())
+            {
+                string nCodPro = "P001";
+                var topPro = (from e in entityContext.ProcedimientoSet
+                                       orderby e.CodPro descending
+                                       select e).FirstOrDefault();
+                if (topPro != null)
+                {
+                    nCodPro = topPro.CodPro.Substring(1, topPro.CodPro.Length - 1);
+                    int Cod = Convert.ToInt32(nCodPro) + 1;
+                    nCodPro = 'P' + Utiles.CerosIzquierda(Cod.ToString(), 3);
+                }
+
+                entity.CodPro = nCodPro;
+
+                return Add(entity);
+
+            }
+        }
+
     }
 }

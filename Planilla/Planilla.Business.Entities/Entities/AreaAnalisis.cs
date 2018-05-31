@@ -19,6 +19,7 @@ namespace Planilla.Business.Entities
         [DataMember]
         public string CodArea { get; set; }
         [DataMember(Name = "AreaAnalisis")]
+        [Column("AreaAnalisis")]
         public string AreaAnalisisDes { get; set; }
         public int EntityId { get => IdAreaAnalisis; set => IdAreaAnalisis = value; }
     }

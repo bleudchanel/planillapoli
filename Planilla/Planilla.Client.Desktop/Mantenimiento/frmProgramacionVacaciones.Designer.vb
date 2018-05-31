@@ -37,8 +37,6 @@ Partial Class frmProgramacionVacaciones
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtAnioAProgramar = New System.Windows.Forms.TextBox()
         Me.grpDetalle = New System.Windows.Forms.GroupBox()
-        Me.btnGrabar = New System.Windows.Forms.Button()
-        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.dgvPagoDctoBasico = New System.Windows.Forms.DataGridView()
         Me.IdVacaciones = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Anio = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -53,7 +51,11 @@ Partial Class frmProgramacionVacaciones
         Me.FinEje2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IniEje3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FinEje3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnGrabar = New System.Windows.Forms.Button()
+        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.lblCantidadEmpleados = New System.Windows.Forms.Label()
+        Me.btnExcel = New System.Windows.Forms.Button()
+        Me.btnGenerar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.grpDetalle.SuspendLayout()
@@ -89,6 +91,8 @@ Partial Class frmProgramacionVacaciones
         '
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.btnGenerar)
+        Me.GroupBox1.Controls.Add(Me.btnExcel)
         Me.GroupBox1.Controls.Add(Me.txtAnioAProgramar)
         Me.GroupBox1.Location = New System.Drawing.Point(3, 49)
         Me.GroupBox1.Name = "GroupBox1"
@@ -121,30 +125,6 @@ Partial Class frmProgramacionVacaciones
         Me.grpDetalle.Size = New System.Drawing.Size(1053, 380)
         Me.grpDetalle.TabIndex = 109
         Me.grpDetalle.TabStop = False
-        '
-        'btnGrabar
-        '
-        Me.btnGrabar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnGrabar.BackColor = System.Drawing.Color.White
-        Me.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGrabar.Location = New System.Drawing.Point(917, 501)
-        Me.btnGrabar.Name = "btnGrabar"
-        Me.btnGrabar.Size = New System.Drawing.Size(140, 30)
-        Me.btnGrabar.TabIndex = 111
-        Me.btnGrabar.Text = "&Grabar"
-        Me.btnGrabar.UseVisualStyleBackColor = False
-        '
-        'btnCancelar
-        '
-        Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnCancelar.BackColor = System.Drawing.Color.White
-        Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancelar.Location = New System.Drawing.Point(3, 501)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(140, 30)
-        Me.btnCancelar.TabIndex = 110
-        Me.btnCancelar.Text = "C&ancelar"
-        Me.btnCancelar.UseVisualStyleBackColor = False
         '
         'dgvPagoDctoBasico
         '
@@ -285,6 +265,30 @@ Partial Class frmProgramacionVacaciones
         Me.FinEje3.ReadOnly = True
         Me.FinEje3.Width = 70
         '
+        'btnGrabar
+        '
+        Me.btnGrabar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnGrabar.BackColor = System.Drawing.Color.White
+        Me.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGrabar.Location = New System.Drawing.Point(917, 501)
+        Me.btnGrabar.Name = "btnGrabar"
+        Me.btnGrabar.Size = New System.Drawing.Size(140, 30)
+        Me.btnGrabar.TabIndex = 111
+        Me.btnGrabar.Text = "&Grabar"
+        Me.btnGrabar.UseVisualStyleBackColor = False
+        '
+        'btnCancelar
+        '
+        Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnCancelar.BackColor = System.Drawing.Color.White
+        Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCancelar.Location = New System.Drawing.Point(3, 501)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(140, 30)
+        Me.btnCancelar.TabIndex = 110
+        Me.btnCancelar.Text = "C&ancelar"
+        Me.btnCancelar.UseVisualStyleBackColor = False
+        '
         'lblCantidadEmpleados
         '
         Me.lblCantidadEmpleados.AutoSize = True
@@ -293,6 +297,30 @@ Partial Class frmProgramacionVacaciones
         Me.lblCantidadEmpleados.Size = New System.Drawing.Size(144, 15)
         Me.lblCantidadEmpleados.TabIndex = 112
         Me.lblCantidadEmpleados.Text = "Cantidad de Empleados: 0"
+        '
+        'btnExcel
+        '
+        Me.btnExcel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnExcel.BackColor = System.Drawing.Color.White
+        Me.btnExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnExcel.Location = New System.Drawing.Point(905, 21)
+        Me.btnExcel.Name = "btnExcel"
+        Me.btnExcel.Size = New System.Drawing.Size(140, 30)
+        Me.btnExcel.TabIndex = 128
+        Me.btnExcel.Text = "&Excel"
+        Me.btnExcel.UseVisualStyleBackColor = False
+        '
+        'btnGenerar
+        '
+        Me.btnGenerar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnGenerar.BackColor = System.Drawing.Color.White
+        Me.btnGenerar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGenerar.Location = New System.Drawing.Point(129, 22)
+        Me.btnGenerar.Name = "btnGenerar"
+        Me.btnGenerar.Size = New System.Drawing.Size(140, 30)
+        Me.btnGenerar.TabIndex = 129
+        Me.btnGenerar.Text = "&Generar"
+        Me.btnGenerar.UseVisualStyleBackColor = False
         '
         'frmProgramacionVacaciones
         '
@@ -340,4 +368,6 @@ Partial Class frmProgramacionVacaciones
     Friend WithEvents IniEje3 As DataGridViewTextBoxColumn
     Friend WithEvents FinEje3 As DataGridViewTextBoxColumn
     Friend WithEvents lblCantidadEmpleados As Label
+    Friend WithEvents btnExcel As Button
+    Friend WithEvents btnGenerar As Button
 End Class

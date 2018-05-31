@@ -1,4 +1,5 @@
 ﻿using Core.Common.Extensions;
+using Core.Common.Utils;
 using Planilla.Business.Entities;
 using Planilla.Data.Contracts;
 using System;
@@ -50,6 +51,29 @@ namespace Planilla.Data
                         where e.Estado == "A"
                         orderby e.CodPer descending
                         select e).ToFullyLoaded();
+            }
+        }
+
+
+        public Personal AddPersonalComplete(Personal entity)
+        {
+            using (PlanillaContext entityContext = new PlanillaContext())
+            {
+                string nCodPer = "P001";
+                var topPersonal = (from e in entityContext.PersonalSet
+                                orderby e.CodPer descending
+                                select e).FirstOrDefault();
+                if (topPersonal != null)
+                {
+                    nCodPer = topPersonal.CodPer.Substring(1, topPersonal.CodPer.Length - 1);
+                    int Cod = Convert.ToInt32(nCodPer) + 1;
+                    nCodPer = 'P' + Utiles.CerosIzquierda(Cod.ToString(), 3);
+                }
+
+                entity.CodPer = nCodPer;
+
+                return Add(entity);
+
             }
         }
 

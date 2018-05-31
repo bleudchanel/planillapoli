@@ -336,6 +336,9 @@ namespace Planilla.Business.Entities
         public string CUSPP { get; set; }
         public string Dni { get; set; }
         public string AFP { get; set; }
+        public DateTime FechaIngreso { get; set; }
+        public string Cargo { get; set; }
+        public string Area { get; set; }
 
         public Vacaciones VacacionesPeriodo { get; set; }
 

@@ -69,6 +69,14 @@ namespace Planilla.Business.Managers
             
         }
 
+        public IEnumerable<PlanillaRemuneracion> GetPlanillaGratificacion(int Anio, int Mes)
+        {
+            IEnumerable<PlanillaRemuneracion> resultado = new List<PlanillaRemuneracion>();
+            IPlanillaEngine planillaEngine = _BusinessEngineFactory.GetBusinessEngine<IPlanillaEngine>();
+            resultado = planillaEngine.GetPlanillaGratificacion(Anio, Mes);
+            return resultado;
+        }
+
         public PlanillaRemuneracion UpdatePlanilla(PlanillaRemuneracion planillaRemuneracion)
         {
             IPlanillaRemuneracionRepository remuneracionRepository = _DataRepositoryFactory.GetDataRepository<IPlanillaRemuneracionRepository>();
@@ -76,6 +84,40 @@ namespace Planilla.Business.Managers
             var Persona = remuneracionRepository.Update(planillaRemuneracion);
             Persona.VacacionesPeriodo = vacacionesRepository.Update(planillaRemuneracion.VacacionesPeriodo);
             return Persona;
+        }
+
+        public IEnumerable<PlanillaUnico> GetPlanillaPeriodo(int Anio)
+        {
+            IPlanillaRemuneracionRepository remuneracionRepository = _DataRepositoryFactory.GetDataRepository<IPlanillaRemuneracionRepository>();
+            return remuneracionRepository.GetPlanillasAnio(Anio);
+        }
+
+        
+
+        public void EliminarPlanilla(string Periodo, string TipoPlanilla)
+        {
+            IPlanillaRemuneracionRepository remuneracionRepository = _DataRepositoryFactory.GetDataRepository<IPlanillaRemuneracionRepository>();
+            remuneracionRepository.EliminarPlanilla(Periodo, TipoPlanilla);
+        }
+
+
+        public Personal RegistrarPersonal(Personal personal)
+        {
+            IPersonalRepository personalRepository = _DataRepositoryFactory.GetDataRepository<IPersonalRepository>();
+            if (personal.IdPersonal > 0)
+            {
+                return personalRepository.Update(personal);
+            }
+            else
+            {
+                return personalRepository.AddPersonalComplete(personal);
+            }
+        }
+
+        public Dictionary<String, IEnumerable<ResumenPlanilla>> GetResumenPlanilla(int Anio, int? IdPersonal = 0)
+        {
+            IPlanillaEngine planillaEngine = _BusinessEngineFactory.GetBusinessEngine<IPlanillaEngine>();
+            return planillaEngine.GetPlanillasNormalesResumen(Anio, IdPersonal);
         }
     }
 }

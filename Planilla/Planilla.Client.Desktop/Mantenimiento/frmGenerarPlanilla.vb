@@ -477,6 +477,19 @@ Public Class frmGenerarPlanilla
         Listar()
     End Sub
 
+    Private Sub txtAnioAProgramar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtAnioAProgramar.KeyPress
+        If Asc(e.KeyChar) <> 8 Then
+            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
+                e.Handled = True
+            End If
+        End If
+    End Sub
+
+    Private Sub btnExcel_Click(sender As Object, e As EventArgs) Handles btnExcel.Click
+        Dim dtEx = DataGridViewToDataTable(dgvPlanilla, New List(Of String)(New String() {"IdPersonal"}), "Honk")
+        FncDataTable2Excel(dtEx, "Planilla")
+    End Sub
+
     'Private Sub dgvPlanilla_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPlanilla.CellDoubleClick
     '    If dgvPlanilla.CurrentRow IsNot Nothing AndAlso dgvPlanilla.Rows.Count > 0 Then
     '        Dim IdPlanillaActual As Integer = Me.dgvPlanilla.CurrentRow.Cells.Item(IdPlanilla.Name).Value

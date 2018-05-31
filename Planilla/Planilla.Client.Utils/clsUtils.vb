@@ -10,6 +10,7 @@ Imports System.Xml
 Imports System.Text
 Imports System.Security.Cryptography
 Imports System.Reflection
+Imports Planilla.Business.Entities
 
 Public Class clsUtils
 
@@ -161,7 +162,23 @@ Public Class clsUtils
     End Function
 
 
+    Public Shared Sub ProcComboBoxAGrati(ByVal pComboBox As ComboBox)
+        pComboBox.DataSource = Nothing
 
+        Dim intMes As Integer = FechaHoraServidor.Month
+
+        Dim ObjDataTable As New DataTable
+        ObjDataTable.Columns.Add("IdMes", GetType(Integer))
+        ObjDataTable.Columns.Add("Nombre", GetType(String))
+        ObjDataTable.Rows.Add(7, "07 JULIO")
+        ObjDataTable.Rows.Add(12, "12 DICIEMBRE")
+
+        pComboBox.DataSource = ObjDataTable
+        pComboBox.ValueMember = "IdMes"
+        pComboBox.DisplayMember = "Nombre"
+        pComboBox.SelectedValue = intMes
+
+    End Sub
 
     Public Sub ProcComboBoxAMes(ByVal pComboBox As ComboBox)
         ' Dim ObjAuxiliar As New clsco2_auxiliarBUS
@@ -210,6 +227,26 @@ Public Class clsUtils
         Next
     End Function
 
+    'Public Shared Sub CopyAllToClipBoard(ByVal dgv As DataGridView)
+    '    dgv.SelectAll()
+    '    If dataObj IsNot Nothing Then Clipboard.SetDataObject(dataObj)
+    'End Sub
+
+    'Public Shared Sub ExportClipboard(ByVal dgv As DataGridView)
+    '    CopyAllToClipBoard(dgv)
+    '    Dim xlexcel As Microsoft.Office.Interop.Excel.Application
+    '    Dim xlWorkBook As Microsoft.Office.Interop.Excel.Workbook
+    '    Dim xlWorkSheet As Microsoft.Office.Interop.Excel.Worksheet
+    '    Dim misValue As Object = System.Reflection.Missing.Value
+    '    xlexcel = New Excel.Application()
+    '    xlexcel.Visible = True
+    '    xlWorkBook = xlexcel.Workbooks.Add(misValue)
+    '    xlWorkSheet = CType(xlWorkBook.Worksheets.Item(1), Excel.Worksheet)
+    '    Dim CR As Excel.Range = CType(xlWorkSheet.Cells(1, 1), Excel.Range)
+    '    CR.[Select]()
+    '    xlWorkSheet.PasteSpecial(CR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, True)
+    'End Sub
+
     Public Shared Function RedondeoBCR(ByVal Valor As Decimal) As Decimal
         Dim Redondeado As Decimal = 0
         If (Valor - Math.Round(Valor, 1)) * 100 > 5 Then
@@ -228,6 +265,102 @@ Public Class clsUtils
     ' ''' <remarks></remarks>
     'Public Enum enumTipoOperacion As Integer
 
+    Public Shared Sub fncIngresaEnReportePlanilla(ByRef dtResultado As DataTable,
+                                              ByVal planilla As PlanillaRemuneracion)
+
+        Dim cm As CultureInfo = New CultureInfo("es-ES")
+        Dim format As String = "dd/MM/yyyy"
+        dtResultado.Rows.Add()
+        With dtResultado.Rows(dtResultado.Rows.Count - 1)
+            .Item("COD") = planilla.CodPer
+            .Item("APEPAT") = planilla.ApellidoPaterno
+            .Item("APEMAT") = planilla.ApellidoMaterno
+            .Item("NOMBRES") = planilla.Nombre
+            .Item("DNI") = planilla.Dni
+            .Item("F.INGRESO") = planilla.FechaIngreso.ToString("dd/MM/yyyy")
+            .Item("CARGO") = planilla.Cargo
+            .Item("AREA") = planilla.Area
+            .Item("REGIMEN PENSIONES") = planilla.AFP
+            .Item("CUSPP") = planilla.CUSPP
+            .Item("FLUJO/MIXTA") = planilla.TipComAFP
+            .Item("REM BASICA") = planilla.RemBas
+            .Item("ASIG FAMILIAR") = planilla.AsiFam
+            .Item("SUBSIDIO") = planilla.Subsidio
+            .Item("GRATIFICACION") = planilla.Gratif
+            .Item("REM VACACIONAL") = planilla.RemVac
+            .Item("RIESGO CAJA") = planilla.RieCaj
+            .Item("REINTEGRO") = planilla.Reinte
+            .Item("HORAS EXTRA") = planilla.HE
+            .Item("OTROS INGRESOS") = planilla.OtrIng
+            .Item("TOTAL INGRESOS") = planilla.TotIng
+            .Item("ONP") = planilla.ONP
+            .Item("APORTE OBLIGATORIO") = planilla.ApoObl
+            .Item("PRIMA DE SEGURO") = planilla.PriSeg
+            .Item("COMISION VARIABLE") = planilla.ComVar
+            .Item("QUINTA CATEGORIA") = planilla.Quinta
+            .Item("OTROS DESCUENTOS") = planilla.OtrDes
+            .Item("TOTAL DESCUENTOS") = planilla.TotDes
+            .Item("NETO A PAGAR") = planilla.Neto
+            .Item("ESSALUD") = planilla.Essalud
+            .Item("SCTR") = planilla.SCTR
+            .Item("TOTAL APORTES") = planilla.TotApo
+            .Item("DIAS LAB") = planilla.DiasLab
+            .Item("HORAS LAB") = planilla.HorasLab
+            .Item("INI VAC") = If(planilla.IniVac IsNot Nothing, CDate(planilla.IniVac).ToString("dd/MM/yyyy"), " ")
+            .Item("FIN VAC") = If(planilla.FinVac IsNot Nothing, CDate(planilla.FinVac).ToString("dd/MM/yyyy"), " ")
+            .Item("INI INCAP") = If(planilla.IniIncapacidad IsNot Nothing, CDate(planilla.IniIncapacidad).ToString("dd/MM/yyyy"), " ")
+            .Item("FIN INCAP") = If(planilla.FinIncapacidad IsNot Nothing, CDate(planilla.FinIncapacidad).ToString("dd/MM/yyyy"), " ")
+            .Item("INI SGH") = If(planilla.InicioSinGoceHaber IsNot Nothing, CDate(planilla.InicioSinGoceHaber).ToString("dd/MM/yyyy"), " ")
+            .Item("FIN SGH") = If(planilla.FinSinGoceHaber IsNot Nothing, CDate(planilla.FinSinGoceHaber).ToString("dd/MM/yyyy"), " ")
+        End With
+
+    End Sub
+
+    Public Shared Function fncDataTableReportePlanilla() As DataTable
+        Dim dtResultado As New DataTable
+        dtResultado.Columns.Add("COD", GetType(String))
+        dtResultado.Columns.Add("APEPAT", GetType(String))
+        dtResultado.Columns.Add("APEMAT", GetType(String))
+        dtResultado.Columns.Add("NOMBRES", GetType(String))
+        dtResultado.Columns.Add("DNI", GetType(String))
+        dtResultado.Columns.Add("F.INGRESO", GetType(String))
+        dtResultado.Columns.Add("CARGO", GetType(String))
+        dtResultado.Columns.Add("AREA", GetType(String))
+        dtResultado.Columns.Add("REGIMEN PENSIONES", GetType(String))
+        dtResultado.Columns.Add("CUSPP", GetType(String))
+        dtResultado.Columns.Add("FLUJO/MIXTA", GetType(String))
+        dtResultado.Columns.Add("REM BASICA", GetType(Decimal))
+        dtResultado.Columns.Add("ASIG FAMILIAR", GetType(Decimal))
+        dtResultado.Columns.Add("SUBSIDIO", GetType(Decimal))
+        dtResultado.Columns.Add("GRATIFICACION", GetType(Decimal))
+        dtResultado.Columns.Add("REM VACACIONAL", GetType(Decimal))
+        dtResultado.Columns.Add("RIESGO CAJA", GetType(Decimal))
+        dtResultado.Columns.Add("REINTEGRO", GetType(Decimal))
+        dtResultado.Columns.Add("HORAS EXTRA", GetType(Decimal))
+        dtResultado.Columns.Add("OTROS INGRESOS", GetType(Decimal))
+        dtResultado.Columns.Add("TOTAL INGRESOS", GetType(Decimal))
+        dtResultado.Columns.Add("ONP", GetType(Decimal))
+        dtResultado.Columns.Add("APORTE OBLIGATORIO", GetType(Decimal))
+        dtResultado.Columns.Add("PRIMA DE SEGURO", GetType(Decimal))
+        dtResultado.Columns.Add("COMISION VARIABLE", GetType(Decimal))
+        dtResultado.Columns.Add("QUINTA CATEGORIA", GetType(Decimal))
+        dtResultado.Columns.Add("OTROS DESCUENTOS", GetType(Decimal))
+        dtResultado.Columns.Add("TOTAL DESCUENTOS", GetType(Decimal))
+        dtResultado.Columns.Add("NETO A PAGAR", GetType(Decimal))
+        dtResultado.Columns.Add("ESSALUD", GetType(Decimal))
+        dtResultado.Columns.Add("SCTR", GetType(Decimal))
+        dtResultado.Columns.Add("TOTAL APORTES", GetType(Decimal))
+        dtResultado.Columns.Add("DIAS LAB", GetType(Decimal))
+        dtResultado.Columns.Add("HORAS LAB", GetType(Decimal))
+        dtResultado.Columns.Add("INI VAC", GetType(String))
+        dtResultado.Columns.Add("FIN VAC", GetType(String))
+        dtResultado.Columns.Add("INI INCAP", GetType(String))
+        dtResultado.Columns.Add("FIN INCAP", GetType(String))
+        dtResultado.Columns.Add("INI SGH", GetType(String))
+        dtResultado.Columns.Add("FIN SGH", GetType(String))
+
+        Return dtResultado
+    End Function
 
     Public Shared Function fncDataTableAFP() As DataTable
         Dim dtResultado As New DataTable
@@ -1023,7 +1156,7 @@ Public Class clsUtils
         End Try
     End Function
 
-    Public Shared Function DataGridViewToDataTable(ByVal dtg As DataGridView,
+    Public Shared Function DataGridViewToDataTable(ByVal dtg As DataGridView, ByVal ignore As List(Of String),
     Optional ByVal DataTableName As String = "myDataTable") As DataTable
         Try
             Dim dt As New DataTable(DataTableName)
@@ -1031,17 +1164,25 @@ Public Class clsUtils
             Dim TotalDatagridviewColumns As Integer = dtg.ColumnCount - 1
             'Add Datacolumn
             For Each c As DataGridViewColumn In dtg.Columns
-                Dim idColumn As DataColumn = New DataColumn()
-                idColumn.ColumnName = c.Name
-                dt.Columns.Add(idColumn)
+                If Not ignore.Contains(c.Name) Then
+                    Dim idColumn As DataColumn = New DataColumn()
+                    idColumn.ColumnName = c.Name
+                    dt.Columns.Add(idColumn)
+                End If
             Next
+
+            '' TotalDatagridviewColumns = dt.Columns.Count - 1
             'Now Iterate thru Datagrid and create the data row
             For Each dr As DataGridViewRow In dtg.Rows
                 'Iterate thru datagrid
                 row = dt.NewRow 'Create new row
                 'Iterate thru Column 1 up to the total number of columns
+                Dim iRowCount As Integer = 0
                 For cn As Integer = 0 To TotalDatagridviewColumns
-                    row.Item(cn) = IfNullObj(dr.Cells(cn).Value) ' This Will handle error datagridviewcell on NULL Values
+                    If Not ignore.Contains(dtg.Columns(dr.Cells(cn).ColumnIndex).Name) Then
+                        row.Item(iRowCount) = IfNullObj(dr.Cells(cn).Value) ' This Will handle error datagridviewcell on NULL Values
+                        iRowCount += 1
+                    End If
                 Next
                 'Now add the row to Datarow Collection
                 dt.Rows.Add(row)

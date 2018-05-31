@@ -51,3 +51,9 @@ C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Desktop\obj\Debug\Planill
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Desktop\obj\Debug\Planilla.Client.Desktop.frmGenerarPlanilla.resources
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Desktop\obj\Debug\Planilla.Client.Desktop.frmGenerarAFPNet.resources
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Desktop\obj\Debug\Planilla.Client.Desktop.frmGenerarPDT.resources
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Desktop\obj\Debug\Planilla.Client.Desktop.frmImprimirPlanilla.resources
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Desktop\obj\Debug\Planilla.Client.Desktop.frmEliminarPlanilla.resources
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Desktop\obj\Debug\Planilla.Client.Desktop.frmGenerarPlanillaGratificacion.resources
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Desktop\obj\Debug\Planilla.Client.Desktop.frmProcedimiento.resources
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Desktop\obj\Debug\Planilla.Client.Desktop.frmAnalisisLaboratorio.resources
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Desktop\obj\Debug\Planilla.Client.Desktop.frmResumenAnualPlanillas.resources

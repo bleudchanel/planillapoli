@@ -68,6 +68,9 @@ namespace Planilla.Data
             modelBuilder.Entity<PlanillaRemuneracion>().Ignore(e => e.CUSPP);
             modelBuilder.Entity<PlanillaRemuneracion>().Ignore(e => e.Dni);
             modelBuilder.Entity<PlanillaRemuneracion>().Ignore(e => e.AFP);
+            modelBuilder.Entity<PlanillaRemuneracion>().Ignore(e => e.FechaIngreso);
+            modelBuilder.Entity<PlanillaRemuneracion>().Ignore(e => e.Cargo);
+            modelBuilder.Entity<PlanillaRemuneracion>().Ignore(e => e.Area);
 
 
             modelBuilder.Entity<PlanillaRemuneracion>().Property(e => e.PorApoObl).HasPrecision(18, 4);

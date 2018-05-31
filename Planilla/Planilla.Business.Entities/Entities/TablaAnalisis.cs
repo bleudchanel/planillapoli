@@ -14,6 +14,22 @@ namespace Planilla.Business.Entities
     [Table("TablaAnalisis", Schema = "Planilla")]
     public class TablaAnalisis : EntityBase, IIdentifiableEntity
     {
+        public TablaAnalisis(string analisis, string unidad, int? idProcedimiento, string codPro, string procedimiento, string areaAnalisis)
+        {
+            Analisis = analisis;
+            Unidad = unidad;
+            Titulo = "";
+            IdProcedimiento = idProcedimiento;
+            CodPro = codPro;
+            Procedimiento = procedimiento;
+            AreaLaboratorio = areaAnalisis;
+            AreaAnalisis = areaAnalisis;
+            TituloPerfil = "Empty";            
+        }
+
+        public TablaAnalisis()
+        { }
+
         [DataMember]
         public int IdAnalisis { get; set; }
         [DataMember]

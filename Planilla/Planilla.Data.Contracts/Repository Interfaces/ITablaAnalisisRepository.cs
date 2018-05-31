@@ -10,6 +10,6 @@ namespace Planilla.Data.Contracts
 {
     public interface ITablaAnalisisRepository : IDataRepository<TablaAnalisis>
     {
-
+        TablaAnalisis AddTablaAnalisisComplete(TablaAnalisis entity);
     }
 }

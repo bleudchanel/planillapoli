@@ -59,6 +59,41 @@ namespace Planilla.Business.Managers
             return fondoPensionesRepository.Get();
         }
 
+        public IEnumerable<Procedimiento> GetProcedimientos()
+        {
+            IProcedimientoRepository procedimientoRepository = _DataRepositoryFactory.GetDataRepository<IProcedimientoRepository>();
+            return procedimientoRepository.Get();
+        }
+
+        public IEnumerable<AreaAnalisis> GetAreaAnalisis()
+        {
+            IAreaAnalisisRepository analisisRepository = _DataRepositoryFactory.GetDataRepository<IAreaAnalisisRepository>();
+            return analisisRepository.Get();
+        }
+
+        public IEnumerable<TablaAnalisis> GetTablasAnalisis()
+        {
+            ITablaAnalisisRepository tablaAnalisis = _DataRepositoryFactory.GetDataRepository<ITablaAnalisisRepository>();
+            return tablaAnalisis.Get();
+        }
+
+        public IEnumerable<Ubigeo> GetUbigeo()
+        {
+            IUbigeoRepository UbigeoRepository = _DataRepositoryFactory.GetDataRepository<IUbigeoRepository>();
+            return UbigeoRepository.Get();
+        }
+
+        public IEnumerable<AreaServicio> GetAreasServicio()
+        {
+            IAreaServicioRepository areaServicioRepository = _DataRepositoryFactory.GetDataRepository<IAreaServicioRepository>();
+            return areaServicioRepository.Get();
+        }
+
+        public IEnumerable<Cargo> GetCargos()
+        {
+            ICargoRepository cargoRepository = _DataRepositoryFactory.GetDataRepository<ICargoRepository>();
+            return cargoRepository.Get();
+        }
 
         public FondoPensiones RegistrarFondoPensiones(FondoPensiones fondo)
         {
@@ -72,5 +107,34 @@ namespace Planilla.Business.Managers
                 return fondoRepository.AddFondoPensionesComplete(fondo);
             }
         }
+
+        public Procedimiento RegistrarProcedimiento(Procedimiento procedimiento)
+        {
+            IProcedimientoRepository procedimientoRepository = _DataRepositoryFactory.GetDataRepository<IProcedimientoRepository>();
+            
+            if (procedimiento.IdProcedimiento > 0)
+            {
+             //   procedimiento.CodEsp = 
+                return procedimientoRepository.Update(procedimiento);
+            }
+            else
+            {
+                return procedimientoRepository.AddProcedimientoComplete(procedimiento);
+            }
+        }
+
+        public TablaAnalisis RegistrarTablaAnalisis(TablaAnalisis tabla)
+        {
+            ITablaAnalisisRepository tablaAnalisisRepository = _DataRepositoryFactory.GetDataRepository<ITablaAnalisisRepository>();
+            if (tabla.IdAnalisis > 0)
+            {
+                return tablaAnalisisRepository.Update(tabla);
+            }            
+            else
+            {
+                return tablaAnalisisRepository.AddTablaAnalisisComplete(tabla);
+            }
+        }
+
     }
 }

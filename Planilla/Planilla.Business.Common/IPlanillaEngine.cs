@@ -1,5 +1,6 @@
 ﻿using Core.Common.Contracts;
 using Planilla.Business.Entities;
+using Planilla.Data.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,7 @@ namespace Planilla.Business.Common
     {
         IEnumerable<PlanillaRemuneracion> GenerarPlanilla(string Periodo);
         IEnumerable<PlanillaRemuneracion> GetPlanillaNormalPorPeriodo(int Anio, int Mes);
+        IEnumerable<PlanillaRemuneracion> GetPlanillaGratificacion(int Anio, int Mes);
+        Dictionary<String, IEnumerable<ResumenPlanilla>> GetPlanillasNormalesResumen(int Anio, int? IdPersonal = 0);
     }
 }

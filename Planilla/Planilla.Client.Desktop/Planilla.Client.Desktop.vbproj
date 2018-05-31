@@ -87,10 +87,22 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Mantenimiento\frmAnalisisLaboratorio.Designer.vb">
+      <DependentUpon>frmAnalisisLaboratorio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\frmAnalisisLaboratorio.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Mantenimiento\FrmAportesEmpleador.Designer.vb">
       <DependentUpon>FrmAportesEmpleador.vb</DependentUpon>
     </Compile>
     <Compile Include="Mantenimiento\FrmAportesEmpleador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\frmEliminarPlanilla.Designer.vb">
+      <DependentUpon>frmEliminarPlanilla.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\frmEliminarPlanilla.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Mantenimiento\frmEspecialidad.Designer.vb">
@@ -129,6 +141,24 @@
     <Compile Include="Mantenimiento\frmGenerarPlanilla.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Mantenimiento\frmGenerarPlanillaGratificacion.Designer.vb">
+      <DependentUpon>frmGenerarPlanillaGratificacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\frmGenerarPlanillaGratificacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\frmImprimirPlanilla.Designer.vb">
+      <DependentUpon>frmImprimirPlanilla.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\frmImprimirPlanilla.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\frmProcedimiento.Designer.vb">
+      <DependentUpon>frmProcedimiento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\frmProcedimiento.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Mantenimiento\frmProgramacionVacaciones.Designer.vb">
       <DependentUpon>frmProgramacionVacaciones.vb</DependentUpon>
     </Compile>
@@ -139,6 +169,12 @@
       <DependentUpon>frmPersonal.vb</DependentUpon>
     </Compile>
     <Compile Include="Mantenimiento\frmPersonal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\frmResumenAnualPlanillas.Designer.vb">
+      <DependentUpon>frmResumenAnualPlanillas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\frmResumenAnualPlanillas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="modPersonal.vb" />
@@ -165,11 +201,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Mantenimiento\frmAnalisisLaboratorio.resx">
+      <DependentUpon>frmAnalisisLaboratorio.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\FrmAportesEmpleador.resx">
       <DependentUpon>FrmAportesEmpleador.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\frmDiasLabMes.resx">
       <DependentUpon>frmDiasLabMes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\frmEliminarPlanilla.resx">
+      <DependentUpon>frmEliminarPlanilla.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\frmEspecialidad.resx">
       <DependentUpon>frmEspecialidad.vb</DependentUpon>
@@ -186,11 +228,23 @@
     <EmbeddedResource Include="Mantenimiento\frmGenerarPlanilla.resx">
       <DependentUpon>frmGenerarPlanilla.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\frmGenerarPlanillaGratificacion.resx">
+      <DependentUpon>frmGenerarPlanillaGratificacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\frmImprimirPlanilla.resx">
+      <DependentUpon>frmImprimirPlanilla.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\frmPersonal.resx">
+      <DependentUpon>frmPersonal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\frmProcedimiento.resx">
+      <DependentUpon>frmProcedimiento.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\frmProgramacionVacaciones.resx">
       <DependentUpon>frmProgramacionVacaciones.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimiento\frmRemuneracionBasica.resx">
-      <DependentUpon>frmPersonal.vb</DependentUpon>
+    <EmbeddedResource Include="Mantenimiento\frmResumenAnualPlanillas.resx">
+      <DependentUpon>frmResumenAnualPlanillas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

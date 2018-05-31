@@ -76,4 +76,9 @@ Public Class frmDiasLabMes
         Listar()
 
     End Sub
+
+    Private Sub btnGenerar_Click(sender As Object, e As EventArgs) Handles btnGenerar.Click
+        _dias = diasManager.GetDiasLaborales(txtAnioAProgramar.Text)
+        Listar()
+    End Sub
 End Class

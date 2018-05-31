@@ -1,4 +1,5 @@
-﻿using Planilla.Business.Entities;
+﻿using Core.Common.Utils;
+using Planilla.Business.Entities;
 using Planilla.Data.Contracts;
 using System;
 using System.Collections.Generic;
@@ -39,6 +40,28 @@ namespace Planilla.Data
             return (from e in entityContext.TablaAnalisisSet
                     where e.IdAnalisis == entity.IdAnalisis
                     select e).FirstOrDefault();
+        }
+
+        public TablaAnalisis AddTablaAnalisisComplete(TablaAnalisis entity)
+        {
+            using (PlanillaContext entityContext = new PlanillaContext())
+            {
+                string nCodAna = "A0001";
+                var topPro = (from e in entityContext.TablaAnalisisSet
+                              orderby e.CodAna descending
+                              select e).FirstOrDefault();
+                if (topPro != null)
+                {
+                    nCodAna = topPro.CodAna.Substring(1, topPro.CodAna.Length - 1);
+                    int Cod = Convert.ToInt32(nCodAna) + 1;
+                    nCodAna = 'P' + Utiles.CerosIzquierda(Cod.ToString(), 4);
+                }
+
+                entity.CodAna = nCodAna;
+
+                return Add(entity);
+
+            }
         }
     }
 }

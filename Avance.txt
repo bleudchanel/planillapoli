@@ -1,0 +1,39 @@
+Al 31/05/2018
+
+Se completaron los siguientes formularios :
+Mantenimiento de Personal
+Mantenimiento de Especialidad
+Mantenimiento de Procedimiento
+Mantenimiento de Análisis de Laboratorio (Falta la funcionalidad de Valores Referenciales)
+Programación y Ejecución de Vacaciones (Las actualizaciones se hacen en la misma grilla y se presiona Guardar para grabar los cambios. 
+										Puede que haya una excepción debido al formato de Fecha dependiendo del idioma)
+Mantenimiento Especificación de Días Laborables
+Mantenimiento Conceptos Aportes Empleador
+Mantenimiento Entidades Fondo de Pensiones
+Generar Planilla (Cada que se modifica un monto en los TextBox, se debe presionar Enter para que el cambio se calcule, de otro modo el cambio se pierde).
+Imprimir Planilla (No genera Boletas. No genera Resumen)
+Eliminar Planilla
+Generar Planilla de Gratificaciones
+Generar Archivo AFP Net
+Generar Resumen Anual de Planillas
+Generar PDT PLAME (No genera archivos de text)
+
+Formularios Pendientes:
+Mantenimiento Procedimiento de Laboratorio
+Mantenimiento de Médicos (Ya que no se les paga en la planilla se ha obviado por ahora)
+Reporte de Médicos 
+Reporte de Personal (Se considera que el formulario de Mantenimiento de Personal ya cumple con esta función)
+Reporte de Vacaciones (Se considera que el formulario de Mantenimiento de Vacaciones ya cumple con esta función)
+Mantenimiento de Áreas/Servicios
+Mantenimiento de Cargos
+Imprimir Planilla de Gratificaciones (Se considera que el formulario de Genera Planilla de Gratificaciones ya cumple con esta función)
+Generar Proyección de Pagos
+Gestión de Contratos
+Gestión de CTS
+Resumen CTS por Periodo
+
+Funcionalidad Pendiente:
+Valores Referenciales en Mantenimiento de Análisis de Laboratorio
+Generar Boletas
+Generar Resumen de Planilla desde Imprimir Planilla
+Generar archivos de Texto PDT Plame

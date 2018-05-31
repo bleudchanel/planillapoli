@@ -22,21 +22,22 @@ Partial Class frmDiasLabMes
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.dgvPagoDctoBasico = New System.Windows.Forms.DataGridView()
-        Me.btnCancelar = New System.Windows.Forms.Button()
-        Me.btnGrabar = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtAnioAProgramar = New System.Windows.Forms.TextBox()
         Me.IdDiasLaborales = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CodMes = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Anio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Mes = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DiasLaborados = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Cerrado = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.btnGrabar = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtAnioAProgramar = New System.Windows.Forms.TextBox()
+        Me.btnGenerar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.dgvPagoDctoBasico, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -87,6 +88,49 @@ Partial Class frmDiasLabMes
         Me.dgvPagoDctoBasico.Size = New System.Drawing.Size(401, 326)
         Me.dgvPagoDctoBasico.TabIndex = 87
         '
+        'IdDiasLaborales
+        '
+        Me.IdDiasLaborales.HeaderText = "IdDiasLaborales"
+        Me.IdDiasLaborales.Name = "IdDiasLaborales"
+        Me.IdDiasLaborales.Visible = False
+        '
+        'CodMes
+        '
+        Me.CodMes.HeaderText = "CodMes"
+        Me.CodMes.Name = "CodMes"
+        Me.CodMes.Visible = False
+        Me.CodMes.Width = 60
+        '
+        'Anio
+        '
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Anio.DefaultCellStyle = DataGridViewCellStyle3
+        Me.Anio.HeaderText = "Anio"
+        Me.Anio.Name = "Anio"
+        Me.Anio.Width = 60
+        '
+        'Mes
+        '
+        Me.Mes.HeaderText = "Mes"
+        Me.Mes.Name = "Mes"
+        Me.Mes.Width = 160
+        '
+        'DiasLaborados
+        '
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle4.Format = "N0"
+        DataGridViewCellStyle4.NullValue = "0"
+        Me.DiasLaborados.DefaultCellStyle = DataGridViewCellStyle4
+        Me.DiasLaborados.HeaderText = "Dias"
+        Me.DiasLaborados.Name = "DiasLaborados"
+        Me.DiasLaborados.Width = 50
+        '
+        'Cerrado
+        '
+        Me.Cerrado.HeaderText = "Cerrado?"
+        Me.Cerrado.Name = "Cerrado"
+        Me.Cerrado.Width = 70
+        '
         'btnCancelar
         '
         Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
@@ -113,6 +157,7 @@ Partial Class frmDiasLabMes
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.btnGenerar)
         Me.GroupBox1.Controls.Add(Me.txtAnioAProgramar)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 62)
         Me.GroupBox1.Name = "GroupBox1"
@@ -134,48 +179,17 @@ Partial Class frmDiasLabMes
         Me.txtAnioAProgramar.TabIndex = 108
         Me.txtAnioAProgramar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'IdDiasLaborales
+        'btnGenerar
         '
-        Me.IdDiasLaborales.HeaderText = "IdDiasLaborales"
-        Me.IdDiasLaborales.Name = "IdDiasLaborales"
-        Me.IdDiasLaborales.Visible = False
-        '
-        'CodMes
-        '
-        Me.CodMes.HeaderText = "CodMes"
-        Me.CodMes.Name = "CodMes"
-        Me.CodMes.Visible = False
-        Me.CodMes.Width = 60
-        '
-        'Anio
-        '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Anio.DefaultCellStyle = DataGridViewCellStyle1
-        Me.Anio.HeaderText = "Anio"
-        Me.Anio.Name = "Anio"
-        Me.Anio.Width = 60
-        '
-        'Mes
-        '
-        Me.Mes.HeaderText = "Mes"
-        Me.Mes.Name = "Mes"
-        Me.Mes.Width = 160
-        '
-        'DiasLaborados
-        '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle2.Format = "N0"
-        DataGridViewCellStyle2.NullValue = "0"
-        Me.DiasLaborados.DefaultCellStyle = DataGridViewCellStyle2
-        Me.DiasLaborados.HeaderText = "Dias"
-        Me.DiasLaborados.Name = "DiasLaborados"
-        Me.DiasLaborados.Width = 50
-        '
-        'Cerrado
-        '
-        Me.Cerrado.HeaderText = "Cerrado?"
-        Me.Cerrado.Name = "Cerrado"
-        Me.Cerrado.Width = 70
+        Me.btnGenerar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnGenerar.BackColor = System.Drawing.Color.White
+        Me.btnGenerar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGenerar.Location = New System.Drawing.Point(150, 21)
+        Me.btnGenerar.Name = "btnGenerar"
+        Me.btnGenerar.Size = New System.Drawing.Size(140, 30)
+        Me.btnGenerar.TabIndex = 109
+        Me.btnGenerar.Text = "&Generar"
+        Me.btnGenerar.UseVisualStyleBackColor = False
         '
         'frmDiasLabMes
         '
@@ -212,4 +226,5 @@ Partial Class frmDiasLabMes
     Friend WithEvents Mes As DataGridViewTextBoxColumn
     Friend WithEvents DiasLaborados As DataGridViewTextBoxColumn
     Friend WithEvents Cerrado As DataGridViewTextBoxColumn
+    Friend WithEvents btnGenerar As Button
 End Class
