@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A6D025A-5C18-4D11-9E68-CC8EDBAD9FEB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UI.Policlinico</RootNamespace>
+    <AssemblyName>UI.Policlinico</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\LOGOAPP.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject>UI.Policlinico.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dashboard\frmPanelControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\frmPanelControl.Designer.cs">
+      <DependentUpon>frmPanelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logistica\fmrGuiasFarmacia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logistica\fmrGuiasFarmacia.Designer.cs">
+      <DependentUpon>fmrGuiasFarmacia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logistica\frmCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logistica\frmCategoria.Designer.cs">
+      <DependentUpon>frmCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logistica\frmMedicamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logistica\frmMedicamentos.Designer.cs">
+      <DependentUpon>frmMedicamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logistica\frmMenuLogistica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logistica\frmMenuLogistica.Designer.cs">
+      <DependentUpon>frmMenuLogistica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logistica\frmProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logistica\frmProveedor.Designer.cs">
+      <DependentUpon>frmProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logistica\frmServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logistica\frmServicio.Designer.cs">
+      <DependentUpon>frmServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logistica\frmTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logistica\frmTipo.Designer.cs">
+      <DependentUpon>frmTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logistica\frmUnidadesMedida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logistica\frmUnidadesMedida.Designer.cs">
+      <DependentUpon>frmUnidadesMedida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\MantenedorSession.cs" />
+    <Compile Include="Persona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Persona.Designer.cs">
+      <DependentUpon>Persona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonaAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonaAddEdit.Designer.cs">
+      <DependentUpon>PersonaAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frmAnalisisLaboratorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frmAnalisisLaboratorio.Designer.cs">
+      <DependentUpon>frmAnalisisLaboratorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frmAreasServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frmAreasServicios.Designer.cs">
+      <DependentUpon>frmAreasServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frmCargos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frmCargos.Designer.cs">
+      <DependentUpon>frmCargos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frmConceptoAportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frmConceptoAportes.Designer.cs">
+      <DependentUpon>frmConceptoAportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frmDiaLaborales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frmDiaLaborales.Designer.cs">
+      <DependentUpon>frmDiaLaborales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frmEliminarPlanilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frmEliminarPlanilla.Designer.cs">
+      <DependentUpon>frmEliminarPlanilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frmEntidadesFondoPensiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frmEntidadesFondoPensiones.Designer.cs">
+      <DependentUpon>frmEntidadesFondoPensiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frm0001Especialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frm0001Especialidad.Designer.cs">
+      <DependentUpon>frm0001Especialidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frmGenerarArchivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frmGenerarArchivo.Designer.cs">
+      <DependentUpon>frmGenerarArchivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frmGenerarPlanilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frmGenerarPlanilla.Designer.cs">
+      <DependentUpon>frmGenerarPlanilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frmGenerarPlanillaGratificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frmGenerarPlanillaGratificaciones.Designer.cs">
+      <DependentUpon>frmGenerarPlanillaGratificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frmGestionDeContratos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frmGestionDeContratos.Designer.cs">
+      <DependentUpon>frmGestionDeContratos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frmGestionDeCTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frmGestionDeCTS.Designer.cs">
+      <DependentUpon>frmGestionDeCTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frmImprimirPlanilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frmImprimirPlanilla.Designer.cs">
+      <DependentUpon>frmImprimirPlanilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frmImprimirPlanillaGratificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frmImprimirPlanillaGratificaciones.Designer.cs">
+      <DependentUpon>frmImprimirPlanillaGratificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frmMedicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frmMedicos.Designer.cs">
+      <DependentUpon>frmMedicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frm0000MenuPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frm0000MenuPersonal.Designer.cs">
+      <DependentUpon>frm0000MenuPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frmPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frmPersonal.Designer.cs">
+      <DependentUpon>frmPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frmPFTPlame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frmPFTPlame.Designer.cs">
+      <DependentUpon>frmPFTPlame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frmProcedimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frmProcedimientos.Designer.cs">
+      <DependentUpon>frmProcedimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frmProcedimientosLaboratorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frmProcedimientosLaboratorios.Designer.cs">
+      <DependentUpon>frmProcedimientosLaboratorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frmProgramacionVacaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frmProgramacionVacaciones.Designer.cs">
+      <DependentUpon>frmProgramacionVacaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frmProyeccionDePagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frmProyeccionDePagos.Designer.cs">
+      <DependentUpon>frmProyeccionDePagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frmReporteVacaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frmReporteVacaciones.Designer.cs">
+      <DependentUpon>frmReporteVacaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frmResumenAnualDePlanillas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frmResumenAnualDePlanillas.Designer.cs">
+      <DependentUpon>frmResumenAnualDePlanillas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\frmResumenCTSPorPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\frmResumenCTSPorPeriodo.Designer.cs">
+      <DependentUpon>frmResumenCTSPorPeriodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmReportVisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmReportVisor.Designer.cs">
+      <DependentUpon>FrmReportVisor.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dashboard\frmPanelControl.resx">
+      <DependentUpon>frmPanelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logistica\fmrGuiasFarmacia.resx">
+      <DependentUpon>fmrGuiasFarmacia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logistica\frmCategoria.resx">
+      <DependentUpon>frmCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logistica\frmMedicamentos.resx">
+      <DependentUpon>frmMedicamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logistica\frmMenuLogistica.resx">
+      <DependentUpon>frmMenuLogistica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logistica\frmProveedor.resx">
+      <DependentUpon>frmProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logistica\frmServicio.resx">
+      <DependentUpon>frmServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logistica\frmTipo.resx">
+      <DependentUpon>frmTipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logistica\frmUnidadesMedida.resx">
+      <DependentUpon>frmUnidadesMedida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persona.resx">
+      <DependentUpon>Persona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonaAddEdit.resx">
+      <DependentUpon>PersonaAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personal\frm0001Especialidad.resx">
+      <DependentUpon>frm0001Especialidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personal\frmImprimirPlanillaGratificaciones.resx">
+      <DependentUpon>frmImprimirPlanillaGratificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personal\frm0000MenuPersonal.es-PE.resx">
+      <DependentUpon>frm0000MenuPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personal\frm0000MenuPersonal.resx">
+      <DependentUpon>frm0000MenuPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reportes\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FrmReportVisor.resx">
+      <DependentUpon>FrmReportVisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\dd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL.Policlinico\BL.Policlinico.csproj">
+      <Project>{7c03fd49-4b63-4b6e-b762-8395e6659913}</Project>
+      <Name>BL.Policlinico</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity.Policlinico\Entity.Policlinico.csproj">
+      <Project>{e6554279-6174-45e6-96f0-02131aee0b39}</Project>
+      <Name>Entity.Policlinico</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UI.Planilla\Planilla.Client.Desktop\Planilla.Client.Desktop.vbproj">
+      <Project>{071047de-9cb1-4373-8f89-be1404ea15cd}</Project>
+      <Name>Planilla.Client.Desktop</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\doctor.png" />
+    <Content Include="Resources\FONDO.png" />
+    <Content Include="Resources\FONDO_PRINC.png" />
+    <Content Include="Resources\LOGO.ico" />
+    <Content Include="Resources\LOGOAPP.ico" />
+    <Content Include="Resources\PERSONAL.ico" />
+    <Content Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

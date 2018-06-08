@@ -1,0 +1,5 @@
+E:\Descargas\POLICLINICO_08022018\POLICLINICO\SGPoliclinico\Entity.Policlinico\bin\Release\Entity.Policlinico.dll
+E:\Descargas\POLICLINICO_08022018\POLICLINICO\SGPoliclinico\Entity.Policlinico\bin\Release\Entity.Policlinico.pdb
+E:\Descargas\POLICLINICO_08022018\POLICLINICO\SGPoliclinico\Entity.Policlinico\obj\Release\Entity.Policlinico.csprojResolveAssemblyReference.cache
+E:\Descargas\POLICLINICO_08022018\POLICLINICO\SGPoliclinico\Entity.Policlinico\obj\Release\Entity.Policlinico.dll
+E:\Descargas\POLICLINICO_08022018\POLICLINICO\SGPoliclinico\Entity.Policlinico\obj\Release\Entity.Policlinico.pdb
