@@ -53,6 +53,24 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -97,6 +115,12 @@
       <DependentUpon>FrmAportesEmpleador.vb</DependentUpon>
     </Compile>
     <Compile Include="Mantenimiento\FrmAportesEmpleador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\frmContratos.Designer.vb">
+      <DependentUpon>frmContratos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\frmContratos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Mantenimiento\frmEliminarPlanilla.Designer.vb">
@@ -153,6 +177,12 @@
     <Compile Include="Mantenimiento\frmImprimirPlanilla.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Mantenimiento\frmPlanillaCTS.Designer.vb">
+      <DependentUpon>frmPlanillaCTS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\frmPlanillaCTS.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Mantenimiento\frmProcedimiento.Designer.vb">
       <DependentUpon>frmProcedimiento.vb</DependentUpon>
     </Compile>
@@ -163,6 +193,12 @@
       <DependentUpon>frmProgramacionVacaciones.vb</DependentUpon>
     </Compile>
     <Compile Include="Mantenimiento\frmProgramacionVacaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\frmProyeccionPago.Designer.vb">
+      <DependentUpon>frmProyeccionPago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\frmProyeccionPago.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Mantenimiento\frmRemuneracionBasica.Designer.vb">
@@ -199,6 +235,12 @@
     <Compile Include="Principal\frmPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportes\frmReporteResumenPlanilla.Designer.vb">
+      <DependentUpon>frmReporteResumenPlanilla.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmReporteResumenPlanilla.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Mantenimiento\frmAnalisisLaboratorio.resx">
@@ -206,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\FrmAportesEmpleador.resx">
       <DependentUpon>FrmAportesEmpleador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\frmContratos.resx">
+      <DependentUpon>frmContratos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\frmDiasLabMes.resx">
       <DependentUpon>frmDiasLabMes.vb</DependentUpon>
@@ -237,11 +282,17 @@
     <EmbeddedResource Include="Mantenimiento\frmPersonal.resx">
       <DependentUpon>frmPersonal.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\frmPlanillaCTS.resx">
+      <DependentUpon>frmPlanillaCTS.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\frmProcedimiento.resx">
       <DependentUpon>frmProcedimiento.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\frmProgramacionVacaciones.resx">
       <DependentUpon>frmProgramacionVacaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\frmProyeccionPago.resx">
+      <DependentUpon>frmProyeccionPago.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\frmResumenAnualPlanillas.resx">
       <DependentUpon>frmResumenAnualPlanillas.vb</DependentUpon>
@@ -255,6 +306,11 @@
     <EmbeddedResource Include="Principal\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Boletas.rdlc" />
+    <EmbeddedResource Include="Reportes\frmReporteResumenPlanilla.resx">
+      <DependentUpon>frmReporteResumenPlanilla.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ResumenPlanilla.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
@@ -3299,5 +3355,22 @@
   <ItemGroup>
     <None Include="Resources\zoom_out.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

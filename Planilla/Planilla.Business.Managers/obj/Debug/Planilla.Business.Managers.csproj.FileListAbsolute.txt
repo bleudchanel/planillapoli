@@ -23,8 +23,8 @@ C:\Users\Usuario\planillapoli\Planilla\Planilla.Business.Managers\bin\Debug\Plan
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Business.Managers\bin\Debug\Planilla.Data.dll.config
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Business.Managers\bin\Debug\Planilla.Business.pdb
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Business.Managers\bin\Debug\Planilla.Business.Common.pdb
-C:\Users\Usuario\planillapoli\Planilla\Planilla.Business.Managers\obj\Debug\Planilla.Business.Managers.csprojResolveAssemblyReference.cache
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Business.Managers\obj\Debug\Planilla.Business.Managers.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Business.Managers\obj\Debug\Planilla.Business.Managers.csproj.CopyComplete
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Business.Managers\obj\Debug\Planilla.Business.Managers.dll
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Business.Managers\obj\Debug\Planilla.Business.Managers.pdb
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Business.Managers\obj\Debug\Planilla.Business.Managers.csprojAssemblyReference.cache

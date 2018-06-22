@@ -5,7 +5,7 @@ c:\users\usuario\source\repos\Planilla\Core.Common.Contracts\obj\Debug\Core.Comm
 c:\users\usuario\source\repos\Planilla\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.pdb
 C:\Users\Usuario\planillapoli\Planilla\Core.Common.Contracts\bin\Debug\Core.Common.Contracts.dll
 C:\Users\Usuario\planillapoli\Planilla\Core.Common.Contracts\bin\Debug\Core.Common.Contracts.pdb
-C:\Users\Usuario\planillapoli\Planilla\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.csprojResolveAssemblyReference.cache
 C:\Users\Usuario\planillapoli\Planilla\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\planillapoli\Planilla\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.dll
 C:\Users\Usuario\planillapoli\Planilla\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.pdb
+C:\Users\Usuario\planillapoli\Planilla\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.csprojAssemblyReference.cache

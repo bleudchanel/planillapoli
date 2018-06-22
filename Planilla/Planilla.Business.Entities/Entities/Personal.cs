@@ -60,6 +60,11 @@ namespace Planilla.Business.Entities
 
         }
 
+        public string GetNombre()
+        {
+            return ApePaterno + " " + ApeMaterno + ", " + Nombre;
+        }
+
         [DataMember]
         public int IdPersonal { get; set; }
         [DataMember]

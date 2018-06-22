@@ -15,6 +15,7 @@ namespace Planilla.Business.Entities
     public class Medico : EntityBase, IIdentifiableEntity
     {
         [DataMember]
+        [Column("Id_Medico")]
         public int IdMedico { get; set; }
         [DataMember]
         public string CodMed { get; set; }

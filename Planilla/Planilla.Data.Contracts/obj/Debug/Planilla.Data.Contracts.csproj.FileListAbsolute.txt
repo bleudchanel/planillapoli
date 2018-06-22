@@ -31,8 +31,8 @@ C:\Users\Usuario\planillapoli\Planilla\Planilla.Data.Contracts\bin\Debug\Planill
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Data.Contracts\bin\Debug\Planilla.Business.Entities.dll.config
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Data.Contracts\bin\Debug\EntityFramework.xml
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Data.Contracts\bin\Debug\FluentValidation.xml
-C:\Users\Usuario\planillapoli\Planilla\Planilla.Data.Contracts\obj\Debug\Planilla.Data.Contracts.csprojResolveAssemblyReference.cache
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Data.Contracts\obj\Debug\Planilla.Data.Contracts.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Data.Contracts\obj\Debug\Planilla.Data.Contracts.csproj.CopyComplete
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Data.Contracts\obj\Debug\Planilla.Data.Contracts.dll
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Data.Contracts\obj\Debug\Planilla.Data.Contracts.pdb
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Data.Contracts\obj\Debug\Planilla.Data.Contracts.csprojAssemblyReference.cache

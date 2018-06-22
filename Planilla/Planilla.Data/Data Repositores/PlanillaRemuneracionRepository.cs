@@ -119,6 +119,32 @@ namespace Planilla.Data
         }
 
 
+        public IEnumerable<PlanillaRemuneracion> PlanillasEnPeriodoPorCTS(int Mes, int Anio)
+        {
+            int AnioAnterior = Anio - 1;
+            var Periodos = new string[] { };
+            string PeriodoGrati = (Mes == 5) ? (AnioAnterior + "12") : (Anio + "07");
+            string PeriodoHasta = Anio.ToString();
+            
+            if (Mes == 5)
+            {
+                Periodos = new string[] { AnioAnterior.ToString() + "11", AnioAnterior.ToString() + "12", Anio.ToString() + "01", Anio.ToString() + "02", Anio.ToString() + "03", Anio.ToString() + "04" };
+            }
+            else
+            {
+                Periodos = new string[] { Anio.ToString() + "05", Anio.ToString() + "06", Anio.ToString() + "07", Anio.ToString() + "08", Anio.ToString() + "09", Anio.ToString() + "10" };
+            }
+
+            using (PlanillaContext entityContext = new PlanillaContext())
+            {
+                var planilla = (from e in entityContext.PlanillaRemuneracionSet
+                                where (Periodos.Contains(e.Periodo) && e.TipoPlan == "N") || (e.Periodo == PeriodoGrati && e.TipoPlan == "G")
+                                select e).ToFullyLoaded();
+                return planilla;
+            }
+
+        }
+
 
         public IEnumerable<PlanillaRemuneracion> GetPlanillaGratificacionSimple(string Periodo)
         {

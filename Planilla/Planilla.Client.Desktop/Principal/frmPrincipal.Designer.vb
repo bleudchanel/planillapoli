@@ -46,15 +46,18 @@ Partial Class frmPrincipal
         Me.EliminarPlanillaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.GenerarPlanillaDeGratificacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StatusStrip = New System.Windows.Forms.StatusStrip()
-        Me.lblPrDatos = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.AFPNetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GenerarArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AnálisisYProyeccionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResumenAnualDePlanillasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SUNATToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PDTPLAMEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StatusStrip = New System.Windows.Forms.StatusStrip()
+        Me.lblPrDatos = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.CTSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GestiónDeCTSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProyecciónDePagosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -62,7 +65,7 @@ Partial Class frmPrincipal
         'MenuStrip
         '
         Me.MenuStrip.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SistemaToolStripMenuItem, Me.PersonaToolStripMenuItem, Me.TablaHonorariosToolStripMenuItem, Me.TablasPlanillasToolStripMenuItem, Me.TablaPlanillasToolStripMenuItem, Me.AFPNetToolStripMenuItem, Me.AnálisisYProyeccionesToolStripMenuItem, Me.SUNATToolStripMenuItem})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SistemaToolStripMenuItem, Me.PersonaToolStripMenuItem, Me.TablaHonorariosToolStripMenuItem, Me.TablasPlanillasToolStripMenuItem, Me.TablaPlanillasToolStripMenuItem, Me.AFPNetToolStripMenuItem, Me.AnálisisYProyeccionesToolStripMenuItem, Me.SUNATToolStripMenuItem, Me.CTSToolStripMenuItem})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.Name = "MenuStrip"
         Me.MenuStrip.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
@@ -197,22 +200,6 @@ Partial Class frmPrincipal
         Me.GenerarPlanillaDeGratificacionesToolStripMenuItem.Size = New System.Drawing.Size(317, 26)
         Me.GenerarPlanillaDeGratificacionesToolStripMenuItem.Text = "Generar Planilla de Gratificaciones"
         '
-        'StatusStrip
-        '
-        Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblPrDatos})
-        Me.StatusStrip.Location = New System.Drawing.Point(0, 873)
-        Me.StatusStrip.Name = "StatusStrip"
-        Me.StatusStrip.Padding = New System.Windows.Forms.Padding(1, 0, 16, 0)
-        Me.StatusStrip.Size = New System.Drawing.Size(1127, 22)
-        Me.StatusStrip.TabIndex = 7
-        Me.StatusStrip.Text = "StatusStrip"
-        '
-        'lblPrDatos
-        '
-        Me.lblPrDatos.Name = "lblPrDatos"
-        Me.lblPrDatos.Size = New System.Drawing.Size(37, 17)
-        Me.lblPrDatos.Text = "Datos"
-        '
         'AFPNetToolStripMenuItem
         '
         Me.AFPNetToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GenerarArchivoToolStripMenuItem})
@@ -228,7 +215,7 @@ Partial Class frmPrincipal
         '
         'AnálisisYProyeccionesToolStripMenuItem
         '
-        Me.AnálisisYProyeccionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ResumenAnualDePlanillasToolStripMenuItem})
+        Me.AnálisisYProyeccionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ResumenAnualDePlanillasToolStripMenuItem, Me.ProyecciónDePagosToolStripMenuItem})
         Me.AnálisisYProyeccionesToolStripMenuItem.Name = "AnálisisYProyeccionesToolStripMenuItem"
         Me.AnálisisYProyeccionesToolStripMenuItem.Size = New System.Drawing.Size(182, 25)
         Me.AnálisisYProyeccionesToolStripMenuItem.Text = "Análisis y Proyecciones"
@@ -249,8 +236,43 @@ Partial Class frmPrincipal
         'PDTPLAMEToolStripMenuItem
         '
         Me.PDTPLAMEToolStripMenuItem.Name = "PDTPLAMEToolStripMenuItem"
-        Me.PDTPLAMEToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.PDTPLAMEToolStripMenuItem.Size = New System.Drawing.Size(160, 26)
         Me.PDTPLAMEToolStripMenuItem.Text = "PDT PLAME"
+        '
+        'StatusStrip
+        '
+        Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblPrDatos})
+        Me.StatusStrip.Location = New System.Drawing.Point(0, 873)
+        Me.StatusStrip.Name = "StatusStrip"
+        Me.StatusStrip.Padding = New System.Windows.Forms.Padding(1, 0, 16, 0)
+        Me.StatusStrip.Size = New System.Drawing.Size(1127, 22)
+        Me.StatusStrip.TabIndex = 7
+        Me.StatusStrip.Text = "StatusStrip"
+        '
+        'lblPrDatos
+        '
+        Me.lblPrDatos.Name = "lblPrDatos"
+        Me.lblPrDatos.Size = New System.Drawing.Size(37, 17)
+        Me.lblPrDatos.Text = "Datos"
+        '
+        'CTSToolStripMenuItem
+        '
+        Me.CTSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GestiónDeCTSToolStripMenuItem})
+        Me.CTSToolStripMenuItem.Name = "CTSToolStripMenuItem"
+        Me.CTSToolStripMenuItem.Size = New System.Drawing.Size(49, 25)
+        Me.CTSToolStripMenuItem.Text = "CTS"
+        '
+        'GestiónDeCTSToolStripMenuItem
+        '
+        Me.GestiónDeCTSToolStripMenuItem.Name = "GestiónDeCTSToolStripMenuItem"
+        Me.GestiónDeCTSToolStripMenuItem.Size = New System.Drawing.Size(185, 26)
+        Me.GestiónDeCTSToolStripMenuItem.Text = "Gestión de CTS"
+        '
+        'ProyecciónDePagosToolStripMenuItem
+        '
+        Me.ProyecciónDePagosToolStripMenuItem.Name = "ProyecciónDePagosToolStripMenuItem"
+        Me.ProyecciónDePagosToolStripMenuItem.Size = New System.Drawing.Size(271, 26)
+        Me.ProyecciónDePagosToolStripMenuItem.Text = "Proyección de Pagos"
         '
         'frmPrincipal
         '
@@ -304,4 +326,7 @@ Partial Class frmPrincipal
     Friend WithEvents ResumenAnualDePlanillasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SUNATToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PDTPLAMEToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CTSToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GestiónDeCTSToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ProyecciónDePagosToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -92,6 +92,7 @@ Partial Class frmImprimirPlanilla
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtAnioAProgramar = New System.Windows.Forms.TextBox()
         Me.cmbMes = New System.Windows.Forms.ComboBox()
+        Me.btnBoletas = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.dgvPlanilla, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -472,6 +473,7 @@ Partial Class frmImprimirPlanilla
         '
         'grpPrincipal
         '
+        Me.grpPrincipal.Controls.Add(Me.btnBoletas)
         Me.grpPrincipal.Controls.Add(Me.btnExcel)
         Me.grpPrincipal.Controls.Add(Me.btnResumen)
         Me.grpPrincipal.Controls.Add(Me.btnGenerar)
@@ -490,7 +492,7 @@ Partial Class frmImprimirPlanilla
         Me.btnExcel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnExcel.BackColor = System.Drawing.Color.White
         Me.btnExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnExcel.Location = New System.Drawing.Point(927, 12)
+        Me.btnExcel.Location = New System.Drawing.Point(788, 10)
         Me.btnExcel.Name = "btnExcel"
         Me.btnExcel.Size = New System.Drawing.Size(140, 30)
         Me.btnExcel.TabIndex = 127
@@ -502,7 +504,7 @@ Partial Class frmImprimirPlanilla
         Me.btnResumen.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnResumen.BackColor = System.Drawing.Color.White
         Me.btnResumen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnResumen.Location = New System.Drawing.Point(1073, 12)
+        Me.btnResumen.Location = New System.Drawing.Point(934, 10)
         Me.btnResumen.Name = "btnResumen"
         Me.btnResumen.Size = New System.Drawing.Size(140, 30)
         Me.btnResumen.TabIndex = 126
@@ -550,6 +552,18 @@ Partial Class frmImprimirPlanilla
         Me.cmbMes.Name = "cmbMes"
         Me.cmbMes.Size = New System.Drawing.Size(158, 21)
         Me.cmbMes.TabIndex = 122
+        '
+        'btnBoletas
+        '
+        Me.btnBoletas.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnBoletas.BackColor = System.Drawing.Color.White
+        Me.btnBoletas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnBoletas.Location = New System.Drawing.Point(1077, 10)
+        Me.btnBoletas.Name = "btnBoletas"
+        Me.btnBoletas.Size = New System.Drawing.Size(140, 30)
+        Me.btnBoletas.TabIndex = 128
+        Me.btnBoletas.Text = "&Boletas"
+        Me.btnBoletas.UseVisualStyleBackColor = False
         '
         'frmImprimirPlanilla
         '
@@ -614,4 +628,5 @@ Partial Class frmImprimirPlanilla
     Friend WithEvents Label1 As Label
     Friend WithEvents txtAnioAProgramar As TextBox
     Friend WithEvents cmbMes As ComboBox
+    Friend WithEvents btnBoletas As Button
 End Class

@@ -73,8 +73,8 @@ C:\Users\Usuario\planillapoli\Planilla\Planilla.Data.Test\bin\Debug\FluentValida
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Data.Test\bin\Debug\Planilla.Data.pdb
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Data.Test\bin\Debug\Planilla.Data.dll.config
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Data.Test\bin\Debug\Planilla.Business.pdb
-C:\Users\Usuario\planillapoli\Planilla\Planilla.Data.Test\obj\Debug\Planilla.Data.Test.csprojResolveAssemblyReference.cache
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Data.Test\obj\Debug\Planilla.Data.Test.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Data.Test\obj\Debug\Planilla.Data.Test.csproj.CopyComplete
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Data.Test\obj\Debug\Planilla.Data.Test.dll
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Data.Test\obj\Debug\Planilla.Data.Test.pdb
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Data.Test\obj\Debug\Planilla.Data.Test.csprojAssemblyReference.cache

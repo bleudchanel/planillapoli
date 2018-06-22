@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTOs\Planilla.cs" />
+    <Compile Include="DTOs\PlanillaCTS.cs" />
     <Compile Include="DTOs\PlanillaPersonaPeriodo.cs" />
     <Compile Include="DTOs\ResumenPlanilla.cs" />
     <Compile Include="DTOs\VacacionesPersona.cs" />

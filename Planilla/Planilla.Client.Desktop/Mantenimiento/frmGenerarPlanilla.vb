@@ -486,8 +486,11 @@ Public Class frmGenerarPlanilla
     End Sub
 
     Private Sub btnExcel_Click(sender As Object, e As EventArgs) Handles btnExcel.Click
-        Dim dtEx = DataGridViewToDataTable(dgvPlanilla, New List(Of String)(New String() {"IdPersonal"}), "Honk")
-        FncDataTable2Excel(dtEx, "Planilla")
+        If dgvPlanilla.Rows.Count > 0 Then
+            Dim dtEx = DataGridViewToDataTable(dgvPlanilla, New List(Of String)(New String() {"IdPersonal"}), "Honk")
+            FncDataTable2Excel(dtEx, "Planilla")
+        End If
+
     End Sub
 
     'Private Sub dgvPlanilla_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPlanilla.CellDoubleClick

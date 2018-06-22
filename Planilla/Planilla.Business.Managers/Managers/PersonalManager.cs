@@ -69,6 +69,14 @@ namespace Planilla.Business.Managers
             
         }
 
+        public IEnumerable<PlanillaCTS> GetPlanillaCTS(int Anio, int Mes)
+        {
+            IEnumerable<PlanillaCTS> resultado = new List<PlanillaCTS>();
+            IPlanillaEngine planillaEngine = _BusinessEngineFactory.GetBusinessEngine<IPlanillaEngine>();
+            resultado = planillaEngine.GenerarPlanillaCTS(Anio, Mes);
+            return resultado;
+        }
+
         public IEnumerable<PlanillaRemuneracion> GetPlanillaGratificacion(int Anio, int Mes)
         {
             IEnumerable<PlanillaRemuneracion> resultado = new List<PlanillaRemuneracion>();
@@ -118,6 +126,12 @@ namespace Planilla.Business.Managers
         {
             IPlanillaEngine planillaEngine = _BusinessEngineFactory.GetBusinessEngine<IPlanillaEngine>();
             return planillaEngine.GetPlanillasNormalesResumen(Anio, IdPersonal);
+        }
+
+        public List<PlanillaRemuneracion> GetPlanillaSimple(string Periodo)
+        {
+            IPlanillaEngine planillaEngine = _BusinessEngineFactory.GetBusinessEngine<IPlanillaEngine>();
+            return planillaEngine.GenerarPlanilla(Periodo);
         }
     }
 }

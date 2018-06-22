@@ -49,8 +49,8 @@ C:\Users\Usuario\planillapoli\Planilla\Planilla.Business.Bootstrapper\bin\Debug\
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Business.Bootstrapper\bin\Debug\Core.Common.dll.config
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Business.Bootstrapper\bin\Debug\EntityFramework.xml
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Business.Bootstrapper\bin\Debug\FluentValidation.xml
-C:\Users\Usuario\planillapoli\Planilla\Planilla.Business.Bootstrapper\obj\Debug\Planilla.Business.Bootstrapper.csprojResolveAssemblyReference.cache
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Business.Bootstrapper\obj\Debug\Planilla.Business.Bootstrapper.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Business.Bootstrapper\obj\Debug\Planilla.Business.Bootstrapper.csproj.CopyComplete
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Business.Bootstrapper\obj\Debug\Planilla.Business.Bootstrapper.dll
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Business.Bootstrapper\obj\Debug\Planilla.Business.Bootstrapper.pdb
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Business.Bootstrapper\obj\Debug\Planilla.Business.Bootstrapper.csprojAssemblyReference.cache

@@ -243,6 +243,34 @@ Public Class frmPrincipal
         End If
     End Sub
 
+    Private Sub GestiónDeCTSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestiónDeCTSToolStripMenuItem.Click
+        If SingletonForm(frmPlanillaCTS) = True Then
+            Dim ChildForm As New frmPlanillaCTS
+
+            ChildForm.StartPosition = FormStartPosition.Manual
+            ChildForm.Left = 0
+            ChildForm.Top = 0
+            ChildForm.MdiParent = Me
+            ChildForm.Show()
+        Else
+            DevolverEnfoque(frmPlanillaCTS)
+        End If
+    End Sub
+
+    Private Sub ProyecciónDePagosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProyecciónDePagosToolStripMenuItem.Click
+        If SingletonForm(frmProyeccionPago) = True Then
+            Dim ChildForm As New frmProyeccionPago
+
+            ChildForm.StartPosition = FormStartPosition.Manual
+            ChildForm.Left = 0
+            ChildForm.Top = 0
+            ChildForm.MdiParent = Me
+            ChildForm.Show()
+        Else
+            DevolverEnfoque(frmProyeccionPago)
+        End If
+    End Sub
+
 
 
 

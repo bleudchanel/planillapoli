@@ -36,6 +36,7 @@ namespace Planilla.Business.Entities
         }
 
         [DataMember]
+        [Column("Id_Procedimiento")]
         public int IdProcedimiento { get; set; }
         [DataMember]
         public string CodPro { get; set; }
@@ -45,6 +46,7 @@ namespace Planilla.Business.Entities
         [Column("Procedimiento")]
         public string Procedimiento1 { get; set; }
         [DataMember]
+        [Column("Id_Especialidades")]
         public Nullable<int> IdEspecialidad { get; set; }
         [DataMember]
         public string CodEsp { get; set; }

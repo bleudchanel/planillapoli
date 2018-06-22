@@ -12,6 +12,14 @@ Public Class frmImprimirPlanilla
     Private _planillasRemuneracion As List(Of PlanillaRemuneracion)
     Private _planillaActual As PlanillaRemuneracion
 
+    Private decTotalPlanilla As Decimal
+    Private decTotalONP As Decimal
+    Private decTotalAFP As Decimal
+    Private decTotalESSALUD As Decimal
+    Private decTotalRentaQuinta As Decimal
+    Private decTotalADepositar As Decimal
+    Private decTotalSCTR As Decimal
+
     Private Sub frmImprimirPlanilla_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ProcComboBoxAMes(cmbMes)
         Me.txtAnioAProgramar.Text = Date.Now.Year
@@ -36,8 +44,24 @@ Public Class frmImprimirPlanilla
     End Sub
 
     Private Sub Listar()
+        decTotalPlanilla = 0
+        decTotalONP = 0
+        decTotalAFP = 0
+        decTotalESSALUD = 0
+        decTotalRentaQuinta = 0
+        decTotalADepositar = 0
+        decTotalSCTR = 0
+
         Me.dgvPlanilla.Rows.Clear()
         For Each _planilla In _planillasRemuneracion
+
+            decTotalAFP += (_planilla.ApoObl + _planilla.ComVar + _planilla.PriSeg)
+            decTotalONP += _planilla.ONP
+            decTotalESSALUD += _planilla.Essalud
+            decTotalSCTR += _planilla.SCTR
+            decTotalRentaQuinta += _planilla.Quinta
+            decTotalPlanilla += _planilla.Neto
+
             Me.dgvPlanilla.Rows.Add()
             With dgvPlanilla.Rows(dgvPlanilla.Rows.Count - 1)
                 .Cells(IdPlanilla.Name).Value = _planilla.IdPlanilla
@@ -76,6 +100,9 @@ Public Class frmImprimirPlanilla
                 .Cells(Cerrado.Name).Value = _planilla.Cerrado
             End With
         Next
+
+        decTotalADepositar = decTotalONP + decTotalESSALUD + decTotalRentaQuinta
+
     End Sub
 
     Private Sub btnExcel_Click(sender As Object, e As EventArgs) Handles btnExcel.Click
@@ -87,6 +114,21 @@ Public Class frmImprimirPlanilla
 
             FncDataTable2Excel(dtbase, "Reporte Planilla: ")
 
+        End If
+    End Sub
+
+    Private Sub btnResumen_Click(sender As Object, e As EventArgs) Handles btnResumen.Click
+        If _planillasRemuneracion IsNot Nothing AndAlso _planillasRemuneracion.Count > 0 Then
+            modPersonal.strADepositar = FormatearNumero(decTotalADepositar, 2)
+            modPersonal.strAFPMonto = FormatearNumero(decTotalAFP, 2)
+            modPersonal.strESSALUD = FormatearNumero(decTotalESSALUD, 2)
+            modPersonal.strONP = FormatearNumero(decTotalONP, 2)
+            modPersonal.strTotalPagoPersonas = FormatearNumero(decTotalPlanilla, 2)
+            modPersonal.strSCTR = FormatearNumero(decTotalSCTR, 2)
+            modPersonal.strRentaQuinta = FormatearNumero(decTotalRentaQuinta, 2)
+            modPersonal.strPeriodo = fncTextoMesPorIntMes(cmbMes.SelectedValue) & " " & txtAnioAProgramar.Text
+            Dim frm As New frmReporteResumenPlanilla()
+            frmReporteResumenPlanilla.Show()
         End If
     End Sub
 End Class

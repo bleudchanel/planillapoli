@@ -110,8 +110,11 @@ Public Class frmProgramacionVacaciones
     End Sub
 
     Private Sub btnExcel_Click(sender As Object, e As EventArgs) Handles btnExcel.Click
-        Dim dtEx = DataGridViewToDataTable(dgvPagoDctoBasico, New List(Of String)(New String() {"IdVacaciones"}), "Honk")
-        FncDataTable2Excel(dtEx, "Vacaciones")
+        If dgvPagoDctoBasico.Rows.Count > 0 Then
+            Dim dtEx = DataGridViewToDataTable(dgvPagoDctoBasico, New List(Of String)(New String() {"IdVacaciones"}), "Honk")
+            FncDataTable2Excel(dtEx, "Vacaciones")
+        End If
+
     End Sub
 
     Private Sub btnGenerar_Click(sender As Object, e As EventArgs) Handles btnGenerar.Click

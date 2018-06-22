@@ -3,6 +3,17 @@
 
 Module modPersonal
 
+    ' Parámetros Reporte Resumen Planilla
+    Public strTotalPagoPersonas As String
+    Public strAFPMonto As String
+    Public strONP As String
+    Public strESSALUD As String
+    Public strRentaQuinta As String
+    Public strADepositar As String
+    Public strSCTR As String
+    Public strPeriodo As String
+    ' Fin 
+
     Public intIdFacultad As Integer
     Public intIdPtaDependencia As Integer
     Public intIdChoSemestre As Integer

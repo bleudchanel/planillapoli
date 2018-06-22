@@ -20,7 +20,6 @@ C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Utils\bin\Debug\Core.Comm
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Utils\bin\Debug\Core.Common.dll.config
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Utils\bin\Debug\EntityFramework.xml
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Utils\bin\Debug\FluentValidation.xml
-C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Utils\obj\Debug\Planilla.Client.Utils.vbprojResolveAssemblyReference.cache
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Utils\obj\Debug\Planilla.Client.Utils.Resources.resources
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Utils\obj\Debug\Planilla.Client.Utils.vbproj.GenerateResource.cache
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Utils\obj\Debug\Planilla.Client.Utils.vbproj.CoreCompileInputs.cache
@@ -29,3 +28,4 @@ C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Utils\obj\Debug\Planilla.
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Utils\obj\Debug\Planilla.Client.Utils.xml
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Utils\obj\Debug\Planilla.Client.Utils.pdb
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Utils\obj\Debug\Planilla.Client.Utils.vbproj.ResolveComReference.cache
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Utils\obj\Debug\Planilla.Client.Utils.vbprojAssemblyReference.cache

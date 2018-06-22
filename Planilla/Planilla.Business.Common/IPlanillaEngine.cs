@@ -11,9 +11,10 @@ namespace Planilla.Business.Common
 {
     public interface IPlanillaEngine : IBusinessEngine
     {
-        IEnumerable<PlanillaRemuneracion> GenerarPlanilla(string Periodo);
+        List<PlanillaRemuneracion> GenerarPlanilla(string Periodo);
         IEnumerable<PlanillaRemuneracion> GetPlanillaNormalPorPeriodo(int Anio, int Mes);
         IEnumerable<PlanillaRemuneracion> GetPlanillaGratificacion(int Anio, int Mes);
         Dictionary<String, IEnumerable<ResumenPlanilla>> GetPlanillasNormalesResumen(int Anio, int? IdPersonal = 0);
+        IEnumerable<PlanillaCTS> GenerarPlanillaCTS(int Anio, int Mes);
     }
 }

@@ -130,7 +130,10 @@ Public Class frmResumenAnualPlanillas
     End Sub
 
     Private Sub btnExcel_Click(sender As Object, e As EventArgs) Handles btnExcel.Click
-        Dim dtEx = DataGridViewToDataTable(dgvPagoDctoBasico, New List(Of String)(New String() {"IdPersonal"}), "Honk")
-        FncDataTable2Excel(dtEx, "Resumen")
+        If dgvPagoDctoBasico.Rows.Count > 0 Then
+            Dim dtEx = DataGridViewToDataTable(dgvPagoDctoBasico, New List(Of String)(New String() {"IdPersonal"}), "Honk")
+            FncDataTable2Excel(dtEx, "Resumen")
+        End If
+
     End Sub
 End Class

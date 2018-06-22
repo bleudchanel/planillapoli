@@ -15,6 +15,6 @@ namespace Planilla.Data.Contracts
         void EliminarPlanilla(string Periodo, string TipoPlanilla);
         IEnumerable<PlanillaRemuneracion> PlanillasEnPeriodoPorGrati(int Mes, int Anio);
         IEnumerable<PlanillaRemuneracion> GetPlanillaGratificacionSimple(string Periodo);
-       
+        IEnumerable<PlanillaRemuneracion> PlanillasEnPeriodoPorCTS(int Mes, int Anio);
     }
 }

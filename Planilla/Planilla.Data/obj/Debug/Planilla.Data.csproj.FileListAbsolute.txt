@@ -41,8 +41,8 @@ C:\Users\Usuario\planillapoli\Planilla\Planilla.Data\bin\Debug\Planilla.Data.Con
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Data\bin\Debug\EntityFramework.xml
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Data\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Data\bin\Debug\FluentValidation.xml
-C:\Users\Usuario\planillapoli\Planilla\Planilla.Data\obj\Debug\Planilla.Data.csprojResolveAssemblyReference.cache
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Data\obj\Debug\Planilla.Data.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Data\obj\Debug\Planilla.Data.csproj.CopyComplete
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Data\obj\Debug\Planilla.Data.dll
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Data\obj\Debug\Planilla.Data.pdb
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Data\obj\Debug\Planilla.Data.csprojAssemblyReference.cache
