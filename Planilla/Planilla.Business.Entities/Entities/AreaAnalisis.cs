@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Planilla.Business.Entities
 {
     [DataContract]
-    [Table("AreaAnalisis", Schema = "Planilla")]
+    [Table("Lab_AreaAnalisis", Schema = "Planilla")]
     public class AreaAnalisis : EntityBase, IIdentifiableEntity
     {
         [DataMember]

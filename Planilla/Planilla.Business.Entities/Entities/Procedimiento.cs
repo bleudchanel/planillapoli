@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Planilla.Business.Entities
 {
     [DataContract]
-    [Table("Procedimiento", Schema = "Planilla")]
+    [Table("dProcedimientos", Schema = "Planilla")]
     public class Procedimiento : EntityBase, IIdentifiableEntity
     {
         public Procedimiento(string tipPro, string procedimiento1, 

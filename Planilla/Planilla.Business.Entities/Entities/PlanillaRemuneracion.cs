@@ -247,6 +247,7 @@ namespace Planilla.Business.Entities
         [DataMember]
         public string Periodo { get; set; }
         [DataMember]
+        [Column("Id")]
         public Nullable<int> IdPersonal { get; set; }
         [DataMember]
         public string CodPer { get; set; }

@@ -46,7 +46,7 @@ namespace Planilla.Business
                 var planillas = planillasPeriodo.Where(o => o.IdPersonal == personal.IdPersonal && o.TipoPlan == "N");
                 var planillaGrati = planillasPeriodo.Where(o => o.IdPersonal == personal.IdPersonal && o.TipoPlan == "G");
                 var UltimoIngresoValido = planillasPeriodo.Where(o => o.IdPersonal == personal.IdPersonal && o.TipoPlan == "N" && o.Periodo == Periodo).FirstOrDefault();
-                decimal UltimoSueldo = UltimoIngresoValido.TotIng ?? 0;
+                decimal UltimoSueldo = UltimoIngresoValido != null ? UltimoIngresoValido.TotIng ?? 0 : 0; // UltimoIngresoValido.TotIng ?? 0;
                 int nroPlanillas = planillas != null ? planillas.Count() : 0;
                 int nroGratis = planillaGrati != null ? planillaGrati.Count() : 0;
                 decimal TotalIngresos = planillas.Sum(o => o.TotIng ?? 0);
