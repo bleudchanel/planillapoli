@@ -4,13 +4,13 @@ CREATE SCHEMA Planilla
 
 GO
 
-CREATE TABLE [Planilla].[AreaLaboratorio](
+CREATE TABLE [Planilla].[Lab_AreasLaboratorio](
 	[IdAreaLaboratorio] INT IDENTITY NOT NULL PRIMARY KEY,
 	[CodAre] [varchar](1) NOT NULL,
 	[AreaLab] [varchar](25) NULL)
 GO
 
-INSERT INTO [Planilla].[AreaLaboratorio]
+INSERT INTO [Planilla].[Lab_AreasLaboratorio]
            ([CodAre]
            ,[AreaLab])
 SELECT [CodAre]
@@ -18,13 +18,13 @@ SELECT [CodAre]
   FROM Policlinico.dbo.[vAreasLaboratorio]
 GO
 
-SELECT * FROM  [Planilla].[AreaLaboratorio]
+SELECT * FROM  [Planilla].[Lab_AreasLaboratorio]
 
 GO
 
 
-CREATE TABLE [Planilla].[Especialidad](
-	[IdEspecialidad] INT IDENTITY NOT NULL PRIMARY KEY,
+CREATE TABLE [Planilla].[dEspecialidades](
+	[Id_Especialidades] INT IDENTITY NOT NULL PRIMARY KEY,
 	[CodEsp] [varchar](4) NULL,
 	[Descripcion] [varchar](80) NOT NULL,
 	[PrecioConsulta] smallmoney NOT NULL,
@@ -33,12 +33,12 @@ CREATE TABLE [Planilla].[Especialidad](
 
 GO
 
-INSERT INTO Planilla.Especialidad (CodEsp, Descripcion, PrecioConsulta, MontoMedico)
+INSERT INTO Planilla.dEspecialidades (CodEsp, Descripcion, PrecioConsulta, MontoMedico)
 SELECT esp.CodEsp,esp.Especialidad, COALESCE(esp.PrecioConsulta,0), COALESCE(esp.MontoMedico,0)  FROM Policlinico.dbo.dEspecialidades esp
 
 GO
 
-SELECT * FROM PoliclinicoNuevo.Planilla.Especialidad 
+SELECT * FROM PoliclinicoNuevo.Planilla.dEspecialidades 
 
 GO
 
@@ -77,14 +77,14 @@ SELECT * FROM [Planilla].[Ubigeo]
 GO
 
 
-CREATE TABLE [Planilla].[AreaAnalisis](
+CREATE TABLE [Planilla].[Lab_AreaAnalisis](
 	[IdAreaAnalisis] INT IDENTITY NOT NULL PRIMARY KEY,
 	[CodArea] [varchar](4) NULL,
 	[AreaAnalisis] [varchar](25) NULL)
 
 GO
 
-INSERT INTO [Planilla].[AreaAnalisis]
+INSERT INTO [Planilla].[Lab_AreaAnalisis]
            ([CodArea]
            ,[AreaAnalisis])
 SELECT [CodArea]
@@ -92,16 +92,16 @@ SELECT [CodArea]
   FROM Policlinico.[dbo].[vAreasAnalisis]
 GO
 
-Select * from Planilla.AreaAnalisis
+Select * from Planilla.Lab_AreaAnalisis
 
 GO
 
-CREATE TABLE [Planilla].[Procedimiento](
-	IdProcedimiento INT IDENTITY NOT NULL PRIMARY KEY,
+CREATE TABLE [Planilla].[dProcedimientos](
+	Id_Procedimiento INT IDENTITY NOT NULL PRIMARY KEY,
 	[CodPro] [varchar](4) NULL,
 	[TipPro] [varchar](1) NULL,	
 	[Procedimiento] [varchar](100) NULL,
-	[IdEspecialidad] INT NULL,
+	[Id_Especialidades] INT NULL,
 	[CodEsp] [varchar](4) NULL,
 	[PrecioProcedimiento] smallmoney NULL,
 	[MontoMedico] smallmoney NULL,
@@ -112,16 +112,16 @@ CREATE TABLE [Planilla].[Procedimiento](
 ) ON [PRIMARY]
 GO
 
-ALTER TABLE [Planilla].[Procedimiento]
-ADD FOREIGN KEY (IdEspecialidad)
-REFERENCES [Planilla].[Especialidad](IdEspecialidad)
+ALTER TABLE [Planilla].[dProcedimientos]
+ADD FOREIGN KEY (Id_Especialidades)
+REFERENCES [Planilla].[dEspecialidades](Id_Especialidades)
 GO
-ALTER TABLE [Planilla].[Procedimiento]
+ALTER TABLE [Planilla].[dProcedimientos]
 ADD FOREIGN KEY (IdAreaLaboratorio)
-REFERENCES [Planilla].[AreaLaboratorio](IdAreaLaboratorio)
+REFERENCES [Planilla].[Lab_AreasLaboratorio](IdAreaLaboratorio)
 GO
 
-INSERT INTO [Planilla].[Procedimiento]
+INSERT INTO [Planilla].[dProcedimientos]
            ([CodPro]
            ,[TipPro]
            ,[Procedimiento]
@@ -144,31 +144,31 @@ SELECT [CodPro]
 
 GO
 
-UPDATE [Planilla].[Procedimiento]
-SET [Planilla].[Procedimiento].IdEspecialidad =  pe.IdEspecialidad from [Planilla].Procedimiento pp
-INNER JOIN  [Planilla].Especialidad pe 
+UPDATE [Planilla].[dProcedimientos]
+SET [Planilla].[dProcedimientos].Id_Especialidades =  pe.Id_Especialidades from [Planilla].dProcedimientos pp
+INNER JOIN  [Planilla].dEspecialidades pe 
 ON pp.CodEsp = pe.CodEsp
 
 GO
 
-UPDATE [Planilla].[Procedimiento]
-SET [Planilla].[Procedimiento].[IdAreaLaboratorio] =  pal.IdAreaLaboratorio from [Planilla].Procedimiento pp
-INNER JOIN  [Planilla].AreaLaboratorio pal 
+UPDATE [Planilla].[dProcedimientos]
+SET [Planilla].[dProcedimientos].[IdAreaLaboratorio] =  pal.IdAreaLaboratorio from [Planilla].dProcedimientos pp
+INNER JOIN  [Planilla].Lab_AreasLaboratorio pal 
 ON pp.AreaLaboratorio = pal.CodAre
 
 GO
 
-Select * from Planilla.Procedimiento
+Select * from Planilla.dProcedimientos
 
 GO
 
-CREATE TABLE [Planilla].[TablaAnalisis](
+CREATE TABLE [Planilla].[Lab_TablaAnalisis](
 	[IdAnalisis] INT IDENTITY NOT NULL PRIMARY KEY,
 	[CodAna] [varchar](5) NULL,
 	[Analisis] [varchar](100) NULL,
 	[Unidad] [varchar](30) NULL,
 	[Titulo] [varchar](1) NULL,
-	[IdProcedimiento] INT NULL,
+	[Id_Procedimiento] INT NULL,
 	[CodPro] [varchar](4) NULL,
 	[Procedimiento] [varchar](100) NULL,
 	[AreaLaboratorio] [varchar](30) NULL,
@@ -177,12 +177,12 @@ CREATE TABLE [Planilla].[TablaAnalisis](
 ) ON [PRIMARY]
 GO
 
-ALTER TABLE [Planilla].[TablaAnalisis]
-ADD FOREIGN KEY (IdProcedimiento)
-REFERENCES [Planilla].[Procedimiento](IdProcedimiento)
+ALTER TABLE [Planilla].[Lab_TablaAnalisis]
+ADD FOREIGN KEY (Id_Procedimiento)
+REFERENCES [Planilla].[dProcedimientos](Id_Procedimiento)
 GO
 
-INSERT INTO [Planilla].[TablaAnalisis]
+INSERT INTO [Planilla].[Lab_TablaAnalisis]
            ([CodAna]
            ,[Analisis]
            ,[Unidad]
@@ -205,14 +205,14 @@ SELECT [CodAna]
 GO
 
 
-UPDATE [Planilla].[TablaAnalisis]
-SET [Planilla].[TablaAnalisis].IdProcedimiento =  pal.IdProcedimiento from [Planilla].[TablaAnalisis] pp
-INNER JOIN  [Planilla].Procedimiento pal 
+UPDATE [Planilla].[Lab_TablaAnalisis]
+SET [Planilla].[Lab_TablaAnalisis].Id_Procedimiento =  pal.Id_Procedimiento from [Planilla].[Lab_TablaAnalisis] pp
+INNER JOIN  [Planilla].dProcedimientos pal 
 ON pp.CodPro = pal.CodPro
 
 GO
 
-SELECT * FROM [Planilla].[TablaAnalisis]
+SELECT * FROM [Planilla].[Lab_TablaAnalisis]
 
 GO
 
@@ -242,7 +242,7 @@ Select * from [Planilla].[Cargo]
 GO
 
 
-CREATE TABLE [Planilla].[TablaAnalisisVR](
+CREATE TABLE [Planilla].[Lab_TablaAnalisisVR](
 	[IdValReferencial] [int] IDENTITY(1,1) NOT NULL PRIMARY KEY,
 	[CodVal] [varchar](5) NULL,
 	[ValReferencial] [varchar](35) NULL,
@@ -250,14 +250,14 @@ CREATE TABLE [Planilla].[TablaAnalisisVR](
 	[CodAna] [varchar](5) NULL
 ) 
 GO
-ALTER TABLE [Planilla].[TablaAnalisisVR]
+ALTER TABLE [Planilla].[Lab_TablaAnalisisVR]
 ADD FOREIGN KEY ([IdAnalisis])
-REFERENCES [Planilla].[TablaAnalisis]([IdAnalisis])
+REFERENCES [Planilla].[Lab_TablaAnalisis]([IdAnalisis])
 GO
 
 
 GO
-INSERT INTO [Planilla].[TablaAnalisisVR]
+INSERT INTO [Planilla].[Lab_TablaAnalisisVR]
            ([CodVal]
            ,[ValReferencial]
            ,[CodAna])
@@ -268,12 +268,12 @@ SELECT [CodVal]
 
 GO
 
-UPDATE [Planilla].[TablaAnalisisVR]
-SET [Planilla].[TablaAnalisisVR].IdAnalisis =  pal.IdAnalisis from [Planilla].[TablaAnalisisVR] pp
-INNER JOIN  [Planilla].[TablaAnalisis] pal 
+UPDATE [Planilla].[Lab_TablaAnalisisVR]
+SET [Planilla].[Lab_TablaAnalisisVR].IdAnalisis =  pal.IdAnalisis from [Planilla].[Lab_TablaAnalisisVR] pp
+INNER JOIN  [Planilla].[Lab_TablaAnalisis] pal 
 ON pp.CodAna = pal.CodAna
 
-SELECT * FROM [Planilla].[TablaAnalisisVR]
+SELECT * FROM [Planilla].[Lab_TablaAnalisisVR]
 
 GO
 
@@ -391,8 +391,8 @@ GO
 Select * from [Planilla].[AporteEmpleador]
 GO
 
-CREATE TABLE [Planilla].[Personal](
-	[IdPersonal] INT IDENTITY NOT NULL PRIMARY KEY,
+CREATE TABLE [Planilla].[pPersonal](
+	[Id] INT IDENTITY NOT NULL PRIMARY KEY,
 	[CodPer] [varchar](4) NOT NULL,
 	[DNI] [varchar](8) NULL,
 	[ApePaterno] [varchar](60) NULL,
@@ -433,25 +433,25 @@ CREATE TABLE [Planilla].[Personal](
 	[NumCtaCTS] [varchar](20) NULL)
 
 GO
-ALTER TABLE [Planilla].[Personal]
+ALTER TABLE [Planilla].[pPersonal]
 ADD FOREIGN KEY (IdUbigeo)
 REFERENCES [Planilla].[Ubigeo](IdUbigeo)
 GO
-ALTER TABLE [Planilla].[Personal]
+ALTER TABLE [Planilla].[pPersonal]
 ADD FOREIGN KEY (IdAreaServicio)
 REFERENCES [Planilla].AreaServicio(IdAreaServicio)
 GO
-ALTER TABLE [Planilla].[Personal]
+ALTER TABLE [Planilla].[pPersonal]
 ADD FOREIGN KEY (IdCargo)
 REFERENCES [Planilla].Cargo(IdCargo)
 GO
-ALTER TABLE [Planilla].[Personal]
+ALTER TABLE [Planilla].[pPersonal]
 ADD FOREIGN KEY (IdFondoPen)
 REFERENCES [Planilla].FondoPensiones(IdFondoPen)
 GO
 
 
-INSERT INTO [Planilla].[Personal]
+INSERT INTO [Planilla].[pPersonal]
            ([CodPer]
            ,[DNI]
            ,[ApePaterno]
@@ -525,43 +525,43 @@ SELECT [CodPer]
 GO
 
 
-UPDATE [Planilla].[Personal]
-SET [Planilla].[Personal].IdUbigeo =  pal.IdUbigeo from [Planilla].[Personal] pp
+UPDATE [Planilla].[pPersonal]
+SET [Planilla].[pPersonal].IdUbigeo =  pal.IdUbigeo from [Planilla].[pPersonal] pp
 INNER JOIN  [Planilla].Ubigeo pal 
 ON pp.CodDistrito = pal.CODDIS
 
 GO
 
-UPDATE [Planilla].[Personal]
-SET [Planilla].[Personal].IdAreaServicio =  pal.IdAreaServicio from [Planilla].[Personal] pp
+UPDATE [Planilla].[pPersonal]
+SET [Planilla].[pPersonal].IdAreaServicio =  pal.IdAreaServicio from [Planilla].[pPersonal] pp
 INNER JOIN  [Planilla].AreaServicio pal 
 ON pp.CodAre = pal.CodAre
 
 GO
 
-UPDATE [Planilla].[Personal]
-SET [Planilla].[Personal].IdCargo =  pal.IdCargo from [Planilla].[Personal] pp
+UPDATE [Planilla].[pPersonal]
+SET [Planilla].[pPersonal].IdCargo =  pal.IdCargo from [Planilla].[pPersonal] pp
 INNER JOIN  [Planilla].Cargo pal 
 ON pp.CodCar = pal.CodCar
 
 GO
 
 
-UPDATE [Planilla].[Personal]
-SET [Planilla].[Personal].IdFondoPen =  pal.IdFondoPen from [Planilla].[Personal] pp
+UPDATE [Planilla].[pPersonal]
+SET [Planilla].[pPersonal].IdFondoPen =  pal.IdFondoPen from [Planilla].[pPersonal] pp
 INNER JOIN  [Planilla].FondoPensiones pal 
 ON pp.CodFon = pal.CodFon
 
 GO
 
-SELECT * FROM [Planilla].[Personal]
+SELECT * FROM [Planilla].[pPersonal]
 
 GO
 
 CREATE TABLE [Planilla].[Vacaciones](
 	IdVacaciones INT IDENTITY NOT NULL PRIMARY KEY,
 	[Año] [int] NULL,
-	[IdPersonal] INT NULL,
+	[Id] INT NULL,
 	[CodPer] [varchar](4) NULL,
 	[IniProg] [datetime] NULL,
 	[FinProg] [datetime] NULL,
@@ -577,8 +577,8 @@ CREATE TABLE [Planilla].[Vacaciones](
 GO
 
 ALTER TABLE [Planilla].[Vacaciones]
-ADD FOREIGN KEY (IdPersonal)
-REFERENCES [Planilla].[Personal](IdPersonal)
+ADD FOREIGN KEY (Id)
+REFERENCES [Planilla].[pPersonal](Id)
 GO
 
 INSERT INTO [Planilla].[Vacaciones]
@@ -610,15 +610,15 @@ SELECT [Año]
 GO
 
 UPDATE [Planilla].[Vacaciones]
-SET [Planilla].[Vacaciones].IdPersonal =  pal.IdPersonal from [Planilla].[Vacaciones] pp
-INNER JOIN  [Planilla].Personal pal 
+SET [Planilla].[Vacaciones].Id =  pal.Id from [Planilla].[Vacaciones] pp
+INNER JOIN  [Planilla].pPersonal pal 
 ON pp.CodPer = pal.CodPer
 
 GO
 
 
-CREATE TABLE [Planilla].[Medico](
-	[IdMedico] INT IDENTITY NOT NULL PRIMARY KEY,
+CREATE TABLE [Planilla].[dMedicos](
+	[Id_Medico] INT IDENTITY NOT NULL PRIMARY KEY,
 	[CodMed] [varchar](4) NULL,
 	[DNI] [varchar](8) NULL,
 	[ApePaterno] [varchar](60) NULL,
@@ -637,32 +637,32 @@ CREATE TABLE [Planilla].[Medico](
 	[NumCol] [varchar](6) NULL,
 	[Sit] [varchar](1) NULL,
 	[RNE] [varchar](6) NULL,
-	IdEspecialidad1 INT NULL,
+	Id_Especialidades1 INT NULL,
 	[CodEsp1] [varchar](4) NULL,
-	IdEspecialidad2 INT NULL,
+	Id_Especialidades2 INT NULL,
 	[CodEsp2] [varchar](4) NULL,
 	[Estado] [varchar](1) NULL,
 	[Tipo] [varchar](1) NULL
 )
 GO
 
-ALTER TABLE [Planilla].[Medico]
+ALTER TABLE [Planilla].[dMedicos]
 ADD FOREIGN KEY (IdUbigeo)
 REFERENCES [Planilla].Ubigeo(IdUbigeo)
 GO
 
-ALTER TABLE [Planilla].[Medico]
-ADD FOREIGN KEY (IdEspecialidad1)
-REFERENCES [Planilla].Especialidad(IdEspecialidad)
+ALTER TABLE [Planilla].[dMedicos]
+ADD FOREIGN KEY (Id_Especialidades1)
+REFERENCES [Planilla].dEspecialidades(Id_Especialidades)
 GO
 
-ALTER TABLE [Planilla].[Medico]
-ADD FOREIGN KEY (IdEspecialidad2)
-REFERENCES [Planilla].Especialidad(IdEspecialidad)
+ALTER TABLE [Planilla].[dMedicos]
+ADD FOREIGN KEY (Id_Especialidades2)
+REFERENCES [Planilla].dEspecialidades(Id_Especialidades)
 
 GO
 
-INSERT INTO [Planilla].[Medico]
+INSERT INTO [Planilla].[dMedicos]
            ([CodMed]
            ,[DNI]
            ,[ApePaterno]
@@ -708,23 +708,23 @@ SELECT [CodMed]
   FROM Policlinico.[dbo].[dMedicos]
 GO
 
-UPDATE [Planilla].[Medico]
-SET [Planilla].[Medico].IdUbigeo =  pal.IdUbigeo from [Planilla].[Medico] pp
+UPDATE [Planilla].[dMedicos]
+SET [Planilla].[dMedicos].IdUbigeo =  pal.IdUbigeo from [Planilla].[dMedicos] pp
 INNER JOIN  [Planilla].Ubigeo pal 
 ON pp.CodDistrito = pal.CODDIS
 
 GO
 
-UPDATE [Planilla].[Medico]
-SET [Planilla].[Medico].IdEspecialidad1 =  pal.IdEspecialidad from [Planilla].[Medico] pp
-INNER JOIN  [Planilla].Especialidad pal 
+UPDATE [Planilla].[dMedicos]
+SET [Planilla].[dMedicos].Id_Especialidades1 =  pal.Id_Especialidades from [Planilla].[dMedicos] pp
+INNER JOIN  [Planilla].dEspecialidades pal 
 ON pp.CodEsp1 = pal.CodEsp
 
 GO
 
-UPDATE [Planilla].[Medico]
-SET [Planilla].[Medico].IdEspecialidad2 =  pal.IdEspecialidad from [Planilla].[Medico] pp
-INNER JOIN  [Planilla].Especialidad pal 
+UPDATE [Planilla].[dMedicos]
+SET [Planilla].[dMedicos].Id_Especialidades2 =  pal.Id_Especialidades from [Planilla].[dMedicos] pp
+INNER JOIN  [Planilla].dEspecialidades pal 
 ON pp.CodEsp2 = pal.CodEsp
 
 GO
@@ -732,7 +732,7 @@ GO
 CREATE TABLE [Planilla].[PlanillasRem](
 	IdPlanilla INT IDENTITY NOT NULL PRIMARY KEY,
 	[Periodo] [varchar](6) NULL,
-	IdPersonal INT NULL,
+	Id INT NULL,
 	[CodPer] [varchar](4) NULL,
 	IdCargo INT NULL,
 	[CodCar] [varchar](3) NULL,
@@ -782,8 +782,8 @@ CREATE TABLE [Planilla].[PlanillasRem](
 )
 GO
 ALTER TABLE [Planilla].[PlanillasRem]
-ADD FOREIGN KEY (IdPersonal)
-REFERENCES [Planilla].Personal(IdPersonal)
+ADD FOREIGN KEY (Id)
+REFERENCES [Planilla].pPersonal(Id)
 GO
 ALTER TABLE [Planilla].[PlanillasRem]
 ADD FOREIGN KEY (IdFondoPen)
@@ -891,8 +891,8 @@ SELECT [Periodo]
 GO
 
 UPDATE [Planilla].[PlanillasRem]
-SET [Planilla].[PlanillasRem].IdPersonal =  pal.IdPersonal from [Planilla].[PlanillasRem] pp
-INNER JOIN  [Planilla].Personal pal 
+SET [Planilla].[PlanillasRem].Id =  pal.Id from [Planilla].[PlanillasRem] pp
+INNER JOIN  [Planilla].pPersonal pal 
 ON pp.CodPer = pal.CodPer
 
 GO
