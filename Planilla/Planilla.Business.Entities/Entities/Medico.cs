@@ -14,6 +14,37 @@ namespace Planilla.Business.Entities
     [Table("dMedicos", Schema = "Planilla")]
     public class Medico : EntityBase, IIdentifiableEntity
     {
+        public Medico(string dNI, string apePaterno, string apeMaterno, string nombre, string direccion, int? idUbigeo, string codDistrito, DateTime? fecNac, string telefono, string celular, string email, string rUC, DateTime? fecIngreso, string grado, string numCol, string sit, string rNE, int? idEspecialidad1, string codEsp1, int? idEspecialidad2, string codEsp2, string estado, string tipo)
+        {
+            DNI = dNI;
+            ApePaterno = apePaterno;
+            ApeMaterno = apeMaterno;
+            Nombre = nombre;
+            Direccion = direccion;
+            IdUbigeo = idUbigeo;
+            CodDistrito = codDistrito;
+            FecNac = fecNac;
+            Telefono = telefono;
+            Celular = celular;
+            Email = email;
+            RUC = rUC;
+            FecIngreso = fecIngreso;
+            Grado = grado;
+            NumCol = numCol;
+            Sit = sit;
+            RNE = rNE;
+            IdEspecialidad1 = idEspecialidad1;
+            CodEsp1 = codEsp1;
+            IdEspecialidad2 = idEspecialidad2;
+            CodEsp2 = codEsp2;
+            Estado = estado;
+            Tipo = tipo;
+        }
+
+        public Medico()
+        {
+        }
+
         [DataMember]
         [Column("Id_Medico")]
         public int IdMedico { get; set; }
@@ -54,10 +85,12 @@ namespace Planilla.Business.Entities
         [DataMember]
         public string RNE { get; set; }
         [DataMember]
+        [Column("Id_Especialidades1")]
         public Nullable<int> IdEspecialidad1 { get; set; }
         [DataMember]
         public string CodEsp1 { get; set; }
         [DataMember]
+        [Column("Id_Especialidades2")]
         public Nullable<int> IdEspecialidad2 { get; set; }
         [DataMember]
         public string CodEsp2 { get; set; }

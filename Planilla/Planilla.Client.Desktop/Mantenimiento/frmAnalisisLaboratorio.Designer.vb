@@ -130,6 +130,7 @@ Partial Class frmAnalisisLaboratorio
         '
         Me.btnModificar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnModificar.BackColor = System.Drawing.Color.White
+        Me.btnModificar.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_edit
         Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnModificar.Location = New System.Drawing.Point(154, 351)
         Me.btnModificar.Name = "btnModificar"
@@ -142,6 +143,7 @@ Partial Class frmAnalisisLaboratorio
         '
         Me.btnNuevo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnNuevo.BackColor = System.Drawing.Color.White
+        Me.btnNuevo.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_add
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnNuevo.Location = New System.Drawing.Point(7, 351)
         Me.btnNuevo.Name = "btnNuevo"

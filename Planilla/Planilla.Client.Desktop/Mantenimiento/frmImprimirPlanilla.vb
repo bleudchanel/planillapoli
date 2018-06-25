@@ -128,7 +128,24 @@ Public Class frmImprimirPlanilla
             modPersonal.strRentaQuinta = FormatearNumero(decTotalRentaQuinta, 2)
             modPersonal.strPeriodo = fncTextoMesPorIntMes(cmbMes.SelectedValue) & " " & txtAnioAProgramar.Text
             Dim frm As New frmReporteResumenPlanilla()
-            frmReporteResumenPlanilla.Show()
+            frm.Show()
         End If
+    End Sub
+
+    Private Sub btnBoletas_Click(sender As Object, e As EventArgs) Handles btnBoletas.Click
+        Dim dtBoletasPre As New DataTable
+        dtBoletasPre.Columns.Add("CodPer")
+        dtBoletasPre.Columns.Add("Nombre")
+        dtBoletasPre.Columns.Add("FechaIngreso")
+        dtBoletasPre.Columns.Add("DocIdentidad")
+        dtBoletasPre.Columns.Add("Cargo")
+
+        For Each _planilla In _planillasRemuneracion
+            dtBoletasPre.Rows.Add(_planilla.CodPer, _planilla.NombrePersona, _planilla.FechaIngreso, _planilla.Dni, _planilla.Cargo)
+        Next
+        modPersonal.dtBoleta = dtBoletasPre
+        Dim frm As New frmReporteBoletas
+        frm.Show()
+
     End Sub
 End Class

@@ -22,8 +22,8 @@ Partial Class frmDiasLabMes
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.dgvPagoDctoBasico = New System.Windows.Forms.DataGridView()
@@ -36,8 +36,8 @@ Partial Class frmDiasLabMes
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGrabar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtAnioAProgramar = New System.Windows.Forms.TextBox()
         Me.btnGenerar = New System.Windows.Forms.Button()
+        Me.txtAnioAProgramar = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.dgvPagoDctoBasico, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -103,8 +103,8 @@ Partial Class frmDiasLabMes
         '
         'Anio
         '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Anio.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Anio.DefaultCellStyle = DataGridViewCellStyle1
         Me.Anio.HeaderText = "Anio"
         Me.Anio.Name = "Anio"
         Me.Anio.Width = 60
@@ -117,10 +117,10 @@ Partial Class frmDiasLabMes
         '
         'DiasLaborados
         '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle4.Format = "N0"
-        DataGridViewCellStyle4.NullValue = "0"
-        Me.DiasLaborados.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle2.Format = "N0"
+        DataGridViewCellStyle2.NullValue = "0"
+        Me.DiasLaborados.DefaultCellStyle = DataGridViewCellStyle2
         Me.DiasLaborados.HeaderText = "Dias"
         Me.DiasLaborados.Name = "DiasLaborados"
         Me.DiasLaborados.Width = 50
@@ -147,6 +147,7 @@ Partial Class frmDiasLabMes
         '
         Me.btnGrabar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnGrabar.BackColor = System.Drawing.Color.White
+        Me.btnGrabar.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.accept
         Me.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnGrabar.Location = New System.Drawing.Point(277, 472)
         Me.btnGrabar.Name = "btnGrabar"
@@ -166,6 +167,18 @@ Partial Class frmDiasLabMes
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "A programar : "
         '
+        'btnGenerar
+        '
+        Me.btnGenerar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnGenerar.BackColor = System.Drawing.Color.White
+        Me.btnGenerar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGenerar.Location = New System.Drawing.Point(150, 21)
+        Me.btnGenerar.Name = "btnGenerar"
+        Me.btnGenerar.Size = New System.Drawing.Size(140, 30)
+        Me.btnGenerar.TabIndex = 109
+        Me.btnGenerar.Text = "&Generar"
+        Me.btnGenerar.UseVisualStyleBackColor = False
+        '
         'txtAnioAProgramar
         '
         Me.txtAnioAProgramar.BackColor = System.Drawing.SystemColors.Window
@@ -178,18 +191,6 @@ Partial Class frmDiasLabMes
         Me.txtAnioAProgramar.Size = New System.Drawing.Size(137, 25)
         Me.txtAnioAProgramar.TabIndex = 108
         Me.txtAnioAProgramar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'btnGenerar
-        '
-        Me.btnGenerar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnGenerar.BackColor = System.Drawing.Color.White
-        Me.btnGenerar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGenerar.Location = New System.Drawing.Point(150, 21)
-        Me.btnGenerar.Name = "btnGenerar"
-        Me.btnGenerar.Size = New System.Drawing.Size(140, 30)
-        Me.btnGenerar.TabIndex = 109
-        Me.btnGenerar.Text = "&Generar"
-        Me.btnGenerar.UseVisualStyleBackColor = False
         '
         'frmDiasLabMes
         '

@@ -69,9 +69,9 @@ Public Class frmRemuneracionBasica
 
 
     Private Sub frmRemuneracionBasica_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        _personal = personalManager.GetPersonalActivo()
+
         Controles_En_Load()
-        ListaPersonal()
+
         ComboBoxBase()
     End Sub
 
@@ -222,6 +222,7 @@ Public Class frmRemuneracionBasica
     End Sub
 
     Sub Controles_En_Load()
+        _personal = personalManager.GetPersonalActivo()
         Me.tbcOtrosPagos.TabPages.Remove(tbpListar)
         Me.tbcOtrosPagos.TabPages.Remove(tbpNuevo)
         Me.tbcOtrosPagos.TabPages.Insert(0, tbpListar)
@@ -229,7 +230,7 @@ Public Class frmRemuneracionBasica
         ClearGroup(grpDatos)
         ClearGroup(grpRemuneracion)
         ClearGroup(grpEstudios)
-
+        ListaPersonal()
     End Sub
 
 

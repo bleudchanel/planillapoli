@@ -27,19 +27,19 @@ Partial Class frmEliminarPlanilla
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnGenerar = New System.Windows.Forms.Button()
         Me.txtAnioAProgramar = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgvPagoDctoBasico = New System.Windows.Forms.DataGridView()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.btnCancelar = New System.Windows.Forms.Button()
-        Me.btnEliminar = New System.Windows.Forms.Button()
-        Me.btnGenerar = New System.Windows.Forms.Button()
         Me.Anio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Mes = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Tipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TipoExt = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Cerrado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Periodo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -102,6 +102,17 @@ Partial Class frmEliminarPlanilla
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Periodo"
         '
+        'btnGenerar
+        '
+        Me.btnGenerar.BackColor = System.Drawing.Color.White
+        Me.btnGenerar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGenerar.Location = New System.Drawing.Point(152, 15)
+        Me.btnGenerar.Name = "btnGenerar"
+        Me.btnGenerar.Size = New System.Drawing.Size(140, 30)
+        Me.btnGenerar.TabIndex = 109
+        Me.btnGenerar.Text = "&Generar"
+        Me.btnGenerar.UseVisualStyleBackColor = False
+        '
         'txtAnioAProgramar
         '
         Me.txtAnioAProgramar.BackColor = System.Drawing.SystemColors.Window
@@ -144,52 +155,6 @@ Partial Class frmEliminarPlanilla
         Me.dgvPagoDctoBasico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvPagoDctoBasico.Size = New System.Drawing.Size(421, 327)
         Me.dgvPagoDctoBasico.TabIndex = 88
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.btnEliminar)
-        Me.GroupBox3.Controls.Add(Me.btnCancelar)
-        Me.GroupBox3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupBox3.Location = New System.Drawing.Point(3, 415)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(427, 44)
-        Me.GroupBox3.TabIndex = 93
-        Me.GroupBox3.TabStop = False
-        '
-        'btnCancelar
-        '
-        Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnCancelar.BackColor = System.Drawing.Color.White
-        Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancelar.Location = New System.Drawing.Point(6, 12)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(140, 30)
-        Me.btnCancelar.TabIndex = 89
-        Me.btnCancelar.Text = "C&ancelar"
-        Me.btnCancelar.UseVisualStyleBackColor = False
-        '
-        'btnEliminar
-        '
-        Me.btnEliminar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnEliminar.BackColor = System.Drawing.Color.White
-        Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEliminar.Location = New System.Drawing.Point(278, 12)
-        Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(140, 30)
-        Me.btnEliminar.TabIndex = 90
-        Me.btnEliminar.Text = "&Eliminar"
-        Me.btnEliminar.UseVisualStyleBackColor = False
-        '
-        'btnGenerar
-        '
-        Me.btnGenerar.BackColor = System.Drawing.Color.White
-        Me.btnGenerar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGenerar.Location = New System.Drawing.Point(152, 15)
-        Me.btnGenerar.Name = "btnGenerar"
-        Me.btnGenerar.Size = New System.Drawing.Size(140, 30)
-        Me.btnGenerar.TabIndex = 109
-        Me.btnGenerar.Text = "&Generar"
-        Me.btnGenerar.UseVisualStyleBackColor = False
         '
         'Anio
         '
@@ -236,6 +201,42 @@ Partial Class frmEliminarPlanilla
         Me.Periodo.Name = "Periodo"
         Me.Periodo.ReadOnly = True
         Me.Periodo.Visible = False
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.btnEliminar)
+        Me.GroupBox3.Controls.Add(Me.btnCancelar)
+        Me.GroupBox3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GroupBox3.Location = New System.Drawing.Point(3, 415)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(427, 44)
+        Me.GroupBox3.TabIndex = 93
+        Me.GroupBox3.TabStop = False
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnEliminar.BackColor = System.Drawing.Color.White
+        Me.btnEliminar.Image = Global.Planilla.Client.Desktop.My.Resources.Resources._stop
+        Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEliminar.Location = New System.Drawing.Point(278, 12)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(140, 30)
+        Me.btnEliminar.TabIndex = 90
+        Me.btnEliminar.Text = "&Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = False
+        '
+        'btnCancelar
+        '
+        Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnCancelar.BackColor = System.Drawing.Color.White
+        Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCancelar.Location = New System.Drawing.Point(6, 12)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(140, 30)
+        Me.btnCancelar.TabIndex = 89
+        Me.btnCancelar.Text = "C&ancelar"
+        Me.btnCancelar.UseVisualStyleBackColor = False
         '
         'frmEliminarPlanilla
         '

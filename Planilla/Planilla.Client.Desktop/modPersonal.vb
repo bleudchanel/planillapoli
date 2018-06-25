@@ -14,6 +14,10 @@ Module modPersonal
     Public strPeriodo As String
     ' Fin 
 
+    ' Parámetros Reporte Boletas
+    Public dtBoleta As New DataTable
+    ' Fin
+
     Public intIdFacultad As Integer
     Public intIdPtaDependencia As Integer
     Public intIdChoSemestre As Integer

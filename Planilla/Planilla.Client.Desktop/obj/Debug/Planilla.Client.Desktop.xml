@@ -5040,5 +5040,25 @@ Planilla.Client.Desktop
  <returns></returns>
  <remarks></remarks>
 </member>
+<member name="T:Planilla.Client.Desktop.dsBoletas">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Planilla.Client.Desktop.dsBoletas.dtBoletasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Planilla.Client.Desktop.dsBoletas.dtBoletasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Planilla.Client.Desktop.dsBoletas.dtBoletasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 </members>
 </doc>

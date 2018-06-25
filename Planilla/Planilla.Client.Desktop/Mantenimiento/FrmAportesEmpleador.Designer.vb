@@ -22,17 +22,17 @@ Partial Class FrmAportesEmpleador
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.grpAporte = New System.Windows.Forms.GroupBox()
         Me.dgvPagoDctoBasico = New System.Windows.Forms.DataGridView()
-        Me.btnGrabar = New System.Windows.Forms.Button()
-        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.IdAporteEmpleador = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CodApo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Aporte = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Porcentaje = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnGrabar = New System.Windows.Forms.Button()
+        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.grpAporte.SuspendLayout()
         CType(Me.dgvPagoDctoBasico, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -94,32 +94,6 @@ Partial Class FrmAportesEmpleador
         Me.dgvPagoDctoBasico.Size = New System.Drawing.Size(482, 290)
         Me.dgvPagoDctoBasico.TabIndex = 88
         '
-        'btnGrabar
-        '
-        Me.btnGrabar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnGrabar.BackColor = System.Drawing.Color.White
-        Me.btnGrabar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGrabar.Location = New System.Drawing.Point(326, 383)
-        Me.btnGrabar.Name = "btnGrabar"
-        Me.btnGrabar.Size = New System.Drawing.Size(163, 28)
-        Me.btnGrabar.TabIndex = 91
-        Me.btnGrabar.Text = "&Grabar"
-        Me.btnGrabar.UseVisualStyleBackColor = False
-        '
-        'btnCancelar
-        '
-        Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnCancelar.BackColor = System.Drawing.Color.White
-        Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancelar.Location = New System.Drawing.Point(4, 381)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(163, 30)
-        Me.btnCancelar.TabIndex = 90
-        Me.btnCancelar.Text = "C&ancelar"
-        Me.btnCancelar.UseVisualStyleBackColor = False
-        '
         'IdAporteEmpleador
         '
         Me.IdAporteEmpleador.HeaderText = "IdAporteEmpleador"
@@ -141,13 +115,40 @@ Partial Class FrmAportesEmpleador
         '
         'Porcentaje
         '
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle5.Format = "N4"
-        DataGridViewCellStyle5.NullValue = "0.0000"
-        Me.Porcentaje.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle1.Format = "N4"
+        DataGridViewCellStyle1.NullValue = "0.0000"
+        Me.Porcentaje.DefaultCellStyle = DataGridViewCellStyle1
         Me.Porcentaje.HeaderText = "Porcentaje"
         Me.Porcentaje.Name = "Porcentaje"
         Me.Porcentaje.Width = 80
+        '
+        'btnGrabar
+        '
+        Me.btnGrabar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnGrabar.BackColor = System.Drawing.Color.White
+        Me.btnGrabar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGrabar.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.accept
+        Me.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGrabar.Location = New System.Drawing.Point(326, 383)
+        Me.btnGrabar.Name = "btnGrabar"
+        Me.btnGrabar.Size = New System.Drawing.Size(163, 28)
+        Me.btnGrabar.TabIndex = 91
+        Me.btnGrabar.Text = "&Grabar"
+        Me.btnGrabar.UseVisualStyleBackColor = False
+        '
+        'btnCancelar
+        '
+        Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnCancelar.BackColor = System.Drawing.Color.White
+        Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCancelar.Location = New System.Drawing.Point(4, 381)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(163, 30)
+        Me.btnCancelar.TabIndex = 90
+        Me.btnCancelar.Text = "C&ancelar"
+        Me.btnCancelar.UseVisualStyleBackColor = False
         '
         'FrmAportesEmpleador
         '

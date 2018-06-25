@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Planilla.Client.Desktop.frmPrincipal
+            Me.MainForm = Global.Planilla.Client.Desktop.frmImprimirPlanilla
         End Sub
     End Class
 End Namespace

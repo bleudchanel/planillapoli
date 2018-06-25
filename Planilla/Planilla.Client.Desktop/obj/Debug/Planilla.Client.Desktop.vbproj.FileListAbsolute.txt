@@ -127,3 +127,5 @@ C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Desktop\bin\Debug\zh-CHT\
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Desktop\bin\Debug\zh-HANS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Desktop\bin\Debug\zh-HANT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Desktop\obj\Debug\Planilla.Client.Desktop.frmReporteResumenPlanilla.resources
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Desktop\obj\Debug\Planilla.Client.Desktop.frmMedico.resources
+C:\Users\Usuario\planillapoli\Planilla\Planilla.Client.Desktop\obj\Debug\Planilla.Client.Desktop.frmReporteBoletas.resources

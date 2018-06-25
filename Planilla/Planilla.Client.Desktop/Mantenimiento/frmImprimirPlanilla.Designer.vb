@@ -86,13 +86,13 @@ Partial Class frmImprimirPlanilla
         Me.FinSGH = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Cerrado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grpPrincipal = New System.Windows.Forms.GroupBox()
+        Me.btnBoletas = New System.Windows.Forms.Button()
         Me.btnExcel = New System.Windows.Forms.Button()
         Me.btnResumen = New System.Windows.Forms.Button()
         Me.btnGenerar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtAnioAProgramar = New System.Windows.Forms.TextBox()
         Me.cmbMes = New System.Windows.Forms.ComboBox()
-        Me.btnBoletas = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.dgvPlanilla, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -487,6 +487,18 @@ Partial Class frmImprimirPlanilla
         Me.grpPrincipal.TabIndex = 0
         Me.grpPrincipal.TabStop = False
         '
+        'btnBoletas
+        '
+        Me.btnBoletas.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnBoletas.BackColor = System.Drawing.Color.White
+        Me.btnBoletas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnBoletas.Location = New System.Drawing.Point(1077, 10)
+        Me.btnBoletas.Name = "btnBoletas"
+        Me.btnBoletas.Size = New System.Drawing.Size(140, 30)
+        Me.btnBoletas.TabIndex = 128
+        Me.btnBoletas.Text = "&Boletas"
+        Me.btnBoletas.UseVisualStyleBackColor = False
+        '
         'btnExcel
         '
         Me.btnExcel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -552,18 +564,6 @@ Partial Class frmImprimirPlanilla
         Me.cmbMes.Name = "cmbMes"
         Me.cmbMes.Size = New System.Drawing.Size(158, 21)
         Me.cmbMes.TabIndex = 122
-        '
-        'btnBoletas
-        '
-        Me.btnBoletas.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnBoletas.BackColor = System.Drawing.Color.White
-        Me.btnBoletas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBoletas.Location = New System.Drawing.Point(1077, 10)
-        Me.btnBoletas.Name = "btnBoletas"
-        Me.btnBoletas.Size = New System.Drawing.Size(140, 30)
-        Me.btnBoletas.TabIndex = 128
-        Me.btnBoletas.Text = "&Boletas"
-        Me.btnBoletas.UseVisualStyleBackColor = False
         '
         'frmImprimirPlanilla
         '

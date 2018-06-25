@@ -77,6 +77,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -177,6 +178,12 @@
     <Compile Include="Mantenimiento\frmImprimirPlanilla.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Mantenimiento\frmMedico.Designer.vb">
+      <DependentUpon>frmMedico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\frmMedico.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Mantenimiento\frmPlanillaCTS.Designer.vb">
       <DependentUpon>frmPlanillaCTS.vb</DependentUpon>
     </Compile>
@@ -235,6 +242,20 @@
     <Compile Include="Principal\frmPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportes\dsBoletas.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBoletas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dsBoletas.vb">
+      <DependentUpon>dsBoletas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmReporteBoletas.Designer.vb">
+      <DependentUpon>frmReporteBoletas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmReporteBoletas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\frmReporteResumenPlanilla.Designer.vb">
       <DependentUpon>frmReporteResumenPlanilla.vb</DependentUpon>
     </Compile>
@@ -279,6 +300,9 @@
     <EmbeddedResource Include="Mantenimiento\frmImprimirPlanilla.resx">
       <DependentUpon>frmImprimirPlanilla.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\frmMedico.resx">
+      <DependentUpon>frmMedico.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\frmPersonal.resx">
       <DependentUpon>frmPersonal.vb</DependentUpon>
     </EmbeddedResource>
@@ -307,6 +331,9 @@
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Boletas.rdlc" />
+    <EmbeddedResource Include="Reportes\frmReporteBoletas.resx">
+      <DependentUpon>frmReporteBoletas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\frmReporteResumenPlanilla.resx">
       <DependentUpon>frmReporteResumenPlanilla.vb</DependentUpon>
     </EmbeddedResource>
@@ -356,6 +383,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Reportes\dsBoletas.xsc">
+      <DependentUpon>dsBoletas.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\dsBoletas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBoletas.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reportes\dsBoletas.xss">
+      <DependentUpon>dsBoletas.xsd</DependentUpon>
+    </None>
     <None Include="Resources\accept.png" />
   </ItemGroup>
   <ItemGroup>
