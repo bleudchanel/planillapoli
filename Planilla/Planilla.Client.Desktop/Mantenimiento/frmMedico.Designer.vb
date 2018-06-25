@@ -22,9 +22,9 @@ Partial Class frmMedico
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.tbcOtrosPagos = New System.Windows.Forms.TabControl()
@@ -33,6 +33,26 @@ Partial Class frmMedico
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.dgvPagoDctoBasico = New System.Windows.Forms.DataGridView()
+        Me.IdMedico = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CodMed = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApePaterno = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApeMaterno = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CodDis = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FecNac = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cel = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Email = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RUC = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FecIngreso = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Grado = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NumCol = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Sit = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RNE = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CodEsp1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CodEsp2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Tipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tbpNuevo = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.grpDatos = New System.Windows.Forms.GroupBox()
@@ -64,6 +84,10 @@ Partial Class frmMedico
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.grpRemuneracion = New System.Windows.Forms.GroupBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.txtNroColegiatura = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.cmbGrado = New System.Windows.Forms.ComboBox()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.cmbEstado = New System.Windows.Forms.ComboBox()
         Me.txtRNE = New System.Windows.Forms.TextBox()
@@ -76,30 +100,6 @@ Partial Class frmMedico
         Me.cmbEspecialidad2 = New System.Windows.Forms.ComboBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.cmbEspecialidad1 = New System.Windows.Forms.ComboBox()
-        Me.txtNroColegiatura = New System.Windows.Forms.TextBox()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.cmbGrado = New System.Windows.Forms.ComboBox()
-        Me.IdMedico = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CodMed = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApePaterno = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApeMaterno = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CodDis = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FecNac = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cel = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Email = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RUC = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FecIngreso = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Grado = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NumCol = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Sit = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RNE = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CodEsp1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CodEsp2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Tipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         Me.tbcOtrosPagos.SuspendLayout()
         Me.tbpListar.SuspendLayout()
@@ -164,6 +164,7 @@ Partial Class frmMedico
         '
         Me.btnExcel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnExcel.BackColor = System.Drawing.Color.White
+        Me.btnExcel.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_excel
         Me.btnExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnExcel.Location = New System.Drawing.Point(863, 543)
         Me.btnExcel.Name = "btnExcel"
@@ -176,6 +177,7 @@ Partial Class frmMedico
         '
         Me.btnModificar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnModificar.BackColor = System.Drawing.Color.White
+        Me.btnModificar.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_edit
         Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnModificar.Location = New System.Drawing.Point(129, 543)
         Me.btnModificar.Name = "btnModificar"
@@ -188,6 +190,7 @@ Partial Class frmMedico
         '
         Me.btnNuevo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnNuevo.BackColor = System.Drawing.Color.White
+        Me.btnNuevo.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_add
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnNuevo.Location = New System.Drawing.Point(3, 543)
         Me.btnNuevo.Name = "btnNuevo"
@@ -216,6 +219,155 @@ Partial Class frmMedico
         Me.dgvPagoDctoBasico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvPagoDctoBasico.Size = New System.Drawing.Size(980, 507)
         Me.dgvPagoDctoBasico.TabIndex = 34
+        '
+        'IdMedico
+        '
+        Me.IdMedico.Frozen = True
+        Me.IdMedico.HeaderText = "IdMedico"
+        Me.IdMedico.Name = "IdMedico"
+        Me.IdMedico.ReadOnly = True
+        Me.IdMedico.Visible = False
+        '
+        'CodMed
+        '
+        Me.CodMed.Frozen = True
+        Me.CodMed.HeaderText = "CodMed"
+        Me.CodMed.Name = "CodMed"
+        Me.CodMed.ReadOnly = True
+        Me.CodMed.Width = 60
+        '
+        'ApePaterno
+        '
+        Me.ApePaterno.Frozen = True
+        Me.ApePaterno.HeaderText = "ApePaterno"
+        Me.ApePaterno.Name = "ApePaterno"
+        Me.ApePaterno.ReadOnly = True
+        '
+        'ApeMaterno
+        '
+        Me.ApeMaterno.Frozen = True
+        Me.ApeMaterno.HeaderText = "ApeMaterno"
+        Me.ApeMaterno.Name = "ApeMaterno"
+        Me.ApeMaterno.ReadOnly = True
+        '
+        'Nombre
+        '
+        Me.Nombre.Frozen = True
+        Me.Nombre.HeaderText = "Nombre"
+        Me.Nombre.Name = "Nombre"
+        Me.Nombre.ReadOnly = True
+        '
+        'Direccion
+        '
+        Me.Direccion.HeaderText = "Dirección"
+        Me.Direccion.Name = "Direccion"
+        Me.Direccion.ReadOnly = True
+        Me.Direccion.Width = 150
+        '
+        'CodDis
+        '
+        Me.CodDis.HeaderText = "CodDis"
+        Me.CodDis.Name = "CodDis"
+        Me.CodDis.ReadOnly = True
+        Me.CodDis.Width = 60
+        '
+        'FecNac
+        '
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.Format = "d"
+        Me.FecNac.DefaultCellStyle = DataGridViewCellStyle1
+        Me.FecNac.HeaderText = "FecNac"
+        Me.FecNac.Name = "FecNac"
+        Me.FecNac.ReadOnly = True
+        '
+        'Cel
+        '
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Cel.DefaultCellStyle = DataGridViewCellStyle2
+        Me.Cel.HeaderText = "Cel"
+        Me.Cel.Name = "Cel"
+        Me.Cel.ReadOnly = True
+        Me.Cel.Width = 75
+        '
+        'Email
+        '
+        Me.Email.HeaderText = "Email"
+        Me.Email.Name = "Email"
+        Me.Email.ReadOnly = True
+        Me.Email.Width = 120
+        '
+        'RUC
+        '
+        Me.RUC.HeaderText = "RUC"
+        Me.RUC.Name = "RUC"
+        Me.RUC.ReadOnly = True
+        Me.RUC.Width = 40
+        '
+        'FecIngreso
+        '
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.Format = "d"
+        Me.FecIngreso.DefaultCellStyle = DataGridViewCellStyle3
+        Me.FecIngreso.HeaderText = "FecIngreso"
+        Me.FecIngreso.Name = "FecIngreso"
+        Me.FecIngreso.ReadOnly = True
+        Me.FecIngreso.Width = 80
+        '
+        'Grado
+        '
+        Me.Grado.HeaderText = "Grado"
+        Me.Grado.Name = "Grado"
+        Me.Grado.ReadOnly = True
+        Me.Grado.Width = 55
+        '
+        'NumCol
+        '
+        Me.NumCol.HeaderText = "NumCol"
+        Me.NumCol.Name = "NumCol"
+        Me.NumCol.ReadOnly = True
+        Me.NumCol.Width = 50
+        '
+        'Sit
+        '
+        Me.Sit.HeaderText = "Sit"
+        Me.Sit.Name = "Sit"
+        Me.Sit.ReadOnly = True
+        Me.Sit.Width = 55
+        '
+        'RNE
+        '
+        Me.RNE.HeaderText = "RNE"
+        Me.RNE.Name = "RNE"
+        Me.RNE.ReadOnly = True
+        Me.RNE.Width = 45
+        '
+        'CodEsp1
+        '
+        Me.CodEsp1.HeaderText = "CodEsp1"
+        Me.CodEsp1.Name = "CodEsp1"
+        Me.CodEsp1.ReadOnly = True
+        Me.CodEsp1.Width = 45
+        '
+        'CodEsp2
+        '
+        Me.CodEsp2.HeaderText = "CodEsp2"
+        Me.CodEsp2.Name = "CodEsp2"
+        Me.CodEsp2.ReadOnly = True
+        Me.CodEsp2.Width = 45
+        '
+        'Estado
+        '
+        Me.Estado.HeaderText = "Estado"
+        Me.Estado.Name = "Estado"
+        Me.Estado.ReadOnly = True
+        Me.Estado.Width = 55
+        '
+        'Tipo
+        '
+        Me.Tipo.HeaderText = "Tipo"
+        Me.Tipo.Name = "Tipo"
+        Me.Tipo.ReadOnly = True
+        Me.Tipo.Width = 55
         '
         'tbpNuevo
         '
@@ -623,6 +775,51 @@ Partial Class frmMedico
         Me.grpRemuneracion.TabStop = False
         Me.grpRemuneracion.Text = "Remuneración"
         '
+        'Label17
+        '
+        Me.Label17.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(403, 61)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(83, 15)
+        Me.Label17.TabIndex = 142
+        Me.Label17.Text = "N. Colegiatura"
+        '
+        'txtNroColegiatura
+        '
+        Me.txtNroColegiatura.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.txtNroColegiatura.BackColor = System.Drawing.SystemColors.Window
+        Me.txtNroColegiatura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtNroColegiatura.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNroColegiatura.Location = New System.Drawing.Point(492, 57)
+        Me.txtNroColegiatura.MaxLength = 350
+        Me.txtNroColegiatura.Name = "txtNroColegiatura"
+        Me.txtNroColegiatura.Size = New System.Drawing.Size(52, 25)
+        Me.txtNroColegiatura.TabIndex = 115
+        Me.txtNroColegiatura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label16
+        '
+        Me.Label16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(441, 32)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(39, 15)
+        Me.Label16.TabIndex = 141
+        Me.Label16.Text = "Grado"
+        '
+        'cmbGrado
+        '
+        Me.cmbGrado.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.cmbGrado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbGrado.FormattingEnabled = True
+        Me.cmbGrado.Location = New System.Drawing.Point(492, 32)
+        Me.cmbGrado.Name = "cmbGrado"
+        Me.cmbGrado.Size = New System.Drawing.Size(154, 21)
+        Me.cmbGrado.TabIndex = 138
+        '
         'Label28
         '
         Me.Label28.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
@@ -751,200 +948,6 @@ Partial Class frmMedico
         Me.cmbEspecialidad1.Name = "cmbEspecialidad1"
         Me.cmbEspecialidad1.Size = New System.Drawing.Size(233, 21)
         Me.cmbEspecialidad1.TabIndex = 131
-        '
-        'txtNroColegiatura
-        '
-        Me.txtNroColegiatura.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.txtNroColegiatura.BackColor = System.Drawing.SystemColors.Window
-        Me.txtNroColegiatura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtNroColegiatura.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNroColegiatura.Location = New System.Drawing.Point(492, 57)
-        Me.txtNroColegiatura.MaxLength = 350
-        Me.txtNroColegiatura.Name = "txtNroColegiatura"
-        Me.txtNroColegiatura.Size = New System.Drawing.Size(52, 25)
-        Me.txtNroColegiatura.TabIndex = 115
-        Me.txtNroColegiatura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label17
-        '
-        Me.Label17.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(403, 61)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(83, 15)
-        Me.Label17.TabIndex = 142
-        Me.Label17.Text = "N. Colegiatura"
-        '
-        'Label16
-        '
-        Me.Label16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(441, 32)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(39, 15)
-        Me.Label16.TabIndex = 141
-        Me.Label16.Text = "Grado"
-        '
-        'cmbGrado
-        '
-        Me.cmbGrado.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.cmbGrado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbGrado.FormattingEnabled = True
-        Me.cmbGrado.Location = New System.Drawing.Point(492, 32)
-        Me.cmbGrado.Name = "cmbGrado"
-        Me.cmbGrado.Size = New System.Drawing.Size(154, 21)
-        Me.cmbGrado.TabIndex = 138
-        '
-        'IdMedico
-        '
-        Me.IdMedico.Frozen = True
-        Me.IdMedico.HeaderText = "IdMedico"
-        Me.IdMedico.Name = "IdMedico"
-        Me.IdMedico.ReadOnly = True
-        Me.IdMedico.Visible = False
-        '
-        'CodMed
-        '
-        Me.CodMed.Frozen = True
-        Me.CodMed.HeaderText = "CodMed"
-        Me.CodMed.Name = "CodMed"
-        Me.CodMed.ReadOnly = True
-        Me.CodMed.Width = 60
-        '
-        'ApePaterno
-        '
-        Me.ApePaterno.Frozen = True
-        Me.ApePaterno.HeaderText = "ApePaterno"
-        Me.ApePaterno.Name = "ApePaterno"
-        Me.ApePaterno.ReadOnly = True
-        '
-        'ApeMaterno
-        '
-        Me.ApeMaterno.Frozen = True
-        Me.ApeMaterno.HeaderText = "ApeMaterno"
-        Me.ApeMaterno.Name = "ApeMaterno"
-        Me.ApeMaterno.ReadOnly = True
-        '
-        'Nombre
-        '
-        Me.Nombre.Frozen = True
-        Me.Nombre.HeaderText = "Nombre"
-        Me.Nombre.Name = "Nombre"
-        Me.Nombre.ReadOnly = True
-        '
-        'Direccion
-        '
-        Me.Direccion.HeaderText = "Dirección"
-        Me.Direccion.Name = "Direccion"
-        Me.Direccion.ReadOnly = True
-        Me.Direccion.Width = 150
-        '
-        'CodDis
-        '
-        Me.CodDis.HeaderText = "CodDis"
-        Me.CodDis.Name = "CodDis"
-        Me.CodDis.ReadOnly = True
-        Me.CodDis.Width = 60
-        '
-        'FecNac
-        '
-        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle19.Format = "d"
-        Me.FecNac.DefaultCellStyle = DataGridViewCellStyle19
-        Me.FecNac.HeaderText = "FecNac"
-        Me.FecNac.Name = "FecNac"
-        Me.FecNac.ReadOnly = True
-        '
-        'Cel
-        '
-        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Cel.DefaultCellStyle = DataGridViewCellStyle20
-        Me.Cel.HeaderText = "Cel"
-        Me.Cel.Name = "Cel"
-        Me.Cel.ReadOnly = True
-        Me.Cel.Width = 75
-        '
-        'Email
-        '
-        Me.Email.HeaderText = "Email"
-        Me.Email.Name = "Email"
-        Me.Email.ReadOnly = True
-        Me.Email.Width = 120
-        '
-        'RUC
-        '
-        Me.RUC.HeaderText = "RUC"
-        Me.RUC.Name = "RUC"
-        Me.RUC.ReadOnly = True
-        Me.RUC.Width = 40
-        '
-        'FecIngreso
-        '
-        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle21.Format = "d"
-        Me.FecIngreso.DefaultCellStyle = DataGridViewCellStyle21
-        Me.FecIngreso.HeaderText = "FecIngreso"
-        Me.FecIngreso.Name = "FecIngreso"
-        Me.FecIngreso.ReadOnly = True
-        Me.FecIngreso.Width = 80
-        '
-        'Grado
-        '
-        Me.Grado.HeaderText = "Grado"
-        Me.Grado.Name = "Grado"
-        Me.Grado.ReadOnly = True
-        Me.Grado.Width = 55
-        '
-        'NumCol
-        '
-        Me.NumCol.HeaderText = "NumCol"
-        Me.NumCol.Name = "NumCol"
-        Me.NumCol.ReadOnly = True
-        Me.NumCol.Width = 50
-        '
-        'Sit
-        '
-        Me.Sit.HeaderText = "Sit"
-        Me.Sit.Name = "Sit"
-        Me.Sit.ReadOnly = True
-        Me.Sit.Width = 55
-        '
-        'RNE
-        '
-        Me.RNE.HeaderText = "RNE"
-        Me.RNE.Name = "RNE"
-        Me.RNE.ReadOnly = True
-        Me.RNE.Width = 45
-        '
-        'CodEsp1
-        '
-        Me.CodEsp1.HeaderText = "CodEsp1"
-        Me.CodEsp1.Name = "CodEsp1"
-        Me.CodEsp1.ReadOnly = True
-        Me.CodEsp1.Width = 45
-        '
-        'CodEsp2
-        '
-        Me.CodEsp2.HeaderText = "CodEsp2"
-        Me.CodEsp2.Name = "CodEsp2"
-        Me.CodEsp2.ReadOnly = True
-        Me.CodEsp2.Width = 45
-        '
-        'Estado
-        '
-        Me.Estado.HeaderText = "Estado"
-        Me.Estado.Name = "Estado"
-        Me.Estado.ReadOnly = True
-        Me.Estado.Width = 55
-        '
-        'Tipo
-        '
-        Me.Tipo.HeaderText = "Tipo"
-        Me.Tipo.Name = "Tipo"
-        Me.Tipo.ReadOnly = True
-        Me.Tipo.Width = 55
         '
         'frmMedico
         '

@@ -22,6 +22,7 @@ Partial Class frmAnalisisLaboratorio
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAnalisisLaboratorio))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.tbcOtrosPagos = New System.Windows.Forms.TabControl()
@@ -130,7 +131,7 @@ Partial Class frmAnalisisLaboratorio
         '
         Me.btnModificar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnModificar.BackColor = System.Drawing.Color.White
-        Me.btnModificar.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_edit
+        Me.btnModificar.Image = CType(resources.GetObject("btnModificar.Image"), System.Drawing.Image)
         Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnModificar.Location = New System.Drawing.Point(154, 351)
         Me.btnModificar.Name = "btnModificar"
@@ -143,7 +144,7 @@ Partial Class frmAnalisisLaboratorio
         '
         Me.btnNuevo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnNuevo.BackColor = System.Drawing.Color.White
-        Me.btnNuevo.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_add
+        Me.btnNuevo.Image = CType(resources.GetObject("btnNuevo.Image"), System.Drawing.Image)
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnNuevo.Location = New System.Drawing.Point(7, 351)
         Me.btnNuevo.Name = "btnNuevo"
@@ -430,6 +431,7 @@ Partial Class frmAnalisisLaboratorio
         '
         Me.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnCancelar.BackColor = System.Drawing.Color.White
+        Me.btnCancelar.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.cancel
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCancelar.Location = New System.Drawing.Point(390, 22)
         Me.btnCancelar.Name = "btnCancelar"
@@ -442,6 +444,7 @@ Partial Class frmAnalisisLaboratorio
         '
         Me.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnGuardar.BackColor = System.Drawing.Color.White
+        Me.btnGuardar.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_save
         Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnGuardar.Location = New System.Drawing.Point(243, 22)
         Me.btnGuardar.Name = "btnGuardar"

@@ -22,19 +22,21 @@ Partial Class frmProgramacionVacaciones
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnGenerar = New System.Windows.Forms.Button()
+        Me.btnExcel = New System.Windows.Forms.Button()
         Me.txtAnioAProgramar = New System.Windows.Forms.TextBox()
         Me.grpDetalle = New System.Windows.Forms.GroupBox()
         Me.dgvPagoDctoBasico = New System.Windows.Forms.DataGridView()
@@ -54,8 +56,6 @@ Partial Class frmProgramacionVacaciones
         Me.btnGrabar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.lblCantidadEmpleados = New System.Windows.Forms.Label()
-        Me.btnExcel = New System.Windows.Forms.Button()
-        Me.btnGenerar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.grpDetalle.SuspendLayout()
@@ -100,6 +100,31 @@ Partial Class frmProgramacionVacaciones
         Me.GroupBox1.TabIndex = 91
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "A programar : "
+        '
+        'btnGenerar
+        '
+        Me.btnGenerar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnGenerar.BackColor = System.Drawing.Color.White
+        Me.btnGenerar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGenerar.Location = New System.Drawing.Point(129, 22)
+        Me.btnGenerar.Name = "btnGenerar"
+        Me.btnGenerar.Size = New System.Drawing.Size(140, 30)
+        Me.btnGenerar.TabIndex = 129
+        Me.btnGenerar.Text = "&Generar"
+        Me.btnGenerar.UseVisualStyleBackColor = False
+        '
+        'btnExcel
+        '
+        Me.btnExcel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnExcel.BackColor = System.Drawing.Color.White
+        Me.btnExcel.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_excel
+        Me.btnExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnExcel.Location = New System.Drawing.Point(905, 21)
+        Me.btnExcel.Name = "btnExcel"
+        Me.btnExcel.Size = New System.Drawing.Size(140, 30)
+        Me.btnExcel.TabIndex = 128
+        Me.btnExcel.Text = "&Excel"
+        Me.btnExcel.UseVisualStyleBackColor = False
         '
         'txtAnioAProgramar
         '
@@ -154,8 +179,8 @@ Partial Class frmProgramacionVacaciones
         '
         'Anio
         '
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Anio.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Anio.DefaultCellStyle = DataGridViewCellStyle1
         Me.Anio.HeaderText = "Anio"
         Me.Anio.Name = "Anio"
         Me.Anio.ReadOnly = True
@@ -177,10 +202,10 @@ Partial Class frmProgramacionVacaciones
         '
         'Area
         '
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.Format = "N0"
-        DataGridViewCellStyle12.NullValue = "0"
-        Me.Area.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.Format = "N0"
+        DataGridViewCellStyle2.NullValue = "0"
+        Me.Area.DefaultCellStyle = DataGridViewCellStyle2
         Me.Area.HeaderText = "Area"
         Me.Area.Name = "Area"
         Me.Area.ReadOnly = True
@@ -188,28 +213,28 @@ Partial Class frmProgramacionVacaciones
         '
         'IniProg
         '
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle13.Format = "d"
-        Me.IniProg.DefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle3.Format = "d"
+        Me.IniProg.DefaultCellStyle = DataGridViewCellStyle3
         Me.IniProg.HeaderText = "IniProg"
         Me.IniProg.Name = "IniProg"
         Me.IniProg.Width = 70
         '
         'FinProg
         '
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle14.Format = "d"
-        Me.FinProg.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle4.Format = "d"
+        Me.FinProg.DefaultCellStyle = DataGridViewCellStyle4
         Me.FinProg.HeaderText = "FinProg"
         Me.FinProg.Name = "FinProg"
         Me.FinProg.Width = 70
         '
         'IniEje1
         '
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle15.Format = "d"
-        DataGridViewCellStyle15.NullValue = Nothing
-        Me.IniEje1.DefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle5.Format = "d"
+        DataGridViewCellStyle5.NullValue = Nothing
+        Me.IniEje1.DefaultCellStyle = DataGridViewCellStyle5
         Me.IniEje1.HeaderText = "IniEje1"
         Me.IniEje1.Name = "IniEje1"
         Me.IniEje1.ReadOnly = True
@@ -217,9 +242,9 @@ Partial Class frmProgramacionVacaciones
         '
         'FinEje1
         '
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle16.Format = "d"
-        Me.FinEje1.DefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle6.Format = "d"
+        Me.FinEje1.DefaultCellStyle = DataGridViewCellStyle6
         Me.FinEje1.HeaderText = "FinEje1"
         Me.FinEje1.Name = "FinEje1"
         Me.FinEje1.ReadOnly = True
@@ -227,9 +252,9 @@ Partial Class frmProgramacionVacaciones
         '
         'IniEje2
         '
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle17.Format = "d"
-        Me.IniEje2.DefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle7.Format = "d"
+        Me.IniEje2.DefaultCellStyle = DataGridViewCellStyle7
         Me.IniEje2.HeaderText = "IniEje2"
         Me.IniEje2.Name = "IniEje2"
         Me.IniEje2.ReadOnly = True
@@ -237,9 +262,9 @@ Partial Class frmProgramacionVacaciones
         '
         'FinEje2
         '
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle18.Format = "d"
-        Me.FinEje2.DefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle8.Format = "d"
+        Me.FinEje2.DefaultCellStyle = DataGridViewCellStyle8
         Me.FinEje2.HeaderText = "FinEje2"
         Me.FinEje2.Name = "FinEje2"
         Me.FinEje2.ReadOnly = True
@@ -247,9 +272,9 @@ Partial Class frmProgramacionVacaciones
         '
         'IniEje3
         '
-        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle19.Format = "d"
-        Me.IniEje3.DefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle9.Format = "d"
+        Me.IniEje3.DefaultCellStyle = DataGridViewCellStyle9
         Me.IniEje3.HeaderText = "IniEje3"
         Me.IniEje3.Name = "IniEje3"
         Me.IniEje3.ReadOnly = True
@@ -257,9 +282,9 @@ Partial Class frmProgramacionVacaciones
         '
         'FinEje3
         '
-        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle20.Format = "d"
-        Me.FinEje3.DefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle10.Format = "d"
+        Me.FinEje3.DefaultCellStyle = DataGridViewCellStyle10
         Me.FinEje3.HeaderText = "FinEje3"
         Me.FinEje3.Name = "FinEje3"
         Me.FinEje3.ReadOnly = True
@@ -269,6 +294,7 @@ Partial Class frmProgramacionVacaciones
         '
         Me.btnGrabar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnGrabar.BackColor = System.Drawing.Color.White
+        Me.btnGrabar.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_save
         Me.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnGrabar.Location = New System.Drawing.Point(917, 501)
         Me.btnGrabar.Name = "btnGrabar"
@@ -281,6 +307,7 @@ Partial Class frmProgramacionVacaciones
         '
         Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnCancelar.BackColor = System.Drawing.Color.White
+        Me.btnCancelar.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.cancel
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCancelar.Location = New System.Drawing.Point(3, 501)
         Me.btnCancelar.Name = "btnCancelar"
@@ -297,30 +324,6 @@ Partial Class frmProgramacionVacaciones
         Me.lblCantidadEmpleados.Size = New System.Drawing.Size(144, 15)
         Me.lblCantidadEmpleados.TabIndex = 112
         Me.lblCantidadEmpleados.Text = "Cantidad de Empleados: 0"
-        '
-        'btnExcel
-        '
-        Me.btnExcel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnExcel.BackColor = System.Drawing.Color.White
-        Me.btnExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnExcel.Location = New System.Drawing.Point(905, 21)
-        Me.btnExcel.Name = "btnExcel"
-        Me.btnExcel.Size = New System.Drawing.Size(140, 30)
-        Me.btnExcel.TabIndex = 128
-        Me.btnExcel.Text = "&Excel"
-        Me.btnExcel.UseVisualStyleBackColor = False
-        '
-        'btnGenerar
-        '
-        Me.btnGenerar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnGenerar.BackColor = System.Drawing.Color.White
-        Me.btnGenerar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGenerar.Location = New System.Drawing.Point(129, 22)
-        Me.btnGenerar.Name = "btnGenerar"
-        Me.btnGenerar.Size = New System.Drawing.Size(140, 30)
-        Me.btnGenerar.TabIndex = 129
-        Me.btnGenerar.Text = "&Generar"
-        Me.btnGenerar.UseVisualStyleBackColor = False
         '
         'frmProgramacionVacaciones
         '

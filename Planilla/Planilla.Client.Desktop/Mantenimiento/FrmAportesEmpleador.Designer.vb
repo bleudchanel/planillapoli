@@ -23,6 +23,7 @@ Partial Class FrmAportesEmpleador
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAportesEmpleador))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.grpAporte = New System.Windows.Forms.GroupBox()
@@ -128,7 +129,7 @@ Partial Class FrmAportesEmpleador
         Me.btnGrabar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnGrabar.BackColor = System.Drawing.Color.White
         Me.btnGrabar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGrabar.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.accept
+        Me.btnGrabar.Image = CType(resources.GetObject("btnGrabar.Image"), System.Drawing.Image)
         Me.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnGrabar.Location = New System.Drawing.Point(326, 383)
         Me.btnGrabar.Name = "btnGrabar"
@@ -142,6 +143,7 @@ Partial Class FrmAportesEmpleador
         Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnCancelar.BackColor = System.Drawing.Color.White
         Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelar.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.cancel
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCancelar.Location = New System.Drawing.Point(4, 381)
         Me.btnCancelar.Name = "btnCancelar"

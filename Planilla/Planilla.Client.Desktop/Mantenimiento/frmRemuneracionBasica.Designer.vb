@@ -22,22 +22,56 @@ Partial Class frmRemuneracionBasica
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.tbcOtrosPagos = New System.Windows.Forms.TabControl()
         Me.tbpListar = New System.Windows.Forms.TabPage()
         Me.btnExcel = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.dgvPagoDctoBasico = New System.Windows.Forms.DataGridView()
+        Me.IdPersonal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CodPer = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApePaterno = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApeMaterno = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CodDis = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FecNac = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cel = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Email = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Sex = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EstCivil = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NumHijo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FecIngreso = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Estudios = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Grado = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NumCol = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CodAre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CodCar = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CodFon = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TipComAFP = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CUSPP = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EVida = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RemBas = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AsiFam = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RiesgoCaja = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SCTR = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.HorLab = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Obs = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaBaja = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EntidadCTS = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NumCtaCTS = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tbpNuevo = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.grpDatos = New System.Windows.Forms.GroupBox()
+        Me.txtNumHijos = New System.Windows.Forms.NumericUpDown()
         Me.cmbEstadoCivil = New System.Windows.Forms.ComboBox()
         Me.txtCodPer = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -69,6 +103,7 @@ Partial Class frmRemuneracionBasica
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.grpRemuneracion = New System.Windows.Forms.GroupBox()
+        Me.txtHorasLaborales = New System.Windows.Forms.NumericUpDown()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.dtpFechaBaja = New System.Windows.Forms.DateTimePicker()
         Me.Label31 = New System.Windows.Forms.Label()
@@ -109,53 +144,18 @@ Partial Class frmRemuneracionBasica
         Me.cmbEstudios = New System.Windows.Forms.ComboBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
-        Me.txtNumHijos = New System.Windows.Forms.NumericUpDown()
-        Me.txtHorasLaborales = New System.Windows.Forms.NumericUpDown()
-        Me.IdPersonal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CodPer = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApePaterno = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApeMaterno = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CodDis = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FecNac = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cel = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Email = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Sex = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EstCivil = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NumHijo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FecIngreso = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Estudios = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Grado = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NumCol = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CodAre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CodCar = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CodFon = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TipComAFP = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CUSPP = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EVida = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RemBas = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AsiFam = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RiesgoCaja = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SCTR = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.HorLab = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Obs = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Estado = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaBaja = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EntidadCTS = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NumCtaCTS = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tbcOtrosPagos.SuspendLayout()
         Me.tbpListar.SuspendLayout()
         CType(Me.dgvPagoDctoBasico, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tbpNuevo.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.grpDatos.SuspendLayout()
+        CType(Me.txtNumHijos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpAccion.SuspendLayout()
         Me.grpRemuneracion.SuspendLayout()
+        CType(Me.txtHorasLaborales, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpEstudios.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.txtNumHijos, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtHorasLaborales, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tbcOtrosPagos
@@ -178,7 +178,7 @@ Partial Class frmRemuneracionBasica
         Me.tbpListar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbpListar.Location = New System.Drawing.Point(4, 26)
         Me.tbpListar.Name = "tbpListar"
-        Me.tbpListar.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.tbpListar.Padding = New System.Windows.Forms.Padding(3)
         Me.tbpListar.Size = New System.Drawing.Size(991, 573)
         Me.tbpListar.TabIndex = 0
         Me.tbpListar.Text = "Listar"
@@ -188,6 +188,7 @@ Partial Class frmRemuneracionBasica
         '
         Me.btnExcel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnExcel.BackColor = System.Drawing.Color.White
+        Me.btnExcel.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_excel
         Me.btnExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnExcel.Location = New System.Drawing.Point(863, 539)
         Me.btnExcel.Name = "btnExcel"
@@ -200,6 +201,7 @@ Partial Class frmRemuneracionBasica
         '
         Me.btnModificar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnModificar.BackColor = System.Drawing.Color.White
+        Me.btnModificar.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_edit
         Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnModificar.Location = New System.Drawing.Point(129, 539)
         Me.btnModificar.Name = "btnModificar"
@@ -212,6 +214,7 @@ Partial Class frmRemuneracionBasica
         '
         Me.btnNuevo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnNuevo.BackColor = System.Drawing.Color.White
+        Me.btnNuevo.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_add
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnNuevo.Location = New System.Drawing.Point(3, 539)
         Me.btnNuevo.Name = "btnNuevo"
@@ -241,12 +244,256 @@ Partial Class frmRemuneracionBasica
         Me.dgvPagoDctoBasico.Size = New System.Drawing.Size(980, 503)
         Me.dgvPagoDctoBasico.TabIndex = 34
         '
+        'IdPersonal
+        '
+        Me.IdPersonal.Frozen = True
+        Me.IdPersonal.HeaderText = "IdPersonal"
+        Me.IdPersonal.Name = "IdPersonal"
+        Me.IdPersonal.ReadOnly = True
+        Me.IdPersonal.Visible = False
+        '
+        'CodPer
+        '
+        Me.CodPer.Frozen = True
+        Me.CodPer.HeaderText = "CodPer"
+        Me.CodPer.Name = "CodPer"
+        Me.CodPer.ReadOnly = True
+        Me.CodPer.Width = 60
+        '
+        'ApePaterno
+        '
+        Me.ApePaterno.Frozen = True
+        Me.ApePaterno.HeaderText = "ApePaterno"
+        Me.ApePaterno.Name = "ApePaterno"
+        Me.ApePaterno.ReadOnly = True
+        '
+        'ApeMaterno
+        '
+        Me.ApeMaterno.Frozen = True
+        Me.ApeMaterno.HeaderText = "ApeMaterno"
+        Me.ApeMaterno.Name = "ApeMaterno"
+        Me.ApeMaterno.ReadOnly = True
+        '
+        'Nombre
+        '
+        Me.Nombre.Frozen = True
+        Me.Nombre.HeaderText = "Nombre"
+        Me.Nombre.Name = "Nombre"
+        Me.Nombre.ReadOnly = True
+        '
+        'Direccion
+        '
+        Me.Direccion.HeaderText = "Dirección"
+        Me.Direccion.Name = "Direccion"
+        Me.Direccion.ReadOnly = True
+        Me.Direccion.Width = 150
+        '
+        'CodDis
+        '
+        Me.CodDis.HeaderText = "CodDis"
+        Me.CodDis.Name = "CodDis"
+        Me.CodDis.ReadOnly = True
+        Me.CodDis.Width = 60
+        '
+        'FecNac
+        '
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.Format = "d"
+        Me.FecNac.DefaultCellStyle = DataGridViewCellStyle1
+        Me.FecNac.HeaderText = "FecNac"
+        Me.FecNac.Name = "FecNac"
+        Me.FecNac.ReadOnly = True
+        '
+        'Cel
+        '
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Cel.DefaultCellStyle = DataGridViewCellStyle2
+        Me.Cel.HeaderText = "Cel"
+        Me.Cel.Name = "Cel"
+        Me.Cel.ReadOnly = True
+        Me.Cel.Width = 75
+        '
+        'Email
+        '
+        Me.Email.HeaderText = "Email"
+        Me.Email.Name = "Email"
+        Me.Email.ReadOnly = True
+        Me.Email.Width = 120
+        '
+        'Sex
+        '
+        Me.Sex.HeaderText = "Sex"
+        Me.Sex.Name = "Sex"
+        Me.Sex.ReadOnly = True
+        Me.Sex.Width = 40
+        '
+        'EstCivil
+        '
+        Me.EstCivil.HeaderText = "EstCivil"
+        Me.EstCivil.Name = "EstCivil"
+        Me.EstCivil.ReadOnly = True
+        Me.EstCivil.Width = 70
+        '
+        'NumHijo
+        '
+        Me.NumHijo.HeaderText = "NumHijo"
+        Me.NumHijo.Name = "NumHijo"
+        Me.NumHijo.ReadOnly = True
+        Me.NumHijo.Width = 50
+        '
+        'FecIngreso
+        '
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.Format = "d"
+        Me.FecIngreso.DefaultCellStyle = DataGridViewCellStyle3
+        Me.FecIngreso.HeaderText = "FecIngreso"
+        Me.FecIngreso.Name = "FecIngreso"
+        Me.FecIngreso.ReadOnly = True
+        Me.FecIngreso.Width = 80
+        '
+        'Estudios
+        '
+        Me.Estudios.HeaderText = "Estudios"
+        Me.Estudios.Name = "Estudios"
+        Me.Estudios.ReadOnly = True
+        '
+        'Grado
+        '
+        Me.Grado.HeaderText = "Grado"
+        Me.Grado.Name = "Grado"
+        Me.Grado.ReadOnly = True
+        '
+        'NumCol
+        '
+        Me.NumCol.HeaderText = "NumCol"
+        Me.NumCol.Name = "NumCol"
+        Me.NumCol.ReadOnly = True
+        Me.NumCol.Width = 50
+        '
+        'CodAre
+        '
+        Me.CodAre.HeaderText = "CodAre"
+        Me.CodAre.Name = "CodAre"
+        Me.CodAre.ReadOnly = True
+        Me.CodAre.Width = 45
+        '
+        'CodCar
+        '
+        Me.CodCar.HeaderText = "CodCar"
+        Me.CodCar.Name = "CodCar"
+        Me.CodCar.ReadOnly = True
+        Me.CodCar.Width = 45
+        '
+        'CodFon
+        '
+        Me.CodFon.HeaderText = "CodFon"
+        Me.CodFon.Name = "CodFon"
+        Me.CodFon.ReadOnly = True
+        Me.CodFon.Width = 45
+        '
+        'TipComAFP
+        '
+        Me.TipComAFP.HeaderText = "TipComAFP"
+        Me.TipComAFP.Name = "TipComAFP"
+        Me.TipComAFP.ReadOnly = True
+        '
+        'CUSPP
+        '
+        Me.CUSPP.HeaderText = "CUSPP"
+        Me.CUSPP.Name = "CUSPP"
+        Me.CUSPP.ReadOnly = True
+        '
+        'EVida
+        '
+        Me.EVida.HeaderText = "EVida"
+        Me.EVida.Name = "EVida"
+        Me.EVida.ReadOnly = True
+        Me.EVida.Width = 50
+        '
+        'RemBas
+        '
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle4.Format = "N2"
+        Me.RemBas.DefaultCellStyle = DataGridViewCellStyle4
+        Me.RemBas.HeaderText = "RemBas"
+        Me.RemBas.Name = "RemBas"
+        Me.RemBas.ReadOnly = True
+        Me.RemBas.Width = 65
+        '
+        'AsiFam
+        '
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle5.Format = "N2"
+        Me.AsiFam.DefaultCellStyle = DataGridViewCellStyle5
+        Me.AsiFam.HeaderText = "AsiFam"
+        Me.AsiFam.Name = "AsiFam"
+        Me.AsiFam.ReadOnly = True
+        Me.AsiFam.Width = 65
+        '
+        'RiesgoCaja
+        '
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle6.Format = "N2"
+        Me.RiesgoCaja.DefaultCellStyle = DataGridViewCellStyle6
+        Me.RiesgoCaja.HeaderText = "RiesgoCaja"
+        Me.RiesgoCaja.Name = "RiesgoCaja"
+        Me.RiesgoCaja.ReadOnly = True
+        Me.RiesgoCaja.Width = 65
+        '
+        'SCTR
+        '
+        Me.SCTR.HeaderText = "SCTR"
+        Me.SCTR.Name = "SCTR"
+        Me.SCTR.ReadOnly = True
+        Me.SCTR.Width = 55
+        '
+        'HorLab
+        '
+        Me.HorLab.HeaderText = "HorLab"
+        Me.HorLab.Name = "HorLab"
+        Me.HorLab.ReadOnly = True
+        Me.HorLab.Width = 50
+        '
+        'Obs
+        '
+        Me.Obs.HeaderText = "Obs"
+        Me.Obs.Name = "Obs"
+        Me.Obs.ReadOnly = True
+        '
+        'Estado
+        '
+        Me.Estado.HeaderText = "Estado"
+        Me.Estado.Name = "Estado"
+        Me.Estado.ReadOnly = True
+        Me.Estado.Width = 55
+        '
+        'FechaBaja
+        '
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.Format = "d"
+        Me.FechaBaja.DefaultCellStyle = DataGridViewCellStyle7
+        Me.FechaBaja.HeaderText = "FechaBaja"
+        Me.FechaBaja.Name = "FechaBaja"
+        Me.FechaBaja.ReadOnly = True
+        '
+        'EntidadCTS
+        '
+        Me.EntidadCTS.HeaderText = "EntidadCTS"
+        Me.EntidadCTS.Name = "EntidadCTS"
+        Me.EntidadCTS.ReadOnly = True
+        '
+        'NumCtaCTS
+        '
+        Me.NumCtaCTS.HeaderText = "NumCtaCTS"
+        Me.NumCtaCTS.Name = "NumCtaCTS"
+        Me.NumCtaCTS.ReadOnly = True
+        '
         'tbpNuevo
         '
         Me.tbpNuevo.Controls.Add(Me.TableLayoutPanel1)
         Me.tbpNuevo.Location = New System.Drawing.Point(4, 26)
         Me.tbpNuevo.Name = "tbpNuevo"
-        Me.tbpNuevo.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.tbpNuevo.Padding = New System.Windows.Forms.Padding(3)
         Me.tbpNuevo.Size = New System.Drawing.Size(991, 573)
         Me.tbpNuevo.TabIndex = 1
         Me.tbpNuevo.Text = "Nuevo"
@@ -310,6 +557,14 @@ Partial Class frmRemuneracionBasica
         Me.grpDatos.TabIndex = 2
         Me.grpDatos.TabStop = False
         Me.grpDatos.Text = "Documento"
+        '
+        'txtNumHijos
+        '
+        Me.txtNumHijos.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.txtNumHijos.Location = New System.Drawing.Point(768, 112)
+        Me.txtNumHijos.Name = "txtNumHijos"
+        Me.txtNumHijos.Size = New System.Drawing.Size(45, 25)
+        Me.txtNumHijos.TabIndex = 138
         '
         'cmbEstadoCivil
         '
@@ -699,6 +954,15 @@ Partial Class frmRemuneracionBasica
         Me.grpRemuneracion.TabIndex = 5
         Me.grpRemuneracion.TabStop = False
         Me.grpRemuneracion.Text = "Remuneración"
+        '
+        'txtHorasLaborales
+        '
+        Me.txtHorasLaborales.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.txtHorasLaborales.Location = New System.Drawing.Point(544, 158)
+        Me.txtHorasLaborales.Maximum = New Decimal(New Integer() {250, 0, 0, 0})
+        Me.txtHorasLaborales.Name = "txtHorasLaborales"
+        Me.txtHorasLaborales.Size = New System.Drawing.Size(45, 25)
+        Me.txtHorasLaborales.TabIndex = 161
         '
         'Label32
         '
@@ -1164,267 +1428,6 @@ Partial Class frmRemuneracionBasica
         Me.lblTitulo.TabIndex = 1
         Me.lblTitulo.Text = "Mantenimiento Personal"
         '
-        'txtNumHijos
-        '
-        Me.txtNumHijos.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.txtNumHijos.Location = New System.Drawing.Point(768, 112)
-        Me.txtNumHijos.Name = "txtNumHijos"
-        Me.txtNumHijos.Size = New System.Drawing.Size(45, 25)
-        Me.txtNumHijos.TabIndex = 138
-        '
-        'txtHorasLaborales
-        '
-        Me.txtHorasLaborales.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.txtHorasLaborales.Location = New System.Drawing.Point(544, 158)
-        Me.txtHorasLaborales.Maximum = New Decimal(New Integer() {250, 0, 0, 0})
-        Me.txtHorasLaborales.Name = "txtHorasLaborales"
-        Me.txtHorasLaborales.Size = New System.Drawing.Size(45, 25)
-        Me.txtHorasLaborales.TabIndex = 161
-        '
-        'IdPersonal
-        '
-        Me.IdPersonal.Frozen = True
-        Me.IdPersonal.HeaderText = "IdPersonal"
-        Me.IdPersonal.Name = "IdPersonal"
-        Me.IdPersonal.ReadOnly = True
-        Me.IdPersonal.Visible = False
-        '
-        'CodPer
-        '
-        Me.CodPer.Frozen = True
-        Me.CodPer.HeaderText = "CodPer"
-        Me.CodPer.Name = "CodPer"
-        Me.CodPer.ReadOnly = True
-        Me.CodPer.Width = 60
-        '
-        'ApePaterno
-        '
-        Me.ApePaterno.Frozen = True
-        Me.ApePaterno.HeaderText = "ApePaterno"
-        Me.ApePaterno.Name = "ApePaterno"
-        Me.ApePaterno.ReadOnly = True
-        '
-        'ApeMaterno
-        '
-        Me.ApeMaterno.Frozen = True
-        Me.ApeMaterno.HeaderText = "ApeMaterno"
-        Me.ApeMaterno.Name = "ApeMaterno"
-        Me.ApeMaterno.ReadOnly = True
-        '
-        'Nombre
-        '
-        Me.Nombre.Frozen = True
-        Me.Nombre.HeaderText = "Nombre"
-        Me.Nombre.Name = "Nombre"
-        Me.Nombre.ReadOnly = True
-        '
-        'Direccion
-        '
-        Me.Direccion.HeaderText = "Dirección"
-        Me.Direccion.Name = "Direccion"
-        Me.Direccion.ReadOnly = True
-        Me.Direccion.Width = 150
-        '
-        'CodDis
-        '
-        Me.CodDis.HeaderText = "CodDis"
-        Me.CodDis.Name = "CodDis"
-        Me.CodDis.ReadOnly = True
-        Me.CodDis.Width = 60
-        '
-        'FecNac
-        '
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle8.Format = "d"
-        Me.FecNac.DefaultCellStyle = DataGridViewCellStyle8
-        Me.FecNac.HeaderText = "FecNac"
-        Me.FecNac.Name = "FecNac"
-        Me.FecNac.ReadOnly = True
-        '
-        'Cel
-        '
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Cel.DefaultCellStyle = DataGridViewCellStyle9
-        Me.Cel.HeaderText = "Cel"
-        Me.Cel.Name = "Cel"
-        Me.Cel.ReadOnly = True
-        Me.Cel.Width = 75
-        '
-        'Email
-        '
-        Me.Email.HeaderText = "Email"
-        Me.Email.Name = "Email"
-        Me.Email.ReadOnly = True
-        Me.Email.Width = 120
-        '
-        'Sex
-        '
-        Me.Sex.HeaderText = "Sex"
-        Me.Sex.Name = "Sex"
-        Me.Sex.ReadOnly = True
-        Me.Sex.Width = 40
-        '
-        'EstCivil
-        '
-        Me.EstCivil.HeaderText = "EstCivil"
-        Me.EstCivil.Name = "EstCivil"
-        Me.EstCivil.ReadOnly = True
-        Me.EstCivil.Width = 70
-        '
-        'NumHijo
-        '
-        Me.NumHijo.HeaderText = "NumHijo"
-        Me.NumHijo.Name = "NumHijo"
-        Me.NumHijo.ReadOnly = True
-        Me.NumHijo.Width = 50
-        '
-        'FecIngreso
-        '
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle10.Format = "d"
-        Me.FecIngreso.DefaultCellStyle = DataGridViewCellStyle10
-        Me.FecIngreso.HeaderText = "FecIngreso"
-        Me.FecIngreso.Name = "FecIngreso"
-        Me.FecIngreso.ReadOnly = True
-        Me.FecIngreso.Width = 80
-        '
-        'Estudios
-        '
-        Me.Estudios.HeaderText = "Estudios"
-        Me.Estudios.Name = "Estudios"
-        Me.Estudios.ReadOnly = True
-        '
-        'Grado
-        '
-        Me.Grado.HeaderText = "Grado"
-        Me.Grado.Name = "Grado"
-        Me.Grado.ReadOnly = True
-        '
-        'NumCol
-        '
-        Me.NumCol.HeaderText = "NumCol"
-        Me.NumCol.Name = "NumCol"
-        Me.NumCol.ReadOnly = True
-        Me.NumCol.Width = 50
-        '
-        'CodAre
-        '
-        Me.CodAre.HeaderText = "CodAre"
-        Me.CodAre.Name = "CodAre"
-        Me.CodAre.ReadOnly = True
-        Me.CodAre.Width = 45
-        '
-        'CodCar
-        '
-        Me.CodCar.HeaderText = "CodCar"
-        Me.CodCar.Name = "CodCar"
-        Me.CodCar.ReadOnly = True
-        Me.CodCar.Width = 45
-        '
-        'CodFon
-        '
-        Me.CodFon.HeaderText = "CodFon"
-        Me.CodFon.Name = "CodFon"
-        Me.CodFon.ReadOnly = True
-        Me.CodFon.Width = 45
-        '
-        'TipComAFP
-        '
-        Me.TipComAFP.HeaderText = "TipComAFP"
-        Me.TipComAFP.Name = "TipComAFP"
-        Me.TipComAFP.ReadOnly = True
-        '
-        'CUSPP
-        '
-        Me.CUSPP.HeaderText = "CUSPP"
-        Me.CUSPP.Name = "CUSPP"
-        Me.CUSPP.ReadOnly = True
-        '
-        'EVida
-        '
-        Me.EVida.HeaderText = "EVida"
-        Me.EVida.Name = "EVida"
-        Me.EVida.ReadOnly = True
-        Me.EVida.Width = 50
-        '
-        'RemBas
-        '
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle11.Format = "N2"
-        Me.RemBas.DefaultCellStyle = DataGridViewCellStyle11
-        Me.RemBas.HeaderText = "RemBas"
-        Me.RemBas.Name = "RemBas"
-        Me.RemBas.ReadOnly = True
-        Me.RemBas.Width = 65
-        '
-        'AsiFam
-        '
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle12.Format = "N2"
-        Me.AsiFam.DefaultCellStyle = DataGridViewCellStyle12
-        Me.AsiFam.HeaderText = "AsiFam"
-        Me.AsiFam.Name = "AsiFam"
-        Me.AsiFam.ReadOnly = True
-        Me.AsiFam.Width = 65
-        '
-        'RiesgoCaja
-        '
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle13.Format = "N2"
-        Me.RiesgoCaja.DefaultCellStyle = DataGridViewCellStyle13
-        Me.RiesgoCaja.HeaderText = "RiesgoCaja"
-        Me.RiesgoCaja.Name = "RiesgoCaja"
-        Me.RiesgoCaja.ReadOnly = True
-        Me.RiesgoCaja.Width = 65
-        '
-        'SCTR
-        '
-        Me.SCTR.HeaderText = "SCTR"
-        Me.SCTR.Name = "SCTR"
-        Me.SCTR.ReadOnly = True
-        Me.SCTR.Width = 55
-        '
-        'HorLab
-        '
-        Me.HorLab.HeaderText = "HorLab"
-        Me.HorLab.Name = "HorLab"
-        Me.HorLab.ReadOnly = True
-        Me.HorLab.Width = 50
-        '
-        'Obs
-        '
-        Me.Obs.HeaderText = "Obs"
-        Me.Obs.Name = "Obs"
-        Me.Obs.ReadOnly = True
-        '
-        'Estado
-        '
-        Me.Estado.HeaderText = "Estado"
-        Me.Estado.Name = "Estado"
-        Me.Estado.ReadOnly = True
-        Me.Estado.Width = 55
-        '
-        'FechaBaja
-        '
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle14.Format = "d"
-        Me.FechaBaja.DefaultCellStyle = DataGridViewCellStyle14
-        Me.FechaBaja.HeaderText = "FechaBaja"
-        Me.FechaBaja.Name = "FechaBaja"
-        Me.FechaBaja.ReadOnly = True
-        '
-        'EntidadCTS
-        '
-        Me.EntidadCTS.HeaderText = "EntidadCTS"
-        Me.EntidadCTS.Name = "EntidadCTS"
-        Me.EntidadCTS.ReadOnly = True
-        '
-        'NumCtaCTS
-        '
-        Me.NumCtaCTS.HeaderText = "NumCtaCTS"
-        Me.NumCtaCTS.Name = "NumCtaCTS"
-        Me.NumCtaCTS.ReadOnly = True
-        '
         'frmRemuneracionBasica
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
@@ -1444,15 +1447,15 @@ Partial Class frmRemuneracionBasica
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.grpDatos.ResumeLayout(False)
         Me.grpDatos.PerformLayout()
+        CType(Me.txtNumHijos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpAccion.ResumeLayout(False)
         Me.grpRemuneracion.ResumeLayout(False)
         Me.grpRemuneracion.PerformLayout()
+        CType(Me.txtHorasLaborales, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpEstudios.ResumeLayout(False)
         Me.grpEstudios.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.txtNumHijos, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtHorasLaborales, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

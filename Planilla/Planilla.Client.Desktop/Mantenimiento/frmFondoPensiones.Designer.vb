@@ -22,8 +22,8 @@ Partial Class frmFondoPensiones
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.tbcOtrosPagos = New System.Windows.Forms.TabControl()
@@ -32,8 +32,19 @@ Partial Class frmFondoPensiones
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.dgvPagoDctoBasico = New System.Windows.Forms.DataGridView()
+        Me.IdFondoPensiones = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CodFon = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Entidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApoOblF = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ComVarF = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PriSegF = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApoOblM = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ComVarM = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PriSegM = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PorONP = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tbpNuevo = New System.Windows.Forms.TabPage()
         Me.grpManagement = New System.Windows.Forms.GroupBox()
+        Me.cmbEstado = New System.Windows.Forms.ComboBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.txtONP = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -77,17 +88,6 @@ Partial Class frmFondoPensiones
         Me.txtApellidoPaterno = New System.Windows.Forms.TextBox()
         Me.txtDni = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.IdFondoPensiones = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CodFon = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Entidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApoOblF = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ComVarF = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PriSegF = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApoOblM = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ComVarM = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PriSegM = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PorONP = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cmbEstado = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         Me.tbcOtrosPagos.SuspendLayout()
         Me.tbpListar.SuspendLayout()
@@ -164,6 +164,7 @@ Partial Class frmFondoPensiones
         '
         Me.btnModificar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnModificar.BackColor = System.Drawing.Color.White
+        Me.btnModificar.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_edit
         Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnModificar.Location = New System.Drawing.Point(180, 334)
         Me.btnModificar.Name = "btnModificar"
@@ -176,6 +177,7 @@ Partial Class frmFondoPensiones
         '
         Me.btnNuevo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnNuevo.BackColor = System.Drawing.Color.White
+        Me.btnNuevo.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_add
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnNuevo.Location = New System.Drawing.Point(8, 334)
         Me.btnNuevo.Name = "btnNuevo"
@@ -204,6 +206,80 @@ Partial Class frmFondoPensiones
         Me.dgvPagoDctoBasico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvPagoDctoBasico.Size = New System.Drawing.Size(800, 289)
         Me.dgvPagoDctoBasico.TabIndex = 34
+        '
+        'IdFondoPensiones
+        '
+        Me.IdFondoPensiones.HeaderText = "IdFondoPensiones"
+        Me.IdFondoPensiones.Name = "IdFondoPensiones"
+        Me.IdFondoPensiones.ReadOnly = True
+        Me.IdFondoPensiones.Visible = False
+        '
+        'CodFon
+        '
+        Me.CodFon.HeaderText = "CodFon"
+        Me.CodFon.Name = "CodFon"
+        Me.CodFon.ReadOnly = True
+        Me.CodFon.Width = 60
+        '
+        'Entidad
+        '
+        Me.Entidad.HeaderText = "Entidad"
+        Me.Entidad.Name = "Entidad"
+        Me.Entidad.ReadOnly = True
+        Me.Entidad.Width = 250
+        '
+        'ApoOblF
+        '
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.ApoOblF.DefaultCellStyle = DataGridViewCellStyle1
+        Me.ApoOblF.HeaderText = "ApoOblF"
+        Me.ApoOblF.Name = "ApoOblF"
+        Me.ApoOblF.ReadOnly = True
+        Me.ApoOblF.Width = 65
+        '
+        'ComVarF
+        '
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.ComVarF.DefaultCellStyle = DataGridViewCellStyle2
+        Me.ComVarF.HeaderText = "ComVarF"
+        Me.ComVarF.Name = "ComVarF"
+        Me.ComVarF.ReadOnly = True
+        Me.ComVarF.Width = 65
+        '
+        'PriSegF
+        '
+        Me.PriSegF.HeaderText = "PriSegF"
+        Me.PriSegF.Name = "PriSegF"
+        Me.PriSegF.ReadOnly = True
+        Me.PriSegF.Width = 65
+        '
+        'ApoOblM
+        '
+        Me.ApoOblM.HeaderText = "ApoOblM"
+        Me.ApoOblM.Name = "ApoOblM"
+        Me.ApoOblM.ReadOnly = True
+        Me.ApoOblM.Width = 65
+        '
+        'ComVarM
+        '
+        Me.ComVarM.HeaderText = "ComVarM"
+        Me.ComVarM.Name = "ComVarM"
+        Me.ComVarM.ReadOnly = True
+        Me.ComVarM.Width = 65
+        '
+        'PriSegM
+        '
+        Me.PriSegM.HeaderText = "PriSegM"
+        Me.PriSegM.Name = "PriSegM"
+        Me.PriSegM.ReadOnly = True
+        Me.PriSegM.Width = 65
+        '
+        'PorONP
+        '
+        Me.PorONP.HeaderText = "PorONP"
+        Me.PorONP.Name = "PorONP"
+        Me.PorONP.ReadOnly = True
+        Me.PorONP.Width = 65
         '
         'tbpNuevo
         '
@@ -247,6 +323,15 @@ Partial Class frmFondoPensiones
         Me.grpManagement.Size = New System.Drawing.Size(808, 303)
         Me.grpManagement.TabIndex = 4
         Me.grpManagement.TabStop = False
+        '
+        'cmbEstado
+        '
+        Me.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbEstado.FormattingEnabled = True
+        Me.cmbEstado.Location = New System.Drawing.Point(206, 199)
+        Me.cmbEstado.Name = "cmbEstado"
+        Me.cmbEstado.Size = New System.Drawing.Size(209, 23)
+        Me.cmbEstado.TabIndex = 121
         '
         'Label19
         '
@@ -492,6 +577,7 @@ Partial Class frmFondoPensiones
         Me.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnCancelar.BackColor = System.Drawing.Color.White
         Me.btnCancelar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelar.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.cancel
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCancelar.Location = New System.Drawing.Point(399, 22)
         Me.btnCancelar.Name = "btnCancelar"
@@ -505,6 +591,7 @@ Partial Class frmFondoPensiones
         Me.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnGuardar.BackColor = System.Drawing.Color.White
         Me.btnGuardar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardar.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_save
         Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnGuardar.Location = New System.Drawing.Point(228, 22)
         Me.btnGuardar.Name = "btnGuardar"
@@ -769,89 +856,6 @@ Partial Class frmFondoPensiones
         Me.Label5.Size = New System.Drawing.Size(27, 15)
         Me.Label5.TabIndex = 41
         Me.Label5.Text = "DNI"
-        '
-        'IdFondoPensiones
-        '
-        Me.IdFondoPensiones.HeaderText = "IdFondoPensiones"
-        Me.IdFondoPensiones.Name = "IdFondoPensiones"
-        Me.IdFondoPensiones.ReadOnly = True
-        Me.IdFondoPensiones.Visible = False
-        '
-        'CodFon
-        '
-        Me.CodFon.HeaderText = "CodFon"
-        Me.CodFon.Name = "CodFon"
-        Me.CodFon.ReadOnly = True
-        Me.CodFon.Width = 60
-        '
-        'Entidad
-        '
-        Me.Entidad.HeaderText = "Entidad"
-        Me.Entidad.Name = "Entidad"
-        Me.Entidad.ReadOnly = True
-        Me.Entidad.Width = 250
-        '
-        'ApoOblF
-        '
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.ApoOblF.DefaultCellStyle = DataGridViewCellStyle15
-        Me.ApoOblF.HeaderText = "ApoOblF"
-        Me.ApoOblF.Name = "ApoOblF"
-        Me.ApoOblF.ReadOnly = True
-        Me.ApoOblF.Width = 65
-        '
-        'ComVarF
-        '
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.ComVarF.DefaultCellStyle = DataGridViewCellStyle16
-        Me.ComVarF.HeaderText = "ComVarF"
-        Me.ComVarF.Name = "ComVarF"
-        Me.ComVarF.ReadOnly = True
-        Me.ComVarF.Width = 65
-        '
-        'PriSegF
-        '
-        Me.PriSegF.HeaderText = "PriSegF"
-        Me.PriSegF.Name = "PriSegF"
-        Me.PriSegF.ReadOnly = True
-        Me.PriSegF.Width = 65
-        '
-        'ApoOblM
-        '
-        Me.ApoOblM.HeaderText = "ApoOblM"
-        Me.ApoOblM.Name = "ApoOblM"
-        Me.ApoOblM.ReadOnly = True
-        Me.ApoOblM.Width = 65
-        '
-        'ComVarM
-        '
-        Me.ComVarM.HeaderText = "ComVarM"
-        Me.ComVarM.Name = "ComVarM"
-        Me.ComVarM.ReadOnly = True
-        Me.ComVarM.Width = 65
-        '
-        'PriSegM
-        '
-        Me.PriSegM.HeaderText = "PriSegM"
-        Me.PriSegM.Name = "PriSegM"
-        Me.PriSegM.ReadOnly = True
-        Me.PriSegM.Width = 65
-        '
-        'PorONP
-        '
-        Me.PorONP.HeaderText = "PorONP"
-        Me.PorONP.Name = "PorONP"
-        Me.PorONP.ReadOnly = True
-        Me.PorONP.Width = 65
-        '
-        'cmbEstado
-        '
-        Me.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbEstado.FormattingEnabled = True
-        Me.cmbEstado.Location = New System.Drawing.Point(206, 199)
-        Me.cmbEstado.Name = "cmbEstado"
-        Me.cmbEstado.Size = New System.Drawing.Size(209, 23)
-        Me.cmbEstado.TabIndex = 121
         '
         'frmFondoPensiones
         '

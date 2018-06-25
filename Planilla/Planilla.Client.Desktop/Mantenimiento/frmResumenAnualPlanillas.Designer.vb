@@ -22,38 +22,33 @@ Partial Class frmResumenAnualPlanillas
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle41 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle42 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.grpControles = New System.Windows.Forms.GroupBox()
         Me.btnExcel = New System.Windows.Forms.Button()
         Me.dgvPagoDctoBasico = New System.Windows.Forms.DataGridView()
-        Me.grpDatos = New System.Windows.Forms.GroupBox()
-        Me.btnGenerar = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtAnioAProgramar = New System.Windows.Forms.TextBox()
-        Me.cmbPersonal = New System.Windows.Forms.ComboBox()
         Me.Periodo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RemBasica = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AsigFamiliar = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -76,6 +71,11 @@ Partial Class frmResumenAnualPlanillas
         Me.Essalud = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SCTR = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TotalAportes = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.grpDatos = New System.Windows.Forms.GroupBox()
+        Me.btnGenerar = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtAnioAProgramar = New System.Windows.Forms.TextBox()
+        Me.cmbPersonal = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.grpControles.SuspendLayout()
@@ -139,6 +139,7 @@ Partial Class frmResumenAnualPlanillas
         '
         Me.btnExcel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnExcel.BackColor = System.Drawing.Color.White
+        Me.btnExcel.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_excel
         Me.btnExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnExcel.Location = New System.Drawing.Point(9, 19)
         Me.btnExcel.Name = "btnExcel"
@@ -167,6 +168,180 @@ Partial Class frmResumenAnualPlanillas
         Me.dgvPagoDctoBasico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvPagoDctoBasico.Size = New System.Drawing.Size(975, 433)
         Me.dgvPagoDctoBasico.TabIndex = 35
+        '
+        'Periodo
+        '
+        Me.Periodo.HeaderText = "Periodo"
+        Me.Periodo.Name = "Periodo"
+        Me.Periodo.ReadOnly = True
+        '
+        'RemBasica
+        '
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.RemBasica.DefaultCellStyle = DataGridViewCellStyle1
+        Me.RemBasica.HeaderText = "RemBasica"
+        Me.RemBasica.Name = "RemBasica"
+        Me.RemBasica.ReadOnly = True
+        '
+        'AsigFamiliar
+        '
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.AsigFamiliar.DefaultCellStyle = DataGridViewCellStyle2
+        Me.AsigFamiliar.HeaderText = "AsigFamiliar"
+        Me.AsigFamiliar.Name = "AsigFamiliar"
+        Me.AsigFamiliar.ReadOnly = True
+        '
+        'Subsidio
+        '
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Subsidio.DefaultCellStyle = DataGridViewCellStyle3
+        Me.Subsidio.HeaderText = "Subsidio"
+        Me.Subsidio.Name = "Subsidio"
+        Me.Subsidio.ReadOnly = True
+        '
+        'Gratificacion
+        '
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Gratificacion.DefaultCellStyle = DataGridViewCellStyle4
+        Me.Gratificacion.HeaderText = "Gratificacion"
+        Me.Gratificacion.Name = "Gratificacion"
+        Me.Gratificacion.ReadOnly = True
+        '
+        'RemVacacional
+        '
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.RemVacacional.DefaultCellStyle = DataGridViewCellStyle5
+        Me.RemVacacional.HeaderText = "RemVacacional"
+        Me.RemVacacional.Name = "RemVacacional"
+        Me.RemVacacional.ReadOnly = True
+        '
+        'RiesgoCaja
+        '
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.RiesgoCaja.DefaultCellStyle = DataGridViewCellStyle6
+        Me.RiesgoCaja.HeaderText = "RiesgoCaja"
+        Me.RiesgoCaja.Name = "RiesgoCaja"
+        Me.RiesgoCaja.ReadOnly = True
+        '
+        'Reintegro
+        '
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Reintegro.DefaultCellStyle = DataGridViewCellStyle7
+        Me.Reintegro.HeaderText = "Reintegro"
+        Me.Reintegro.Name = "Reintegro"
+        Me.Reintegro.ReadOnly = True
+        '
+        'HorasExtra
+        '
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.HorasExtra.DefaultCellStyle = DataGridViewCellStyle8
+        Me.HorasExtra.HeaderText = "HorasExtra"
+        Me.HorasExtra.Name = "HorasExtra"
+        Me.HorasExtra.ReadOnly = True
+        '
+        'OtrosIng
+        '
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.OtrosIng.DefaultCellStyle = DataGridViewCellStyle9
+        Me.OtrosIng.HeaderText = "OtrosIng"
+        Me.OtrosIng.Name = "OtrosIng"
+        Me.OtrosIng.ReadOnly = True
+        '
+        'TotalIngresos
+        '
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.TotalIngresos.DefaultCellStyle = DataGridViewCellStyle10
+        Me.TotalIngresos.HeaderText = "TotalIngresos"
+        Me.TotalIngresos.Name = "TotalIngresos"
+        Me.TotalIngresos.ReadOnly = True
+        '
+        'ONP
+        '
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.ONP.DefaultCellStyle = DataGridViewCellStyle11
+        Me.ONP.HeaderText = "ONP"
+        Me.ONP.Name = "ONP"
+        Me.ONP.ReadOnly = True
+        '
+        'AporteObligatorio
+        '
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.AporteObligatorio.DefaultCellStyle = DataGridViewCellStyle12
+        Me.AporteObligatorio.HeaderText = "AporteObligatorio"
+        Me.AporteObligatorio.Name = "AporteObligatorio"
+        Me.AporteObligatorio.ReadOnly = True
+        '
+        'PrimaSeguro
+        '
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.PrimaSeguro.DefaultCellStyle = DataGridViewCellStyle13
+        Me.PrimaSeguro.HeaderText = "PrimaSeguro"
+        Me.PrimaSeguro.Name = "PrimaSeguro"
+        Me.PrimaSeguro.ReadOnly = True
+        '
+        'ComisionVariable
+        '
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.ComisionVariable.DefaultCellStyle = DataGridViewCellStyle14
+        Me.ComisionVariable.HeaderText = "ComisionVariable"
+        Me.ComisionVariable.Name = "ComisionVariable"
+        Me.ComisionVariable.ReadOnly = True
+        '
+        'QuintaCategoria
+        '
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.QuintaCategoria.DefaultCellStyle = DataGridViewCellStyle15
+        Me.QuintaCategoria.HeaderText = "QuintaCategoria"
+        Me.QuintaCategoria.Name = "QuintaCategoria"
+        Me.QuintaCategoria.ReadOnly = True
+        '
+        'OtrosDescuentos
+        '
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.OtrosDescuentos.DefaultCellStyle = DataGridViewCellStyle16
+        Me.OtrosDescuentos.HeaderText = "OtrosDescuentos"
+        Me.OtrosDescuentos.Name = "OtrosDescuentos"
+        Me.OtrosDescuentos.ReadOnly = True
+        '
+        'TotalDescuentos
+        '
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.TotalDescuentos.DefaultCellStyle = DataGridViewCellStyle17
+        Me.TotalDescuentos.HeaderText = "TotalDescuentos"
+        Me.TotalDescuentos.Name = "TotalDescuentos"
+        Me.TotalDescuentos.ReadOnly = True
+        '
+        'Neto
+        '
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Neto.DefaultCellStyle = DataGridViewCellStyle18
+        Me.Neto.HeaderText = "Neto"
+        Me.Neto.Name = "Neto"
+        Me.Neto.ReadOnly = True
+        '
+        'Essalud
+        '
+        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Essalud.DefaultCellStyle = DataGridViewCellStyle19
+        Me.Essalud.HeaderText = "Essalud"
+        Me.Essalud.Name = "Essalud"
+        Me.Essalud.ReadOnly = True
+        '
+        'SCTR
+        '
+        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.SCTR.DefaultCellStyle = DataGridViewCellStyle20
+        Me.SCTR.HeaderText = "SCTR"
+        Me.SCTR.Name = "SCTR"
+        Me.SCTR.ReadOnly = True
+        '
+        'TotalAportes
+        '
+        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.TotalAportes.DefaultCellStyle = DataGridViewCellStyle21
+        Me.TotalAportes.HeaderText = "TotalAportes"
+        Me.TotalAportes.Name = "TotalAportes"
+        Me.TotalAportes.ReadOnly = True
         '
         'grpDatos
         '
@@ -223,180 +398,6 @@ Partial Class frmResumenAnualPlanillas
         Me.cmbPersonal.Name = "cmbPersonal"
         Me.cmbPersonal.Size = New System.Drawing.Size(337, 21)
         Me.cmbPersonal.TabIndex = 126
-        '
-        'Periodo
-        '
-        Me.Periodo.HeaderText = "Periodo"
-        Me.Periodo.Name = "Periodo"
-        Me.Periodo.ReadOnly = True
-        '
-        'RemBasica
-        '
-        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.RemBasica.DefaultCellStyle = DataGridViewCellStyle22
-        Me.RemBasica.HeaderText = "RemBasica"
-        Me.RemBasica.Name = "RemBasica"
-        Me.RemBasica.ReadOnly = True
-        '
-        'AsigFamiliar
-        '
-        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.AsigFamiliar.DefaultCellStyle = DataGridViewCellStyle23
-        Me.AsigFamiliar.HeaderText = "AsigFamiliar"
-        Me.AsigFamiliar.Name = "AsigFamiliar"
-        Me.AsigFamiliar.ReadOnly = True
-        '
-        'Subsidio
-        '
-        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Subsidio.DefaultCellStyle = DataGridViewCellStyle24
-        Me.Subsidio.HeaderText = "Subsidio"
-        Me.Subsidio.Name = "Subsidio"
-        Me.Subsidio.ReadOnly = True
-        '
-        'Gratificacion
-        '
-        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Gratificacion.DefaultCellStyle = DataGridViewCellStyle25
-        Me.Gratificacion.HeaderText = "Gratificacion"
-        Me.Gratificacion.Name = "Gratificacion"
-        Me.Gratificacion.ReadOnly = True
-        '
-        'RemVacacional
-        '
-        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.RemVacacional.DefaultCellStyle = DataGridViewCellStyle26
-        Me.RemVacacional.HeaderText = "RemVacacional"
-        Me.RemVacacional.Name = "RemVacacional"
-        Me.RemVacacional.ReadOnly = True
-        '
-        'RiesgoCaja
-        '
-        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.RiesgoCaja.DefaultCellStyle = DataGridViewCellStyle27
-        Me.RiesgoCaja.HeaderText = "RiesgoCaja"
-        Me.RiesgoCaja.Name = "RiesgoCaja"
-        Me.RiesgoCaja.ReadOnly = True
-        '
-        'Reintegro
-        '
-        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Reintegro.DefaultCellStyle = DataGridViewCellStyle28
-        Me.Reintegro.HeaderText = "Reintegro"
-        Me.Reintegro.Name = "Reintegro"
-        Me.Reintegro.ReadOnly = True
-        '
-        'HorasExtra
-        '
-        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.HorasExtra.DefaultCellStyle = DataGridViewCellStyle29
-        Me.HorasExtra.HeaderText = "HorasExtra"
-        Me.HorasExtra.Name = "HorasExtra"
-        Me.HorasExtra.ReadOnly = True
-        '
-        'OtrosIng
-        '
-        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.OtrosIng.DefaultCellStyle = DataGridViewCellStyle30
-        Me.OtrosIng.HeaderText = "OtrosIng"
-        Me.OtrosIng.Name = "OtrosIng"
-        Me.OtrosIng.ReadOnly = True
-        '
-        'TotalIngresos
-        '
-        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.TotalIngresos.DefaultCellStyle = DataGridViewCellStyle31
-        Me.TotalIngresos.HeaderText = "TotalIngresos"
-        Me.TotalIngresos.Name = "TotalIngresos"
-        Me.TotalIngresos.ReadOnly = True
-        '
-        'ONP
-        '
-        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.ONP.DefaultCellStyle = DataGridViewCellStyle32
-        Me.ONP.HeaderText = "ONP"
-        Me.ONP.Name = "ONP"
-        Me.ONP.ReadOnly = True
-        '
-        'AporteObligatorio
-        '
-        DataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.AporteObligatorio.DefaultCellStyle = DataGridViewCellStyle33
-        Me.AporteObligatorio.HeaderText = "AporteObligatorio"
-        Me.AporteObligatorio.Name = "AporteObligatorio"
-        Me.AporteObligatorio.ReadOnly = True
-        '
-        'PrimaSeguro
-        '
-        DataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.PrimaSeguro.DefaultCellStyle = DataGridViewCellStyle34
-        Me.PrimaSeguro.HeaderText = "PrimaSeguro"
-        Me.PrimaSeguro.Name = "PrimaSeguro"
-        Me.PrimaSeguro.ReadOnly = True
-        '
-        'ComisionVariable
-        '
-        DataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.ComisionVariable.DefaultCellStyle = DataGridViewCellStyle35
-        Me.ComisionVariable.HeaderText = "ComisionVariable"
-        Me.ComisionVariable.Name = "ComisionVariable"
-        Me.ComisionVariable.ReadOnly = True
-        '
-        'QuintaCategoria
-        '
-        DataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.QuintaCategoria.DefaultCellStyle = DataGridViewCellStyle36
-        Me.QuintaCategoria.HeaderText = "QuintaCategoria"
-        Me.QuintaCategoria.Name = "QuintaCategoria"
-        Me.QuintaCategoria.ReadOnly = True
-        '
-        'OtrosDescuentos
-        '
-        DataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.OtrosDescuentos.DefaultCellStyle = DataGridViewCellStyle37
-        Me.OtrosDescuentos.HeaderText = "OtrosDescuentos"
-        Me.OtrosDescuentos.Name = "OtrosDescuentos"
-        Me.OtrosDescuentos.ReadOnly = True
-        '
-        'TotalDescuentos
-        '
-        DataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.TotalDescuentos.DefaultCellStyle = DataGridViewCellStyle38
-        Me.TotalDescuentos.HeaderText = "TotalDescuentos"
-        Me.TotalDescuentos.Name = "TotalDescuentos"
-        Me.TotalDescuentos.ReadOnly = True
-        '
-        'Neto
-        '
-        DataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Neto.DefaultCellStyle = DataGridViewCellStyle39
-        Me.Neto.HeaderText = "Neto"
-        Me.Neto.Name = "Neto"
-        Me.Neto.ReadOnly = True
-        '
-        'Essalud
-        '
-        DataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Essalud.DefaultCellStyle = DataGridViewCellStyle40
-        Me.Essalud.HeaderText = "Essalud"
-        Me.Essalud.Name = "Essalud"
-        Me.Essalud.ReadOnly = True
-        '
-        'SCTR
-        '
-        DataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.SCTR.DefaultCellStyle = DataGridViewCellStyle41
-        Me.SCTR.HeaderText = "SCTR"
-        Me.SCTR.Name = "SCTR"
-        Me.SCTR.ReadOnly = True
-        '
-        'TotalAportes
-        '
-        DataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.TotalAportes.DefaultCellStyle = DataGridViewCellStyle42
-        Me.TotalAportes.HeaderText = "TotalAportes"
-        Me.TotalAportes.Name = "TotalAportes"
-        Me.TotalAportes.ReadOnly = True
         '
         'frmResumenAnualPlanillas
         '

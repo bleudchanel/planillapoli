@@ -83,4 +83,8 @@ Public Class frmGenerarPDT
             FncDataTable2Excel(dtEx, "Planilla")
         End If
     End Sub
+
+    Private Sub btnSunat_Click(sender As Object, e As EventArgs) Handles btnSunat.Click
+
+    End Sub
 End Class

@@ -22,8 +22,8 @@ Partial Class frmProcedimiento
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.tbcOtrosPagos = New System.Windows.Forms.TabControl()
@@ -32,19 +32,6 @@ Partial Class frmProcedimiento
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.dgvPagoDctoBasico = New System.Windows.Forms.DataGridView()
-        Me.tbpNuevo = New System.Windows.Forms.TabPage()
-        Me.grpManagement = New System.Windows.Forms.GroupBox()
-        Me.txtMontoMedico = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtProcedimiento = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtCodigo = New System.Windows.Forms.TextBox()
-        Me.txtPrecioProcedimiento = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.grpAccion = New System.Windows.Forms.GroupBox()
-        Me.btnCancelar = New System.Windows.Forms.Button()
-        Me.btnGuardar = New System.Windows.Forms.Button()
         Me.IdProcedimiento = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CodPro = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TipPro = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -56,14 +43,27 @@ Partial Class frmProcedimiento
         Me.Observacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProImprimir = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AreaLaboratorio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.cmbEspecialidad = New System.Windows.Forms.ComboBox()
-        Me.txtTipo = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtNombreCorto = New System.Windows.Forms.TextBox()
+        Me.tbpNuevo = New System.Windows.Forms.TabPage()
+        Me.grpManagement = New System.Windows.Forms.GroupBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtObservacion = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtNombreCorto = New System.Windows.Forms.TextBox()
+        Me.txtTipo = New System.Windows.Forms.TextBox()
+        Me.cmbEspecialidad = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtMontoMedico = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtProcedimiento = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtCodigo = New System.Windows.Forms.TextBox()
+        Me.txtPrecioProcedimiento = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.grpAccion = New System.Windows.Forms.GroupBox()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.tbcOtrosPagos.SuspendLayout()
         Me.tbpListar.SuspendLayout()
@@ -137,6 +137,7 @@ Partial Class frmProcedimiento
         '
         Me.btnModificar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnModificar.BackColor = System.Drawing.Color.White
+        Me.btnModificar.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_edit
         Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnModificar.Location = New System.Drawing.Point(154, 351)
         Me.btnModificar.Name = "btnModificar"
@@ -149,6 +150,7 @@ Partial Class frmProcedimiento
         '
         Me.btnNuevo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnNuevo.BackColor = System.Drawing.Color.White
+        Me.btnNuevo.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_add
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnNuevo.Location = New System.Drawing.Point(7, 351)
         Me.btnNuevo.Name = "btnNuevo"
@@ -176,6 +178,89 @@ Partial Class frmProcedimiento
         Me.dgvPagoDctoBasico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvPagoDctoBasico.Size = New System.Drawing.Size(777, 312)
         Me.dgvPagoDctoBasico.TabIndex = 34
+        '
+        'IdProcedimiento
+        '
+        Me.IdProcedimiento.HeaderText = "IdProcedimiento"
+        Me.IdProcedimiento.Name = "IdProcedimiento"
+        Me.IdProcedimiento.ReadOnly = True
+        Me.IdProcedimiento.Visible = False
+        '
+        'CodPro
+        '
+        Me.CodPro.HeaderText = "CodPro"
+        Me.CodPro.Name = "CodPro"
+        Me.CodPro.ReadOnly = True
+        Me.CodPro.Width = 60
+        '
+        'TipPro
+        '
+        Me.TipPro.HeaderText = "TipPro"
+        Me.TipPro.Name = "TipPro"
+        Me.TipPro.ReadOnly = True
+        Me.TipPro.Width = 50
+        '
+        'Procedimiento
+        '
+        Me.Procedimiento.HeaderText = "Procedimiento"
+        Me.Procedimiento.Name = "Procedimiento"
+        Me.Procedimiento.ReadOnly = True
+        Me.Procedimiento.Width = 200
+        '
+        'IdEspecialidad
+        '
+        Me.IdEspecialidad.HeaderText = "IdEspecialidad"
+        Me.IdEspecialidad.Name = "IdEspecialidad"
+        Me.IdEspecialidad.ReadOnly = True
+        Me.IdEspecialidad.Visible = False
+        '
+        'CodEsp
+        '
+        Me.CodEsp.HeaderText = "CodEsp"
+        Me.CodEsp.Name = "CodEsp"
+        Me.CodEsp.ReadOnly = True
+        Me.CodEsp.Width = 50
+        '
+        'PrecioProcedimiento
+        '
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle1.Format = "N2"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.PrecioProcedimiento.DefaultCellStyle = DataGridViewCellStyle1
+        Me.PrecioProcedimiento.HeaderText = "PrecioProce"
+        Me.PrecioProcedimiento.Name = "PrecioProcedimiento"
+        Me.PrecioProcedimiento.ReadOnly = True
+        Me.PrecioProcedimiento.Width = 70
+        '
+        'MontoMedico
+        '
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle2.Format = "N2"
+        Me.MontoMedico.DefaultCellStyle = DataGridViewCellStyle2
+        Me.MontoMedico.HeaderText = "MontoMed"
+        Me.MontoMedico.Name = "MontoMedico"
+        Me.MontoMedico.ReadOnly = True
+        Me.MontoMedico.Width = 70
+        '
+        'Observacion
+        '
+        Me.Observacion.HeaderText = "Observacion"
+        Me.Observacion.Name = "Observacion"
+        Me.Observacion.ReadOnly = True
+        Me.Observacion.Width = 150
+        '
+        'ProImprimir
+        '
+        Me.ProImprimir.HeaderText = "ProImprimir"
+        Me.ProImprimir.Name = "ProImprimir"
+        Me.ProImprimir.ReadOnly = True
+        Me.ProImprimir.Width = 150
+        '
+        'AreaLaboratorio
+        '
+        Me.AreaLaboratorio.HeaderText = "AreaLaboratorio"
+        Me.AreaLaboratorio.Name = "AreaLaboratorio"
+        Me.AreaLaboratorio.ReadOnly = True
         '
         'tbpNuevo
         '
@@ -215,6 +300,97 @@ Partial Class frmProcedimiento
         Me.grpManagement.Size = New System.Drawing.Size(779, 310)
         Me.grpManagement.TabIndex = 4
         Me.grpManagement.TabStop = False
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(84, 251)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(73, 15)
+        Me.Label5.TabIndex = 128
+        Me.Label5.Text = "Observación"
+        '
+        'txtObservacion
+        '
+        Me.txtObservacion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.txtObservacion.BackColor = System.Drawing.SystemColors.Window
+        Me.txtObservacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtObservacion.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtObservacion.Location = New System.Drawing.Point(174, 247)
+        Me.txtObservacion.MaxLength = 350
+        Me.txtObservacion.Name = "txtObservacion"
+        Me.txtObservacion.Size = New System.Drawing.Size(576, 25)
+        Me.txtObservacion.TabIndex = 127
+        Me.txtObservacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(75, 220)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(84, 15)
+        Me.Label3.TabIndex = 126
+        Me.Label3.Text = "Nombre Corto"
+        '
+        'txtNombreCorto
+        '
+        Me.txtNombreCorto.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.txtNombreCorto.BackColor = System.Drawing.SystemColors.Window
+        Me.txtNombreCorto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtNombreCorto.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombreCorto.Location = New System.Drawing.Point(174, 216)
+        Me.txtNombreCorto.MaxLength = 350
+        Me.txtNombreCorto.Name = "txtNombreCorto"
+        Me.txtNombreCorto.Size = New System.Drawing.Size(352, 25)
+        Me.txtNombreCorto.TabIndex = 125
+        Me.txtNombreCorto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtTipo
+        '
+        Me.txtTipo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.txtTipo.BackColor = System.Drawing.SystemColors.Window
+        Me.txtTipo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtTipo.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTipo.Location = New System.Drawing.Point(174, 88)
+        Me.txtTipo.MaxLength = 1
+        Me.txtTipo.Name = "txtTipo"
+        Me.txtTipo.Size = New System.Drawing.Size(33, 25)
+        Me.txtTipo.TabIndex = 124
+        Me.txtTipo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'cmbEspecialidad
+        '
+        Me.cmbEspecialidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbEspecialidad.FormattingEnabled = True
+        Me.cmbEspecialidad.Location = New System.Drawing.Point(174, 122)
+        Me.cmbEspecialidad.Name = "cmbEspecialidad"
+        Me.cmbEspecialidad.Size = New System.Drawing.Size(352, 21)
+        Me.cmbEspecialidad.TabIndex = 123
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(89, 124)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(72, 15)
+        Me.Label2.TabIndex = 111
+        Me.Label2.Text = "Especialidad"
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(52, 159)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(107, 13)
+        Me.Label1.TabIndex = 110
+        Me.Label1.Text = "Precio Procedimiento"
         '
         'txtMontoMedico
         '
@@ -350,180 +526,6 @@ Partial Class frmProcedimiento
         Me.btnGuardar.TabIndex = 20
         Me.btnGuardar.Text = "&Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = False
-        '
-        'IdProcedimiento
-        '
-        Me.IdProcedimiento.HeaderText = "IdProcedimiento"
-        Me.IdProcedimiento.Name = "IdProcedimiento"
-        Me.IdProcedimiento.ReadOnly = True
-        Me.IdProcedimiento.Visible = False
-        '
-        'CodPro
-        '
-        Me.CodPro.HeaderText = "CodPro"
-        Me.CodPro.Name = "CodPro"
-        Me.CodPro.ReadOnly = True
-        Me.CodPro.Width = 60
-        '
-        'TipPro
-        '
-        Me.TipPro.HeaderText = "TipPro"
-        Me.TipPro.Name = "TipPro"
-        Me.TipPro.ReadOnly = True
-        Me.TipPro.Width = 50
-        '
-        'Procedimiento
-        '
-        Me.Procedimiento.HeaderText = "Procedimiento"
-        Me.Procedimiento.Name = "Procedimiento"
-        Me.Procedimiento.ReadOnly = True
-        Me.Procedimiento.Width = 200
-        '
-        'IdEspecialidad
-        '
-        Me.IdEspecialidad.HeaderText = "IdEspecialidad"
-        Me.IdEspecialidad.Name = "IdEspecialidad"
-        Me.IdEspecialidad.ReadOnly = True
-        Me.IdEspecialidad.Visible = False
-        '
-        'CodEsp
-        '
-        Me.CodEsp.HeaderText = "CodEsp"
-        Me.CodEsp.Name = "CodEsp"
-        Me.CodEsp.ReadOnly = True
-        Me.CodEsp.Width = 50
-        '
-        'PrecioProcedimiento
-        '
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle15.Format = "N2"
-        DataGridViewCellStyle15.NullValue = Nothing
-        Me.PrecioProcedimiento.DefaultCellStyle = DataGridViewCellStyle15
-        Me.PrecioProcedimiento.HeaderText = "PrecioProce"
-        Me.PrecioProcedimiento.Name = "PrecioProcedimiento"
-        Me.PrecioProcedimiento.ReadOnly = True
-        Me.PrecioProcedimiento.Width = 70
-        '
-        'MontoMedico
-        '
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle16.Format = "N2"
-        Me.MontoMedico.DefaultCellStyle = DataGridViewCellStyle16
-        Me.MontoMedico.HeaderText = "MontoMed"
-        Me.MontoMedico.Name = "MontoMedico"
-        Me.MontoMedico.ReadOnly = True
-        Me.MontoMedico.Width = 70
-        '
-        'Observacion
-        '
-        Me.Observacion.HeaderText = "Observacion"
-        Me.Observacion.Name = "Observacion"
-        Me.Observacion.ReadOnly = True
-        Me.Observacion.Width = 150
-        '
-        'ProImprimir
-        '
-        Me.ProImprimir.HeaderText = "ProImprimir"
-        Me.ProImprimir.Name = "ProImprimir"
-        Me.ProImprimir.ReadOnly = True
-        Me.ProImprimir.Width = 150
-        '
-        'AreaLaboratorio
-        '
-        Me.AreaLaboratorio.HeaderText = "AreaLaboratorio"
-        Me.AreaLaboratorio.Name = "AreaLaboratorio"
-        Me.AreaLaboratorio.ReadOnly = True
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(52, 159)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(107, 13)
-        Me.Label1.TabIndex = 110
-        Me.Label1.Text = "Precio Procedimiento"
-        '
-        'Label2
-        '
-        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(89, 124)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 15)
-        Me.Label2.TabIndex = 111
-        Me.Label2.Text = "Especialidad"
-        '
-        'cmbEspecialidad
-        '
-        Me.cmbEspecialidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbEspecialidad.FormattingEnabled = True
-        Me.cmbEspecialidad.Location = New System.Drawing.Point(174, 122)
-        Me.cmbEspecialidad.Name = "cmbEspecialidad"
-        Me.cmbEspecialidad.Size = New System.Drawing.Size(352, 21)
-        Me.cmbEspecialidad.TabIndex = 123
-        '
-        'txtTipo
-        '
-        Me.txtTipo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.txtTipo.BackColor = System.Drawing.SystemColors.Window
-        Me.txtTipo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtTipo.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTipo.Location = New System.Drawing.Point(174, 88)
-        Me.txtTipo.MaxLength = 1
-        Me.txtTipo.Name = "txtTipo"
-        Me.txtTipo.Size = New System.Drawing.Size(33, 25)
-        Me.txtTipo.TabIndex = 124
-        Me.txtTipo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label3
-        '
-        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(75, 220)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(84, 15)
-        Me.Label3.TabIndex = 126
-        Me.Label3.Text = "Nombre Corto"
-        '
-        'txtNombreCorto
-        '
-        Me.txtNombreCorto.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.txtNombreCorto.BackColor = System.Drawing.SystemColors.Window
-        Me.txtNombreCorto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtNombreCorto.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombreCorto.Location = New System.Drawing.Point(174, 216)
-        Me.txtNombreCorto.MaxLength = 350
-        Me.txtNombreCorto.Name = "txtNombreCorto"
-        Me.txtNombreCorto.Size = New System.Drawing.Size(352, 25)
-        Me.txtNombreCorto.TabIndex = 125
-        Me.txtNombreCorto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label5
-        '
-        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(84, 251)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(73, 15)
-        Me.Label5.TabIndex = 128
-        Me.Label5.Text = "Observación"
-        '
-        'txtObservacion
-        '
-        Me.txtObservacion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.txtObservacion.BackColor = System.Drawing.SystemColors.Window
-        Me.txtObservacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtObservacion.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtObservacion.Location = New System.Drawing.Point(174, 247)
-        Me.txtObservacion.MaxLength = 350
-        Me.txtObservacion.Name = "txtObservacion"
-        Me.txtObservacion.Size = New System.Drawing.Size(576, 25)
-        Me.txtObservacion.TabIndex = 127
-        Me.txtObservacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'frmProcedimiento
         '

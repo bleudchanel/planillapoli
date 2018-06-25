@@ -24,6 +24,7 @@ Partial Class frmDiasLabMes
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDiasLabMes))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.dgvPagoDctoBasico = New System.Windows.Forms.DataGridView()
@@ -135,6 +136,7 @@ Partial Class frmDiasLabMes
         '
         Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnCancelar.BackColor = System.Drawing.Color.White
+        Me.btnCancelar.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.cancel
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCancelar.Location = New System.Drawing.Point(16, 472)
         Me.btnCancelar.Name = "btnCancelar"
@@ -147,7 +149,7 @@ Partial Class frmDiasLabMes
         '
         Me.btnGrabar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnGrabar.BackColor = System.Drawing.Color.White
-        Me.btnGrabar.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.accept
+        Me.btnGrabar.Image = CType(resources.GetObject("btnGrabar.Image"), System.Drawing.Image)
         Me.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnGrabar.Location = New System.Drawing.Point(277, 472)
         Me.btnGrabar.Name = "btnGrabar"

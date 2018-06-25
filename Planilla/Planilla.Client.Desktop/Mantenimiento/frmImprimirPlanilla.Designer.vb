@@ -503,6 +503,7 @@ Partial Class frmImprimirPlanilla
         '
         Me.btnExcel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnExcel.BackColor = System.Drawing.Color.White
+        Me.btnExcel.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_excel
         Me.btnExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnExcel.Location = New System.Drawing.Point(788, 10)
         Me.btnExcel.Name = "btnExcel"

@@ -146,6 +146,7 @@ Partial Class frmEspecialidad
         '
         Me.btnModificar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnModificar.BackColor = System.Drawing.Color.White
+        Me.btnModificar.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_edit
         Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnModificar.Location = New System.Drawing.Point(154, 303)
         Me.btnModificar.Name = "btnModificar"
@@ -158,6 +159,7 @@ Partial Class frmEspecialidad
         '
         Me.btnNuevo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnNuevo.BackColor = System.Drawing.Color.White
+        Me.btnNuevo.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_add
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnNuevo.Location = New System.Drawing.Point(7, 303)
         Me.btnNuevo.Name = "btnNuevo"
@@ -370,6 +372,7 @@ Partial Class frmEspecialidad
         '
         Me.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnCancelar.BackColor = System.Drawing.Color.White
+        Me.btnCancelar.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.cancel
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCancelar.Location = New System.Drawing.Point(320, 22)
         Me.btnCancelar.Name = "btnCancelar"
@@ -382,6 +385,7 @@ Partial Class frmEspecialidad
         '
         Me.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnGuardar.BackColor = System.Drawing.Color.White
+        Me.btnGuardar.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_save
         Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnGuardar.Location = New System.Drawing.Point(173, 22)
         Me.btnGuardar.Name = "btnGuardar"
