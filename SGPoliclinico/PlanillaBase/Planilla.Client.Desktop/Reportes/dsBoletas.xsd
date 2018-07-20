@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsBoletas" targetNamespace="http://tempuri.org/dsBoletas.xsd" xmlns:mstns="http://tempuri.org/dsBoletas.xsd" xmlns="http://tempuri.org/dsBoletas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsBoletas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsBoletas" msprop:Generator_UserDSName="dsBoletas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtBoletas" msprop:Generator_TableClassName="dtBoletasDataTable" msprop:Generator_TableVarName="tabledtBoletas" msprop:Generator_RowChangedName="dtBoletasRowChanged" msprop:Generator_TablePropName="dtBoletas" msprop:Generator_RowDeletingName="dtBoletasRowDeleting" msprop:Generator_RowChangingName="dtBoletasRowChanging" msprop:Generator_RowEvHandlerName="dtBoletasRowChangeEventHandler" msprop:Generator_RowDeletedName="dtBoletasRowDeleted" msprop:Generator_RowClassName="dtBoletasRow" msprop:Generator_UserTableName="dtBoletas" msprop:Generator_RowEvArgName="dtBoletasRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodPer" msprop:Generator_ColumnVarNameInTable="columnCodPer" msprop:Generator_ColumnPropNameInRow="CodPer" msprop:Generator_ColumnPropNameInTable="CodPerColumn" msprop:Generator_UserColumnName="CodPer" type="xs:string" minOccurs="0" />
+              <xs:element name="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="FechaIngreso" msprop:Generator_ColumnVarNameInTable="columnFechaIngreso" msprop:Generator_ColumnPropNameInRow="FechaIngreso" msprop:Generator_ColumnPropNameInTable="FechaIngresoColumn" msprop:Generator_UserColumnName="FechaIngreso" type="xs:string" minOccurs="0" />
+              <xs:element name="DocIdentidad" msprop:Generator_ColumnVarNameInTable="columnDocIdentidad" msprop:Generator_ColumnPropNameInRow="DocIdentidad" msprop:Generator_ColumnPropNameInTable="DocIdentidadColumn" msprop:Generator_UserColumnName="DocIdentidad" type="xs:string" minOccurs="0" />
+              <xs:element name="Cargo" msprop:Generator_ColumnVarNameInTable="columnCargo" msprop:Generator_ColumnPropNameInRow="Cargo" msprop:Generator_ColumnPropNameInTable="CargoColumn" msprop:Generator_UserColumnName="Cargo" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
