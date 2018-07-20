@@ -81,6 +81,9 @@ namespace Planilla.Business.Entities
             DiasSinGoceHaber = diasSinGoceHaber;
             Cerrado = cerrado;
             TipoPlan = tipoPlan;
+
+            Aumento = 0;
+            NuevaRem = 0;
         }
 
         public PlanillaRemuneracion()
@@ -141,11 +144,20 @@ namespace Planilla.Business.Entities
             TipoPlan = planillaBase.TipoPlan;
             NombrePersona = planillaBase.NombrePersona;
             VacacionesPeriodo = planillaBase.VacacionesPeriodo;
+            Aumento = planillaBase.Aumento;
+            NuevaRem = planillaBase.RemBas ?? 0;
         }
 
         public void SetRemBas(decimal remBas)
         {
             this.RemBas = remBas;
+            Recalc();
+        }
+
+        public void SetAumento(decimal aumento)
+        {
+            this.Aumento = aumento;
+            this.NuevaRem += aumento;
             Recalc();
         }
 
@@ -213,7 +225,7 @@ namespace Planilla.Business.Entities
 
         private void Recalc()
         {
-            TotIng = (RemBas + AsiFam + Subsidio + Gratif + RemVac + RieCaj + Reinte + HE + OtrIng);
+            TotIng = (RemBas + AsiFam + Subsidio + Gratif + RemVac + RieCaj + Reinte + HE + OtrIng + Aumento);
 
             ONP = Math.Round((TotIng ?? 0) * (PorONP ?? 0), 2, MidpointRounding.AwayFromZero);
             ApoObl = Math.Round((TotIng ?? 0) * (PorApoObl ?? 0), 2, MidpointRounding.AwayFromZero);
@@ -235,6 +247,7 @@ namespace Planilla.Business.Entities
         [DataMember]
         public string Periodo { get; set; }
         [DataMember]
+        [Column("Id")]
         public Nullable<int> IdPersonal { get; set; }
         [DataMember]
         public string CodPer { get; set; }
@@ -339,6 +352,8 @@ namespace Planilla.Business.Entities
         public DateTime FechaIngreso { get; set; }
         public string Cargo { get; set; }
         public string Area { get; set; }
+        public decimal Aumento { get; set; }
+        public decimal NuevaRem { get; set; }
 
         public Vacaciones VacacionesPeriodo { get; set; }
 

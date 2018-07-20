@@ -49,7 +49,6 @@ Partial Class frmProcedimiento
         Me.txtObservacion = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtNombreCorto = New System.Windows.Forms.TextBox()
-        Me.txtTipo = New System.Windows.Forms.TextBox()
         Me.cmbEspecialidad = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -64,6 +63,7 @@ Partial Class frmProcedimiento
         Me.grpAccion = New System.Windows.Forms.GroupBox()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.cmbConsultaPro = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         Me.tbcOtrosPagos.SuspendLayout()
         Me.tbpListar.SuspendLayout()
@@ -279,11 +279,11 @@ Partial Class frmProcedimiento
         Me.grpManagement.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.grpManagement.Controls.Add(Me.cmbConsultaPro)
         Me.grpManagement.Controls.Add(Me.Label5)
         Me.grpManagement.Controls.Add(Me.txtObservacion)
         Me.grpManagement.Controls.Add(Me.Label3)
         Me.grpManagement.Controls.Add(Me.txtNombreCorto)
-        Me.grpManagement.Controls.Add(Me.txtTipo)
         Me.grpManagement.Controls.Add(Me.cmbEspecialidad)
         Me.grpManagement.Controls.Add(Me.Label2)
         Me.grpManagement.Controls.Add(Me.Label1)
@@ -348,19 +348,6 @@ Partial Class frmProcedimiento
         Me.txtNombreCorto.Size = New System.Drawing.Size(352, 25)
         Me.txtNombreCorto.TabIndex = 125
         Me.txtNombreCorto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtTipo
-        '
-        Me.txtTipo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.txtTipo.BackColor = System.Drawing.SystemColors.Window
-        Me.txtTipo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtTipo.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTipo.Location = New System.Drawing.Point(174, 88)
-        Me.txtTipo.MaxLength = 1
-        Me.txtTipo.Name = "txtTipo"
-        Me.txtTipo.Size = New System.Drawing.Size(33, 25)
-        Me.txtTipo.TabIndex = 124
-        Me.txtTipo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'cmbEspecialidad
         '
@@ -527,6 +514,15 @@ Partial Class frmProcedimiento
         Me.btnGuardar.Text = "&Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = False
         '
+        'cmbConsultaPro
+        '
+        Me.cmbConsultaPro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbConsultaPro.FormattingEnabled = True
+        Me.cmbConsultaPro.Location = New System.Drawing.Point(174, 93)
+        Me.cmbConsultaPro.Name = "cmbConsultaPro"
+        Me.cmbConsultaPro.Size = New System.Drawing.Size(106, 21)
+        Me.cmbConsultaPro.TabIndex = 129
+        '
         'frmProcedimiento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -583,10 +579,10 @@ Partial Class frmProcedimiento
     Friend WithEvents AreaLaboratorio As DataGridViewTextBoxColumn
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents txtTipo As TextBox
     Friend WithEvents cmbEspecialidad As ComboBox
     Friend WithEvents Label5 As Label
     Friend WithEvents txtObservacion As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents txtNombreCorto As TextBox
+    Friend WithEvents cmbConsultaPro As ComboBox
 End Class

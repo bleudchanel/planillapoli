@@ -5,7 +5,7 @@ c:\users\usuario\source\repos\Planilla\Core.Common.ServiceModel\obj\Debug\Core.C
 c:\users\usuario\source\repos\Planilla\Core.Common.ServiceModel\obj\Debug\Core.Common.ServiceModel.pdb
 C:\Users\Usuario\planillapoli\Planilla\Core.Common.ServiceModel\bin\Debug\Core.Common.ServiceModel.dll
 C:\Users\Usuario\planillapoli\Planilla\Core.Common.ServiceModel\bin\Debug\Core.Common.ServiceModel.pdb
-C:\Users\Usuario\planillapoli\Planilla\Core.Common.ServiceModel\obj\Debug\Core.Common.ServiceModel.csprojResolveAssemblyReference.cache
 C:\Users\Usuario\planillapoli\Planilla\Core.Common.ServiceModel\obj\Debug\Core.Common.ServiceModel.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\planillapoli\Planilla\Core.Common.ServiceModel\obj\Debug\Core.Common.ServiceModel.dll
 C:\Users\Usuario\planillapoli\Planilla\Core.Common.ServiceModel\obj\Debug\Core.Common.ServiceModel.pdb
+C:\Users\Usuario\planillapoli\Planilla\Core.Common.ServiceModel\obj\Debug\Core.Common.ServiceModel.csprojAssemblyReference.cache

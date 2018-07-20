@@ -32,6 +32,36 @@ namespace Planilla.Business
         IDataRepositoryFactory _DataRepositoryFactory;
 
 
+        public IEnumerable<PlanillaCTS> GenerarPlanillaCTS(int Anio, int Mes)
+        {
+            IPlanillaRemuneracionRepository planillaRemuneracionRepository = _DataRepositoryFactory.GetDataRepository<IPlanillaRemuneracionRepository>();
+            IPersonalRepository personalRepository = _DataRepositoryFactory.GetDataRepository<IPersonalRepository>();
+            string Periodo = Anio.ToString() + Utiles.CerosIzquierda((Mes - 1).ToString(), 2);
+            List<PlanillaCTS> resultado = new List<PlanillaCTS>();
+
+            var planillasPeriodo = planillaRemuneracionRepository.PlanillasEnPeriodoPorCTS(Mes, Anio);
+            IEnumerable<Personal> personalActivo = personalRepository.GetPersonalActivo();
+            foreach(Personal personal in personalActivo)
+            {
+                var planillas = planillasPeriodo.Where(o => o.IdPersonal == personal.IdPersonal && o.TipoPlan == "N");
+                var planillaGrati = planillasPeriodo.Where(o => o.IdPersonal == personal.IdPersonal && o.TipoPlan == "G");
+                var UltimoIngresoValido = planillasPeriodo.Where(o => o.IdPersonal == personal.IdPersonal && o.TipoPlan == "N" && o.Periodo == Periodo).FirstOrDefault();
+                decimal UltimoSueldo = UltimoIngresoValido != null ? UltimoIngresoValido.TotIng ?? 0 : 0; // UltimoIngresoValido.TotIng ?? 0;
+                int nroPlanillas = planillas != null ? planillas.Count() : 0;
+                int nroGratis = planillaGrati != null ? planillaGrati.Count() : 0;
+                decimal TotalIngresos = planillas.Sum(o => o.TotIng ?? 0);
+                decimal TotalGrati = planillaGrati.Sum(o => o.Gratif ?? 0);
+                decimal SextoGrati = Math.Round(TotalGrati / 6,2,MidpointRounding.AwayFromZero);
+
+                resultado.Add(new PlanillaCTS(personal.IdPersonal, personal.CodPer, personal.DNI, personal.GetNombre(), personal.FecNac ?? DateTime.Now, personal.FecIngreso ?? DateTime.Now, personal.NumCtaCTS,
+                    UltimoSueldo, SextoGrati, nroPlanillas, personal.EntidadCTS));
+
+            }
+
+            return resultado;
+
+        }
+
         private IEnumerable<PlanillaRemuneracion> GenerarPlanillaGratificacion(int Anio, int Mes)
         {
             IPlanillaRemuneracionRepository planillaRemuneracionRepository = _DataRepositoryFactory.GetDataRepository<IPlanillaRemuneracionRepository>();
@@ -96,6 +126,7 @@ namespace Planilla.Business
 
             return planillaGrati;
         }
+
 
         public IEnumerable<PlanillaRemuneracion> GetPlanillaNormalPorPeriodo(int Anio, int Mes)
         {
@@ -164,7 +195,9 @@ namespace Planilla.Business
 
         //}
 
-        public IEnumerable<PlanillaRemuneracion> GenerarPlanilla(string Periodo)
+
+
+        public List<PlanillaRemuneracion> GenerarPlanilla(string Periodo)
         {
 
 
@@ -210,6 +243,7 @@ namespace Planilla.Business
                     0, 0, 0, fondoPensiones.PorONP, porcentajeApoObl, porcentajePriSeg, porcentajeComVar, 0 
                     , 0, aporteEmpleadorESSALUD.Porcentaje, porcentajeSCTR, diasLaborables.DiasLab, personal.HorLab, null, null, null, null, null, null, null, null, null, "F", "N");
                 planillaPersona.VacacionesPeriodo = vacacionesPeriodo;
+                planillaPersona.NombrePersona = personal.GetNombre();
                 remuneracion.Add(planillaPersona);
 
 

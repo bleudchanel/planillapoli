@@ -10,6 +10,6 @@ namespace Planilla.Data.Contracts
 {
     public interface IMedicoRepository : IDataRepository<Medico>
     {
-
+        Medico AddPersonalComplete(Medico entity);
     }
 }

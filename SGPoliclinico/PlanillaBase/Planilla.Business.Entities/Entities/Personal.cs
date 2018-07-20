@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Planilla.Business.Entities
 {
     [DataContract]
-    [Table("Personal", Schema = "Planilla")]
+    [Table("pPersonal", Schema = "Planilla")]
     public class Personal : EntityBase, IIdentifiableEntity
     {
         public Personal(string dNI, string apePaterno, string apeMaterno, string nombre, string direccion, int? idUbigeo, string codDistrito, DateTime? fecNac, string telefono, string celular, string email, string sex, string estadoCivil, byte? numHij, DateTime? fecIngreso, string estudios, string grado, string numCol, int? idAreaServicio, string codAre, int? idCargo, string codCar, int? idFondoPen, string codFon, string tipComAFP, string cUSPP, string eVida, decimal? remBas, decimal? asiFam, decimal? rieCaj, string sCTR, int? horLab, string observacion, string estado, DateTime? fecBaja, string entidadCTS, string numCtaCTS)
@@ -60,7 +60,13 @@ namespace Planilla.Business.Entities
 
         }
 
+        public string GetNombre()
+        {
+            return ApePaterno + " " + ApeMaterno + ", " + Nombre;
+        }
+
         [DataMember]
+        [Column("Id")]
         public int IdPersonal { get; set; }
         [DataMember]
         public string CodPer { get; set; }

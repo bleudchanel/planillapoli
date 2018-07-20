@@ -271,36 +271,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\PlanillaBase\Core.Common\Core.Common.csproj">
-      <Project>{A4A41185-DF19-4AE1-B572-4122A34C1575}</Project>
-      <Name>Core.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\PlanillaBase\Planilla.Business.Bootstrapper\Planilla.Business.Bootstrapper.csproj">
-      <Project>{B9F946D6-1E1A-4E72-939F-B75C2E784BE2}</Project>
-      <Name>Planilla.Business.Bootstrapper</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\PlanillaBase\Planilla.Business.Entities\Planilla.Business.Entities.csproj">
-      <Project>{AA990CF5-32B5-474A-9DB5-9B295600B18A}</Project>
-      <Name>Planilla.Business.Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\PlanillaBase\Planilla.Business.Managers\Planilla.Business.Managers.csproj">
-      <Project>{caeded18-3f77-4cc4-b5aa-0dbff876f853}</Project>
-      <Name>Planilla.Business.Managers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\PlanillaBase\Planilla.Business\Planilla.Business.csproj">
-      <Project>{4D182511-3F1F-4C1F-BE1C-12DB40997D79}</Project>
-      <Name>Planilla.Business</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Planilla.Client.Utils\Planilla.Client.Utils.vbproj">
-      <Project>{7444d11f-8534-47da-89d6-a57e90c1d040}</Project>
-      <Name>Planilla.Client.Utils</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\PlanillaBase\Planilla.Data.Contracts\Planilla.Data.Contracts.csproj">
-      <Project>{8E671975-30D3-4C1C-9019-C7E299291489}</Project>
-      <Name>Planilla.Data.Contracts</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\accept.png" />
   </ItemGroup>
   <ItemGroup>

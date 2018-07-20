@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Planilla.Business.Entities
 {
     [DataContract]
-    [Table("Especialidad", Schema = "Planilla")]
+    [Table("dEspecialidades", Schema = "Planilla")]
     public class Especialidad : EntityBase, IIdentifiableEntity
     {
         public Especialidad()
@@ -30,6 +30,7 @@ namespace Planilla.Business.Entities
         }
 
         [DataMember]
+        [Column("Id_Especialidades")]
         public int IdEspecialidad { get; set; }
         [DataMember]
         public string CodEsp { get; set; }

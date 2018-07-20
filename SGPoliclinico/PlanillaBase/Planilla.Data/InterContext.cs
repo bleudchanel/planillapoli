@@ -71,7 +71,8 @@ namespace Planilla.Data
             modelBuilder.Entity<PlanillaRemuneracion>().Ignore(e => e.FechaIngreso);
             modelBuilder.Entity<PlanillaRemuneracion>().Ignore(e => e.Cargo);
             modelBuilder.Entity<PlanillaRemuneracion>().Ignore(e => e.Area);
-
+            modelBuilder.Entity<PlanillaRemuneracion>().Ignore(e => e.Aumento);
+            modelBuilder.Entity<PlanillaRemuneracion>().Ignore(e => e.NuevaRem);
 
             modelBuilder.Entity<PlanillaRemuneracion>().Property(e => e.PorApoObl).HasPrecision(18, 4);
             modelBuilder.Entity<PlanillaRemuneracion>().Property(e => e.PorComVar).HasPrecision(18, 4);

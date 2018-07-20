@@ -72,6 +72,16 @@ Public Class frmProcedimiento
         _procedimientos = variablesManager.GetProcedimientos()
         Controles_En_Load()
 
+        Dim dtConsultaPro As New DataTable
+        dtConsultaPro.Columns.Add("Id", GetType(Integer))
+        dtConsultaPro.Columns.Add("Descripcion", GetType(String))
+        dtConsultaPro.Rows.Add(43, "Consulta")
+        dtConsultaPro.Rows.Add(44, "Procedimiento")
+
+        Me.cmbConsultaPro.DataSource = dtConsultaPro
+        Me.cmbConsultaPro.DisplayMember = "Descripcion"
+        Me.cmbConsultaPro.ValueMember = "Id"
+
         Dim dtEspecialidades As New DataTable
         dtEspecialidades.Columns.Add("IdEspecialidad", GetType(Integer))
         dtEspecialidades.Columns.Add("Descripcion", GetType(String))
@@ -109,7 +119,7 @@ Public Class frmProcedimiento
             With dgvPagoDctoBasico.Rows(dgvPagoDctoBasico.Rows.Count - 1)
                 .Cells(IdProcedimiento.Name).Value = _proce.IdProcedimiento
                 .Cells(CodPro.Name).Value = _proce.CodPro
-                .Cells(TipPro.Name).Value = _proce.TipPro
+                .Cells(TipPro.Name).Value = If(_proce.TipPro = 43, "C", "P")
                 .Cells(Procedimiento.Name).Value = _proce.Procedimiento1
                 .Cells(IdEspecialidad.Name).Value = _proce.IdEspecialidad
                 .Cells(CodEsp.Name).Value = _proce.CodEsp
@@ -150,7 +160,7 @@ Public Class frmProcedimiento
             Me.txtProcedimiento.Text = _procedimientoActual.Procedimiento1
             Me.txtMontoMedico.Text = FormatearNumero(_procedimientoActual.MontoMedico, 2)
             Me.txtPrecioProcedimiento.Text = FormatearNumero(_procedimientoActual.PrecioProcedimiento, 2)
-            Me.txtTipo.Text = _procedimientoActual.TipPro
+            Me.cmbConsultaPro.SelectedValue = _procedimientoActual.TipPro
             Me.cmbEspecialidad.SelectedValue = _procedimientoActual.IdEspecialidad
             Me.txtNombreCorto.Text = _procedimientoActual.ProImprimir
             Me.txtObservacion.Text = _procedimientoActual.Observacion
@@ -186,12 +196,12 @@ Public Class frmProcedimiento
             _procedimientoActual.CodEsp = var.CodEsp
             _procedimientoActual.Observacion = Me.txtObservacion.Text
             _procedimientoActual.ProImprimir = Me.txtNombreCorto.Text
-            _procedimientoActual.TipPro = Me.txtTipo.Text
+            _procedimientoActual.TipPro = Me.cmbConsultaPro.SelectedValue
             Dim proc = variablesManager.RegistrarProcedimiento(_procedimientoActual)
             'Notificar(especialidad.CodEsp & ": Modificado", "")
         Else
             Dim var = (From a In _especialidades Where a.IdEspecialidad = Me.cmbEspecialidad.SelectedValue).FirstOrDefault()
-            Dim nuevoProcedimiento As Procedimiento = New Procedimiento(Me.txtTipo.Text, Me.txtProcedimiento.Text, Me.cmbEspecialidad.SelectedValue,
+            Dim nuevoProcedimiento As Procedimiento = New Procedimiento(Me.cmbConsultaPro.SelectedValue, Me.txtProcedimiento.Text, Me.cmbEspecialidad.SelectedValue,
                 var.CodEsp, Me.txtPrecioProcedimiento.Text, Me.txtMontoMedico.Text, Me.txtObservacion.Text, Me.txtNombreCorto.Text)
             Dim proc = variablesManager.RegistrarProcedimiento(nuevoProcedimiento)
         End If

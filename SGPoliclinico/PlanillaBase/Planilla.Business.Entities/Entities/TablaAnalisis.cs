@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Planilla.Business.Entities
 {
     [DataContract]
-    [Table("TablaAnalisis", Schema = "Planilla")]
+    [Table("Lab_TablaAnalisis", Schema = "Planilla")]
     public class TablaAnalisis : EntityBase, IIdentifiableEntity
     {
         public TablaAnalisis(string analisis, string unidad, int? idProcedimiento, string codPro, string procedimiento, string areaAnalisis)
@@ -41,6 +41,7 @@ namespace Planilla.Business.Entities
         [DataMember]
         public string Titulo { get; set; }
         [DataMember]
+        [Column("Id_Procedimiento")]
         public Nullable<int> IdProcedimiento { get; set; }
         [DataMember]
         public string CodPro { get; set; }

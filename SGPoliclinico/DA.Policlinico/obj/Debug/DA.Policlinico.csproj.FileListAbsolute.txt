@@ -39,3 +39,12 @@ D:\POLICLINICO\POLICLINICO\SGPoliclinico\DA.Policlinico\obj\Debug\DA.Policlinico
 D:\POLICLINICO\POLICLINICO\SGPoliclinico\DA.Policlinico\obj\Debug\DA.Policlinico.csproj.CopyComplete
 D:\POLICLINICO\POLICLINICO\SGPoliclinico\DA.Policlinico\obj\Debug\DA.Policlinico.dll
 D:\POLICLINICO\POLICLINICO\SGPoliclinico\DA.Policlinico\obj\Debug\DA.Policlinico.pdb
+C:\Users\Usuario\planillapoli\SGPoliclinico\DA.Policlinico\bin\Debug\DA.Policlinico.dll
+C:\Users\Usuario\planillapoli\SGPoliclinico\DA.Policlinico\bin\Debug\DA.Policlinico.pdb
+C:\Users\Usuario\planillapoli\SGPoliclinico\DA.Policlinico\bin\Debug\Entity.Policlinico.dll
+C:\Users\Usuario\planillapoli\SGPoliclinico\DA.Policlinico\bin\Debug\Entity.Policlinico.pdb
+C:\Users\Usuario\planillapoli\SGPoliclinico\DA.Policlinico\obj\Debug\DA.Policlinico.csprojAssemblyReference.cache
+C:\Users\Usuario\planillapoli\SGPoliclinico\DA.Policlinico\obj\Debug\DA.Policlinico.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\planillapoli\SGPoliclinico\DA.Policlinico\obj\Debug\DA.Policlinico.csproj.CopyComplete
+C:\Users\Usuario\planillapoli\SGPoliclinico\DA.Policlinico\obj\Debug\DA.Policlinico.dll
+C:\Users\Usuario\planillapoli\SGPoliclinico\DA.Policlinico\obj\Debug\DA.Policlinico.pdb

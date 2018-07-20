@@ -418,7 +418,7 @@
       <Project>{e6554279-6174-45e6-96f0-02131aee0b39}</Project>
       <Name>Entity.Policlinico</Name>
     </ProjectReference>
-    <ProjectReference Include="..\UI.Planilla\Planilla.Client.Desktop\Planilla.Client.Desktop.vbproj">
+    <ProjectReference Include="..\PlanillaBase\Planilla.Client.Desktop\Planilla.Client.Desktop.vbproj">
       <Project>{071047de-9cb1-4373-8f89-be1404ea15cd}</Project>
       <Name>Planilla.Client.Desktop</Name>
     </ProjectReference>

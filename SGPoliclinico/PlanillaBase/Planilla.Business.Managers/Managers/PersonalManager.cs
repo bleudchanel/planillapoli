@@ -52,6 +52,12 @@ namespace Planilla.Business.Managers
                     select e);
         }
 
+        public IEnumerable<Medico> GetMedicos()
+        {
+            IMedicoRepository medicoRepository = _DataRepositoryFactory.GetDataRepository<IMedicoRepository>();
+            return medicoRepository.Get();
+        }
+
         public IEnumerable<PlanillaRemuneracion> GetPlanillaPeriodo(int Anio, int Mes)
         {
             IEnumerable<PlanillaRemuneracion> resultado = new List<PlanillaRemuneracion>();
@@ -67,6 +73,14 @@ namespace Planilla.Business.Managers
 
             return resultado;
             
+        }
+
+        public IEnumerable<PlanillaCTS> GetPlanillaCTS(int Anio, int Mes)
+        {
+            IEnumerable<PlanillaCTS> resultado = new List<PlanillaCTS>();
+            IPlanillaEngine planillaEngine = _BusinessEngineFactory.GetBusinessEngine<IPlanillaEngine>();
+            resultado = planillaEngine.GenerarPlanillaCTS(Anio, Mes);
+            return resultado;
         }
 
         public IEnumerable<PlanillaRemuneracion> GetPlanillaGratificacion(int Anio, int Mes)
@@ -114,10 +128,30 @@ namespace Planilla.Business.Managers
             }
         }
 
+        public Medico RegistrarMedico(Medico medico)
+        {
+            IMedicoRepository medicoRepository = _DataRepositoryFactory.GetDataRepository<IMedicoRepository>();
+            if (medico.IdMedico> 0)
+            {
+                return medicoRepository.Update(medico);
+            }
+            else
+            {
+                return medicoRepository.AddPersonalComplete(medico);
+            }
+        }
+
+
         public Dictionary<String, IEnumerable<ResumenPlanilla>> GetResumenPlanilla(int Anio, int? IdPersonal = 0)
         {
             IPlanillaEngine planillaEngine = _BusinessEngineFactory.GetBusinessEngine<IPlanillaEngine>();
             return planillaEngine.GetPlanillasNormalesResumen(Anio, IdPersonal);
+        }
+
+        public List<PlanillaRemuneracion> GetPlanillaSimple(string Periodo)
+        {
+            IPlanillaEngine planillaEngine = _BusinessEngineFactory.GetBusinessEngine<IPlanillaEngine>();
+            return planillaEngine.GenerarPlanilla(Periodo);
         }
     }
 }

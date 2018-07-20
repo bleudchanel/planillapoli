@@ -95,6 +95,12 @@ namespace Planilla.Business.Managers
             return cargoRepository.Get();
         }
 
+        public IEnumerable<Especialidad> GetEspecialidades()
+        {
+            IEspecialidadRepository especialidadRepository = _DataRepositoryFactory.GetDataRepository<IEspecialidadRepository>();
+            return especialidadRepository.Get();
+        }
+
         public FondoPensiones RegistrarFondoPensiones(FondoPensiones fondo)
         {
             IFondoPensionesRepository fondoRepository = _DataRepositoryFactory.GetDataRepository<IFondoPensionesRepository>();
