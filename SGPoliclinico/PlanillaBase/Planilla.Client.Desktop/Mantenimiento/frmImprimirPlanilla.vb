@@ -139,13 +139,91 @@ Public Class frmImprimirPlanilla
         dtBoletasPre.Columns.Add("FechaIngreso")
         dtBoletasPre.Columns.Add("DocIdentidad")
         dtBoletasPre.Columns.Add("Cargo")
+        dtBoletasPre.Columns.Add("MesAnio")
+        dtBoletasPre.Columns.Add("DiasLab")
+        dtBoletasPre.Columns.Add("HorasLab")
+        dtBoletasPre.Columns.Add("AFPCUSPP")
+        dtBoletasPre.Columns.Add("FechaPago")
+        dtBoletasPre.Columns.Add("DiasVac")
+        dtBoletasPre.Columns.Add("RemBasica")
+        dtBoletasPre.Columns.Add("AsigFamiliar")
+        dtBoletasPre.Columns.Add("Subsidio")
+        dtBoletasPre.Columns.Add("Gratificacion")
+        dtBoletasPre.Columns.Add("RemVacacional")
+        dtBoletasPre.Columns.Add("RiesgoCaja")
+        dtBoletasPre.Columns.Add("Reintegro")
+        dtBoletasPre.Columns.Add("HorasExtra")
+        dtBoletasPre.Columns.Add("OtrosIngresos")
+        dtBoletasPre.Columns.Add("TotalRem")
+        dtBoletasPre.Columns.Add("AFPAporteObl")
+        dtBoletasPre.Columns.Add("AFPComVar")
+        dtBoletasPre.Columns.Add("AFPPrimaSeg")
+        dtBoletasPre.Columns.Add("ONP")
+        dtBoletasPre.Columns.Add("RentaQuinta")
+        dtBoletasPre.Columns.Add("OtrosDesc")
+        dtBoletasPre.Columns.Add("TotalDesc")
+        dtBoletasPre.Columns.Add("ESSALUD")
+        dtBoletasPre.Columns.Add("SCTR")
+        dtBoletasPre.Columns.Add("TotalAporte")
+        dtBoletasPre.Columns.Add("NetoRecibir")
+        dtBoletasPre.Columns.Add("PorApoObl")
+        dtBoletasPre.Columns.Add("PorComVar")
+        dtBoletasPre.Columns.Add("PorPriSeg")
+        dtBoletasPre.Columns.Add("PorONP")
+        dtBoletasPre.Columns.Add("PorEssalud")
+        dtBoletasPre.Columns.Add("PorSCTR")
 
         For Each _planilla In _planillasRemuneracion
-            dtBoletasPre.Rows.Add(_planilla.CodPer, _planilla.NombrePersona, _planilla.FechaIngreso, _planilla.Dni, _planilla.Cargo)
+            dtBoletasPre.Rows.Add(_planilla.CodPer,
+                                  _planilla.NombrePersona,
+                                  _planilla.FechaIngreso.ToString("dd/MM/yy"),
+                                  _planilla.Dni,
+                                  _planilla.Cargo,
+                                   _planilla.Periodo,
+                                   _planilla.DiasLab,
+                                   _planilla.HorasLab * _planilla.DiasLab,
+                                   _planilla.AFP + " " + _planilla.CUSPP,
+                                   Date.Now.ToString("dd/MM/yy"),
+                                   If(_planilla.DiasVac Is Nothing, 0, _planilla.DiasVac),
+                                   FormatearNumero(_planilla.RemBas, 2),
+                                   FormatearNumero(_planilla.AsiFam, 2),
+                                   FormatearNumero(_planilla.Subsidio, 2),
+                                   FormatearNumero(_planilla.Gratif, 2),
+                                   FormatearNumero(_planilla.RemVac, 2),
+                                   FormatearNumero(_planilla.RieCaj, 2),
+                                   FormatearNumero(_planilla.Reinte, 2),
+                                   FormatearNumero(_planilla.HE, 2),
+                                   FormatearNumero(_planilla.OtrIng, 2),
+                                   FormatearNumero(_planilla.TotIng, 2),
+                                   FormatearNumero(_planilla.ApoObl, 2),
+                                   FormatearNumero(_planilla.ComVar, 2),
+                                   FormatearNumero(_planilla.PriSeg, 2),
+                                   FormatearNumero(_planilla.ONP, 2),
+                                   FormatearNumero(_planilla.Quinta, 2),
+                                   FormatearNumero(_planilla.OtrDes, 2),
+                                   FormatearNumero(_planilla.TotDes, 2),
+                                   FormatearNumero(_planilla.Essalud, 2),
+                                   FormatearNumero(_planilla.SCTR, 2),
+                                   FormatearNumero(_planilla.TotApo, 2),
+                                   FormatearNumero(_planilla.Neto, 2),
+FormatearNumero(_planilla.PorApoObl * 100, 2) + " %",
+FormatearNumero(_planilla.PorComVar * 100, 2) + " %",
+FormatearNumero(_planilla.PorPriSeg * 100, 2) + " %",
+FormatearNumero(_planilla.PorONP * 100, 2) + " %",
+FormatearNumero(_planilla.PorEssalud * 100, 2) + " %",
+FormatearNumero(_planilla.PorSCTR * 100, 2) + " %")
+
         Next
-        modPersonal.dtBoleta = dtBoletasPre
-        Dim frm As New frmReporteBoletas
-        frm.Show()
+
+        If dtBoletasPre IsNot Nothing AndAlso dtBoletasPre.Rows.Count > 0 Then
+            Dim frmReporte As New frmRepositorioReportevb
+            frmReporte.ConstruirReporteBoleta(dtBoletasPre, "Honk")
+            frmReporte.Show()
+        End If
+
+        'modPersonal.dtBoleta = dtBoletasPre
+        'Dim frm As New frmReporteBoletas
+        'frm.Show()
 
     End Sub
 End Class

@@ -365,3 +365,8 @@ C:\Users\Usuario\planillapoli\SGPoliclinico\UI.Policlinico\bin\Debug\zh-HANS\Mic
 C:\Users\Usuario\planillapoli\SGPoliclinico\UI.Policlinico\bin\Debug\zh-HANT\Microsoft.ReportViewer.DataVisualization.resources.dll
 C:\Users\Usuario\planillapoli\SGPoliclinico\UI.Policlinico\obj\Debug\es-PE\UI.Policlinico.resources.dll
 C:\Users\Usuario\planillapoli\SGPoliclinico\UI.Policlinico\obj\Debug\UI.Policlinico.csproj.CopyComplete
+C:\Users\Usuario\planillapoli\SGPoliclinico\UI.Policlinico\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Usuario\planillapoli\SGPoliclinico\UI.Policlinico\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\Usuario\planillapoli\SGPoliclinico\UI.Policlinico\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\Usuario\planillapoli\SGPoliclinico\UI.Policlinico\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\Usuario\planillapoli\SGPoliclinico\UI.Policlinico\bin\Debug\FlashControlV71.dll

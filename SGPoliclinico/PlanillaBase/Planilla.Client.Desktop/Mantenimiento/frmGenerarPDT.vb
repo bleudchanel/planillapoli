@@ -4,6 +4,7 @@ Imports Planilla.Business.Entities
 Imports Planilla.Business.Managers
 Imports Planilla.Client.Utils.clsUtils
 Imports System.Net
+Imports System.Text
 
 Public Class frmGenerarPDT
 
@@ -85,6 +86,191 @@ Public Class frmGenerarPDT
     End Sub
 
     Private Sub btnSunat_Click(sender As Object, e As EventArgs) Handles btnSunat.Click
-
+        pdtEstructruraBasic()
+        pdtEstructruraComplete()
     End Sub
+
+
+    Private Sub pdtEstructruraComplete()
+        If _planillasRemuneracion Is Nothing Or _planillasRemuneracion.Count = 0 Then
+            MsgBox("No existe informacion para la generacion del archivo")
+            Exit Sub
+        End If
+
+
+        ''''''''''''''''''''''''''''''''''GENERAR A PARTIR DE GRILLA'''''''''''''''''''''''''''''''''''''''
+        Dim strLinea As String = String.Empty
+        Dim swrArchivo As System.IO.StreamWriter
+        Dim strNombreArchivo As String = String.Empty
+        Dim sfdGuardarArchivo As New SaveFileDialog
+
+        If _planillasRemuneracion.Count > 0 Then
+            strNombreArchivo = "0601" & _planillasRemuneracion.Item(0).Periodo & "20339833011"  '"LE20119917698" & CmbAnio.Text & If(CmbMes.SelectedValue.ToString < 10, "0" & CmbMes.SelectedValue.ToString, CmbMes.SelectedValue.ToString) & "00140100001" & "1" & "11"
+        Else
+            strNombreArchivo = "TxtCuarta"  '"LE20119917698" & CmbAnio.Text & If(CmbMes.SelectedValue.ToString < 10, "0" & CmbMes.SelectedValue.ToString, CmbMes.SelectedValue.ToString) & "00140100001" & "0" & "11"
+        End If
+
+        sfdGuardarArchivo.Title = "GENERAR ARCHIVO DE TEXTO REGISTRO VENTAS E INGRESOS"
+        sfdGuardarArchivo.FileName = strNombreArchivo
+        sfdGuardarArchivo.Filter = "Archivos de renta de cuarta (*.rem)|*.rem"
+        sfdGuardarArchivo.FilterIndex = 1
+        sfdGuardarArchivo.RestoreDirectory = True
+
+
+        Dim nombres As String()
+        Dim Ap As String
+        Dim Am As String
+        Dim Nombre As String = ""
+
+        If sfdGuardarArchivo.ShowDialog = DialogResult.OK Then
+            swrArchivo = New System.IO.StreamWriter(sfdGuardarArchivo.OpenFile, Encoding.Default)
+            If (swrArchivo IsNot Nothing) Then
+                If _planillasRemuneracion.Count > 0 Then
+                    For Each _planilla In _planillasRemuneracion
+
+                        If _planilla.RemBas IsNot Nothing AndAlso _planilla.RemBas > 0 Then
+                            strLinea = strLinea & "01|" & _planilla.Dni & "|0121|" & Format(_planilla.RemBas, "#.##") & "|" & Format(_planilla.RemBas, "#.##")
+                            swrArchivo.WriteLine(strLinea)
+                            strLinea = String.Empty
+                        End If
+
+                        If _planilla.RemVac IsNot Nothing AndAlso _planilla.RemVac > 0 Then
+                            strLinea = strLinea & "01|" & _planilla.Dni & "|0118|" & Format(_planilla.RemVac, "#.##") & "|" & Format(_planilla.RemVac, "#.##")
+                            swrArchivo.WriteLine(strLinea)
+                            strLinea = String.Empty
+                        End If
+
+                        If _planilla.AsiFam IsNot Nothing AndAlso _planilla.AsiFam > 0 Then
+                            strLinea = strLinea & "01|" & _planilla.Dni & "|0201|" & Format(_planilla.AsiFam, "#.##") & "|" & Format(_planilla.AsiFam, "#.##")
+                            swrArchivo.WriteLine(strLinea)
+                            strLinea = String.Empty
+                        End If
+
+                        If _planilla.RieCaj IsNot Nothing AndAlso _planilla.RieCaj > 0 Then
+                            strLinea = strLinea & "01|" & _planilla.Dni & "|0304|" & Format(_planilla.RieCaj, "#.##") & "|" & Format(_planilla.RieCaj, "#.##")
+                            swrArchivo.WriteLine(strLinea)
+                            strLinea = String.Empty
+                        End If
+
+                        If _planilla.ComVar IsNot Nothing AndAlso _planilla.ComVar > 0 Then
+                            strLinea = strLinea & "01|" & _planilla.Dni & "|0601|" & Format(_planilla.ComVar, "#.##") & "|" & Format(_planilla.ComVar, "#.##")
+                            swrArchivo.WriteLine(strLinea)
+                            strLinea = String.Empty
+                        End If
+
+                        If _planilla.PriSeg IsNot Nothing AndAlso _planilla.PriSeg > 0 Then
+                            strLinea = strLinea & "01|" & _planilla.Dni & "|0606|" & Format(_planilla.PriSeg, "#.##") & "|" & Format(_planilla.PriSeg, "#.##")
+                            swrArchivo.WriteLine(strLinea)
+                            strLinea = String.Empty
+                        End If
+
+                        If _planilla.ApoObl IsNot Nothing AndAlso _planilla.ApoObl > 0 Then
+                            strLinea = strLinea & "01|" & _planilla.Dni & "|0608|" & Format(_planilla.ApoObl, "#.##") & "|" & Format(_planilla.ApoObl, "#.##")
+                            swrArchivo.WriteLine(strLinea)
+                            strLinea = String.Empty
+                        End If
+
+                        If _planilla.Quinta IsNot Nothing AndAlso _planilla.Quinta > 0 Then
+                            strLinea = strLinea & "01|" & _planilla.Dni & "|0605|" & Format(_planilla.Quinta, "#.##") & "|" & Format(_planilla.Quinta, "#.##")
+                            swrArchivo.WriteLine(strLinea)
+                            strLinea = String.Empty
+                        Else
+                            strLinea = strLinea & "01|" & _planilla.Dni & "|0605|0|0"
+                            swrArchivo.WriteLine(strLinea)
+                            strLinea = String.Empty
+                        End If
+
+                        ''strLinea = strLinea & "01|" & _planilla.Dni & "|" & _planilla.HorasLab * _planilla.DiasLab & "|0|0|0|"
+                        '    If(dvrRegistroVentaIngreso.Cells("RucDni").Value.ToString.Length = 11, "06", "01") & "|" &
+                        '                    dvrRegistroVentaIngreso.Cells("RucDni").Value.ToString & "|" &
+                        '                 Ap & "|" &
+                        '                 Am & "|" &
+                        '               RTrim(LTrim(Nombre)) & "|" &
+                        '                "1|" &
+                        '                "0|"
+                        'Nombre = ""
+                        'swrArchivo.WriteLine(strLinea)
+                        'strLinea = String.Empty
+                    Next
+                End If
+
+                swrArchivo.Close()
+            End If
+            MessageBox.Show("Generación Completa.", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+    End Sub
+
+    Private Sub pdtEstructruraBasic()
+        If _planillasRemuneracion Is Nothing Or _planillasRemuneracion.Count = 0 Then
+            MsgBox("No existe informacion para la generacion del archivo")
+            Exit Sub
+        End If
+
+
+        ''''''''''''''''''''''''''''''''''GENERAR A PARTIR DE GRILLA'''''''''''''''''''''''''''''''''''''''
+        Dim strLinea As String = String.Empty
+        Dim swrArchivo As System.IO.StreamWriter
+        Dim strNombreArchivo As String = String.Empty
+        Dim sfdGuardarArchivo As New SaveFileDialog
+
+        If _planillasRemuneracion.Count > 0 Then
+            strNombreArchivo = "0601" & _planillasRemuneracion.Item(0).Periodo & "20339833011"  '"LE20119917698" & CmbAnio.Text & If(CmbMes.SelectedValue.ToString < 10, "0" & CmbMes.SelectedValue.ToString, CmbMes.SelectedValue.ToString) & "00140100001" & "1" & "11"
+        Else
+            strNombreArchivo = "TxtCuarta"  '"LE20119917698" & CmbAnio.Text & If(CmbMes.SelectedValue.ToString < 10, "0" & CmbMes.SelectedValue.ToString, CmbMes.SelectedValue.ToString) & "00140100001" & "0" & "11"
+        End If
+
+        sfdGuardarArchivo.Title = "GENERAR ARCHIVO DE TEXTO REGISTRO VENTAS E INGRESOS"
+        sfdGuardarArchivo.FileName = strNombreArchivo
+        sfdGuardarArchivo.Filter = "Archivos de renta de cuarta (*.jor)|*.jor"
+        sfdGuardarArchivo.FilterIndex = 1
+        sfdGuardarArchivo.RestoreDirectory = True
+
+
+        Dim nombres As String()
+        Dim Ap As String
+        Dim Am As String
+        Dim Nombre As String = ""
+
+        If sfdGuardarArchivo.ShowDialog = DialogResult.OK Then
+            swrArchivo = New System.IO.StreamWriter(sfdGuardarArchivo.OpenFile, Encoding.Default)
+            If (swrArchivo IsNot Nothing) Then
+                If _planillasRemuneracion.Count > 0 Then
+                    For Each _planilla In _planillasRemuneracion
+                        ' NUEVO
+
+                        'nombres = dvrRegistroVentaIngreso.Cells("Razon").Value.ToString.Split(" ")
+
+                        'Ap = nombres(0)
+                        'Am = nombres(1)
+                        'If Am = "-" Then
+                        '    Am = ""
+                        'End If
+
+                        'For i As Integer = 2 To nombres.Length - 1
+                        '    Nombre = Nombre & nombres(i)
+                        '    If i < nombres.Length Then
+                        '        Nombre = Nombre & " "
+                        '    End If
+                        'Next
+
+                        strLinea = strLinea & "01|" & _planilla.Dni & "|" & _planilla.HorasLab * _planilla.DiasLab & "|0|0|0|"
+                        '    If(dvrRegistroVentaIngreso.Cells("RucDni").Value.ToString.Length = 11, "06", "01") & "|" &
+                        '                    dvrRegistroVentaIngreso.Cells("RucDni").Value.ToString & "|" &
+                        '                 Ap & "|" &
+                        '                 Am & "|" &
+                        '               RTrim(LTrim(Nombre)) & "|" &
+                        '                "1|" &
+                        '                "0|"
+                        'Nombre = ""
+                        swrArchivo.WriteLine(strLinea)
+                        strLinea = String.Empty
+                    Next
+                End If
+
+                swrArchivo.Close()
+            End If
+            MessageBox.Show("Generación Completa.", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+    End Sub
+
 End Class
