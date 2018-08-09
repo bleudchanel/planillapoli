@@ -169,7 +169,7 @@ Partial Class frmMedico
         Me.btnExcel.Location = New System.Drawing.Point(863, 543)
         Me.btnExcel.Name = "btnExcel"
         Me.btnExcel.Size = New System.Drawing.Size(120, 26)
-        Me.btnExcel.TabIndex = 38
+        Me.btnExcel.TabIndex = 4
         Me.btnExcel.Text = "&Excel"
         Me.btnExcel.UseVisualStyleBackColor = False
         '
@@ -182,7 +182,7 @@ Partial Class frmMedico
         Me.btnModificar.Location = New System.Drawing.Point(129, 543)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(120, 26)
-        Me.btnModificar.TabIndex = 37
+        Me.btnModificar.TabIndex = 3
         Me.btnModificar.Text = "&Modificar"
         Me.btnModificar.UseVisualStyleBackColor = False
         '
@@ -195,7 +195,7 @@ Partial Class frmMedico
         Me.btnNuevo.Location = New System.Drawing.Point(3, 543)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(120, 26)
-        Me.btnNuevo.TabIndex = 36
+        Me.btnNuevo.TabIndex = 2
         Me.btnNuevo.Text = "&Nuevo"
         Me.btnNuevo.UseVisualStyleBackColor = False
         '
@@ -218,7 +218,7 @@ Partial Class frmMedico
         Me.dgvPagoDctoBasico.RowHeadersVisible = False
         Me.dgvPagoDctoBasico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvPagoDctoBasico.Size = New System.Drawing.Size(980, 507)
-        Me.dgvPagoDctoBasico.TabIndex = 34
+        Me.dgvPagoDctoBasico.TabIndex = 1
         '
         'IdMedico
         '
@@ -445,7 +445,7 @@ Partial Class frmMedico
         Me.txtCodPer.Name = "txtCodPer"
         Me.txtCodPer.ReadOnly = True
         Me.txtCodPer.Size = New System.Drawing.Size(122, 25)
-        Me.txtCodPer.TabIndex = 136
+        Me.txtCodPer.TabIndex = 5
         Me.txtCodPer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label15
@@ -466,17 +466,18 @@ Partial Class frmMedico
         Me.dtpFecIngreso.Location = New System.Drawing.Point(769, 83)
         Me.dtpFecIngreso.Name = "dtpFecIngreso"
         Me.dtpFecIngreso.Size = New System.Drawing.Size(110, 20)
-        Me.dtpFecIngreso.TabIndex = 134
+        Me.dtpFecIngreso.TabIndex = 17
         '
         'cmbDistrito
         '
         Me.cmbDistrito.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.cmbDistrito.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbDistrito.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbDistrito.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbDistrito.FormattingEnabled = True
         Me.cmbDistrito.Location = New System.Drawing.Point(647, 180)
         Me.cmbDistrito.Name = "cmbDistrito"
         Me.cmbDistrito.Size = New System.Drawing.Size(233, 21)
-        Me.cmbDistrito.TabIndex = 130
+        Me.cmbDistrito.TabIndex = 15
         '
         'txtRUC
         '
@@ -488,7 +489,7 @@ Partial Class frmMedico
         Me.txtRUC.MaxLength = 1
         Me.txtRUC.Name = "txtRUC"
         Me.txtRUC.Size = New System.Drawing.Size(111, 25)
-        Me.txtRUC.TabIndex = 118
+        Me.txtRUC.TabIndex = 16
         Me.txtRUC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label13
@@ -512,7 +513,7 @@ Partial Class frmMedico
         Me.txtEmail.MaxLength = 50
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(222, 25)
-        Me.txtEmail.TabIndex = 116
+        Me.txtEmail.TabIndex = 14
         Me.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label12
@@ -536,7 +537,7 @@ Partial Class frmMedico
         Me.txtCelular.MaxLength = 15
         Me.txtCelular.Name = "txtCelular"
         Me.txtCelular.Size = New System.Drawing.Size(122, 25)
-        Me.txtCelular.TabIndex = 114
+        Me.txtCelular.TabIndex = 13
         Me.txtCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label11
@@ -560,7 +561,7 @@ Partial Class frmMedico
         Me.txtTelefono.MaxLength = 15
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(122, 25)
-        Me.txtTelefono.TabIndex = 112
+        Me.txtTelefono.TabIndex = 12
         Me.txtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label10
@@ -592,7 +593,7 @@ Partial Class frmMedico
         Me.dtpFecNac.Location = New System.Drawing.Point(423, 50)
         Me.dtpFecNac.Name = "dtpFecNac"
         Me.dtpFecNac.Size = New System.Drawing.Size(110, 20)
-        Me.dtpFecNac.TabIndex = 110
+        Me.dtpFecNac.TabIndex = 11
         '
         'Label6
         '
@@ -615,7 +616,7 @@ Partial Class frmMedico
         Me.txtDireccion.MaxLength = 100
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(502, 25)
-        Me.txtDireccion.TabIndex = 108
+        Me.txtDireccion.TabIndex = 10
         Me.txtDireccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label3
@@ -639,7 +640,7 @@ Partial Class frmMedico
         Me.txtNombres.MaxLength = 60
         Me.txtNombres.Name = "txtNombres"
         Me.txtNombres.Size = New System.Drawing.Size(197, 25)
-        Me.txtNombres.TabIndex = 106
+        Me.txtNombres.TabIndex = 9
         Me.txtNombres.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label2
@@ -663,7 +664,7 @@ Partial Class frmMedico
         Me.txtApellidoMaterno.MaxLength = 60
         Me.txtApellidoMaterno.Name = "txtApellidoMaterno"
         Me.txtApellidoMaterno.Size = New System.Drawing.Size(197, 25)
-        Me.txtApellidoMaterno.TabIndex = 104
+        Me.txtApellidoMaterno.TabIndex = 8
         Me.txtApellidoMaterno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label1
@@ -687,7 +688,7 @@ Partial Class frmMedico
         Me.txtApellidoPaterno.MaxLength = 60
         Me.txtApellidoPaterno.Name = "txtApellidoPaterno"
         Me.txtApellidoPaterno.Size = New System.Drawing.Size(197, 25)
-        Me.txtApellidoPaterno.TabIndex = 102
+        Me.txtApellidoPaterno.TabIndex = 7
         Me.txtApellidoPaterno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtDni
@@ -700,7 +701,7 @@ Partial Class frmMedico
         Me.txtDni.MaxLength = 8
         Me.txtDni.Name = "txtDni"
         Me.txtDni.Size = New System.Drawing.Size(122, 25)
-        Me.txtDni.TabIndex = 11
+        Me.txtDni.TabIndex = 6
         Me.txtDni.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label5
@@ -733,7 +734,7 @@ Partial Class frmMedico
         Me.btnCancelar.Location = New System.Drawing.Point(507, 14)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(118, 26)
-        Me.btnCancelar.TabIndex = 21
+        Me.btnCancelar.TabIndex = 29
         Me.btnCancelar.Text = "C&ancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
@@ -745,7 +746,7 @@ Partial Class frmMedico
         Me.btnGuardar.Location = New System.Drawing.Point(381, 14)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(118, 26)
-        Me.btnGuardar.TabIndex = 20
+        Me.btnGuardar.TabIndex = 28
         Me.btnGuardar.Text = "&Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = False
         '
@@ -796,7 +797,7 @@ Partial Class frmMedico
         Me.txtNroColegiatura.MaxLength = 350
         Me.txtNroColegiatura.Name = "txtNroColegiatura"
         Me.txtNroColegiatura.Size = New System.Drawing.Size(52, 25)
-        Me.txtNroColegiatura.TabIndex = 115
+        Me.txtNroColegiatura.TabIndex = 26
         Me.txtNroColegiatura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label16
@@ -813,12 +814,13 @@ Partial Class frmMedico
         'cmbGrado
         '
         Me.cmbGrado.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.cmbGrado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbGrado.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbGrado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbGrado.FormattingEnabled = True
         Me.cmbGrado.Location = New System.Drawing.Point(492, 32)
         Me.cmbGrado.Name = "cmbGrado"
         Me.cmbGrado.Size = New System.Drawing.Size(154, 21)
-        Me.cmbGrado.TabIndex = 138
+        Me.cmbGrado.TabIndex = 25
         '
         'Label28
         '
@@ -839,7 +841,7 @@ Partial Class frmMedico
         Me.cmbEstado.Location = New System.Drawing.Point(492, 126)
         Me.cmbEstado.Name = "cmbEstado"
         Me.cmbEstado.Size = New System.Drawing.Size(110, 21)
-        Me.cmbEstado.TabIndex = 151
+        Me.cmbEstado.TabIndex = 27
         '
         'txtRNE
         '
@@ -851,7 +853,7 @@ Partial Class frmMedico
         Me.txtRNE.MaxLength = 350
         Me.txtRNE.Name = "txtRNE"
         Me.txtRNE.Size = New System.Drawing.Size(122, 25)
-        Me.txtRNE.TabIndex = 139
+        Me.txtRNE.TabIndex = 24
         Me.txtRNE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label22
@@ -879,12 +881,13 @@ Partial Class frmMedico
         'cmbTipo
         '
         Me.cmbTipo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbTipo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbTipo.FormattingEnabled = True
         Me.cmbTipo.Location = New System.Drawing.Point(138, 126)
         Me.cmbTipo.Name = "cmbTipo"
         Me.cmbTipo.Size = New System.Drawing.Size(154, 21)
-        Me.cmbTipo.TabIndex = 137
+        Me.cmbTipo.TabIndex = 23
         '
         'Label20
         '
@@ -900,12 +903,13 @@ Partial Class frmMedico
         'cmbSituacionEspecialidad
         '
         Me.cmbSituacionEspecialidad.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.cmbSituacionEspecialidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbSituacionEspecialidad.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbSituacionEspecialidad.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbSituacionEspecialidad.FormattingEnabled = True
         Me.cmbSituacionEspecialidad.Location = New System.Drawing.Point(138, 95)
         Me.cmbSituacionEspecialidad.Name = "cmbSituacionEspecialidad"
         Me.cmbSituacionEspecialidad.Size = New System.Drawing.Size(154, 21)
-        Me.cmbSituacionEspecialidad.TabIndex = 135
+        Me.cmbSituacionEspecialidad.TabIndex = 22
         '
         'Label19
         '
@@ -921,12 +925,13 @@ Partial Class frmMedico
         'cmbEspecialidad2
         '
         Me.cmbEspecialidad2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.cmbEspecialidad2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbEspecialidad2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbEspecialidad2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbEspecialidad2.FormattingEnabled = True
         Me.cmbEspecialidad2.Location = New System.Drawing.Point(138, 64)
         Me.cmbEspecialidad2.Name = "cmbEspecialidad2"
         Me.cmbEspecialidad2.Size = New System.Drawing.Size(233, 21)
-        Me.cmbEspecialidad2.TabIndex = 133
+        Me.cmbEspecialidad2.TabIndex = 21
         '
         'Label18
         '
@@ -942,12 +947,13 @@ Partial Class frmMedico
         'cmbEspecialidad1
         '
         Me.cmbEspecialidad1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.cmbEspecialidad1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbEspecialidad1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbEspecialidad1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbEspecialidad1.FormattingEnabled = True
         Me.cmbEspecialidad1.Location = New System.Drawing.Point(138, 33)
         Me.cmbEspecialidad1.Name = "cmbEspecialidad1"
         Me.cmbEspecialidad1.Size = New System.Drawing.Size(233, 21)
-        Me.cmbEspecialidad1.TabIndex = 131
+        Me.cmbEspecialidad1.TabIndex = 20
         '
         'frmMedico
         '

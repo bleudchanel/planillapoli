@@ -34,6 +34,7 @@ Public Class frmProgramacionVacaciones
         If e.KeyCode = Keys.Enter Then
             _vacaciones = vacacionesManager.GetVacacionesPorPeriodo(txtAnioAProgramar.Text)
             Listar()
+            Me.ActiveControl = dgvPagoDctoBasico
         End If
     End Sub
 
@@ -120,5 +121,49 @@ Public Class frmProgramacionVacaciones
     Private Sub btnGenerar_Click(sender As Object, e As EventArgs) Handles btnGenerar.Click
         _vacaciones = vacacionesManager.GetVacacionesPorPeriodo(txtAnioAProgramar.Text)
         Listar()
+        Me.ActiveControl = dgvPagoDctoBasico
+    End Sub
+
+    Private Sub dgvPagoDctoBasico_KeyDown(sender As Object, e As KeyEventArgs) Handles dgvPagoDctoBasico.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            e.SuppressKeyPress = True
+            If dgvPagoDctoBasico.CurrentRow IsNot Nothing Then
+                Me.grpFechas.Visible = True
+                Me.dgvPagoDctoBasico.Enabled = False
+                Me.ActiveControl = dtpInicio
+            End If
+        End If
+    End Sub
+
+    Private Sub dtpInicio_KeyDown(sender As Object, e As KeyEventArgs) Handles dtpInicio.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Me.ActiveControl = dtpFin
+        End If
+    End Sub
+
+    Private Sub dtpFin_KeyDown(sender As Object, e As KeyEventArgs) Handles dtpFin.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Me.btnOk.PerformClick()
+        End If
+    End Sub
+
+    Private Sub btnOk_Click(sender As Object, e As EventArgs) Handles btnOk.Click
+        If dgvPagoDctoBasico.CurrentRow IsNot Nothing Then
+            With dgvPagoDctoBasico.CurrentRow
+                .Cells("IniProg").Value = Me.dtpInicio.Value
+                .Cells("FinProg").Value = Me.dtpFin.Value
+            End With
+            Me.grpFechas.Visible = False
+            Me.dgvPagoDctoBasico.Enabled = True
+            Me.ActiveControl = Me.dgvPagoDctoBasico
+        End If
+    End Sub
+
+    Private Sub dgvPagoDctoBasico_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPagoDctoBasico.CellDoubleClick
+        If dgvPagoDctoBasico.CurrentRow IsNot Nothing Then
+            Me.grpFechas.Visible = True
+            Me.dgvPagoDctoBasico.Enabled = False
+            Me.ActiveControl = dtpInicio
+        End If
     End Sub
 End Class

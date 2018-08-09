@@ -494,7 +494,7 @@ Partial Class frmGenerarPDT
         Me.btnExcel.Location = New System.Drawing.Point(924, 12)
         Me.btnExcel.Name = "btnExcel"
         Me.btnExcel.Size = New System.Drawing.Size(140, 30)
-        Me.btnExcel.TabIndex = 127
+        Me.btnExcel.TabIndex = 4
         Me.btnExcel.Text = "&Excel"
         Me.btnExcel.UseVisualStyleBackColor = False
         '
@@ -506,7 +506,7 @@ Partial Class frmGenerarPDT
         Me.btnSunat.Location = New System.Drawing.Point(1070, 12)
         Me.btnSunat.Name = "btnSunat"
         Me.btnSunat.Size = New System.Drawing.Size(140, 30)
-        Me.btnSunat.TabIndex = 126
+        Me.btnSunat.TabIndex = 5
         Me.btnSunat.Text = "&Sunat"
         Me.btnSunat.UseVisualStyleBackColor = False
         '
@@ -517,7 +517,7 @@ Partial Class frmGenerarPDT
         Me.btnGenerar.Location = New System.Drawing.Point(283, 9)
         Me.btnGenerar.Name = "btnGenerar"
         Me.btnGenerar.Size = New System.Drawing.Size(140, 30)
-        Me.btnGenerar.TabIndex = 125
+        Me.btnGenerar.TabIndex = 3
         Me.btnGenerar.Text = "&Generar"
         Me.btnGenerar.UseVisualStyleBackColor = False
         '
@@ -540,7 +540,7 @@ Partial Class frmGenerarPDT
         Me.txtAnioAProgramar.Name = "txtAnioAProgramar"
         Me.txtAnioAProgramar.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.txtAnioAProgramar.Size = New System.Drawing.Size(73, 25)
-        Me.txtAnioAProgramar.TabIndex = 123
+        Me.txtAnioAProgramar.TabIndex = 2
         Me.txtAnioAProgramar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'cmbMes
@@ -550,7 +550,7 @@ Partial Class frmGenerarPDT
         Me.cmbMes.Location = New System.Drawing.Point(8, 14)
         Me.cmbMes.Name = "cmbMes"
         Me.cmbMes.Size = New System.Drawing.Size(158, 21)
-        Me.cmbMes.TabIndex = 122
+        Me.cmbMes.TabIndex = 1
         '
         'frmGenerarPDT
         '

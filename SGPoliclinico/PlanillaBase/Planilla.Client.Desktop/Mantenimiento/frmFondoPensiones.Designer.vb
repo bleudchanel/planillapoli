@@ -157,7 +157,7 @@ Partial Class frmFondoPensiones
         Me.txtBusqueda.MaxLength = 350
         Me.txtBusqueda.Name = "txtBusqueda"
         Me.txtBusqueda.Size = New System.Drawing.Size(299, 25)
-        Me.txtBusqueda.TabIndex = 107
+        Me.txtBusqueda.TabIndex = 1
         Me.txtBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnModificar
@@ -169,7 +169,7 @@ Partial Class frmFondoPensiones
         Me.btnModificar.Location = New System.Drawing.Point(180, 334)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(163, 35)
-        Me.btnModificar.TabIndex = 37
+        Me.btnModificar.TabIndex = 4
         Me.btnModificar.Text = "&Modificar"
         Me.btnModificar.UseVisualStyleBackColor = False
         '
@@ -182,7 +182,7 @@ Partial Class frmFondoPensiones
         Me.btnNuevo.Location = New System.Drawing.Point(8, 334)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(163, 35)
-        Me.btnNuevo.TabIndex = 36
+        Me.btnNuevo.TabIndex = 3
         Me.btnNuevo.Text = "&Nuevo"
         Me.btnNuevo.UseVisualStyleBackColor = False
         '
@@ -205,7 +205,7 @@ Partial Class frmFondoPensiones
         Me.dgvPagoDctoBasico.RowHeadersVisible = False
         Me.dgvPagoDctoBasico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvPagoDctoBasico.Size = New System.Drawing.Size(800, 289)
-        Me.dgvPagoDctoBasico.TabIndex = 34
+        Me.dgvPagoDctoBasico.TabIndex = 2
         '
         'IdFondoPensiones
         '
@@ -331,7 +331,7 @@ Partial Class frmFondoPensiones
         Me.cmbEstado.Location = New System.Drawing.Point(206, 199)
         Me.cmbEstado.Name = "cmbEstado"
         Me.cmbEstado.Size = New System.Drawing.Size(209, 23)
-        Me.cmbEstado.TabIndex = 121
+        Me.cmbEstado.TabIndex = 14
         '
         'Label19
         '
@@ -354,7 +354,7 @@ Partial Class frmFondoPensiones
         Me.txtONP.MaxLength = 350
         Me.txtONP.Name = "txtONP"
         Me.txtONP.Size = New System.Drawing.Size(95, 25)
-        Me.txtONP.TabIndex = 119
+        Me.txtONP.TabIndex = 10
         Me.txtONP.Text = "0.0000"
         Me.txtONP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -411,7 +411,7 @@ Partial Class frmFondoPensiones
         Me.txtMixtaPrimaSeg.MaxLength = 350
         Me.txtMixtaPrimaSeg.Name = "txtMixtaPrimaSeg"
         Me.txtMixtaPrimaSeg.Size = New System.Drawing.Size(95, 25)
-        Me.txtMixtaPrimaSeg.TabIndex = 113
+        Me.txtMixtaPrimaSeg.TabIndex = 13
         Me.txtMixtaPrimaSeg.Text = "0.0000"
         Me.txtMixtaPrimaSeg.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -426,7 +426,7 @@ Partial Class frmFondoPensiones
         Me.txtFlujoPrimaSeg.MaxLength = 350
         Me.txtFlujoPrimaSeg.Name = "txtFlujoPrimaSeg"
         Me.txtFlujoPrimaSeg.Size = New System.Drawing.Size(95, 25)
-        Me.txtFlujoPrimaSeg.TabIndex = 112
+        Me.txtFlujoPrimaSeg.TabIndex = 9
         Me.txtFlujoPrimaSeg.Text = "0.0000"
         Me.txtFlujoPrimaSeg.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -441,7 +441,7 @@ Partial Class frmFondoPensiones
         Me.txtMixtaComisionVar.MaxLength = 350
         Me.txtMixtaComisionVar.Name = "txtMixtaComisionVar"
         Me.txtMixtaComisionVar.Size = New System.Drawing.Size(95, 25)
-        Me.txtMixtaComisionVar.TabIndex = 111
+        Me.txtMixtaComisionVar.TabIndex = 12
         Me.txtMixtaComisionVar.Text = "0.0000"
         Me.txtMixtaComisionVar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -456,7 +456,7 @@ Partial Class frmFondoPensiones
         Me.txtFlujoComisionVar.MaxLength = 350
         Me.txtFlujoComisionVar.Name = "txtFlujoComisionVar"
         Me.txtFlujoComisionVar.Size = New System.Drawing.Size(95, 25)
-        Me.txtFlujoComisionVar.TabIndex = 110
+        Me.txtFlujoComisionVar.TabIndex = 8
         Me.txtFlujoComisionVar.Text = "0.0000"
         Me.txtFlujoComisionVar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -471,7 +471,7 @@ Partial Class frmFondoPensiones
         Me.txtMixtaAporteOblig.MaxLength = 350
         Me.txtMixtaAporteOblig.Name = "txtMixtaAporteOblig"
         Me.txtMixtaAporteOblig.Size = New System.Drawing.Size(95, 25)
-        Me.txtMixtaAporteOblig.TabIndex = 108
+        Me.txtMixtaAporteOblig.TabIndex = 11
         Me.txtMixtaAporteOblig.Text = "0.0000"
         Me.txtMixtaAporteOblig.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -506,7 +506,7 @@ Partial Class frmFondoPensiones
         Me.txtEntidad.MaxLength = 350
         Me.txtEntidad.Name = "txtEntidad"
         Me.txtEntidad.Size = New System.Drawing.Size(327, 25)
-        Me.txtEntidad.TabIndex = 106
+        Me.txtEntidad.TabIndex = 6
         Me.txtEntidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
@@ -531,7 +531,7 @@ Partial Class frmFondoPensiones
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.ReadOnly = True
         Me.txtCodigo.Size = New System.Drawing.Size(61, 25)
-        Me.txtCodigo.TabIndex = 104
+        Me.txtCodigo.TabIndex = 5
         Me.txtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtFlujoAporteOblig
@@ -545,7 +545,7 @@ Partial Class frmFondoPensiones
         Me.txtFlujoAporteOblig.MaxLength = 350
         Me.txtFlujoAporteOblig.Name = "txtFlujoAporteOblig"
         Me.txtFlujoAporteOblig.Size = New System.Drawing.Size(95, 25)
-        Me.txtFlujoAporteOblig.TabIndex = 18
+        Me.txtFlujoAporteOblig.TabIndex = 7
         Me.txtFlujoAporteOblig.Text = "0.0000"
         Me.txtFlujoAporteOblig.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -581,8 +581,8 @@ Partial Class frmFondoPensiones
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCancelar.Location = New System.Drawing.Point(399, 22)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(167, 42)
-        Me.btnCancelar.TabIndex = 21
+        Me.btnCancelar.Size = New System.Drawing.Size(167, 28)
+        Me.btnCancelar.TabIndex = 16
         Me.btnCancelar.Text = "C&ancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
@@ -595,8 +595,8 @@ Partial Class frmFondoPensiones
         Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnGuardar.Location = New System.Drawing.Point(228, 22)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(167, 42)
-        Me.btnGuardar.TabIndex = 20
+        Me.btnGuardar.Size = New System.Drawing.Size(167, 28)
+        Me.btnGuardar.TabIndex = 15
         Me.btnGuardar.Text = "&Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = False
         '

@@ -543,7 +543,7 @@ Partial Class frmGenerarPlanillaGratificacion
         Me.btnExcel.Location = New System.Drawing.Point(931, 8)
         Me.btnExcel.Name = "btnExcel"
         Me.btnExcel.Size = New System.Drawing.Size(140, 30)
-        Me.btnExcel.TabIndex = 128
+        Me.btnExcel.TabIndex = 4
         Me.btnExcel.Text = "&Excel"
         Me.btnExcel.UseVisualStyleBackColor = False
         '
@@ -555,7 +555,7 @@ Partial Class frmGenerarPlanillaGratificacion
         Me.btnCerrarPlanilla.Location = New System.Drawing.Point(1076, 9)
         Me.btnCerrarPlanilla.Name = "btnCerrarPlanilla"
         Me.btnCerrarPlanilla.Size = New System.Drawing.Size(140, 30)
-        Me.btnCerrarPlanilla.TabIndex = 126
+        Me.btnCerrarPlanilla.TabIndex = 5
         Me.btnCerrarPlanilla.Text = "&Cerrar Planilla"
         Me.btnCerrarPlanilla.UseVisualStyleBackColor = False
         '
@@ -566,7 +566,7 @@ Partial Class frmGenerarPlanillaGratificacion
         Me.btnGenerar.Location = New System.Drawing.Point(283, 9)
         Me.btnGenerar.Name = "btnGenerar"
         Me.btnGenerar.Size = New System.Drawing.Size(140, 30)
-        Me.btnGenerar.TabIndex = 125
+        Me.btnGenerar.TabIndex = 3
         Me.btnGenerar.Text = "&Generar"
         Me.btnGenerar.UseVisualStyleBackColor = False
         '
@@ -589,7 +589,7 @@ Partial Class frmGenerarPlanillaGratificacion
         Me.txtAnioAProgramar.Name = "txtAnioAProgramar"
         Me.txtAnioAProgramar.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.txtAnioAProgramar.Size = New System.Drawing.Size(73, 25)
-        Me.txtAnioAProgramar.TabIndex = 123
+        Me.txtAnioAProgramar.TabIndex = 2
         Me.txtAnioAProgramar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'cmbMes
@@ -599,7 +599,7 @@ Partial Class frmGenerarPlanillaGratificacion
         Me.cmbMes.Location = New System.Drawing.Point(8, 14)
         Me.cmbMes.Name = "cmbMes"
         Me.cmbMes.Size = New System.Drawing.Size(158, 21)
-        Me.cmbMes.TabIndex = 122
+        Me.cmbMes.TabIndex = 1
         '
         'TableLayoutPanel3
         '
@@ -756,8 +756,9 @@ Partial Class frmGenerarPlanillaGratificacion
         Me.txtOtrosIngresos.Location = New System.Drawing.Point(698, 28)
         Me.txtOtrosIngresos.MaxLength = 350
         Me.txtOtrosIngresos.Name = "txtOtrosIngresos"
+        Me.txtOtrosIngresos.ReadOnly = True
         Me.txtOtrosIngresos.Size = New System.Drawing.Size(80, 23)
-        Me.txtOtrosIngresos.TabIndex = 118
+        Me.txtOtrosIngresos.TabIndex = 11
         Me.txtOtrosIngresos.Text = "0.00"
         Me.txtOtrosIngresos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -808,8 +809,9 @@ Partial Class frmGenerarPlanillaGratificacion
         Me.txtHorasExtra.Location = New System.Drawing.Point(612, 28)
         Me.txtHorasExtra.MaxLength = 350
         Me.txtHorasExtra.Name = "txtHorasExtra"
+        Me.txtHorasExtra.ReadOnly = True
         Me.txtHorasExtra.Size = New System.Drawing.Size(80, 23)
-        Me.txtHorasExtra.TabIndex = 114
+        Me.txtHorasExtra.TabIndex = 10
         Me.txtHorasExtra.Text = "0.00"
         Me.txtHorasExtra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -861,8 +863,9 @@ Partial Class frmGenerarPlanillaGratificacion
         Me.txtReintegro.Location = New System.Drawing.Point(526, 28)
         Me.txtReintegro.MaxLength = 350
         Me.txtReintegro.Name = "txtReintegro"
+        Me.txtReintegro.ReadOnly = True
         Me.txtReintegro.Size = New System.Drawing.Size(80, 23)
-        Me.txtReintegro.TabIndex = 110
+        Me.txtReintegro.TabIndex = 9
         Me.txtReintegro.Text = "0.00"
         Me.txtReintegro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -886,8 +889,9 @@ Partial Class frmGenerarPlanillaGratificacion
         Me.txtOtroDesc.Location = New System.Drawing.Point(440, 70)
         Me.txtOtroDesc.MaxLength = 350
         Me.txtOtroDesc.Name = "txtOtroDesc"
+        Me.txtOtroDesc.ReadOnly = True
         Me.txtOtroDesc.Size = New System.Drawing.Size(80, 23)
-        Me.txtOtroDesc.TabIndex = 108
+        Me.txtOtroDesc.TabIndex = 13
         Me.txtOtroDesc.Text = "0.00"
         Me.txtOtroDesc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -937,8 +941,9 @@ Partial Class frmGenerarPlanillaGratificacion
         Me.txtQuinta.Location = New System.Drawing.Point(354, 70)
         Me.txtQuinta.MaxLength = 350
         Me.txtQuinta.Name = "txtQuinta"
+        Me.txtQuinta.ReadOnly = True
         Me.txtQuinta.Size = New System.Drawing.Size(80, 23)
-        Me.txtQuinta.TabIndex = 104
+        Me.txtQuinta.TabIndex = 12
         Me.txtQuinta.Text = "0.00"
         Me.txtQuinta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -962,8 +967,9 @@ Partial Class frmGenerarPlanillaGratificacion
         Me.txtRemVacac.Location = New System.Drawing.Point(354, 28)
         Me.txtRemVacac.MaxLength = 350
         Me.txtRemVacac.Name = "txtRemVacac"
+        Me.txtRemVacac.ReadOnly = True
         Me.txtRemVacac.Size = New System.Drawing.Size(80, 23)
-        Me.txtRemVacac.TabIndex = 102
+        Me.txtRemVacac.TabIndex = 8
         Me.txtRemVacac.Text = "0.00"
         Me.txtRemVacac.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -1065,8 +1071,9 @@ Partial Class frmGenerarPlanillaGratificacion
         Me.txtSubsidio.Location = New System.Drawing.Point(182, 28)
         Me.txtSubsidio.MaxLength = 350
         Me.txtSubsidio.Name = "txtSubsidio"
+        Me.txtSubsidio.ReadOnly = True
         Me.txtSubsidio.Size = New System.Drawing.Size(80, 23)
-        Me.txtSubsidio.TabIndex = 94
+        Me.txtSubsidio.TabIndex = 7
         Me.txtSubsidio.Text = "0.00"
         Me.txtSubsidio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -1168,8 +1175,9 @@ Partial Class frmGenerarPlanillaGratificacion
         Me.txtRemuneracionBasica.Location = New System.Drawing.Point(10, 28)
         Me.txtRemuneracionBasica.MaxLength = 350
         Me.txtRemuneracionBasica.Name = "txtRemuneracionBasica"
+        Me.txtRemuneracionBasica.ReadOnly = True
         Me.txtRemuneracionBasica.Size = New System.Drawing.Size(80, 23)
-        Me.txtRemuneracionBasica.TabIndex = 86
+        Me.txtRemuneracionBasica.TabIndex = 6
         Me.txtRemuneracionBasica.Text = "0.00"
         Me.txtRemuneracionBasica.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -1200,7 +1208,7 @@ Partial Class frmGenerarPlanillaGratificacion
         Me.btnCancelar.Location = New System.Drawing.Point(6, 13)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(80, 30)
-        Me.btnCancelar.TabIndex = 128
+        Me.btnCancelar.TabIndex = 14
         Me.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnCancelar.UseVisualStyleBackColor = False
         '

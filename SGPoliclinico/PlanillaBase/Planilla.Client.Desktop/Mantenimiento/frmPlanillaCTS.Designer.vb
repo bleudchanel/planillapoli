@@ -22,14 +22,14 @@ Partial Class frmPlanillaCTS
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
@@ -132,7 +132,7 @@ Partial Class frmPlanillaCTS
         Me.dgvPlanilla.RowHeadersVisible = False
         Me.dgvPlanilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvPlanilla.Size = New System.Drawing.Size(1084, 410)
-        Me.dgvPlanilla.TabIndex = 89
+        Me.dgvPlanilla.TabIndex = 5
         '
         'IdPersonal
         '
@@ -164,10 +164,10 @@ Partial Class frmPlanillaCTS
         '
         'FechaNac
         '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle1.Format = "d"
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.FechaNac.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle9.Format = "d"
+        DataGridViewCellStyle9.NullValue = Nothing
+        Me.FechaNac.DefaultCellStyle = DataGridViewCellStyle9
         Me.FechaNac.HeaderText = "Fecha Nac"
         Me.FechaNac.Name = "FechaNac"
         Me.FechaNac.ReadOnly = True
@@ -175,10 +175,10 @@ Partial Class frmPlanillaCTS
         '
         'FechaIng
         '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle2.Format = "d"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.FechaIng.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle10.Format = "d"
+        DataGridViewCellStyle10.NullValue = Nothing
+        Me.FechaIng.DefaultCellStyle = DataGridViewCellStyle10
         Me.FechaIng.HeaderText = "Fecha Ing"
         Me.FechaIng.Name = "FechaIng"
         Me.FechaIng.ReadOnly = True
@@ -186,8 +186,8 @@ Partial Class frmPlanillaCTS
         '
         'NumCta
         '
-        DataGridViewCellStyle3.Format = "d"
-        Me.NumCta.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle11.Format = "d"
+        Me.NumCta.DefaultCellStyle = DataGridViewCellStyle11
         Me.NumCta.HeaderText = "Num Cta"
         Me.NumCta.Name = "NumCta"
         Me.NumCta.ReadOnly = True
@@ -195,10 +195,10 @@ Partial Class frmPlanillaCTS
         '
         'TotRemuneracion
         '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle4.Format = "N2"
-        DataGridViewCellStyle4.NullValue = Nothing
-        Me.TotRemuneracion.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle12.Format = "N2"
+        DataGridViewCellStyle12.NullValue = Nothing
+        Me.TotRemuneracion.DefaultCellStyle = DataGridViewCellStyle12
         Me.TotRemuneracion.HeaderText = "Tot. Remun."
         Me.TotRemuneracion.Name = "TotRemuneracion"
         Me.TotRemuneracion.ReadOnly = True
@@ -206,9 +206,9 @@ Partial Class frmPlanillaCTS
         '
         'SextoGrati
         '
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle5.Format = "N2"
-        Me.SextoGrati.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle13.Format = "N2"
+        Me.SextoGrati.DefaultCellStyle = DataGridViewCellStyle13
         Me.SextoGrati.HeaderText = "1/6 Grati."
         Me.SextoGrati.Name = "SextoGrati"
         Me.SextoGrati.ReadOnly = True
@@ -216,18 +216,18 @@ Partial Class frmPlanillaCTS
         '
         'RemComputable
         '
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.Format = "N2"
-        Me.RemComputable.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.Format = "N2"
+        Me.RemComputable.DefaultCellStyle = DataGridViewCellStyle14
         Me.RemComputable.HeaderText = "Rem Computable"
         Me.RemComputable.Name = "RemComputable"
         Me.RemComputable.ReadOnly = True
         '
         'MesesLab
         '
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.MesesLab.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.MesesLab.DefaultCellStyle = DataGridViewCellStyle15
         Me.MesesLab.HeaderText = "Meses"
         Me.MesesLab.Name = "MesesLab"
         Me.MesesLab.ReadOnly = True
@@ -235,9 +235,9 @@ Partial Class frmPlanillaCTS
         '
         'MontoCTS
         '
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle8.Format = "N2"
-        Me.MontoCTS.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle16.Format = "N2"
+        Me.MontoCTS.DefaultCellStyle = DataGridViewCellStyle16
         Me.MontoCTS.HeaderText = "Monto CTS"
         Me.MontoCTS.Name = "MontoCTS"
         Me.MontoCTS.ReadOnly = True
@@ -273,7 +273,7 @@ Partial Class frmPlanillaCTS
         Me.btnExcel.Location = New System.Drawing.Point(942, 9)
         Me.btnExcel.Name = "btnExcel"
         Me.btnExcel.Size = New System.Drawing.Size(140, 30)
-        Me.btnExcel.TabIndex = 128
+        Me.btnExcel.TabIndex = 4
         Me.btnExcel.Text = "&Excel"
         Me.btnExcel.UseVisualStyleBackColor = False
         '
@@ -284,7 +284,7 @@ Partial Class frmPlanillaCTS
         Me.btnGenerar.Location = New System.Drawing.Point(283, 9)
         Me.btnGenerar.Name = "btnGenerar"
         Me.btnGenerar.Size = New System.Drawing.Size(140, 30)
-        Me.btnGenerar.TabIndex = 125
+        Me.btnGenerar.TabIndex = 3
         Me.btnGenerar.Text = "&Generar"
         Me.btnGenerar.UseVisualStyleBackColor = False
         '
@@ -307,7 +307,7 @@ Partial Class frmPlanillaCTS
         Me.txtAnioAProgramar.Name = "txtAnioAProgramar"
         Me.txtAnioAProgramar.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.txtAnioAProgramar.Size = New System.Drawing.Size(73, 25)
-        Me.txtAnioAProgramar.TabIndex = 123
+        Me.txtAnioAProgramar.TabIndex = 2
         Me.txtAnioAProgramar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'cmbMes
@@ -317,7 +317,7 @@ Partial Class frmPlanillaCTS
         Me.cmbMes.Location = New System.Drawing.Point(8, 14)
         Me.cmbMes.Name = "cmbMes"
         Me.cmbMes.Size = New System.Drawing.Size(158, 21)
-        Me.cmbMes.TabIndex = 122
+        Me.cmbMes.TabIndex = 1
         '
         'GroupBox1
         '
@@ -380,57 +380,61 @@ Partial Class frmPlanillaCTS
         'txtMontoCts
         '
         Me.txtMontoCts.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtMontoCts.BackColor = System.Drawing.SystemColors.Window
+        Me.txtMontoCts.BackColor = System.Drawing.SystemColors.Menu
         Me.txtMontoCts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtMontoCts.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtMontoCts.Location = New System.Drawing.Point(959, 23)
         Me.txtMontoCts.MaxLength = 350
         Me.txtMontoCts.Name = "txtMontoCts"
+        Me.txtMontoCts.ReadOnly = True
         Me.txtMontoCts.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.txtMontoCts.Size = New System.Drawing.Size(110, 25)
-        Me.txtMontoCts.TabIndex = 127
+        Me.txtMontoCts.TabIndex = 9
         Me.txtMontoCts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtRemComputable
         '
         Me.txtRemComputable.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtRemComputable.BackColor = System.Drawing.SystemColors.Window
+        Me.txtRemComputable.BackColor = System.Drawing.SystemColors.Menu
         Me.txtRemComputable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtRemComputable.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRemComputable.Location = New System.Drawing.Point(843, 23)
         Me.txtRemComputable.MaxLength = 350
         Me.txtRemComputable.Name = "txtRemComputable"
+        Me.txtRemComputable.ReadOnly = True
         Me.txtRemComputable.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.txtRemComputable.Size = New System.Drawing.Size(110, 25)
-        Me.txtRemComputable.TabIndex = 126
+        Me.txtRemComputable.TabIndex = 8
         Me.txtRemComputable.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtSextoGrati
         '
         Me.txtSextoGrati.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtSextoGrati.BackColor = System.Drawing.SystemColors.Window
+        Me.txtSextoGrati.BackColor = System.Drawing.SystemColors.Menu
         Me.txtSextoGrati.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtSextoGrati.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSextoGrati.Location = New System.Drawing.Point(727, 23)
         Me.txtSextoGrati.MaxLength = 350
         Me.txtSextoGrati.Name = "txtSextoGrati"
+        Me.txtSextoGrati.ReadOnly = True
         Me.txtSextoGrati.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.txtSextoGrati.Size = New System.Drawing.Size(110, 25)
-        Me.txtSextoGrati.TabIndex = 125
+        Me.txtSextoGrati.TabIndex = 7
         Me.txtSextoGrati.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtTotalRemuneracion
         '
         Me.txtTotalRemuneracion.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtTotalRemuneracion.BackColor = System.Drawing.SystemColors.Window
+        Me.txtTotalRemuneracion.BackColor = System.Drawing.SystemColors.Menu
         Me.txtTotalRemuneracion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTotalRemuneracion.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTotalRemuneracion.Location = New System.Drawing.Point(611, 23)
         Me.txtTotalRemuneracion.MaxLength = 350
         Me.txtTotalRemuneracion.Name = "txtTotalRemuneracion"
+        Me.txtTotalRemuneracion.ReadOnly = True
         Me.txtTotalRemuneracion.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.txtTotalRemuneracion.Size = New System.Drawing.Size(110, 25)
-        Me.txtTotalRemuneracion.TabIndex = 124
+        Me.txtTotalRemuneracion.TabIndex = 6
         Me.txtTotalRemuneracion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblCantidad

@@ -11,7 +11,7 @@ Public Class frmResumenAnualPlanillas
 
     Private Sub frmResumenAnualPlanillas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.txtAnioAProgramar.Text = Date.Now.Year
-        Me.ActiveControl = Me.txtAnioAProgramar
+        Me.ActiveControl = Me.cmbPersonal
 
         _personal = planillaManager.GetPersonalActivo()
 
@@ -135,5 +135,17 @@ Public Class frmResumenAnualPlanillas
             FncDataTable2Excel(dtEx, "Resumen")
         End If
 
+    End Sub
+
+    Private Sub cmbPersonal_KeyDown(sender As Object, e As KeyEventArgs) Handles cmbPersonal.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Me.ActiveControl = txtAnioAProgramar
+        End If
+    End Sub
+
+    Private Sub txtAnioAProgramar_KeyDown(sender As Object, e As KeyEventArgs) Handles txtAnioAProgramar.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            btnGenerar.PerformClick()
+        End If
     End Sub
 End Class

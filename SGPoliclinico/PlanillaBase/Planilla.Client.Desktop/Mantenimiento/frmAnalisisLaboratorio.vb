@@ -44,6 +44,7 @@ Public Class frmAnalisisLaboratorio
 
         _tablasAnalisis = variablesManager.GetTablasAnalisis()
         Controles_En_Load()
+        Me.ActiveControl = txtBusqueda
     End Sub
 
 

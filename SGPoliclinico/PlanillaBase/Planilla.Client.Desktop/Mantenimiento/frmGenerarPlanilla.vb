@@ -19,6 +19,7 @@ Public Class frmGenerarPlanilla
         Dim oTextBox As TextBox = DirectCast(sender, TextBox)
         If e.KeyCode = Keys.Delete Then
             e.Handled = True
+            oTextBox.Text = "0.00"
         End If
         If e.KeyCode = Keys.Enter And oTextBox.Name = txtRemuneracionBasica.Name Then
             If _planillaActual IsNot Nothing Then
@@ -424,6 +425,7 @@ Public Class frmGenerarPlanilla
         Dim Fechas = fncInicioFinMes(tuple.Item1, tuple.Item2)
         Me.dtpInicioVacaciones.Value = Fechas.Item(0)
         Me.dtpFinVacaciones.Value = Fechas.Item(1)
+        Me.ActiveControl = Me.dtpInicioVacaciones
     End Sub
 
     Private Sub btnGuardarVacaciones_Click(sender As Object, e As EventArgs) Handles btnGuardarVacaciones.Click
@@ -531,6 +533,42 @@ Public Class frmGenerarPlanilla
         Catch ex As Exception
             ' Notificar
         End Try
+    End Sub
+
+    Private Sub dtpInicioIncapacidad_KeyDown(sender As Object, e As KeyEventArgs) Handles dtpInicioIncapacidad.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Me.ActiveControl = dtpFinIncapacidad
+        End If
+    End Sub
+
+    Private Sub dtpFinIncapacidad_KeyDown(sender As Object, e As KeyEventArgs) Handles dtpFinIncapacidad.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            btnGuardarPerIncapacidad.PerformClick()
+        End If
+    End Sub
+
+    Private Sub dtpInicioDiasSinGoce_KeyDown(sender As Object, e As KeyEventArgs) Handles dtpInicioDiasSinGoce.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Me.ActiveControl = dtpFinDiasSinGoce
+        End If
+    End Sub
+
+    Private Sub dtpFinDiasSinGoce_KeyDown(sender As Object, e As KeyEventArgs) Handles dtpFinDiasSinGoce.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            btnGuardarPerDiasSinGoce.PerformClick()
+        End If
+    End Sub
+
+    Private Sub dtpInicioVacaciones_KeyDown(sender As Object, e As KeyEventArgs) Handles dtpInicioVacaciones.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Me.ActiveControl = dtpFinVacaciones
+        End If
+    End Sub
+
+    Private Sub dtpFinVacaciones_KeyDown(sender As Object, e As KeyEventArgs) Handles dtpFinVacaciones.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            btnGuardarVacaciones.PerformClick()
+        End If
     End Sub
 
     'Private Sub dgvPlanilla_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPlanilla.CellDoubleClick

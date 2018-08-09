@@ -202,7 +202,7 @@ Partial Class frmRemuneracionBasica
         Me.btnExcel.Location = New System.Drawing.Point(863, 539)
         Me.btnExcel.Name = "btnExcel"
         Me.btnExcel.Size = New System.Drawing.Size(120, 26)
-        Me.btnExcel.TabIndex = 38
+        Me.btnExcel.TabIndex = 4
         Me.btnExcel.Text = "&Excel"
         Me.btnExcel.UseVisualStyleBackColor = False
         '
@@ -215,7 +215,7 @@ Partial Class frmRemuneracionBasica
         Me.btnModificar.Location = New System.Drawing.Point(129, 539)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(120, 26)
-        Me.btnModificar.TabIndex = 37
+        Me.btnModificar.TabIndex = 3
         Me.btnModificar.Text = "&Modificar"
         Me.btnModificar.UseVisualStyleBackColor = False
         '
@@ -228,7 +228,7 @@ Partial Class frmRemuneracionBasica
         Me.btnNuevo.Location = New System.Drawing.Point(3, 539)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(120, 26)
-        Me.btnNuevo.TabIndex = 36
+        Me.btnNuevo.TabIndex = 2
         Me.btnNuevo.Text = "&Nuevo"
         Me.btnNuevo.UseVisualStyleBackColor = False
         '
@@ -251,7 +251,7 @@ Partial Class frmRemuneracionBasica
         Me.dgvPagoDctoBasico.RowHeadersVisible = False
         Me.dgvPagoDctoBasico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvPagoDctoBasico.Size = New System.Drawing.Size(980, 503)
-        Me.dgvPagoDctoBasico.TabIndex = 34
+        Me.dgvPagoDctoBasico.TabIndex = 1
         '
         'IdPersonal
         '
@@ -573,7 +573,7 @@ Partial Class frmRemuneracionBasica
         Me.txtNumHijos.Location = New System.Drawing.Point(768, 112)
         Me.txtNumHijos.Name = "txtNumHijos"
         Me.txtNumHijos.Size = New System.Drawing.Size(45, 25)
-        Me.txtNumHijos.TabIndex = 138
+        Me.txtNumHijos.TabIndex = 16
         '
         'cmbEstadoCivil
         '
@@ -583,7 +583,7 @@ Partial Class frmRemuneracionBasica
         Me.cmbEstadoCivil.Location = New System.Drawing.Point(770, 81)
         Me.cmbEstadoCivil.Name = "cmbEstadoCivil"
         Me.cmbEstadoCivil.Size = New System.Drawing.Size(110, 25)
-        Me.cmbEstadoCivil.TabIndex = 137
+        Me.cmbEstadoCivil.TabIndex = 15
         '
         'txtCodPer
         '
@@ -596,7 +596,7 @@ Partial Class frmRemuneracionBasica
         Me.txtCodPer.Name = "txtCodPer"
         Me.txtCodPer.ReadOnly = True
         Me.txtCodPer.Size = New System.Drawing.Size(122, 25)
-        Me.txtCodPer.TabIndex = 136
+        Me.txtCodPer.TabIndex = 5
         Me.txtCodPer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label15
@@ -617,7 +617,7 @@ Partial Class frmRemuneracionBasica
         Me.dtpFecIngreso.Location = New System.Drawing.Point(768, 143)
         Me.dtpFecIngreso.Name = "dtpFecIngreso"
         Me.dtpFecIngreso.Size = New System.Drawing.Size(110, 25)
-        Me.dtpFecIngreso.TabIndex = 134
+        Me.dtpFecIngreso.TabIndex = 17
         '
         'Label14
         '
@@ -644,12 +644,13 @@ Partial Class frmRemuneracionBasica
         'cmbDistrito
         '
         Me.cmbDistrito.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.cmbDistrito.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbDistrito.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbDistrito.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbDistrito.FormattingEnabled = True
         Me.cmbDistrito.Location = New System.Drawing.Point(647, 180)
         Me.cmbDistrito.Name = "cmbDistrito"
         Me.cmbDistrito.Size = New System.Drawing.Size(233, 25)
-        Me.cmbDistrito.TabIndex = 130
+        Me.cmbDistrito.TabIndex = 19
         '
         'txtSexo
         '
@@ -661,7 +662,7 @@ Partial Class frmRemuneracionBasica
         Me.txtSexo.MaxLength = 1
         Me.txtSexo.Name = "txtSexo"
         Me.txtSexo.Size = New System.Drawing.Size(45, 25)
-        Me.txtSexo.TabIndex = 118
+        Me.txtSexo.TabIndex = 14
         Me.txtSexo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label13
@@ -685,7 +686,7 @@ Partial Class frmRemuneracionBasica
         Me.txtEmail.MaxLength = 50
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(222, 25)
-        Me.txtEmail.TabIndex = 116
+        Me.txtEmail.TabIndex = 13
         Me.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label12
@@ -709,7 +710,7 @@ Partial Class frmRemuneracionBasica
         Me.txtCelular.MaxLength = 15
         Me.txtCelular.Name = "txtCelular"
         Me.txtCelular.Size = New System.Drawing.Size(122, 25)
-        Me.txtCelular.TabIndex = 114
+        Me.txtCelular.TabIndex = 12
         Me.txtCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label11
@@ -733,7 +734,7 @@ Partial Class frmRemuneracionBasica
         Me.txtTelefono.MaxLength = 15
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(122, 25)
-        Me.txtTelefono.TabIndex = 112
+        Me.txtTelefono.TabIndex = 11
         Me.txtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label10
@@ -765,7 +766,7 @@ Partial Class frmRemuneracionBasica
         Me.dtpFecNac.Location = New System.Drawing.Point(423, 50)
         Me.dtpFecNac.Name = "dtpFecNac"
         Me.dtpFecNac.Size = New System.Drawing.Size(110, 25)
-        Me.dtpFecNac.TabIndex = 110
+        Me.dtpFecNac.TabIndex = 10
         '
         'Label6
         '
@@ -788,7 +789,7 @@ Partial Class frmRemuneracionBasica
         Me.txtDireccion.MaxLength = 100
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(502, 25)
-        Me.txtDireccion.TabIndex = 108
+        Me.txtDireccion.TabIndex = 18
         Me.txtDireccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label3
@@ -812,7 +813,7 @@ Partial Class frmRemuneracionBasica
         Me.txtNombres.MaxLength = 60
         Me.txtNombres.Name = "txtNombres"
         Me.txtNombres.Size = New System.Drawing.Size(197, 25)
-        Me.txtNombres.TabIndex = 106
+        Me.txtNombres.TabIndex = 9
         Me.txtNombres.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label2
@@ -836,7 +837,7 @@ Partial Class frmRemuneracionBasica
         Me.txtApellidoMaterno.MaxLength = 60
         Me.txtApellidoMaterno.Name = "txtApellidoMaterno"
         Me.txtApellidoMaterno.Size = New System.Drawing.Size(197, 25)
-        Me.txtApellidoMaterno.TabIndex = 104
+        Me.txtApellidoMaterno.TabIndex = 8
         Me.txtApellidoMaterno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label1
@@ -860,7 +861,7 @@ Partial Class frmRemuneracionBasica
         Me.txtApellidoPaterno.MaxLength = 60
         Me.txtApellidoPaterno.Name = "txtApellidoPaterno"
         Me.txtApellidoPaterno.Size = New System.Drawing.Size(197, 25)
-        Me.txtApellidoPaterno.TabIndex = 102
+        Me.txtApellidoPaterno.TabIndex = 7
         Me.txtApellidoPaterno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtDni
@@ -873,7 +874,7 @@ Partial Class frmRemuneracionBasica
         Me.txtDni.MaxLength = 8
         Me.txtDni.Name = "txtDni"
         Me.txtDni.Size = New System.Drawing.Size(122, 25)
-        Me.txtDni.TabIndex = 11
+        Me.txtDni.TabIndex = 6
         Me.txtDni.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label5
@@ -906,7 +907,7 @@ Partial Class frmRemuneracionBasica
         Me.btnCancelar.Location = New System.Drawing.Point(507, 14)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(118, 26)
-        Me.btnCancelar.TabIndex = 21
+        Me.btnCancelar.TabIndex = 51
         Me.btnCancelar.Text = "C&ancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
@@ -918,7 +919,7 @@ Partial Class frmRemuneracionBasica
         Me.btnGuardar.Location = New System.Drawing.Point(381, 14)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(118, 26)
-        Me.btnGuardar.TabIndex = 20
+        Me.btnGuardar.TabIndex = 50
         Me.btnGuardar.Text = "&Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = False
         '
@@ -973,7 +974,7 @@ Partial Class frmRemuneracionBasica
         Me.txtHorasLaborales.Maximum = New Decimal(New Integer() {250, 0, 0, 0})
         Me.txtHorasLaborales.Name = "txtHorasLaborales"
         Me.txtHorasLaborales.Size = New System.Drawing.Size(45, 25)
-        Me.txtHorasLaborales.TabIndex = 161
+        Me.txtHorasLaborales.TabIndex = 41
         '
         'Label32
         '
@@ -993,7 +994,7 @@ Partial Class frmRemuneracionBasica
         Me.dtpFechaBaja.Location = New System.Drawing.Point(815, 180)
         Me.dtpFechaBaja.Name = "dtpFechaBaja"
         Me.dtpFechaBaja.Size = New System.Drawing.Size(110, 25)
-        Me.dtpFechaBaja.TabIndex = 159
+        Me.dtpFechaBaja.TabIndex = 46
         '
         'Label31
         '
@@ -1017,7 +1018,7 @@ Partial Class frmRemuneracionBasica
         Me.txtObservacion.Multiline = True
         Me.txtObservacion.Name = "txtObservacion"
         Me.txtObservacion.Size = New System.Drawing.Size(257, 56)
-        Me.txtObservacion.TabIndex = 157
+        Me.txtObservacion.TabIndex = 45
         Me.txtObservacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtCuentaCTS
@@ -1030,7 +1031,7 @@ Partial Class frmRemuneracionBasica
         Me.txtCuentaCTS.MaxLength = 350
         Me.txtCuentaCTS.Name = "txtCuentaCTS"
         Me.txtCuentaCTS.Size = New System.Drawing.Size(156, 25)
-        Me.txtCuentaCTS.TabIndex = 156
+        Me.txtCuentaCTS.TabIndex = 44
         Me.txtCuentaCTS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label30
@@ -1054,7 +1055,7 @@ Partial Class frmRemuneracionBasica
         Me.txtEntidadCTS.MaxLength = 350
         Me.txtEntidadCTS.Name = "txtEntidadCTS"
         Me.txtEntidadCTS.Size = New System.Drawing.Size(122, 25)
-        Me.txtEntidadCTS.TabIndex = 154
+        Me.txtEntidadCTS.TabIndex = 43
         Me.txtEntidadCTS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label29
@@ -1087,7 +1088,7 @@ Partial Class frmRemuneracionBasica
         Me.cmbEstado.Location = New System.Drawing.Point(546, 180)
         Me.cmbEstado.Name = "cmbEstado"
         Me.cmbEstado.Size = New System.Drawing.Size(110, 25)
-        Me.cmbEstado.TabIndex = 151
+        Me.cmbEstado.TabIndex = 42
         '
         'Label27
         '
@@ -1110,7 +1111,7 @@ Partial Class frmRemuneracionBasica
         Me.txtSCTR.MaxLength = 1
         Me.txtSCTR.Name = "txtSCTR"
         Me.txtSCTR.Size = New System.Drawing.Size(35, 25)
-        Me.txtSCTR.TabIndex = 147
+        Me.txtSCTR.TabIndex = 40
         Me.txtSCTR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label26
@@ -1135,7 +1136,7 @@ Partial Class frmRemuneracionBasica
         Me.txtRiesgoCaja.MaxLength = 350
         Me.txtRiesgoCaja.Name = "txtRiesgoCaja"
         Me.txtRiesgoCaja.Size = New System.Drawing.Size(95, 25)
-        Me.txtRiesgoCaja.TabIndex = 145
+        Me.txtRiesgoCaja.TabIndex = 39
         Me.txtRiesgoCaja.Text = "0.00"
         Me.txtRiesgoCaja.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -1160,7 +1161,7 @@ Partial Class frmRemuneracionBasica
         Me.txtAsignacionFamiliar.MaxLength = 350
         Me.txtAsignacionFamiliar.Name = "txtAsignacionFamiliar"
         Me.txtAsignacionFamiliar.Size = New System.Drawing.Size(95, 25)
-        Me.txtAsignacionFamiliar.TabIndex = 143
+        Me.txtAsignacionFamiliar.TabIndex = 38
         Me.txtAsignacionFamiliar.Text = "0.00"
         Me.txtAsignacionFamiliar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -1184,7 +1185,7 @@ Partial Class frmRemuneracionBasica
         Me.txtEVida.MaxLength = 1
         Me.txtEVida.Name = "txtEVida"
         Me.txtEVida.Size = New System.Drawing.Size(35, 25)
-        Me.txtEVida.TabIndex = 141
+        Me.txtEVida.TabIndex = 36
         Me.txtEVida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label23
@@ -1208,7 +1209,7 @@ Partial Class frmRemuneracionBasica
         Me.txtCUSPP.MaxLength = 350
         Me.txtCUSPP.Name = "txtCUSPP"
         Me.txtCUSPP.Size = New System.Drawing.Size(122, 25)
-        Me.txtCUSPP.TabIndex = 139
+        Me.txtCUSPP.TabIndex = 35
         Me.txtCUSPP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label22
@@ -1236,12 +1237,13 @@ Partial Class frmRemuneracionBasica
         'cmbTipoComision
         '
         Me.cmbTipoComision.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.cmbTipoComision.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbTipoComision.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbTipoComision.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbTipoComision.FormattingEnabled = True
         Me.cmbTipoComision.Location = New System.Drawing.Point(138, 118)
         Me.cmbTipoComision.Name = "cmbTipoComision"
         Me.cmbTipoComision.Size = New System.Drawing.Size(154, 25)
-        Me.cmbTipoComision.TabIndex = 137
+        Me.cmbTipoComision.TabIndex = 34
         '
         'Label20
         '
@@ -1257,12 +1259,13 @@ Partial Class frmRemuneracionBasica
         'cmbFondoPen
         '
         Me.cmbFondoPen.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.cmbFondoPen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbFondoPen.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbFondoPen.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbFondoPen.FormattingEnabled = True
         Me.cmbFondoPen.Location = New System.Drawing.Point(138, 87)
         Me.cmbFondoPen.Name = "cmbFondoPen"
         Me.cmbFondoPen.Size = New System.Drawing.Size(154, 25)
-        Me.cmbFondoPen.TabIndex = 135
+        Me.cmbFondoPen.TabIndex = 33
         '
         'Label19
         '
@@ -1278,12 +1281,13 @@ Partial Class frmRemuneracionBasica
         'cmbCargo
         '
         Me.cmbCargo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.cmbCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbCargo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbCargo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbCargo.FormattingEnabled = True
         Me.cmbCargo.Location = New System.Drawing.Point(138, 56)
         Me.cmbCargo.Name = "cmbCargo"
         Me.cmbCargo.Size = New System.Drawing.Size(233, 25)
-        Me.cmbCargo.TabIndex = 133
+        Me.cmbCargo.TabIndex = 32
         '
         'Label18
         '
@@ -1299,12 +1303,13 @@ Partial Class frmRemuneracionBasica
         'cmbArea
         '
         Me.cmbArea.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.cmbArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbArea.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbArea.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbArea.FormattingEnabled = True
         Me.cmbArea.Location = New System.Drawing.Point(138, 25)
         Me.cmbArea.Name = "cmbArea"
         Me.cmbArea.Size = New System.Drawing.Size(233, 25)
-        Me.cmbArea.TabIndex = 131
+        Me.cmbArea.TabIndex = 31
         '
         'txtRemuneracionBasica
         '
@@ -1317,7 +1322,7 @@ Partial Class frmRemuneracionBasica
         Me.txtRemuneracionBasica.MaxLength = 350
         Me.txtRemuneracionBasica.Name = "txtRemuneracionBasica"
         Me.txtRemuneracionBasica.Size = New System.Drawing.Size(95, 25)
-        Me.txtRemuneracionBasica.TabIndex = 18
+        Me.txtRemuneracionBasica.TabIndex = 37
         Me.txtRemuneracionBasica.Text = "0.00"
         Me.txtRemuneracionBasica.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -1357,7 +1362,7 @@ Partial Class frmRemuneracionBasica
         Me.txtNroColegiatura.MaxLength = 350
         Me.txtNroColegiatura.Name = "txtNroColegiatura"
         Me.txtNroColegiatura.Size = New System.Drawing.Size(52, 25)
-        Me.txtNroColegiatura.TabIndex = 115
+        Me.txtNroColegiatura.TabIndex = 22
         Me.txtNroColegiatura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label17
@@ -1392,7 +1397,7 @@ Partial Class frmRemuneracionBasica
         Me.txtGrado.MaxLength = 350
         Me.txtGrado.Name = "txtGrado"
         Me.txtGrado.Size = New System.Drawing.Size(389, 25)
-        Me.txtGrado.TabIndex = 140
+        Me.txtGrado.TabIndex = 21
         Me.txtGrado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label9
@@ -1409,12 +1414,13 @@ Partial Class frmRemuneracionBasica
         'cmbEstudios
         '
         Me.cmbEstudios.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.cmbEstudios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbEstudios.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbEstudios.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbEstudios.FormattingEnabled = True
         Me.cmbEstudios.Location = New System.Drawing.Point(115, 24)
         Me.cmbEstudios.Name = "cmbEstudios"
         Me.cmbEstudios.Size = New System.Drawing.Size(154, 25)
-        Me.cmbEstudios.TabIndex = 138
+        Me.cmbEstudios.TabIndex = 20
         '
         'Panel1
         '
@@ -1458,7 +1464,7 @@ Partial Class frmRemuneracionBasica
         Me.chkCustomDiasHoras.Location = New System.Drawing.Point(19, 190)
         Me.chkCustomDiasHoras.Name = "chkCustomDiasHoras"
         Me.chkCustomDiasHoras.Size = New System.Drawing.Size(109, 21)
-        Me.chkCustomDiasHoras.TabIndex = 163
+        Me.chkCustomDiasHoras.TabIndex = 47
         Me.chkCustomDiasHoras.Text = "Personalizado"
         Me.chkCustomDiasHoras.UseVisualStyleBackColor = True
         '
@@ -1468,7 +1474,7 @@ Partial Class frmRemuneracionBasica
         Me.nudDias.Location = New System.Drawing.Point(80, 15)
         Me.nudDias.Name = "nudDias"
         Me.nudDias.Size = New System.Drawing.Size(45, 25)
-        Me.nudDias.TabIndex = 139
+        Me.nudDias.TabIndex = 48
         '
         'nudHoras
         '
@@ -1476,7 +1482,7 @@ Partial Class frmRemuneracionBasica
         Me.nudHoras.Location = New System.Drawing.Point(193, 14)
         Me.nudHoras.Name = "nudHoras"
         Me.nudHoras.Size = New System.Drawing.Size(45, 25)
-        Me.nudHoras.TabIndex = 140
+        Me.nudHoras.TabIndex = 49
         '
         'Label33
         '

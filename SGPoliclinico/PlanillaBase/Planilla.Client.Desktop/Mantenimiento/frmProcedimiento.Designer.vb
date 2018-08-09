@@ -45,6 +45,7 @@ Partial Class frmProcedimiento
         Me.AreaLaboratorio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tbpNuevo = New System.Windows.Forms.TabPage()
         Me.grpManagement = New System.Windows.Forms.GroupBox()
+        Me.cmbConsultaPro = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtObservacion = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -63,7 +64,6 @@ Partial Class frmProcedimiento
         Me.grpAccion = New System.Windows.Forms.GroupBox()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.cmbConsultaPro = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         Me.tbcOtrosPagos.SuspendLayout()
         Me.tbpListar.SuspendLayout()
@@ -130,7 +130,7 @@ Partial Class frmProcedimiento
         Me.txtBusqueda.MaxLength = 350
         Me.txtBusqueda.Name = "txtBusqueda"
         Me.txtBusqueda.Size = New System.Drawing.Size(257, 25)
-        Me.txtBusqueda.TabIndex = 107
+        Me.txtBusqueda.TabIndex = 1
         Me.txtBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnModificar
@@ -142,7 +142,7 @@ Partial Class frmProcedimiento
         Me.btnModificar.Location = New System.Drawing.Point(154, 351)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(140, 30)
-        Me.btnModificar.TabIndex = 37
+        Me.btnModificar.TabIndex = 4
         Me.btnModificar.Text = "&Modificar"
         Me.btnModificar.UseVisualStyleBackColor = False
         '
@@ -155,7 +155,7 @@ Partial Class frmProcedimiento
         Me.btnNuevo.Location = New System.Drawing.Point(7, 351)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(140, 30)
-        Me.btnNuevo.TabIndex = 36
+        Me.btnNuevo.TabIndex = 3
         Me.btnNuevo.Text = "&Nuevo"
         Me.btnNuevo.UseVisualStyleBackColor = False
         '
@@ -177,7 +177,7 @@ Partial Class frmProcedimiento
         Me.dgvPagoDctoBasico.RowHeadersVisible = False
         Me.dgvPagoDctoBasico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvPagoDctoBasico.Size = New System.Drawing.Size(777, 312)
-        Me.dgvPagoDctoBasico.TabIndex = 34
+        Me.dgvPagoDctoBasico.TabIndex = 2
         '
         'IdProcedimiento
         '
@@ -301,6 +301,16 @@ Partial Class frmProcedimiento
         Me.grpManagement.TabIndex = 4
         Me.grpManagement.TabStop = False
         '
+        'cmbConsultaPro
+        '
+        Me.cmbConsultaPro.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbConsultaPro.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cmbConsultaPro.FormattingEnabled = True
+        Me.cmbConsultaPro.Location = New System.Drawing.Point(174, 93)
+        Me.cmbConsultaPro.Name = "cmbConsultaPro"
+        Me.cmbConsultaPro.Size = New System.Drawing.Size(167, 21)
+        Me.cmbConsultaPro.TabIndex = 7
+        '
         'Label5
         '
         Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
@@ -322,7 +332,7 @@ Partial Class frmProcedimiento
         Me.txtObservacion.MaxLength = 350
         Me.txtObservacion.Name = "txtObservacion"
         Me.txtObservacion.Size = New System.Drawing.Size(576, 25)
-        Me.txtObservacion.TabIndex = 127
+        Me.txtObservacion.TabIndex = 12
         Me.txtObservacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label3
@@ -346,17 +356,18 @@ Partial Class frmProcedimiento
         Me.txtNombreCorto.MaxLength = 350
         Me.txtNombreCorto.Name = "txtNombreCorto"
         Me.txtNombreCorto.Size = New System.Drawing.Size(352, 25)
-        Me.txtNombreCorto.TabIndex = 125
+        Me.txtNombreCorto.TabIndex = 11
         Me.txtNombreCorto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'cmbEspecialidad
         '
-        Me.cmbEspecialidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbEspecialidad.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbEspecialidad.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbEspecialidad.FormattingEnabled = True
         Me.cmbEspecialidad.Location = New System.Drawing.Point(174, 122)
         Me.cmbEspecialidad.Name = "cmbEspecialidad"
         Me.cmbEspecialidad.Size = New System.Drawing.Size(352, 21)
-        Me.cmbEspecialidad.TabIndex = 123
+        Me.cmbEspecialidad.TabIndex = 8
         '
         'Label2
         '
@@ -390,7 +401,7 @@ Partial Class frmProcedimiento
         Me.txtMontoMedico.MaxLength = 350
         Me.txtMontoMedico.Name = "txtMontoMedico"
         Me.txtMontoMedico.Size = New System.Drawing.Size(106, 25)
-        Me.txtMontoMedico.TabIndex = 108
+        Me.txtMontoMedico.TabIndex = 10
         Me.txtMontoMedico.Text = "0.00"
         Me.txtMontoMedico.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -425,7 +436,7 @@ Partial Class frmProcedimiento
         Me.txtProcedimiento.MaxLength = 350
         Me.txtProcedimiento.Name = "txtProcedimiento"
         Me.txtProcedimiento.Size = New System.Drawing.Size(352, 25)
-        Me.txtProcedimiento.TabIndex = 106
+        Me.txtProcedimiento.TabIndex = 6
         Me.txtProcedimiento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
@@ -450,7 +461,7 @@ Partial Class frmProcedimiento
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.ReadOnly = True
         Me.txtCodigo.Size = New System.Drawing.Size(87, 25)
-        Me.txtCodigo.TabIndex = 104
+        Me.txtCodigo.TabIndex = 5
         Me.txtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtPrecioProcedimiento
@@ -464,7 +475,7 @@ Partial Class frmProcedimiento
         Me.txtPrecioProcedimiento.MaxLength = 350
         Me.txtPrecioProcedimiento.Name = "txtPrecioProcedimiento"
         Me.txtPrecioProcedimiento.Size = New System.Drawing.Size(106, 25)
-        Me.txtPrecioProcedimiento.TabIndex = 18
+        Me.txtPrecioProcedimiento.TabIndex = 9
         Me.txtPrecioProcedimiento.Text = "0.00"
         Me.txtPrecioProcedimiento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -513,15 +524,6 @@ Partial Class frmProcedimiento
         Me.btnGuardar.TabIndex = 20
         Me.btnGuardar.Text = "&Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = False
-        '
-        'cmbConsultaPro
-        '
-        Me.cmbConsultaPro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbConsultaPro.FormattingEnabled = True
-        Me.cmbConsultaPro.Location = New System.Drawing.Point(174, 93)
-        Me.cmbConsultaPro.Name = "cmbConsultaPro"
-        Me.cmbConsultaPro.Size = New System.Drawing.Size(106, 21)
-        Me.cmbConsultaPro.TabIndex = 129
         '
         'frmProcedimiento
         '

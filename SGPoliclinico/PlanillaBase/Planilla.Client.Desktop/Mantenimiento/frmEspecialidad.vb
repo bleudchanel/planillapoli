@@ -19,6 +19,8 @@ Public Class frmEspecialidad
     Private Sub txtMonto_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtMontoMedico.KeyDown, txtPrecioConsulta.KeyDown
         If e.KeyCode = Keys.Delete Then
             e.Handled = True
+            Dim oTextBox As TextBox = DirectCast(sender, TextBox)
+            oTextBox.Text = "0.00"
         End If
     End Sub
 

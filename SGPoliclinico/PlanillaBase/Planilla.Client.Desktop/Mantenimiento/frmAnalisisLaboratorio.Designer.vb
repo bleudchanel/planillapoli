@@ -124,7 +124,7 @@ Partial Class frmAnalisisLaboratorio
         Me.txtBusqueda.MaxLength = 350
         Me.txtBusqueda.Name = "txtBusqueda"
         Me.txtBusqueda.Size = New System.Drawing.Size(257, 25)
-        Me.txtBusqueda.TabIndex = 107
+        Me.txtBusqueda.TabIndex = 1
         Me.txtBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnModificar
@@ -136,7 +136,7 @@ Partial Class frmAnalisisLaboratorio
         Me.btnModificar.Location = New System.Drawing.Point(154, 351)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(140, 30)
-        Me.btnModificar.TabIndex = 37
+        Me.btnModificar.TabIndex = 4
         Me.btnModificar.Text = "&Modificar"
         Me.btnModificar.UseVisualStyleBackColor = False
         '
@@ -149,7 +149,7 @@ Partial Class frmAnalisisLaboratorio
         Me.btnNuevo.Location = New System.Drawing.Point(7, 351)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(140, 30)
-        Me.btnNuevo.TabIndex = 36
+        Me.btnNuevo.TabIndex = 3
         Me.btnNuevo.Text = "&Nuevo"
         Me.btnNuevo.UseVisualStyleBackColor = False
         '
@@ -171,7 +171,7 @@ Partial Class frmAnalisisLaboratorio
         Me.dgvPagoDctoBasico.RowHeadersVisible = False
         Me.dgvPagoDctoBasico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvPagoDctoBasico.Size = New System.Drawing.Size(777, 312)
-        Me.dgvPagoDctoBasico.TabIndex = 34
+        Me.dgvPagoDctoBasico.TabIndex = 2
         '
         'IdAnalisis
         '
@@ -289,18 +289,19 @@ Partial Class frmAnalisisLaboratorio
         Me.txtAreaLaboratorio.Name = "txtAreaLaboratorio"
         Me.txtAreaLaboratorio.ReadOnly = True
         Me.txtAreaLaboratorio.Size = New System.Drawing.Size(352, 25)
-        Me.txtAreaLaboratorio.TabIndex = 130
+        Me.txtAreaLaboratorio.TabIndex = 10
         Me.txtAreaLaboratorio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'cmbAreaAnalisis
         '
         Me.cmbAreaAnalisis.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.cmbAreaAnalisis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbAreaAnalisis.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbAreaAnalisis.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbAreaAnalisis.FormattingEnabled = True
         Me.cmbAreaAnalisis.Location = New System.Drawing.Point(174, 154)
         Me.cmbAreaAnalisis.Name = "cmbAreaAnalisis"
         Me.cmbAreaAnalisis.Size = New System.Drawing.Size(212, 21)
-        Me.cmbAreaAnalisis.TabIndex = 129
+        Me.cmbAreaAnalisis.TabIndex = 9
         '
         'txtUnidad
         '
@@ -312,25 +313,26 @@ Partial Class frmAnalisisLaboratorio
         Me.txtUnidad.MaxLength = 20
         Me.txtUnidad.Name = "txtUnidad"
         Me.txtUnidad.Size = New System.Drawing.Size(87, 25)
-        Me.txtUnidad.TabIndex = 124
+        Me.txtUnidad.TabIndex = 7
         Me.txtUnidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'cmbProcedimiento
         '
         Me.cmbProcedimiento.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.cmbProcedimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbProcedimiento.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbProcedimiento.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbProcedimiento.FormattingEnabled = True
         Me.cmbProcedimiento.Location = New System.Drawing.Point(174, 122)
         Me.cmbProcedimiento.Name = "cmbProcedimiento"
         Me.cmbProcedimiento.Size = New System.Drawing.Size(212, 21)
-        Me.cmbProcedimiento.TabIndex = 123
+        Me.cmbProcedimiento.TabIndex = 8
         '
         'Label2
         '
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(89, 124)
+        Me.Label2.Location = New System.Drawing.Point(82, 124)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(85, 15)
         Me.Label2.TabIndex = 111
@@ -340,7 +342,7 @@ Partial Class frmAnalisisLaboratorio
         '
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(101, 157)
+        Me.Label1.Location = New System.Drawing.Point(94, 157)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(67, 13)
         Me.Label1.TabIndex = 110
@@ -350,7 +352,7 @@ Partial Class frmAnalisisLaboratorio
         '
         Me.Label14.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(84, 190)
+        Me.Label14.Location = New System.Drawing.Point(77, 190)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(85, 13)
         Me.Label14.TabIndex = 109
@@ -361,7 +363,7 @@ Partial Class frmAnalisisLaboratorio
         Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(110, 56)
+        Me.Label8.Location = New System.Drawing.Point(103, 56)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(47, 15)
         Me.Label8.TabIndex = 107
@@ -377,7 +379,7 @@ Partial Class frmAnalisisLaboratorio
         Me.txtAnalisis.MaxLength = 350
         Me.txtAnalisis.Name = "txtAnalisis"
         Me.txtAnalisis.Size = New System.Drawing.Size(352, 25)
-        Me.txtAnalisis.TabIndex = 106
+        Me.txtAnalisis.TabIndex = 6
         Me.txtAnalisis.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
@@ -385,7 +387,7 @@ Partial Class frmAnalisisLaboratorio
         Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(108, 25)
+        Me.Label4.Location = New System.Drawing.Point(101, 25)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(46, 15)
         Me.Label4.TabIndex = 105
@@ -402,14 +404,14 @@ Partial Class frmAnalisisLaboratorio
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.ReadOnly = True
         Me.txtCodigo.Size = New System.Drawing.Size(87, 25)
-        Me.txtCodigo.TabIndex = 104
+        Me.txtCodigo.TabIndex = 5
         Me.txtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label9
         '
         Me.Label9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(116, 93)
+        Me.Label9.Location = New System.Drawing.Point(109, 93)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(41, 13)
         Me.Label9.TabIndex = 85
@@ -436,7 +438,7 @@ Partial Class frmAnalisisLaboratorio
         Me.btnCancelar.Location = New System.Drawing.Point(390, 22)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(143, 30)
-        Me.btnCancelar.TabIndex = 21
+        Me.btnCancelar.TabIndex = 12
         Me.btnCancelar.Text = "C&ancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
@@ -449,7 +451,7 @@ Partial Class frmAnalisisLaboratorio
         Me.btnGuardar.Location = New System.Drawing.Point(243, 22)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(143, 30)
-        Me.btnGuardar.TabIndex = 20
+        Me.btnGuardar.TabIndex = 11
         Me.btnGuardar.Text = "&Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = False
         '

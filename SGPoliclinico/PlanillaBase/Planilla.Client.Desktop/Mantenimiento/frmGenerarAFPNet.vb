@@ -23,6 +23,7 @@ Public Class frmGenerarAFPNet
         If e.KeyCode = Keys.Enter Then
             _planillasRemuneracion = planillaManager.GetPlanillaPeriodo(txtAnioAProgramar.Text, cmbMes.SelectedValue).OrderBy(Function(x) x.NombrePersona).ToList()
             Listar()
+            Me.ActiveControl = btnAFPNet
         End If
     End Sub
 
@@ -89,6 +90,12 @@ Public Class frmGenerarAFPNet
             Next
 
             FncDataTable2Excel(dtBase, "Reporte AFP")
+        End If
+    End Sub
+
+    Private Sub cmbMes_KeyDown(sender As Object, e As KeyEventArgs) Handles cmbMes.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Me.ActiveControl = Me.txtAnioAProgramar
         End If
     End Sub
 End Class

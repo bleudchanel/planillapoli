@@ -73,6 +73,7 @@ Public Class frmRemuneracionBasica
         Controles_En_Load()
 
         ComboBoxBase()
+        Me.ActiveControl = dgvPagoDctoBasico
     End Sub
 
     Private Sub ComboBoxBase()

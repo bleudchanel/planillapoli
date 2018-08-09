@@ -160,7 +160,7 @@ Partial Class frmImprimirPlanilla
         Me.dgvPlanilla.RowHeadersVisible = False
         Me.dgvPlanilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvPlanilla.Size = New System.Drawing.Size(1218, 486)
-        Me.dgvPlanilla.TabIndex = 89
+        Me.dgvPlanilla.TabIndex = 7
         '
         'Codigo
         '
@@ -495,7 +495,7 @@ Partial Class frmImprimirPlanilla
         Me.btnBoletas.Location = New System.Drawing.Point(1077, 10)
         Me.btnBoletas.Name = "btnBoletas"
         Me.btnBoletas.Size = New System.Drawing.Size(140, 30)
-        Me.btnBoletas.TabIndex = 128
+        Me.btnBoletas.TabIndex = 6
         Me.btnBoletas.Text = "&Boletas"
         Me.btnBoletas.UseVisualStyleBackColor = False
         '
@@ -508,7 +508,7 @@ Partial Class frmImprimirPlanilla
         Me.btnExcel.Location = New System.Drawing.Point(788, 10)
         Me.btnExcel.Name = "btnExcel"
         Me.btnExcel.Size = New System.Drawing.Size(140, 30)
-        Me.btnExcel.TabIndex = 127
+        Me.btnExcel.TabIndex = 4
         Me.btnExcel.Text = "&Excel"
         Me.btnExcel.UseVisualStyleBackColor = False
         '
@@ -520,7 +520,7 @@ Partial Class frmImprimirPlanilla
         Me.btnResumen.Location = New System.Drawing.Point(934, 10)
         Me.btnResumen.Name = "btnResumen"
         Me.btnResumen.Size = New System.Drawing.Size(140, 30)
-        Me.btnResumen.TabIndex = 126
+        Me.btnResumen.TabIndex = 5
         Me.btnResumen.Text = "&Resumen"
         Me.btnResumen.UseVisualStyleBackColor = False
         '
@@ -531,7 +531,7 @@ Partial Class frmImprimirPlanilla
         Me.btnGenerar.Location = New System.Drawing.Point(283, 9)
         Me.btnGenerar.Name = "btnGenerar"
         Me.btnGenerar.Size = New System.Drawing.Size(140, 30)
-        Me.btnGenerar.TabIndex = 125
+        Me.btnGenerar.TabIndex = 3
         Me.btnGenerar.Text = "&Generar"
         Me.btnGenerar.UseVisualStyleBackColor = False
         '
@@ -554,7 +554,7 @@ Partial Class frmImprimirPlanilla
         Me.txtAnioAProgramar.Name = "txtAnioAProgramar"
         Me.txtAnioAProgramar.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.txtAnioAProgramar.Size = New System.Drawing.Size(73, 25)
-        Me.txtAnioAProgramar.TabIndex = 123
+        Me.txtAnioAProgramar.TabIndex = 2
         Me.txtAnioAProgramar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'cmbMes
@@ -564,7 +564,7 @@ Partial Class frmImprimirPlanilla
         Me.cmbMes.Location = New System.Drawing.Point(8, 14)
         Me.cmbMes.Name = "cmbMes"
         Me.cmbMes.Size = New System.Drawing.Size(158, 21)
-        Me.cmbMes.TabIndex = 122
+        Me.cmbMes.TabIndex = 1
         '
         'frmImprimirPlanilla
         '

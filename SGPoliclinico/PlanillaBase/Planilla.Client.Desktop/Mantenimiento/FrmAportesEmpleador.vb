@@ -16,6 +16,7 @@ Public Class FrmAportesEmpleador
     Private Sub EnLoad()
         _aportes = AporteEmpleadorManager.GetAportesEmpleador()
         Listar()
+        Me.ActiveControl = btnGrabar
     End Sub
 
     Private Sub Listar()

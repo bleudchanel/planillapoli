@@ -139,7 +139,7 @@ Partial Class frmEspecialidad
         Me.txtBusqueda.MaxLength = 350
         Me.txtBusqueda.Name = "txtBusqueda"
         Me.txtBusqueda.Size = New System.Drawing.Size(257, 25)
-        Me.txtBusqueda.TabIndex = 107
+        Me.txtBusqueda.TabIndex = 1
         Me.txtBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnModificar
@@ -151,7 +151,7 @@ Partial Class frmEspecialidad
         Me.btnModificar.Location = New System.Drawing.Point(154, 303)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(140, 30)
-        Me.btnModificar.TabIndex = 37
+        Me.btnModificar.TabIndex = 3
         Me.btnModificar.Text = "&Modificar"
         Me.btnModificar.UseVisualStyleBackColor = False
         '
@@ -164,7 +164,7 @@ Partial Class frmEspecialidad
         Me.btnNuevo.Location = New System.Drawing.Point(7, 303)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(140, 30)
-        Me.btnNuevo.TabIndex = 36
+        Me.btnNuevo.TabIndex = 2
         Me.btnNuevo.Text = "&Nuevo"
         Me.btnNuevo.UseVisualStyleBackColor = False
         '
@@ -268,7 +268,7 @@ Partial Class frmEspecialidad
         Me.txtMontoMedico.MaxLength = 350
         Me.txtMontoMedico.Name = "txtMontoMedico"
         Me.txtMontoMedico.Size = New System.Drawing.Size(149, 25)
-        Me.txtMontoMedico.TabIndex = 108
+        Me.txtMontoMedico.TabIndex = 7
         Me.txtMontoMedico.Text = "0.00"
         Me.txtMontoMedico.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -303,7 +303,7 @@ Partial Class frmEspecialidad
         Me.txtEspecialidad.MaxLength = 350
         Me.txtEspecialidad.Name = "txtEspecialidad"
         Me.txtEspecialidad.Size = New System.Drawing.Size(352, 25)
-        Me.txtEspecialidad.TabIndex = 106
+        Me.txtEspecialidad.TabIndex = 5
         Me.txtEspecialidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
@@ -328,7 +328,7 @@ Partial Class frmEspecialidad
         Me.txtCodigo.Name = "txtCodigo"
         Me.txtCodigo.ReadOnly = True
         Me.txtCodigo.Size = New System.Drawing.Size(149, 25)
-        Me.txtCodigo.TabIndex = 104
+        Me.txtCodigo.TabIndex = 4
         Me.txtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtPrecioConsulta
@@ -342,7 +342,7 @@ Partial Class frmEspecialidad
         Me.txtPrecioConsulta.MaxLength = 350
         Me.txtPrecioConsulta.Name = "txtPrecioConsulta"
         Me.txtPrecioConsulta.Size = New System.Drawing.Size(149, 25)
-        Me.txtPrecioConsulta.TabIndex = 18
+        Me.txtPrecioConsulta.TabIndex = 6
         Me.txtPrecioConsulta.Text = "0.00"
         Me.txtPrecioConsulta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -377,7 +377,7 @@ Partial Class frmEspecialidad
         Me.btnCancelar.Location = New System.Drawing.Point(320, 22)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(143, 30)
-        Me.btnCancelar.TabIndex = 21
+        Me.btnCancelar.TabIndex = 9
         Me.btnCancelar.Text = "C&ancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
@@ -390,7 +390,7 @@ Partial Class frmEspecialidad
         Me.btnGuardar.Location = New System.Drawing.Point(173, 22)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(143, 30)
-        Me.btnGuardar.TabIndex = 20
+        Me.btnGuardar.TabIndex = 8
         Me.btnGuardar.Text = "&Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = False
         '

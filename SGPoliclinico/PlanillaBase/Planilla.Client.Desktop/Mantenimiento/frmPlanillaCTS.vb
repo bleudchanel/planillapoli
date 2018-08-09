@@ -83,4 +83,16 @@ Public Class frmPlanillaCTS
         End If
 
     End Sub
+
+    Private Sub cmbMes_KeyDown(sender As Object, e As KeyEventArgs) Handles cmbMes.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Me.ActiveControl = txtAnioAProgramar
+        End If
+    End Sub
+
+    Private Sub txtAnioAProgramar_KeyDown(sender As Object, e As KeyEventArgs) Handles txtAnioAProgramar.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            btnGenerar.PerformClick()
+        End If
+    End Sub
 End Class

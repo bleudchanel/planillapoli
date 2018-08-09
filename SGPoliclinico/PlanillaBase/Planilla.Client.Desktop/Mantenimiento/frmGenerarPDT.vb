@@ -23,6 +23,7 @@ Public Class frmGenerarPDT
         If e.KeyCode = Keys.Enter Then
             _planillasRemuneracion = planillaManager.GetPlanillaPeriodo(txtAnioAProgramar.Text, cmbMes.SelectedValue)
             Listar()
+            Me.ActiveControl = btnExcel
         End If
     End Sub
 
@@ -273,4 +274,9 @@ Public Class frmGenerarPDT
         End If
     End Sub
 
+    Private Sub cmbMes_KeyDown(sender As Object, e As KeyEventArgs) Handles cmbMes.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Me.ActiveControl = Me.txtAnioAProgramar
+        End If
+    End Sub
 End Class

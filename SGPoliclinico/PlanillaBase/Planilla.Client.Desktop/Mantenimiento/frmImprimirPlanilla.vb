@@ -240,4 +240,10 @@ FormatearNumero(_planilla.PorSCTR * 100, 2) + " %")
         'frm.Show()
 
     End Sub
+
+    Private Sub cmbMes_KeyDown(sender As Object, e As KeyEventArgs) Handles cmbMes.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Me.ActiveControl = txtAnioAProgramar
+        End If
+    End Sub
 End Class

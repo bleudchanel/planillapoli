@@ -402,7 +402,7 @@ Partial Class frmProyeccionPago
         Me.txtAumentar.Name = "txtAumentar"
         Me.txtAumentar.ReadOnly = True
         Me.txtAumentar.Size = New System.Drawing.Size(70, 23)
-        Me.txtAumentar.TabIndex = 165
+        Me.txtAumentar.TabIndex = 1
         Me.txtAumentar.Text = "0.00"
         Me.txtAumentar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -415,7 +415,7 @@ Partial Class frmProyeccionPago
         Me.btnExcel.Location = New System.Drawing.Point(1076, 9)
         Me.btnExcel.Name = "btnExcel"
         Me.btnExcel.Size = New System.Drawing.Size(140, 30)
-        Me.btnExcel.TabIndex = 127
+        Me.btnExcel.TabIndex = 3
         Me.btnExcel.Text = "&Excel"
         Me.btnExcel.UseVisualStyleBackColor = False
         '
@@ -426,7 +426,7 @@ Partial Class frmProyeccionPago
         Me.btnCalcular.Location = New System.Drawing.Point(209, 9)
         Me.btnCalcular.Name = "btnCalcular"
         Me.btnCalcular.Size = New System.Drawing.Size(140, 30)
-        Me.btnCalcular.TabIndex = 125
+        Me.btnCalcular.TabIndex = 2
         Me.btnCalcular.Text = "&Calcular"
         Me.btnCalcular.UseVisualStyleBackColor = False
         '
