@@ -230,6 +230,7 @@ Public Class frmRemuneracionBasica
         ClearGroup(grpDatos)
         ClearGroup(grpRemuneracion)
         ClearGroup(grpEstudios)
+        Me.chkCustomDiasHoras.CheckState = CheckState.Unchecked
         ListaPersonal()
     End Sub
 
@@ -263,7 +264,7 @@ Public Class frmRemuneracionBasica
             txtCelular.Text = _personaActual.Celular
             txtEmail.Text = _personaActual.Email
             txtSexo.Text = _personaActual.Sex
-            cmbEstadoCivil.SelectedValue = _personaActual.EstadoCivil  ''cmbEstadoCivil.FindString(_personaActual.EstadoCivil.Trim)
+            cmbEstadoCivil.SelectedValue = If(_personaActual.EstadoCivil Is Nothing, "S", _personaActual.EstadoCivil)  ''cmbEstadoCivil.FindString(_personaActual.EstadoCivil.Trim)
             txtNumHijos.Text = _personaActual.NumHij
             dtpFecIngreso.Value = _personaActual.FecIngreso
             cmbDistrito.SelectedValue = _personaActual.IdUbigeo
@@ -286,6 +287,10 @@ Public Class frmRemuneracionBasica
             txtCuentaCTS.Text = _personaActual.NumCtaCTS
             txtObservacion.Text = _personaActual.Observacion
             dtpFechaBaja.Value = _personaActual.FecBaja
+            chkCustomDiasHoras.CheckState = If(_personaActual.CustomDiasHoras > 0, CheckState.Checked, CheckState.Unchecked)
+            Me.grpCustom.Enabled = If(_personaActual.CustomDiasHoras > 0, CheckState.Checked, CheckState.Unchecked)
+            nudDias.Value = _personaActual.CustomDias
+            nudHoras.Value = _personaActual.CustomHoras
         End If
     End Sub
 
@@ -294,6 +299,8 @@ Public Class frmRemuneracionBasica
         Me.tbcOtrosPagos.TabPages.Remove(tbpListar)
         Me.tbcOtrosPagos.TabPages.Remove(tbpNuevo)
         Me.tbcOtrosPagos.TabPages.Insert(0, tbpNuevo)
+        Me.chkCustomDiasHoras.CheckState = CheckState.Unchecked
+        Me.grpCustom.Enabled = False
     End Sub
 
 
@@ -344,7 +351,9 @@ Public Class frmRemuneracionBasica
             _personaActual.NumCtaCTS = txtCuentaCTS.Text.Trim()
             _personaActual.Observacion = txtObservacion.Text
             _personaActual.FecBaja = dtpFechaBaja.Value
-
+            _personaActual.CustomDiasHoras = If(Me.chkCustomDiasHoras.CheckState = CheckState.Checked, 1, 0)
+            _personaActual.CustomDias = If(Me.chkCustomDiasHoras.CheckState = CheckState.Checked, nudDias.Value, 0)
+            _personaActual.CustomHoras = If(Me.chkCustomDiasHoras.CheckState = CheckState.Checked, nudHoras.Value, 0)
             Dim pers = personalManager.RegistrarPersonal(_personaActual)
         Else
             Dim dis = (From dist In _ubigeos Where dist.IdUbigeo = CInt(cmbDistrito.SelectedValue) Select dist).FirstOrDefault()
@@ -356,7 +365,8 @@ Public Class frmRemuneracionBasica
                                               txtNumHijos.Text, dtpFecIngreso.Value, cmbEstudios.Text, txtGrado.Text, txtNroColegiatura.Text, area.IdAreaServicio, area.CodAre,
                                               cargo.IdCargo, cargo.CodCar, fondo.IdFondoPen, fondo.CodFon, cmbTipoComision.SelectedValue.ToString(), txtCUSPP.Text, txtEVida.Text, txtRemuneracionBasica.Text,
                                               txtAsignacionFamiliar.Text, txtRiesgoCaja.Text, txtSCTR.Text, txtHorasLaborales.Text, txtObservacion.Text, cmbEstado.SelectedValue.ToString(), dtpFechaBaja.Value,
-                                              txtEntidadCTS.Text, txtCuentaCTS.Text)
+                                              txtEntidadCTS.Text, txtCuentaCTS.Text, If(Me.chkCustomDiasHoras.CheckState = CheckState.Checked, 1, 0), If(Me.chkCustomDiasHoras.CheckState = CheckState.Checked, nudDias.Value, 0),
+                                              If(Me.chkCustomDiasHoras.CheckState = CheckState.Checked, nudHoras.Value, 0))
 
             Dim pers = personalManager.RegistrarPersonal(nuevoPersonal)
         End If
@@ -373,5 +383,9 @@ Public Class frmRemuneracionBasica
     Private Sub btnSeleccionar_Click(sender As Object, e As EventArgs) Handles btnExcel.Click
         Dim dtEx = DataGridViewToDataTable(dgvPagoDctoBasico, New List(Of String)(New String() {"IdPersonal"}), "Honk")
         FncDataTable2Excel(dtEx, "Personal")
+    End Sub
+
+    Private Sub chkCustomDiasHoras_CheckedChanged(sender As Object, e As EventArgs) Handles chkCustomDiasHoras.CheckedChanged
+        Me.grpCustom.Enabled = chkCustomDiasHoras.Checked
     End Sub
 End Class

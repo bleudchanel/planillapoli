@@ -142,6 +142,14 @@ namespace Planilla.Business.Managers
         }
 
 
+        public PlanillaRemuneracionHistorial  RegistroHistorial(PlanillaRemuneracion planilla)
+        {
+            PlanillaRemuneracionHistorial planillaHis = new PlanillaRemuneracionHistorial(planilla);
+            IPlanillaRemuneracionHistorialRepository historialRepository = _DataRepositoryFactory.GetDataRepository<IPlanillaRemuneracionHistorialRepository>();
+            return historialRepository.Add(planillaHis);
+        }
+
+
         public Dictionary<String, IEnumerable<ResumenPlanilla>> GetResumenPlanilla(int Anio, int? IdPersonal = 0)
         {
             IPlanillaEngine planillaEngine = _BusinessEngineFactory.GetBusinessEngine<IPlanillaEngine>();

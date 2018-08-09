@@ -58,6 +58,7 @@
     <Compile Include="Repository Interfaces\IFondoPensionesRepository.cs" />
     <Compile Include="Repository Interfaces\IMedicoRepository.cs" />
     <Compile Include="Repository Interfaces\IPersonalRepository.cs" />
+    <Compile Include="Repository Interfaces\IPlanillaRemuneracionHistorialRepository.cs" />
     <Compile Include="Repository Interfaces\IPlanillaRemuneracionRepository.cs" />
     <Compile Include="Repository Interfaces\IProcedimientoRepository.cs" />
     <Compile Include="Repository Interfaces\ITablaAnalisisRepository.cs" />

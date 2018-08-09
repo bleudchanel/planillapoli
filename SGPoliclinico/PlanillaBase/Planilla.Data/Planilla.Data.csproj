@@ -60,6 +60,7 @@
     <Compile Include="Data Repositores\FondoPensionesRepository.cs" />
     <Compile Include="Data Repositores\MedicoRepository.cs" />
     <Compile Include="Data Repositores\PersonalRepository.cs" />
+    <Compile Include="Data Repositores\PlanillaRemuneracionHistorialRepository.cs" />
     <Compile Include="Data Repositores\PlanillaRemuneracionRepository.cs" />
     <Compile Include="Data Repositores\ProcedimientoRepository.cs" />
     <Compile Include="Data Repositores\TablaAnalisisRepository.cs" />

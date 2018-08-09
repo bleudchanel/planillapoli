@@ -99,7 +99,7 @@ GO
 CREATE TABLE [Planilla].[dProcedimientos](
 	Id_Procedimiento INT IDENTITY NOT NULL PRIMARY KEY,
 	[CodPro] [varchar](4) NULL,
-	[TipPro] [varchar](1) NULL,	
+	[TipPro] [varchar](2) NULL,	
 	[Procedimiento] [varchar](100) NULL,
 	[Id_Especialidades] INT NULL,
 	[CodEsp] [varchar](4) NULL,
@@ -430,8 +430,10 @@ CREATE TABLE [Planilla].[pPersonal](
 	[Estado] [char](1) NULL,
 	[FecBaja] [datetime] NULL,
 	[EntidadCTS] [varchar](50) NULL,
-	[NumCtaCTS] [varchar](20) NULL)
-
+	[NumCtaCTS] [varchar](20) NULL,
+	[CustomDiasHoras] TINYINT NULL,
+	[CustomDias] TINYINT NULL,
+	[CustomHoras] TINYINT NULL)
 GO
 ALTER TABLE [Planilla].[pPersonal]
 ADD FOREIGN KEY (IdUbigeo)
@@ -778,8 +780,8 @@ CREATE TABLE [Planilla].[PlanillasRem](
 	[FinSinGoceHaber] [datetime] NULL,
 	[DiasSinGoceHaber] [int] NULL,
 	[Cerrado] [varchar](1) NULL,
-	[TipoPlan] [varchar](1) NULL
-)
+	[TipoPlan] [varchar](1) NULL,
+	[Corregido] [varchar](1) NULL)
 GO
 ALTER TABLE [Planilla].[PlanillasRem]
 ADD FOREIGN KEY (Id)
@@ -840,7 +842,8 @@ INSERT INTO [Planilla].[PlanillasRem]
            ,[FinSinGoceHaber]
            ,[DiasSinGoceHaber]
            ,[Cerrado]
-           ,[TipoPlan])
+           ,[TipoPlan]
+           ,[Corregido])
 SELECT [Periodo]
       ,[CodPer]
       ,[CodCar]
@@ -886,6 +889,7 @@ SELECT [Periodo]
       ,[DiasSinGoceHaber]
       ,[Cerrado]
       ,[TipoPlan]
+      ,'F'
   FROM Policlinico.[dbo].[pPlanillasRem]
 
 GO
@@ -909,5 +913,13 @@ SET [Planilla].[PlanillasRem].IdFondoPen =  pal.IdFondoPen from [Planilla].[Plan
 INNER JOIN  [Planilla].FondoPensiones pal 
 ON pp.CodFon = pal.CodFon
 
+GO
+
+UPDATE Planilla.dProcedimientos
+SET TipPro = 43 WHERE Id_Procedimiento < 300
+
+GO
 
 
+UPDATE Planilla.dProcedimientos
+SET TipPro = 44 WHERE Id_Procedimiento >= 300

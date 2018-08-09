@@ -31,6 +31,7 @@ namespace Planilla.Data
         public DbSet<Medico> MedicoSet { get; set; }
         public DbSet<Personal> PersonalSet { get; set; }
         public DbSet<PlanillaRemuneracion> PlanillaRemuneracionSet { get; set; }
+        public DbSet<PlanillaRemuneracionHistorial> PlanillaRemuneracionHistorialSet { get; set; }
         public DbSet<Procedimiento> ProcedimientoSet { get; set; }
         public DbSet<TablaAnalisis> TablaAnalisisSet { get; set; }
         public DbSet<TablaAnalisisVR> TablaAnalisisVRSet { get; set; }
@@ -54,6 +55,7 @@ namespace Planilla.Data
             modelBuilder.Entity<Medico>().HasKey<int>(e => e.IdMedico).Ignore(e => e.EntityId);
             modelBuilder.Entity<Personal>().HasKey<int>(e => e.IdPersonal).Ignore(e => e.EntityId);
             modelBuilder.Entity<PlanillaRemuneracion>().HasKey<int>(e => e.IdPlanilla).Ignore(e => e.EntityId);
+            modelBuilder.Entity<PlanillaRemuneracionHistorial>().HasKey<int>(e => e.IdPlanillaHistorial).Ignore(e => e.EntityId);
             modelBuilder.Entity<Procedimiento>().HasKey<int>(e => e.IdProcedimiento).Ignore(e => e.EntityId);
             modelBuilder.Entity<TablaAnalisis>().HasKey<int>(e => e.IdAnalisis).Ignore(e => e.EntityId);
             modelBuilder.Entity<TablaAnalisisVR>().HasKey<int>(e => e.IdValReferencial).Ignore(e => e.EntityId);

@@ -119,6 +119,10 @@ Public Class frmImprimirPlanilla
 
     Private Sub btnResumen_Click(sender As Object, e As EventArgs) Handles btnResumen.Click
         If _planillasRemuneracion IsNot Nothing AndAlso _planillasRemuneracion.Count > 0 Then
+            If _planillasRemuneracion.Item(0).Cerrado = "F" Then
+                Notificar("La planilla debe estar cerrada.")
+                Exit Sub
+            End If
             modPersonal.strADepositar = FormatearNumero(decTotalADepositar, 2)
             modPersonal.strAFPMonto = FormatearNumero(decTotalAFP, 2)
             modPersonal.strESSALUD = FormatearNumero(decTotalESSALUD, 2)
@@ -133,6 +137,16 @@ Public Class frmImprimirPlanilla
     End Sub
 
     Private Sub btnBoletas_Click(sender As Object, e As EventArgs) Handles btnBoletas.Click
+        If Not (_planillasRemuneracion IsNot Nothing AndAlso _planillasRemuneracion.Count > 0) Then
+            Notificar("Planilla vacía.")
+            Exit Sub
+        End If
+
+        If _planillasRemuneracion.Item(0).Cerrado = "F" Then
+            Notificar("La planilla debe estar cerrada.")
+            Exit Sub
+        End If
+
         Dim dtBoletasPre As New DataTable
         dtBoletasPre.Columns.Add("CodPer")
         dtBoletasPre.Columns.Add("Nombre")

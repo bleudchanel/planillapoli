@@ -14,7 +14,12 @@ namespace Planilla.Business.Entities
     [Table("pPersonal", Schema = "Planilla")]
     public class Personal : EntityBase, IIdentifiableEntity
     {
-        public Personal(string dNI, string apePaterno, string apeMaterno, string nombre, string direccion, int? idUbigeo, string codDistrito, DateTime? fecNac, string telefono, string celular, string email, string sex, string estadoCivil, byte? numHij, DateTime? fecIngreso, string estudios, string grado, string numCol, int? idAreaServicio, string codAre, int? idCargo, string codCar, int? idFondoPen, string codFon, string tipComAFP, string cUSPP, string eVida, decimal? remBas, decimal? asiFam, decimal? rieCaj, string sCTR, int? horLab, string observacion, string estado, DateTime? fecBaja, string entidadCTS, string numCtaCTS)
+        public Personal(string dNI, string apePaterno, string apeMaterno, string nombre, string direccion, 
+            int? idUbigeo, string codDistrito, DateTime? fecNac, string telefono, string celular, string email, 
+            string sex, string estadoCivil, byte? numHij, DateTime? fecIngreso, string estudios, string grado, string numCol, 
+            int? idAreaServicio, string codAre, int? idCargo, string codCar, int? idFondoPen, string codFon, string tipComAFP, 
+            string cUSPP, string eVida, decimal? remBas, decimal? asiFam, decimal? rieCaj, string sCTR, int? horLab, string observacion, 
+            string estado, DateTime? fecBaja, string entidadCTS, string numCtaCTS, byte customDiasHoras, byte customDias, byte customHoras)
         {
             DNI = dNI;
             ApePaterno = apePaterno;
@@ -53,6 +58,9 @@ namespace Planilla.Business.Entities
             FecBaja = fecBaja;
             EntidadCTS = entidadCTS;
             NumCtaCTS = numCtaCTS;
+            CustomDiasHoras = customDiasHoras ;
+            CustomDias = customDias;
+            CustomHoras = customHoras;
         }
 
         public Personal()
@@ -144,6 +152,13 @@ namespace Planilla.Business.Entities
         public string EntidadCTS { get; set; }
         [DataMember]
         public string NumCtaCTS { get; set; }
+        [DataMember]
+        public byte CustomDiasHoras { get; set; }
+        [DataMember]
+        public byte CustomDias { get; set; }
+        [DataMember]
+        public byte CustomHoras { get; set; }
+
         public int EntityId { get => IdPersonal; set => IdPersonal = value; }
     }
 }

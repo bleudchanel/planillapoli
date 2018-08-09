@@ -241,7 +241,8 @@ namespace Planilla.Business
                 PlanillaRemuneracion planillaPersona = new PlanillaRemuneracion(0, Periodo, personal.IdPersonal, personal.CodPer, personal.IdCargo ?? null,
                     personal.CodCar, personal.IdFondoPen ?? null, personal.CodFon, personal.TipComAFP, personal.RemBas, personal.AsiFam, 0, 0, 0, personal.RieCaj,
                     0, 0, 0, fondoPensiones.PorONP, porcentajeApoObl, porcentajePriSeg, porcentajeComVar, 0 
-                    , 0, aporteEmpleadorESSALUD.Porcentaje, porcentajeSCTR, diasLaborables.DiasLab, personal.HorLab, null, null, null, null, null, null, null, null, null, "F", "N");
+                    , 0, aporteEmpleadorESSALUD.Porcentaje, porcentajeSCTR, (personal.CustomDiasHoras > 0 ? personal.CustomDias : diasLaborables.DiasLab),
+                    (personal.CustomDiasHoras > 0 ? personal.CustomHoras : personal.HorLab), null, null, null, null, null, null, null, null, null, "F", "N");
                 planillaPersona.VacacionesPeriodo = vacacionesPeriodo;
                 planillaPersona.NombrePersona = personal.GetNombre();
                 remuneracion.Add(planillaPersona);

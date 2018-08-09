@@ -84,6 +84,7 @@ namespace Planilla.Business.Entities
 
             Aumento = 0;
             NuevaRem = 0;
+            Corregido = "F";
         }
 
         public PlanillaRemuneracion()
@@ -146,6 +147,7 @@ namespace Planilla.Business.Entities
             VacacionesPeriodo = planillaBase.VacacionesPeriodo;
             Aumento = planillaBase.Aumento;
             NuevaRem = planillaBase.RemBas ?? 0;
+            Corregido = planillaBase.Corregido;
         }
 
         public void SetRemBas(decimal remBas)
@@ -341,6 +343,9 @@ namespace Planilla.Business.Entities
         public string Cerrado { get; set; }
         [DataMember]
         public string TipoPlan { get; set; }
+        [DataMember]
+        public string Corregido { get; set; }
+
 
         public string NombrePersona { get; set; }
         public string ApellidoPaterno { get; set; }

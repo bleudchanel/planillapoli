@@ -24,6 +24,12 @@ Public Class frmGenerarPlanillaGratificacion
     End Sub
 
     Private Sub btnCerrarPlanilla_Click(sender As Object, e As EventArgs) Handles btnCerrarPlanilla.Click
+        For Each var In _planillasRemuneracion
+            var.Cerrado = "V"
+            var = planillaManager.UpdatePlanilla(var)
+        Next
+        Notificar("Se ha cerrado la planilla.")
+        Listar()
 
     End Sub
 

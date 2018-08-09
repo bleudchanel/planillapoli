@@ -196,6 +196,7 @@ Public Class frmGenerarPlanilla
                 .Cells(IniSGH.Name).Value = _planilla.InicioSinGoceHaber
                 .Cells(FinSGH.Name).Value = _planilla.FinSinGoceHaber
                 .Cells(Cerrado.Name).Value = _planilla.Cerrado
+                .Cells(Migrado.Name).Value = _planilla.Corregido
             End With
         Next
     End Sub
@@ -233,6 +234,15 @@ Public Class frmGenerarPlanilla
         If dgvPlanilla.CurrentRow IsNot Nothing AndAlso dgvPlanilla.Rows.Count > 0 Then
             Dim IdPlanillaActual As Integer = Me.dgvPlanilla.CurrentRow.Cells.Item(IdPlanilla.Name).Value
             _planillaActual = New PlanillaRemuneracion((From o In _planillasRemuneracion Where o.IdPlanilla = IdPlanillaActual Select o).FirstOrDefault())
+            If (_planillaActual.Cerrado = "V") Then
+                If MsgBox("La planilla se encuentra cerrada y no se pueden hacer más cambios. ¿Desea continuar?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
+                    planillaManager.RegistroHistorial(_planillaActual)
+                    _planillaActual.Corregido = "V"
+                    _planillaActual = planillaManager.UpdatePlanilla(_planillaActual)
+                Else
+                    Exit Sub
+                End If
+            End If
             VerPlanillaPersona()
             Me.grpPlanilla.Enabled = False
             Me.grpControles.Enabled = True
@@ -491,6 +501,36 @@ Public Class frmGenerarPlanilla
             FncDataTable2Excel(dtEx, "Planilla")
         End If
 
+    End Sub
+
+    Private Sub dgvPlanilla_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles dgvPlanilla.CellFormatting
+        Try
+            With Me.dgvPlanilla
+                Select Case .Rows(e.RowIndex).Cells(Migrado.Name).Value
+                    Case "V"
+                        e.CellStyle.BackColor = Color.LightGreen
+                        e.CellStyle.SelectionBackColor = Color.LightGreen
+                    Case Else
+                        'e.CellStyle.BackColor = Color.LightSalmon
+                        'e.CellStyle.SelectionBackColor = Color.LightSalmon
+                End Select
+                'e.CellStyle.BackColor = Color.Yellow
+                'ElseIf .Rows(e.RowIndex).Cells("IdConce").Value = 5063 Then
+                'e.CellStyle.BackColor = Color.Orange
+                e.CellStyle.SelectionForeColor = Color.Black
+                'End If
+            End With
+
+
+            'If (intIdConceG = 5200) Then
+            '    e.CellStyle.BackColor = Color.Yellow
+            'ElseIf (intIdConceG = 5063) Then
+            '    e.CellStyle.BackColor = Color.Orange
+            'End If
+
+        Catch ex As Exception
+            ' Notificar
+        End Try
     End Sub
 
     'Private Sub dgvPlanilla_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPlanilla.CellDoubleClick

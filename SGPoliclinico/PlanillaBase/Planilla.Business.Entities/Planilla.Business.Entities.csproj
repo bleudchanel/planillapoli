@@ -62,6 +62,7 @@
     <Compile Include="Entities\Medico.cs" />
     <Compile Include="Entities\Personal.cs" />
     <Compile Include="Entities\PlanillaRemuneracion.cs" />
+    <Compile Include="Entities\PlanillaRemuneracionHistorial.cs" />
     <Compile Include="Entities\Procedimiento.cs" />
     <Compile Include="Entities\TablaAnalisis.cs" />
     <Compile Include="Entities\TablaAnalisisVR.cs" />
