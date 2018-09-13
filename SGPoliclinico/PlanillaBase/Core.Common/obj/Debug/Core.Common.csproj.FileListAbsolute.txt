@@ -47,3 +47,16 @@ C:\Users\Usuario\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\obj\Debug\C
 C:\Users\Usuario\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\obj\Debug\Core.Common.csproj.CopyComplete
 C:\Users\Usuario\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\obj\Debug\Core.Common.dll
 C:\Users\Usuario\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\obj\Debug\Core.Common.pdb
+C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\bin\Debug\Core.Common.dll.config
+C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\bin\Debug\Core.Common.dll
+C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\bin\Debug\Core.Common.pdb
+C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\bin\Debug\Core.Common.Contracts.dll
+C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\bin\Debug\Core.Common.Contracts.pdb
+C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\bin\Debug\EntityFramework.xml
+C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\bin\Debug\FluentValidation.xml
+C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\obj\Debug\Core.Common.csprojAssemblyReference.cache
+C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\obj\Debug\Core.Common.csproj.CoreCompileInputs.cache
+C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\obj\Debug\Core.Common.csproj.CopyComplete
+C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\obj\Debug\Core.Common.dll
+C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\obj\Debug\Core.Common.pdb

@@ -65,13 +65,22 @@ namespace Planilla.Business
         public Vacaciones UpdateVacaciones(VacacionesPersona vacacionesPersona)
         {
             IVacacionesRepository vacacionesRepository = _DataRepositoryFactory.GetDataRepository<IVacacionesRepository>();
+            IPersonalRepository personalRepository = _DataRepositoryFactory.GetDataRepository<IPersonalRepository>();
             Vacaciones vacaciones = vacacionesRepository.Get(vacacionesPersona.IdVacaciones);
             if (vacaciones != null)
             {
                 vacaciones.IniProg = vacacionesPersona.IniProg;
                 vacaciones.FinProg = vacacionesPersona.FinProg;
+
+                if (((vacaciones.FinProg ?? DateTime.Now) - (vacaciones.IniProg ?? DateTime.Now)).TotalDays > 15)
+                {
+                    var persona = personalRepository.Get(vacacionesPersona.IdPersonal ?? 0);
+                    persona.SCTR = "N";
+                    personalRepository.Update(persona);
+                }
+
                 return vacacionesRepository.Update(vacaciones);
-            }
+            }  
             return vacaciones;
         }
     }

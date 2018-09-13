@@ -31,3 +31,9 @@ C:\Users\Usuario\planillapoli\SGPoliclinico\Entity.Policlinico\obj\Debug\Entity.
 C:\Users\Usuario\planillapoli\SGPoliclinico\Entity.Policlinico\obj\Debug\Entity.Policlinico.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\planillapoli\SGPoliclinico\Entity.Policlinico\obj\Debug\Entity.Policlinico.dll
 C:\Users\Usuario\planillapoli\SGPoliclinico\Entity.Policlinico\obj\Debug\Entity.Policlinico.pdb
+C:\Users\Wilmer\planillapoli\SGPoliclinico\Entity.Policlinico\bin\Debug\Entity.Policlinico.dll
+C:\Users\Wilmer\planillapoli\SGPoliclinico\Entity.Policlinico\bin\Debug\Entity.Policlinico.pdb
+C:\Users\Wilmer\planillapoli\SGPoliclinico\Entity.Policlinico\obj\Debug\Entity.Policlinico.csprojAssemblyReference.cache
+C:\Users\Wilmer\planillapoli\SGPoliclinico\Entity.Policlinico\obj\Debug\Entity.Policlinico.csproj.CoreCompileInputs.cache
+C:\Users\Wilmer\planillapoli\SGPoliclinico\Entity.Policlinico\obj\Debug\Entity.Policlinico.dll
+C:\Users\Wilmer\planillapoli\SGPoliclinico\Entity.Policlinico\obj\Debug\Entity.Policlinico.pdb

@@ -322,4 +322,11 @@ Public Class frmMedico
         ''_procedimientos = variablesManager.GetProcedimientos()
         Controles_En_Load()
     End Sub
+
+    Private Sub dgvPagoDctoBasico_KeyDown(sender As Object, e As KeyEventArgs) Handles dgvPagoDctoBasico.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            e.SuppressKeyPress = True
+            Me.btnModificar.PerformClick()
+        End If
+    End Sub
 End Class

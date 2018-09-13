@@ -22,13 +22,13 @@ Partial Class frmRemuneracionBasica
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.tbcOtrosPagos = New System.Windows.Forms.TabControl()
         Me.tbpListar = New System.Windows.Forms.TabPage()
         Me.btnExcel = New System.Windows.Forms.Button()
@@ -103,6 +103,12 @@ Partial Class frmRemuneracionBasica
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.grpRemuneracion = New System.Windows.Forms.GroupBox()
+        Me.chkCustomDiasHoras = New System.Windows.Forms.CheckBox()
+        Me.grpCustom = New System.Windows.Forms.GroupBox()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.nudHoras = New System.Windows.Forms.NumericUpDown()
+        Me.nudDias = New System.Windows.Forms.NumericUpDown()
         Me.txtHorasLaborales = New System.Windows.Forms.NumericUpDown()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.dtpFechaBaja = New System.Windows.Forms.DateTimePicker()
@@ -144,12 +150,7 @@ Partial Class frmRemuneracionBasica
         Me.cmbEstudios = New System.Windows.Forms.ComboBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
-        Me.grpCustom = New System.Windows.Forms.GroupBox()
-        Me.chkCustomDiasHoras = New System.Windows.Forms.CheckBox()
-        Me.nudDias = New System.Windows.Forms.NumericUpDown()
-        Me.nudHoras = New System.Windows.Forms.NumericUpDown()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
+        Me.cmbGrado = New System.Windows.Forms.ComboBox()
         Me.tbcOtrosPagos.SuspendLayout()
         Me.tbpListar.SuspendLayout()
         CType(Me.dgvPagoDctoBasico, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -159,12 +160,12 @@ Partial Class frmRemuneracionBasica
         CType(Me.txtNumHijos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpAccion.SuspendLayout()
         Me.grpRemuneracion.SuspendLayout()
+        Me.grpCustom.SuspendLayout()
+        CType(Me.nudHoras, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudDias, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtHorasLaborales, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpEstudios.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        Me.grpCustom.SuspendLayout()
-        CType(Me.nudDias, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.nudHoras, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tbcOtrosPagos
@@ -175,7 +176,7 @@ Partial Class frmRemuneracionBasica
         Me.tbcOtrosPagos.Location = New System.Drawing.Point(0, 30)
         Me.tbcOtrosPagos.Name = "tbcOtrosPagos"
         Me.tbcOtrosPagos.SelectedIndex = 0
-        Me.tbcOtrosPagos.Size = New System.Drawing.Size(999, 603)
+        Me.tbcOtrosPagos.Size = New System.Drawing.Size(1019, 608)
         Me.tbcOtrosPagos.TabIndex = 85
         '
         'tbpListar
@@ -188,7 +189,7 @@ Partial Class frmRemuneracionBasica
         Me.tbpListar.Location = New System.Drawing.Point(4, 26)
         Me.tbpListar.Name = "tbpListar"
         Me.tbpListar.Padding = New System.Windows.Forms.Padding(3)
-        Me.tbpListar.Size = New System.Drawing.Size(991, 573)
+        Me.tbpListar.Size = New System.Drawing.Size(1011, 578)
         Me.tbpListar.TabIndex = 0
         Me.tbpListar.Text = "Listar"
         Me.tbpListar.UseVisualStyleBackColor = True
@@ -199,7 +200,7 @@ Partial Class frmRemuneracionBasica
         Me.btnExcel.BackColor = System.Drawing.Color.White
         Me.btnExcel.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_excel
         Me.btnExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnExcel.Location = New System.Drawing.Point(863, 539)
+        Me.btnExcel.Location = New System.Drawing.Point(883, 544)
         Me.btnExcel.Name = "btnExcel"
         Me.btnExcel.Size = New System.Drawing.Size(120, 26)
         Me.btnExcel.TabIndex = 4
@@ -212,7 +213,7 @@ Partial Class frmRemuneracionBasica
         Me.btnModificar.BackColor = System.Drawing.Color.White
         Me.btnModificar.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_edit
         Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnModificar.Location = New System.Drawing.Point(129, 539)
+        Me.btnModificar.Location = New System.Drawing.Point(129, 544)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(120, 26)
         Me.btnModificar.TabIndex = 3
@@ -225,7 +226,7 @@ Partial Class frmRemuneracionBasica
         Me.btnNuevo.BackColor = System.Drawing.Color.White
         Me.btnNuevo.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_add
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNuevo.Location = New System.Drawing.Point(3, 539)
+        Me.btnNuevo.Location = New System.Drawing.Point(3, 544)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(120, 26)
         Me.btnNuevo.TabIndex = 2
@@ -250,7 +251,7 @@ Partial Class frmRemuneracionBasica
         Me.dgvPagoDctoBasico.ReadOnly = True
         Me.dgvPagoDctoBasico.RowHeadersVisible = False
         Me.dgvPagoDctoBasico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvPagoDctoBasico.Size = New System.Drawing.Size(980, 503)
+        Me.dgvPagoDctoBasico.Size = New System.Drawing.Size(1000, 508)
         Me.dgvPagoDctoBasico.TabIndex = 1
         '
         'IdPersonal
@@ -306,17 +307,17 @@ Partial Class frmRemuneracionBasica
         '
         'FecNac
         '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.Format = "d"
-        Me.FecNac.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle22.Format = "d"
+        Me.FecNac.DefaultCellStyle = DataGridViewCellStyle22
         Me.FecNac.HeaderText = "FecNac"
         Me.FecNac.Name = "FecNac"
         Me.FecNac.ReadOnly = True
         '
         'Cel
         '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Cel.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Cel.DefaultCellStyle = DataGridViewCellStyle23
         Me.Cel.HeaderText = "Cel"
         Me.Cel.Name = "Cel"
         Me.Cel.ReadOnly = True
@@ -352,9 +353,9 @@ Partial Class frmRemuneracionBasica
         '
         'FecIngreso
         '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.Format = "d"
-        Me.FecIngreso.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle24.Format = "d"
+        Me.FecIngreso.DefaultCellStyle = DataGridViewCellStyle24
         Me.FecIngreso.HeaderText = "FecIngreso"
         Me.FecIngreso.Name = "FecIngreso"
         Me.FecIngreso.ReadOnly = True
@@ -421,9 +422,9 @@ Partial Class frmRemuneracionBasica
         '
         'RemBas
         '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle4.Format = "N2"
-        Me.RemBas.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle25.Format = "N2"
+        Me.RemBas.DefaultCellStyle = DataGridViewCellStyle25
         Me.RemBas.HeaderText = "RemBas"
         Me.RemBas.Name = "RemBas"
         Me.RemBas.ReadOnly = True
@@ -431,9 +432,9 @@ Partial Class frmRemuneracionBasica
         '
         'AsiFam
         '
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle5.Format = "N2"
-        Me.AsiFam.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle26.Format = "N2"
+        Me.AsiFam.DefaultCellStyle = DataGridViewCellStyle26
         Me.AsiFam.HeaderText = "AsiFam"
         Me.AsiFam.Name = "AsiFam"
         Me.AsiFam.ReadOnly = True
@@ -441,9 +442,9 @@ Partial Class frmRemuneracionBasica
         '
         'RiesgoCaja
         '
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle6.Format = "N2"
-        Me.RiesgoCaja.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle27.Format = "N2"
+        Me.RiesgoCaja.DefaultCellStyle = DataGridViewCellStyle27
         Me.RiesgoCaja.HeaderText = "RiesgoCaja"
         Me.RiesgoCaja.Name = "RiesgoCaja"
         Me.RiesgoCaja.ReadOnly = True
@@ -478,9 +479,9 @@ Partial Class frmRemuneracionBasica
         '
         'FechaBaja
         '
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.Format = "d"
-        Me.FechaBaja.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle28.Format = "d"
+        Me.FechaBaja.DefaultCellStyle = DataGridViewCellStyle28
         Me.FechaBaja.HeaderText = "FechaBaja"
         Me.FechaBaja.Name = "FechaBaja"
         Me.FechaBaja.ReadOnly = True
@@ -503,7 +504,7 @@ Partial Class frmRemuneracionBasica
         Me.tbpNuevo.Location = New System.Drawing.Point(4, 26)
         Me.tbpNuevo.Name = "tbpNuevo"
         Me.tbpNuevo.Padding = New System.Windows.Forms.Padding(3)
-        Me.tbpNuevo.Size = New System.Drawing.Size(991, 573)
+        Me.tbpNuevo.Size = New System.Drawing.Size(1011, 578)
         Me.tbpNuevo.TabIndex = 1
         Me.tbpNuevo.Text = "Nuevo"
         Me.tbpNuevo.UseVisualStyleBackColor = True
@@ -520,11 +521,11 @@ Partial Class frmRemuneracionBasica
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 3)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 4
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.44444!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.55556!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(985, 567)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1005, 572)
         Me.TableLayoutPanel1.TabIndex = 6
         '
         'grpDatos
@@ -562,7 +563,7 @@ Partial Class frmRemuneracionBasica
         Me.grpDatos.Controls.Add(Me.Label5)
         Me.grpDatos.Location = New System.Drawing.Point(3, 3)
         Me.grpDatos.Name = "grpDatos"
-        Me.grpDatos.Size = New System.Drawing.Size(979, 222)
+        Me.grpDatos.Size = New System.Drawing.Size(999, 181)
         Me.grpDatos.TabIndex = 2
         Me.grpDatos.TabStop = False
         Me.grpDatos.Text = "Documento"
@@ -570,7 +571,7 @@ Partial Class frmRemuneracionBasica
         'txtNumHijos
         '
         Me.txtNumHijos.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.txtNumHijos.Location = New System.Drawing.Point(768, 112)
+        Me.txtNumHijos.Location = New System.Drawing.Point(778, 83)
         Me.txtNumHijos.Name = "txtNumHijos"
         Me.txtNumHijos.Size = New System.Drawing.Size(45, 25)
         Me.txtNumHijos.TabIndex = 16
@@ -580,7 +581,7 @@ Partial Class frmRemuneracionBasica
         Me.cmbEstadoCivil.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.cmbEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbEstadoCivil.FormattingEnabled = True
-        Me.cmbEstadoCivil.Location = New System.Drawing.Point(770, 81)
+        Me.cmbEstadoCivil.Location = New System.Drawing.Point(780, 52)
         Me.cmbEstadoCivil.Name = "cmbEstadoCivil"
         Me.cmbEstadoCivil.Size = New System.Drawing.Size(110, 25)
         Me.cmbEstadoCivil.TabIndex = 15
@@ -591,11 +592,11 @@ Partial Class frmRemuneracionBasica
         Me.txtCodPer.BackColor = System.Drawing.SystemColors.Menu
         Me.txtCodPer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCodPer.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodPer.Location = New System.Drawing.Point(136, 20)
+        Me.txtCodPer.Location = New System.Drawing.Point(6, 21)
         Me.txtCodPer.MaxLength = 350
         Me.txtCodPer.Name = "txtCodPer"
         Me.txtCodPer.ReadOnly = True
-        Me.txtCodPer.Size = New System.Drawing.Size(122, 25)
+        Me.txtCodPer.Size = New System.Drawing.Size(92, 25)
         Me.txtCodPer.TabIndex = 5
         Me.txtCodPer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -604,7 +605,7 @@ Partial Class frmRemuneracionBasica
         Me.Label15.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(692, 146)
+        Me.Label15.Location = New System.Drawing.Point(702, 117)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(70, 15)
         Me.Label15.TabIndex = 135
@@ -614,7 +615,7 @@ Partial Class frmRemuneracionBasica
         '
         Me.dtpFecIngreso.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.dtpFecIngreso.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecIngreso.Location = New System.Drawing.Point(768, 143)
+        Me.dtpFecIngreso.Location = New System.Drawing.Point(778, 114)
         Me.dtpFecIngreso.Name = "dtpFecIngreso"
         Me.dtpFecIngreso.Size = New System.Drawing.Size(110, 25)
         Me.dtpFecIngreso.TabIndex = 17
@@ -624,7 +625,7 @@ Partial Class frmRemuneracionBasica
         Me.Label14.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(692, 116)
+        Me.Label14.Location = New System.Drawing.Point(702, 87)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(67, 15)
         Me.Label14.TabIndex = 133
@@ -635,7 +636,7 @@ Partial Class frmRemuneracionBasica
         Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(692, 85)
+        Me.Label8.Location = New System.Drawing.Point(702, 56)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(68, 15)
         Me.Label8.TabIndex = 131
@@ -647,7 +648,7 @@ Partial Class frmRemuneracionBasica
         Me.cmbDistrito.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbDistrito.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbDistrito.FormattingEnabled = True
-        Me.cmbDistrito.Location = New System.Drawing.Point(647, 180)
+        Me.cmbDistrito.Location = New System.Drawing.Point(657, 151)
         Me.cmbDistrito.Name = "cmbDistrito"
         Me.cmbDistrito.Size = New System.Drawing.Size(233, 25)
         Me.cmbDistrito.TabIndex = 19
@@ -658,7 +659,7 @@ Partial Class frmRemuneracionBasica
         Me.txtSexo.BackColor = System.Drawing.SystemColors.Window
         Me.txtSexo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtSexo.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSexo.Location = New System.Drawing.Point(768, 50)
+        Me.txtSexo.Location = New System.Drawing.Point(778, 21)
         Me.txtSexo.MaxLength = 1
         Me.txtSexo.Name = "txtSexo"
         Me.txtSexo.Size = New System.Drawing.Size(45, 25)
@@ -670,7 +671,7 @@ Partial Class frmRemuneracionBasica
         Me.Label13.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(698, 54)
+        Me.Label13.Location = New System.Drawing.Point(708, 25)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(64, 15)
         Me.Label13.TabIndex = 119
@@ -682,7 +683,7 @@ Partial Class frmRemuneracionBasica
         Me.txtEmail.BackColor = System.Drawing.SystemColors.Window
         Me.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtEmail.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail.Location = New System.Drawing.Point(423, 143)
+        Me.txtEmail.Location = New System.Drawing.Point(433, 114)
         Me.txtEmail.MaxLength = 50
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(222, 25)
@@ -694,7 +695,7 @@ Partial Class frmRemuneracionBasica
         Me.Label12.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(376, 143)
+        Me.Label12.Location = New System.Drawing.Point(386, 114)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(41, 15)
         Me.Label12.TabIndex = 117
@@ -706,7 +707,7 @@ Partial Class frmRemuneracionBasica
         Me.txtCelular.BackColor = System.Drawing.SystemColors.Window
         Me.txtCelular.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCelular.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCelular.Location = New System.Drawing.Point(423, 112)
+        Me.txtCelular.Location = New System.Drawing.Point(433, 83)
         Me.txtCelular.MaxLength = 15
         Me.txtCelular.Name = "txtCelular"
         Me.txtCelular.Size = New System.Drawing.Size(122, 25)
@@ -718,7 +719,7 @@ Partial Class frmRemuneracionBasica
         Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(373, 116)
+        Me.Label11.Location = New System.Drawing.Point(383, 87)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(44, 15)
         Me.Label11.TabIndex = 115
@@ -730,7 +731,7 @@ Partial Class frmRemuneracionBasica
         Me.txtTelefono.BackColor = System.Drawing.SystemColors.Window
         Me.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTelefono.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTelefono.Location = New System.Drawing.Point(423, 81)
+        Me.txtTelefono.Location = New System.Drawing.Point(433, 52)
         Me.txtTelefono.MaxLength = 15
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(122, 25)
@@ -742,7 +743,7 @@ Partial Class frmRemuneracionBasica
         Me.Label10.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(364, 88)
+        Me.Label10.Location = New System.Drawing.Point(374, 59)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(53, 15)
         Me.Label10.TabIndex = 113
@@ -753,7 +754,7 @@ Partial Class frmRemuneracionBasica
         Me.Label7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(348, 56)
+        Me.Label7.Location = New System.Drawing.Point(358, 27)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(69, 15)
         Me.Label7.TabIndex = 111
@@ -763,7 +764,7 @@ Partial Class frmRemuneracionBasica
         '
         Me.dtpFecNac.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.dtpFecNac.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecNac.Location = New System.Drawing.Point(423, 50)
+        Me.dtpFecNac.Location = New System.Drawing.Point(433, 21)
         Me.dtpFecNac.Name = "dtpFecNac"
         Me.dtpFecNac.Size = New System.Drawing.Size(110, 25)
         Me.dtpFecNac.TabIndex = 10
@@ -773,7 +774,7 @@ Partial Class frmRemuneracionBasica
         Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(64, 184)
+        Me.Label6.Location = New System.Drawing.Point(74, 155)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(57, 15)
         Me.Label6.TabIndex = 109
@@ -785,7 +786,7 @@ Partial Class frmRemuneracionBasica
         Me.txtDireccion.BackColor = System.Drawing.SystemColors.Window
         Me.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtDireccion.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDireccion.Location = New System.Drawing.Point(136, 180)
+        Me.txtDireccion.Location = New System.Drawing.Point(146, 151)
         Me.txtDireccion.MaxLength = 100
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(502, 25)
@@ -797,7 +798,7 @@ Partial Class frmRemuneracionBasica
         Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(52, 146)
+        Me.Label3.Location = New System.Drawing.Point(62, 117)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(69, 15)
         Me.Label3.TabIndex = 107
@@ -809,7 +810,7 @@ Partial Class frmRemuneracionBasica
         Me.txtNombres.BackColor = System.Drawing.SystemColors.Window
         Me.txtNombres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNombres.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombres.Location = New System.Drawing.Point(136, 143)
+        Me.txtNombres.Location = New System.Drawing.Point(146, 114)
         Me.txtNombres.MaxLength = 60
         Me.txtNombres.Name = "txtNombres"
         Me.txtNombres.Size = New System.Drawing.Size(197, 25)
@@ -821,7 +822,7 @@ Partial Class frmRemuneracionBasica
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(52, 116)
+        Me.Label2.Location = New System.Drawing.Point(62, 87)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(69, 15)
         Me.Label2.TabIndex = 105
@@ -833,7 +834,7 @@ Partial Class frmRemuneracionBasica
         Me.txtApellidoMaterno.BackColor = System.Drawing.SystemColors.Window
         Me.txtApellidoMaterno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtApellidoMaterno.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtApellidoMaterno.Location = New System.Drawing.Point(136, 112)
+        Me.txtApellidoMaterno.Location = New System.Drawing.Point(146, 83)
         Me.txtApellidoMaterno.MaxLength = 60
         Me.txtApellidoMaterno.Name = "txtApellidoMaterno"
         Me.txtApellidoMaterno.Size = New System.Drawing.Size(197, 25)
@@ -845,7 +846,7 @@ Partial Class frmRemuneracionBasica
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(52, 85)
+        Me.Label1.Location = New System.Drawing.Point(62, 56)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(69, 15)
         Me.Label1.TabIndex = 103
@@ -857,7 +858,7 @@ Partial Class frmRemuneracionBasica
         Me.txtApellidoPaterno.BackColor = System.Drawing.SystemColors.Window
         Me.txtApellidoPaterno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtApellidoPaterno.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtApellidoPaterno.Location = New System.Drawing.Point(136, 81)
+        Me.txtApellidoPaterno.Location = New System.Drawing.Point(146, 52)
         Me.txtApellidoPaterno.MaxLength = 60
         Me.txtApellidoPaterno.Name = "txtApellidoPaterno"
         Me.txtApellidoPaterno.Size = New System.Drawing.Size(197, 25)
@@ -870,7 +871,7 @@ Partial Class frmRemuneracionBasica
         Me.txtDni.BackColor = System.Drawing.SystemColors.Window
         Me.txtDni.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtDni.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDni.Location = New System.Drawing.Point(136, 50)
+        Me.txtDni.Location = New System.Drawing.Point(146, 21)
         Me.txtDni.MaxLength = 8
         Me.txtDni.Name = "txtDni"
         Me.txtDni.Size = New System.Drawing.Size(122, 25)
@@ -882,7 +883,7 @@ Partial Class frmRemuneracionBasica
         Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(94, 56)
+        Me.Label5.Location = New System.Drawing.Point(104, 27)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(25, 15)
         Me.Label5.TabIndex = 41
@@ -893,9 +894,9 @@ Partial Class frmRemuneracionBasica
         Me.grpAccion.Controls.Add(Me.btnCancelar)
         Me.grpAccion.Controls.Add(Me.btnGuardar)
         Me.grpAccion.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.grpAccion.Location = New System.Drawing.Point(3, 519)
+        Me.grpAccion.Location = New System.Drawing.Point(3, 524)
         Me.grpAccion.Name = "grpAccion"
-        Me.grpAccion.Size = New System.Drawing.Size(979, 45)
+        Me.grpAccion.Size = New System.Drawing.Size(999, 45)
         Me.grpAccion.TabIndex = 3
         Me.grpAccion.TabStop = False
         '
@@ -904,7 +905,7 @@ Partial Class frmRemuneracionBasica
         Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.btnCancelar.BackColor = System.Drawing.Color.White
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancelar.Location = New System.Drawing.Point(507, 14)
+        Me.btnCancelar.Location = New System.Drawing.Point(517, 14)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(118, 26)
         Me.btnCancelar.TabIndex = 51
@@ -916,7 +917,7 @@ Partial Class frmRemuneracionBasica
         Me.btnGuardar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.btnGuardar.BackColor = System.Drawing.Color.White
         Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGuardar.Location = New System.Drawing.Point(381, 14)
+        Me.btnGuardar.Location = New System.Drawing.Point(391, 14)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(118, 26)
         Me.btnGuardar.TabIndex = 50
@@ -960,17 +961,78 @@ Partial Class frmRemuneracionBasica
         Me.grpRemuneracion.Controls.Add(Me.txtRemuneracionBasica)
         Me.grpRemuneracion.Controls.Add(Me.Label4)
         Me.grpRemuneracion.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.grpRemuneracion.Location = New System.Drawing.Point(3, 291)
+        Me.grpRemuneracion.Location = New System.Drawing.Point(3, 290)
         Me.grpRemuneracion.Name = "grpRemuneracion"
-        Me.grpRemuneracion.Size = New System.Drawing.Size(979, 222)
+        Me.grpRemuneracion.Size = New System.Drawing.Size(999, 228)
         Me.grpRemuneracion.TabIndex = 5
         Me.grpRemuneracion.TabStop = False
         Me.grpRemuneracion.Text = "Remuneración"
         '
+        'chkCustomDiasHoras
+        '
+        Me.chkCustomDiasHoras.AutoSize = True
+        Me.chkCustomDiasHoras.Location = New System.Drawing.Point(19, 184)
+        Me.chkCustomDiasHoras.Name = "chkCustomDiasHoras"
+        Me.chkCustomDiasHoras.Size = New System.Drawing.Size(109, 21)
+        Me.chkCustomDiasHoras.TabIndex = 47
+        Me.chkCustomDiasHoras.Text = "Personalizado"
+        Me.chkCustomDiasHoras.UseVisualStyleBackColor = True
+        '
+        'grpCustom
+        '
+        Me.grpCustom.Controls.Add(Me.Label34)
+        Me.grpCustom.Controls.Add(Me.Label33)
+        Me.grpCustom.Controls.Add(Me.nudHoras)
+        Me.grpCustom.Controls.Add(Me.nudDias)
+        Me.grpCustom.Location = New System.Drawing.Point(133, 167)
+        Me.grpCustom.Name = "grpCustom"
+        Me.grpCustom.Size = New System.Drawing.Size(253, 43)
+        Me.grpCustom.TabIndex = 162
+        Me.grpCustom.TabStop = False
+        Me.grpCustom.Text = "Días/Hora"
+        '
+        'Label34
+        '
+        Me.Label34.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.Location = New System.Drawing.Point(149, 19)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(38, 15)
+        Me.Label34.TabIndex = 144
+        Me.Label34.Text = "Horas"
+        '
+        'Label33
+        '
+        Me.Label33.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.Label33.AutoSize = True
+        Me.Label33.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.Location = New System.Drawing.Point(46, 20)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(29, 15)
+        Me.Label33.TabIndex = 143
+        Me.Label33.Text = "Días"
+        '
+        'nudHoras
+        '
+        Me.nudHoras.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.nudHoras.Location = New System.Drawing.Point(193, 14)
+        Me.nudHoras.Name = "nudHoras"
+        Me.nudHoras.Size = New System.Drawing.Size(45, 25)
+        Me.nudHoras.TabIndex = 49
+        '
+        'nudDias
+        '
+        Me.nudDias.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.nudDias.Location = New System.Drawing.Point(80, 15)
+        Me.nudDias.Name = "nudDias"
+        Me.nudDias.Size = New System.Drawing.Size(45, 25)
+        Me.nudDias.TabIndex = 48
+        '
         'txtHorasLaborales
         '
         Me.txtHorasLaborales.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.txtHorasLaborales.Location = New System.Drawing.Point(544, 150)
+        Me.txtHorasLaborales.Location = New System.Drawing.Point(554, 142)
         Me.txtHorasLaborales.Maximum = New Decimal(New Integer() {250, 0, 0, 0})
         Me.txtHorasLaborales.Name = "txtHorasLaborales"
         Me.txtHorasLaborales.Size = New System.Drawing.Size(45, 25)
@@ -981,7 +1043,7 @@ Partial Class frmRemuneracionBasica
         Me.Label32.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label32.AutoSize = True
         Me.Label32.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(752, 186)
+        Me.Label32.Location = New System.Drawing.Point(762, 180)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(53, 15)
         Me.Label32.TabIndex = 160
@@ -991,7 +1053,7 @@ Partial Class frmRemuneracionBasica
         '
         Me.dtpFechaBaja.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.dtpFechaBaja.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaBaja.Location = New System.Drawing.Point(815, 180)
+        Me.dtpFechaBaja.Location = New System.Drawing.Point(825, 174)
         Me.dtpFechaBaja.Name = "dtpFechaBaja"
         Me.dtpFechaBaja.Size = New System.Drawing.Size(110, 25)
         Me.dtpFechaBaja.TabIndex = 46
@@ -1001,7 +1063,7 @@ Partial Class frmRemuneracionBasica
         Me.Label31.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label31.AutoSize = True
         Me.Label31.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(665, 82)
+        Me.Label31.Location = New System.Drawing.Point(675, 74)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(73, 15)
         Me.Label31.TabIndex = 158
@@ -1013,11 +1075,11 @@ Partial Class frmRemuneracionBasica
         Me.txtObservacion.BackColor = System.Drawing.SystemColors.Window
         Me.txtObservacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtObservacion.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtObservacion.Location = New System.Drawing.Point(668, 103)
+        Me.txtObservacion.Location = New System.Drawing.Point(678, 95)
         Me.txtObservacion.MaxLength = 350
         Me.txtObservacion.Multiline = True
         Me.txtObservacion.Name = "txtObservacion"
-        Me.txtObservacion.Size = New System.Drawing.Size(257, 56)
+        Me.txtObservacion.Size = New System.Drawing.Size(257, 62)
         Me.txtObservacion.TabIndex = 45
         Me.txtObservacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -1027,7 +1089,7 @@ Partial Class frmRemuneracionBasica
         Me.txtCuentaCTS.BackColor = System.Drawing.SystemColors.Window
         Me.txtCuentaCTS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCuentaCTS.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCuentaCTS.Location = New System.Drawing.Point(769, 57)
+        Me.txtCuentaCTS.Location = New System.Drawing.Point(779, 49)
         Me.txtCuentaCTS.MaxLength = 350
         Me.txtCuentaCTS.Name = "txtCuentaCTS"
         Me.txtCuentaCTS.Size = New System.Drawing.Size(156, 25)
@@ -1039,7 +1101,7 @@ Partial Class frmRemuneracionBasica
         Me.Label30.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label30.AutoSize = True
         Me.Label30.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(647, 61)
+        Me.Label30.Location = New System.Drawing.Point(657, 53)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(116, 15)
         Me.Label30.TabIndex = 155
@@ -1051,7 +1113,7 @@ Partial Class frmRemuneracionBasica
         Me.txtEntidadCTS.BackColor = System.Drawing.SystemColors.Window
         Me.txtEntidadCTS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtEntidadCTS.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEntidadCTS.Location = New System.Drawing.Point(769, 26)
+        Me.txtEntidadCTS.Location = New System.Drawing.Point(779, 18)
         Me.txtEntidadCTS.MaxLength = 350
         Me.txtEntidadCTS.Name = "txtEntidadCTS"
         Me.txtEntidadCTS.Size = New System.Drawing.Size(122, 25)
@@ -1063,7 +1125,7 @@ Partial Class frmRemuneracionBasica
         Me.Label29.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label29.AutoSize = True
         Me.Label29.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(692, 30)
+        Me.Label29.Location = New System.Drawing.Point(702, 22)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(71, 15)
         Me.Label29.TabIndex = 153
@@ -1074,7 +1136,7 @@ Partial Class frmRemuneracionBasica
         Me.Label28.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label28.AutoSize = True
         Me.Label28.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(490, 186)
+        Me.Label28.Location = New System.Drawing.Point(500, 180)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(42, 15)
         Me.Label28.TabIndex = 152
@@ -1085,7 +1147,7 @@ Partial Class frmRemuneracionBasica
         Me.cmbEstado.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbEstado.FormattingEnabled = True
-        Me.cmbEstado.Location = New System.Drawing.Point(546, 180)
+        Me.cmbEstado.Location = New System.Drawing.Point(556, 174)
         Me.cmbEstado.Name = "cmbEstado"
         Me.cmbEstado.Size = New System.Drawing.Size(110, 25)
         Me.cmbEstado.TabIndex = 42
@@ -1095,7 +1157,7 @@ Partial Class frmRemuneracionBasica
         Me.Label27.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label27.AutoSize = True
         Me.Label27.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(443, 153)
+        Me.Label27.Location = New System.Drawing.Point(453, 145)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(91, 15)
         Me.Label27.TabIndex = 150
@@ -1107,7 +1169,7 @@ Partial Class frmRemuneracionBasica
         Me.txtSCTR.BackColor = System.Drawing.SystemColors.Window
         Me.txtSCTR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtSCTR.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSCTR.Location = New System.Drawing.Point(544, 118)
+        Me.txtSCTR.Location = New System.Drawing.Point(554, 110)
         Me.txtSCTR.MaxLength = 1
         Me.txtSCTR.Name = "txtSCTR"
         Me.txtSCTR.Size = New System.Drawing.Size(35, 25)
@@ -1119,7 +1181,7 @@ Partial Class frmRemuneracionBasica
         Me.Label26.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(463, 121)
+        Me.Label26.Location = New System.Drawing.Point(473, 113)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(71, 15)
         Me.Label26.TabIndex = 148
@@ -1132,7 +1194,7 @@ Partial Class frmRemuneracionBasica
         Me.txtRiesgoCaja.BackColor = System.Drawing.SystemColors.Window
         Me.txtRiesgoCaja.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtRiesgoCaja.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRiesgoCaja.Location = New System.Drawing.Point(544, 87)
+        Me.txtRiesgoCaja.Location = New System.Drawing.Point(554, 79)
         Me.txtRiesgoCaja.MaxLength = 350
         Me.txtRiesgoCaja.Name = "txtRiesgoCaja"
         Me.txtRiesgoCaja.Size = New System.Drawing.Size(95, 25)
@@ -1144,7 +1206,7 @@ Partial Class frmRemuneracionBasica
         '
         Me.Label25.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(407, 90)
+        Me.Label25.Location = New System.Drawing.Point(417, 82)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(122, 17)
         Me.Label25.TabIndex = 146
@@ -1157,7 +1219,7 @@ Partial Class frmRemuneracionBasica
         Me.txtAsignacionFamiliar.BackColor = System.Drawing.SystemColors.Window
         Me.txtAsignacionFamiliar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAsignacionFamiliar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAsignacionFamiliar.Location = New System.Drawing.Point(544, 57)
+        Me.txtAsignacionFamiliar.Location = New System.Drawing.Point(554, 49)
         Me.txtAsignacionFamiliar.MaxLength = 350
         Me.txtAsignacionFamiliar.Name = "txtAsignacionFamiliar"
         Me.txtAsignacionFamiliar.Size = New System.Drawing.Size(95, 25)
@@ -1169,7 +1231,7 @@ Partial Class frmRemuneracionBasica
         '
         Me.Label24.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(407, 59)
+        Me.Label24.Location = New System.Drawing.Point(417, 51)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(120, 17)
         Me.Label24.TabIndex = 144
@@ -1181,7 +1243,7 @@ Partial Class frmRemuneracionBasica
         Me.txtEVida.BackColor = System.Drawing.SystemColors.Window
         Me.txtEVida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtEVida.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEVida.Location = New System.Drawing.Point(351, 150)
+        Me.txtEVida.Location = New System.Drawing.Point(361, 142)
         Me.txtEVida.MaxLength = 1
         Me.txtEVida.Name = "txtEVida"
         Me.txtEVida.Size = New System.Drawing.Size(35, 25)
@@ -1193,7 +1255,7 @@ Partial Class frmRemuneracionBasica
         Me.Label23.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(271, 154)
+        Me.Label23.Location = New System.Drawing.Point(281, 146)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(75, 15)
         Me.Label23.TabIndex = 142
@@ -1205,7 +1267,7 @@ Partial Class frmRemuneracionBasica
         Me.txtCUSPP.BackColor = System.Drawing.SystemColors.Window
         Me.txtCUSPP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCUSPP.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCUSPP.Location = New System.Drawing.Point(136, 149)
+        Me.txtCUSPP.Location = New System.Drawing.Point(146, 141)
         Me.txtCUSPP.MaxLength = 350
         Me.txtCUSPP.Name = "txtCUSPP"
         Me.txtCUSPP.Size = New System.Drawing.Size(122, 25)
@@ -1217,7 +1279,7 @@ Partial Class frmRemuneracionBasica
         Me.Label22.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(89, 154)
+        Me.Label22.Location = New System.Drawing.Point(99, 146)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(43, 15)
         Me.Label22.TabIndex = 140
@@ -1228,7 +1290,7 @@ Partial Class frmRemuneracionBasica
         Me.Label21.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(45, 121)
+        Me.Label21.Location = New System.Drawing.Point(55, 113)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(85, 15)
         Me.Label21.TabIndex = 138
@@ -1240,7 +1302,7 @@ Partial Class frmRemuneracionBasica
         Me.cmbTipoComision.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbTipoComision.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbTipoComision.FormattingEnabled = True
-        Me.cmbTipoComision.Location = New System.Drawing.Point(138, 118)
+        Me.cmbTipoComision.Location = New System.Drawing.Point(148, 110)
         Me.cmbTipoComision.Name = "cmbTipoComision"
         Me.cmbTipoComision.Size = New System.Drawing.Size(154, 25)
         Me.cmbTipoComision.TabIndex = 34
@@ -1250,7 +1312,7 @@ Partial Class frmRemuneracionBasica
         Me.Label20.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(58, 91)
+        Me.Label20.Location = New System.Drawing.Point(68, 83)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(72, 15)
         Me.Label20.TabIndex = 136
@@ -1262,7 +1324,7 @@ Partial Class frmRemuneracionBasica
         Me.cmbFondoPen.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbFondoPen.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbFondoPen.FormattingEnabled = True
-        Me.cmbFondoPen.Location = New System.Drawing.Point(138, 87)
+        Me.cmbFondoPen.Location = New System.Drawing.Point(148, 79)
         Me.cmbFondoPen.Name = "cmbFondoPen"
         Me.cmbFondoPen.Size = New System.Drawing.Size(154, 25)
         Me.cmbFondoPen.TabIndex = 33
@@ -1272,7 +1334,7 @@ Partial Class frmRemuneracionBasica
         Me.Label19.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(87, 61)
+        Me.Label19.Location = New System.Drawing.Point(97, 53)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(39, 15)
         Me.Label19.TabIndex = 134
@@ -1284,7 +1346,7 @@ Partial Class frmRemuneracionBasica
         Me.cmbCargo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbCargo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbCargo.FormattingEnabled = True
-        Me.cmbCargo.Location = New System.Drawing.Point(138, 56)
+        Me.cmbCargo.Location = New System.Drawing.Point(148, 48)
         Me.cmbCargo.Name = "cmbCargo"
         Me.cmbCargo.Size = New System.Drawing.Size(233, 25)
         Me.cmbCargo.TabIndex = 32
@@ -1294,7 +1356,7 @@ Partial Class frmRemuneracionBasica
         Me.Label18.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(100, 30)
+        Me.Label18.Location = New System.Drawing.Point(110, 22)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(31, 15)
         Me.Label18.TabIndex = 132
@@ -1306,7 +1368,7 @@ Partial Class frmRemuneracionBasica
         Me.cmbArea.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbArea.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbArea.FormattingEnabled = True
-        Me.cmbArea.Location = New System.Drawing.Point(138, 25)
+        Me.cmbArea.Location = New System.Drawing.Point(148, 17)
         Me.cmbArea.Name = "cmbArea"
         Me.cmbArea.Size = New System.Drawing.Size(233, 25)
         Me.cmbArea.TabIndex = 31
@@ -1318,7 +1380,7 @@ Partial Class frmRemuneracionBasica
         Me.txtRemuneracionBasica.BackColor = System.Drawing.SystemColors.Window
         Me.txtRemuneracionBasica.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtRemuneracionBasica.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRemuneracionBasica.Location = New System.Drawing.Point(544, 25)
+        Me.txtRemuneracionBasica.Location = New System.Drawing.Point(554, 17)
         Me.txtRemuneracionBasica.MaxLength = 350
         Me.txtRemuneracionBasica.Name = "txtRemuneracionBasica"
         Me.txtRemuneracionBasica.Size = New System.Drawing.Size(95, 25)
@@ -1330,7 +1392,7 @@ Partial Class frmRemuneracionBasica
         '
         Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(407, 27)
+        Me.Label4.Location = New System.Drawing.Point(417, 19)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(131, 17)
         Me.Label4.TabIndex = 85
@@ -1338,6 +1400,7 @@ Partial Class frmRemuneracionBasica
         '
         'grpEstudios
         '
+        Me.grpEstudios.Controls.Add(Me.cmbGrado)
         Me.grpEstudios.Controls.Add(Me.txtNroColegiatura)
         Me.grpEstudios.Controls.Add(Me.Label17)
         Me.grpEstudios.Controls.Add(Me.Label16)
@@ -1345,9 +1408,9 @@ Partial Class frmRemuneracionBasica
         Me.grpEstudios.Controls.Add(Me.Label9)
         Me.grpEstudios.Controls.Add(Me.cmbEstudios)
         Me.grpEstudios.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.grpEstudios.Location = New System.Drawing.Point(3, 231)
+        Me.grpEstudios.Location = New System.Drawing.Point(3, 190)
         Me.grpEstudios.Name = "grpEstudios"
-        Me.grpEstudios.Size = New System.Drawing.Size(979, 54)
+        Me.grpEstudios.Size = New System.Drawing.Size(999, 94)
         Me.grpEstudios.TabIndex = 6
         Me.grpEstudios.TabStop = False
         Me.grpEstudios.Text = "Estudios"
@@ -1358,7 +1421,7 @@ Partial Class frmRemuneracionBasica
         Me.txtNroColegiatura.BackColor = System.Drawing.SystemColors.Window
         Me.txtNroColegiatura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNroColegiatura.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNroColegiatura.Location = New System.Drawing.Point(831, 24)
+        Me.txtNroColegiatura.Location = New System.Drawing.Point(841, 24)
         Me.txtNroColegiatura.MaxLength = 350
         Me.txtNroColegiatura.Name = "txtNroColegiatura"
         Me.txtNroColegiatura.Size = New System.Drawing.Size(52, 25)
@@ -1370,7 +1433,7 @@ Partial Class frmRemuneracionBasica
         Me.Label17.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(742, 27)
+        Me.Label17.Location = New System.Drawing.Point(752, 27)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(83, 15)
         Me.Label17.TabIndex = 142
@@ -1381,7 +1444,7 @@ Partial Class frmRemuneracionBasica
         Me.Label16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(283, 27)
+        Me.Label16.Location = New System.Drawing.Point(293, 27)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(39, 15)
         Me.Label16.TabIndex = 141
@@ -1393,7 +1456,7 @@ Partial Class frmRemuneracionBasica
         Me.txtGrado.BackColor = System.Drawing.SystemColors.Window
         Me.txtGrado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtGrado.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtGrado.Location = New System.Drawing.Point(328, 24)
+        Me.txtGrado.Location = New System.Drawing.Point(344, 60)
         Me.txtGrado.MaxLength = 350
         Me.txtGrado.Name = "txtGrado"
         Me.txtGrado.Size = New System.Drawing.Size(389, 25)
@@ -1405,7 +1468,7 @@ Partial Class frmRemuneracionBasica
         Me.Label9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(41, 27)
+        Me.Label9.Location = New System.Drawing.Point(51, 27)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(51, 15)
         Me.Label9.TabIndex = 139
@@ -1417,7 +1480,7 @@ Partial Class frmRemuneracionBasica
         Me.cmbEstudios.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbEstudios.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbEstudios.FormattingEnabled = True
-        Me.cmbEstudios.Location = New System.Drawing.Point(115, 24)
+        Me.cmbEstudios.Location = New System.Drawing.Point(125, 24)
         Me.cmbEstudios.Name = "cmbEstudios"
         Me.cmbEstudios.Size = New System.Drawing.Size(154, 25)
         Me.cmbEstudios.TabIndex = 20
@@ -1429,7 +1492,7 @@ Partial Class frmRemuneracionBasica
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(999, 30)
+        Me.Panel1.Size = New System.Drawing.Size(1019, 30)
         Me.Panel1.TabIndex = 84
         '
         'lblTitulo
@@ -1445,72 +1508,22 @@ Partial Class frmRemuneracionBasica
         Me.lblTitulo.TabIndex = 1
         Me.lblTitulo.Text = "Mantenimiento Personal"
         '
-        'grpCustom
+        'cmbGrado
         '
-        Me.grpCustom.Controls.Add(Me.Label34)
-        Me.grpCustom.Controls.Add(Me.Label33)
-        Me.grpCustom.Controls.Add(Me.nudHoras)
-        Me.grpCustom.Controls.Add(Me.nudDias)
-        Me.grpCustom.Location = New System.Drawing.Point(133, 176)
-        Me.grpCustom.Name = "grpCustom"
-        Me.grpCustom.Size = New System.Drawing.Size(253, 43)
-        Me.grpCustom.TabIndex = 162
-        Me.grpCustom.TabStop = False
-        Me.grpCustom.Text = "Días/Hora"
-        '
-        'chkCustomDiasHoras
-        '
-        Me.chkCustomDiasHoras.AutoSize = True
-        Me.chkCustomDiasHoras.Location = New System.Drawing.Point(19, 190)
-        Me.chkCustomDiasHoras.Name = "chkCustomDiasHoras"
-        Me.chkCustomDiasHoras.Size = New System.Drawing.Size(109, 21)
-        Me.chkCustomDiasHoras.TabIndex = 47
-        Me.chkCustomDiasHoras.Text = "Personalizado"
-        Me.chkCustomDiasHoras.UseVisualStyleBackColor = True
-        '
-        'nudDias
-        '
-        Me.nudDias.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.nudDias.Location = New System.Drawing.Point(80, 15)
-        Me.nudDias.Name = "nudDias"
-        Me.nudDias.Size = New System.Drawing.Size(45, 25)
-        Me.nudDias.TabIndex = 48
-        '
-        'nudHoras
-        '
-        Me.nudHoras.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.nudHoras.Location = New System.Drawing.Point(193, 14)
-        Me.nudHoras.Name = "nudHoras"
-        Me.nudHoras.Size = New System.Drawing.Size(45, 25)
-        Me.nudHoras.TabIndex = 49
-        '
-        'Label33
-        '
-        Me.Label33.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.Label33.AutoSize = True
-        Me.Label33.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.Location = New System.Drawing.Point(46, 20)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(29, 15)
-        Me.Label33.TabIndex = 143
-        Me.Label33.Text = "Días"
-        '
-        'Label34
-        '
-        Me.Label34.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.Label34.AutoSize = True
-        Me.Label34.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.Location = New System.Drawing.Point(149, 19)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(38, 15)
-        Me.Label34.TabIndex = 144
-        Me.Label34.Text = "Horas"
+        Me.cmbGrado.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.cmbGrado.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbGrado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cmbGrado.FormattingEnabled = True
+        Me.cmbGrado.Location = New System.Drawing.Point(344, 24)
+        Me.cmbGrado.Name = "cmbGrado"
+        Me.cmbGrado.Size = New System.Drawing.Size(389, 25)
+        Me.cmbGrado.TabIndex = 143
         '
         'frmRemuneracionBasica
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(999, 633)
+        Me.ClientSize = New System.Drawing.Size(1019, 638)
         Me.Controls.Add(Me.tbcOtrosPagos)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1529,15 +1542,15 @@ Partial Class frmRemuneracionBasica
         Me.grpAccion.ResumeLayout(False)
         Me.grpRemuneracion.ResumeLayout(False)
         Me.grpRemuneracion.PerformLayout()
+        Me.grpCustom.ResumeLayout(False)
+        Me.grpCustom.PerformLayout()
+        CType(Me.nudHoras, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudDias, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtHorasLaborales, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpEstudios.ResumeLayout(False)
         Me.grpEstudios.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.grpCustom.ResumeLayout(False)
-        Me.grpCustom.PerformLayout()
-        CType(Me.nudDias, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nudHoras, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1662,4 +1675,5 @@ Partial Class frmRemuneracionBasica
     Friend WithEvents Label33 As Label
     Friend WithEvents nudHoras As NumericUpDown
     Friend WithEvents nudDias As NumericUpDown
+    Friend WithEvents cmbGrado As ComboBox
 End Class

@@ -4,3 +4,9 @@ G:\POLICLINICO\SGPoliclinico\UT.Policlinico\obj\Debug\UT.Policlinico.csprojResol
 G:\POLICLINICO\SGPoliclinico\UT.Policlinico\obj\Debug\UT.Policlinico.csproj.CoreCompileInputs.cache
 G:\POLICLINICO\SGPoliclinico\UT.Policlinico\obj\Debug\UT.Policlinico.dll
 G:\POLICLINICO\SGPoliclinico\UT.Policlinico\obj\Debug\UT.Policlinico.pdb
+C:\Users\Wilmer\planillapoli\SGPoliclinico\UT.Policlinico\bin\Debug\UT.Policlinico.dll
+C:\Users\Wilmer\planillapoli\SGPoliclinico\UT.Policlinico\bin\Debug\UT.Policlinico.pdb
+C:\Users\Wilmer\planillapoli\SGPoliclinico\UT.Policlinico\obj\Debug\UT.Policlinico.csprojAssemblyReference.cache
+C:\Users\Wilmer\planillapoli\SGPoliclinico\UT.Policlinico\obj\Debug\UT.Policlinico.csproj.CoreCompileInputs.cache
+C:\Users\Wilmer\planillapoli\SGPoliclinico\UT.Policlinico\obj\Debug\UT.Policlinico.dll
+C:\Users\Wilmer\planillapoli\SGPoliclinico\UT.Policlinico\obj\Debug\UT.Policlinico.pdb

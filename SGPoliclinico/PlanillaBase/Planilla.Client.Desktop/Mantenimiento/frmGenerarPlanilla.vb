@@ -226,6 +226,7 @@ Public Class frmGenerarPlanilla
 
     Private Sub dgvPlanilla_KeyDown(sender As Object, e As KeyEventArgs) Handles dgvPlanilla.KeyDown
         If e.KeyCode = Keys.Enter Then
+            e.SuppressKeyPress = True
             MostrarEnPlanilla()
         End If
     End Sub

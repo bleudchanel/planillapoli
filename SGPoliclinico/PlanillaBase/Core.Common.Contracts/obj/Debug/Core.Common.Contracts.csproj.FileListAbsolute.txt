@@ -15,3 +15,9 @@ C:\Users\Usuario\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.Contracts\o
 C:\Users\Usuario\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.dll
 C:\Users\Usuario\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.pdb
+C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.Contracts\bin\Debug\Core.Common.Contracts.dll
+C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.Contracts\bin\Debug\Core.Common.Contracts.pdb
+C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.csprojAssemblyReference.cache
+C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.dll
+C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.pdb

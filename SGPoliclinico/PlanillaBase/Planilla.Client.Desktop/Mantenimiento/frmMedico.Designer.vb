@@ -22,9 +22,9 @@ Partial Class frmMedico
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.tbcOtrosPagos = New System.Windows.Forms.TabControl()
@@ -118,7 +118,7 @@ Partial Class frmMedico
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(999, 30)
+        Me.Panel1.Size = New System.Drawing.Size(971, 30)
         Me.Panel1.TabIndex = 85
         '
         'lblTitulo
@@ -142,7 +142,7 @@ Partial Class frmMedico
         Me.tbcOtrosPagos.Location = New System.Drawing.Point(0, 30)
         Me.tbcOtrosPagos.Name = "tbcOtrosPagos"
         Me.tbcOtrosPagos.SelectedIndex = 0
-        Me.tbcOtrosPagos.Size = New System.Drawing.Size(999, 603)
+        Me.tbcOtrosPagos.Size = New System.Drawing.Size(971, 524)
         Me.tbcOtrosPagos.TabIndex = 86
         '
         'tbpListar
@@ -155,7 +155,7 @@ Partial Class frmMedico
         Me.tbpListar.Location = New System.Drawing.Point(4, 22)
         Me.tbpListar.Name = "tbpListar"
         Me.tbpListar.Padding = New System.Windows.Forms.Padding(3)
-        Me.tbpListar.Size = New System.Drawing.Size(991, 577)
+        Me.tbpListar.Size = New System.Drawing.Size(963, 498)
         Me.tbpListar.TabIndex = 0
         Me.tbpListar.Text = "Listar"
         Me.tbpListar.UseVisualStyleBackColor = True
@@ -166,7 +166,7 @@ Partial Class frmMedico
         Me.btnExcel.BackColor = System.Drawing.Color.White
         Me.btnExcel.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_excel
         Me.btnExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnExcel.Location = New System.Drawing.Point(863, 543)
+        Me.btnExcel.Location = New System.Drawing.Point(835, 464)
         Me.btnExcel.Name = "btnExcel"
         Me.btnExcel.Size = New System.Drawing.Size(120, 26)
         Me.btnExcel.TabIndex = 4
@@ -179,7 +179,7 @@ Partial Class frmMedico
         Me.btnModificar.BackColor = System.Drawing.Color.White
         Me.btnModificar.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_edit
         Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnModificar.Location = New System.Drawing.Point(129, 543)
+        Me.btnModificar.Location = New System.Drawing.Point(129, 464)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(120, 26)
         Me.btnModificar.TabIndex = 3
@@ -192,7 +192,7 @@ Partial Class frmMedico
         Me.btnNuevo.BackColor = System.Drawing.Color.White
         Me.btnNuevo.Image = Global.Planilla.Client.Desktop.My.Resources.Resources.page_add
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNuevo.Location = New System.Drawing.Point(3, 543)
+        Me.btnNuevo.Location = New System.Drawing.Point(3, 464)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(120, 26)
         Me.btnNuevo.TabIndex = 2
@@ -217,7 +217,7 @@ Partial Class frmMedico
         Me.dgvPagoDctoBasico.ReadOnly = True
         Me.dgvPagoDctoBasico.RowHeadersVisible = False
         Me.dgvPagoDctoBasico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvPagoDctoBasico.Size = New System.Drawing.Size(980, 507)
+        Me.dgvPagoDctoBasico.Size = New System.Drawing.Size(952, 428)
         Me.dgvPagoDctoBasico.TabIndex = 1
         '
         'IdMedico
@@ -273,17 +273,17 @@ Partial Class frmMedico
         '
         'FecNac
         '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.Format = "d"
-        Me.FecNac.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.Format = "d"
+        Me.FecNac.DefaultCellStyle = DataGridViewCellStyle7
         Me.FecNac.HeaderText = "FecNac"
         Me.FecNac.Name = "FecNac"
         Me.FecNac.ReadOnly = True
         '
         'Cel
         '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Cel.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Cel.DefaultCellStyle = DataGridViewCellStyle8
         Me.Cel.HeaderText = "Cel"
         Me.Cel.Name = "Cel"
         Me.Cel.ReadOnly = True
@@ -305,9 +305,9 @@ Partial Class frmMedico
         '
         'FecIngreso
         '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.Format = "d"
-        Me.FecIngreso.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.Format = "d"
+        Me.FecIngreso.DefaultCellStyle = DataGridViewCellStyle9
         Me.FecIngreso.HeaderText = "FecIngreso"
         Me.FecIngreso.Name = "FecIngreso"
         Me.FecIngreso.ReadOnly = True
@@ -375,7 +375,7 @@ Partial Class frmMedico
         Me.tbpNuevo.Location = New System.Drawing.Point(4, 22)
         Me.tbpNuevo.Name = "tbpNuevo"
         Me.tbpNuevo.Padding = New System.Windows.Forms.Padding(3)
-        Me.tbpNuevo.Size = New System.Drawing.Size(991, 577)
+        Me.tbpNuevo.Size = New System.Drawing.Size(963, 498)
         Me.tbpNuevo.TabIndex = 1
         Me.tbpNuevo.Text = "Nuevo"
         Me.tbpNuevo.UseVisualStyleBackColor = True
@@ -395,7 +395,7 @@ Partial Class frmMedico
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(985, 571)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(957, 492)
         Me.TableLayoutPanel1.TabIndex = 6
         '
         'grpDatos
@@ -429,7 +429,7 @@ Partial Class frmMedico
         Me.grpDatos.Controls.Add(Me.Label5)
         Me.grpDatos.Location = New System.Drawing.Point(3, 3)
         Me.grpDatos.Name = "grpDatos"
-        Me.grpDatos.Size = New System.Drawing.Size(979, 254)
+        Me.grpDatos.Size = New System.Drawing.Size(951, 215)
         Me.grpDatos.TabIndex = 2
         Me.grpDatos.TabStop = False
         Me.grpDatos.Text = "Documento"
@@ -440,7 +440,7 @@ Partial Class frmMedico
         Me.txtCodPer.BackColor = System.Drawing.SystemColors.Menu
         Me.txtCodPer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCodPer.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodPer.Location = New System.Drawing.Point(136, 20)
+        Me.txtCodPer.Location = New System.Drawing.Point(122, 20)
         Me.txtCodPer.MaxLength = 350
         Me.txtCodPer.Name = "txtCodPer"
         Me.txtCodPer.ReadOnly = True
@@ -453,7 +453,7 @@ Partial Class frmMedico
         Me.Label15.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(693, 86)
+        Me.Label15.Location = New System.Drawing.Point(679, 86)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(70, 15)
         Me.Label15.TabIndex = 135
@@ -463,7 +463,7 @@ Partial Class frmMedico
         '
         Me.dtpFecIngreso.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.dtpFecIngreso.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecIngreso.Location = New System.Drawing.Point(769, 83)
+        Me.dtpFecIngreso.Location = New System.Drawing.Point(755, 83)
         Me.dtpFecIngreso.Name = "dtpFecIngreso"
         Me.dtpFecIngreso.Size = New System.Drawing.Size(110, 20)
         Me.dtpFecIngreso.TabIndex = 17
@@ -474,7 +474,7 @@ Partial Class frmMedico
         Me.cmbDistrito.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbDistrito.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbDistrito.FormattingEnabled = True
-        Me.cmbDistrito.Location = New System.Drawing.Point(647, 180)
+        Me.cmbDistrito.Location = New System.Drawing.Point(633, 180)
         Me.cmbDistrito.Name = "cmbDistrito"
         Me.cmbDistrito.Size = New System.Drawing.Size(233, 21)
         Me.cmbDistrito.TabIndex = 15
@@ -485,7 +485,7 @@ Partial Class frmMedico
         Me.txtRUC.BackColor = System.Drawing.SystemColors.Window
         Me.txtRUC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtRUC.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRUC.Location = New System.Drawing.Point(769, 50)
+        Me.txtRUC.Location = New System.Drawing.Point(755, 50)
         Me.txtRUC.MaxLength = 1
         Me.txtRUC.Name = "txtRUC"
         Me.txtRUC.Size = New System.Drawing.Size(111, 25)
@@ -497,7 +497,7 @@ Partial Class frmMedico
         Me.Label13.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(698, 54)
+        Me.Label13.Location = New System.Drawing.Point(684, 54)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(30, 15)
         Me.Label13.TabIndex = 119
@@ -509,7 +509,7 @@ Partial Class frmMedico
         Me.txtEmail.BackColor = System.Drawing.SystemColors.Window
         Me.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtEmail.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail.Location = New System.Drawing.Point(423, 143)
+        Me.txtEmail.Location = New System.Drawing.Point(409, 143)
         Me.txtEmail.MaxLength = 50
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(222, 25)
@@ -521,7 +521,7 @@ Partial Class frmMedico
         Me.Label12.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(376, 143)
+        Me.Label12.Location = New System.Drawing.Point(362, 143)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(41, 15)
         Me.Label12.TabIndex = 117
@@ -533,7 +533,7 @@ Partial Class frmMedico
         Me.txtCelular.BackColor = System.Drawing.SystemColors.Window
         Me.txtCelular.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCelular.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCelular.Location = New System.Drawing.Point(423, 112)
+        Me.txtCelular.Location = New System.Drawing.Point(409, 112)
         Me.txtCelular.MaxLength = 15
         Me.txtCelular.Name = "txtCelular"
         Me.txtCelular.Size = New System.Drawing.Size(122, 25)
@@ -545,7 +545,7 @@ Partial Class frmMedico
         Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(373, 116)
+        Me.Label11.Location = New System.Drawing.Point(359, 116)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(44, 15)
         Me.Label11.TabIndex = 115
@@ -557,7 +557,7 @@ Partial Class frmMedico
         Me.txtTelefono.BackColor = System.Drawing.SystemColors.Window
         Me.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTelefono.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTelefono.Location = New System.Drawing.Point(423, 81)
+        Me.txtTelefono.Location = New System.Drawing.Point(409, 81)
         Me.txtTelefono.MaxLength = 15
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(122, 25)
@@ -569,7 +569,7 @@ Partial Class frmMedico
         Me.Label10.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(364, 88)
+        Me.Label10.Location = New System.Drawing.Point(350, 88)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(53, 15)
         Me.Label10.TabIndex = 113
@@ -580,7 +580,7 @@ Partial Class frmMedico
         Me.Label7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(348, 56)
+        Me.Label7.Location = New System.Drawing.Point(334, 56)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(69, 15)
         Me.Label7.TabIndex = 111
@@ -590,7 +590,7 @@ Partial Class frmMedico
         '
         Me.dtpFecNac.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.dtpFecNac.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecNac.Location = New System.Drawing.Point(423, 50)
+        Me.dtpFecNac.Location = New System.Drawing.Point(409, 50)
         Me.dtpFecNac.Name = "dtpFecNac"
         Me.dtpFecNac.Size = New System.Drawing.Size(110, 20)
         Me.dtpFecNac.TabIndex = 11
@@ -600,7 +600,7 @@ Partial Class frmMedico
         Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(64, 184)
+        Me.Label6.Location = New System.Drawing.Point(50, 184)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(57, 15)
         Me.Label6.TabIndex = 109
@@ -612,7 +612,7 @@ Partial Class frmMedico
         Me.txtDireccion.BackColor = System.Drawing.SystemColors.Window
         Me.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtDireccion.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDireccion.Location = New System.Drawing.Point(136, 180)
+        Me.txtDireccion.Location = New System.Drawing.Point(122, 180)
         Me.txtDireccion.MaxLength = 100
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(502, 25)
@@ -624,7 +624,7 @@ Partial Class frmMedico
         Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(65, 148)
+        Me.Label3.Location = New System.Drawing.Point(51, 148)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(56, 15)
         Me.Label3.TabIndex = 107
@@ -636,7 +636,7 @@ Partial Class frmMedico
         Me.txtNombres.BackColor = System.Drawing.SystemColors.Window
         Me.txtNombres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNombres.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombres.Location = New System.Drawing.Point(136, 143)
+        Me.txtNombres.Location = New System.Drawing.Point(122, 143)
         Me.txtNombres.MaxLength = 60
         Me.txtNombres.Name = "txtNombres"
         Me.txtNombres.Size = New System.Drawing.Size(197, 25)
@@ -648,7 +648,7 @@ Partial Class frmMedico
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(52, 116)
+        Me.Label2.Location = New System.Drawing.Point(38, 116)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(69, 15)
         Me.Label2.TabIndex = 105
@@ -660,7 +660,7 @@ Partial Class frmMedico
         Me.txtApellidoMaterno.BackColor = System.Drawing.SystemColors.Window
         Me.txtApellidoMaterno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtApellidoMaterno.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtApellidoMaterno.Location = New System.Drawing.Point(136, 112)
+        Me.txtApellidoMaterno.Location = New System.Drawing.Point(122, 112)
         Me.txtApellidoMaterno.MaxLength = 60
         Me.txtApellidoMaterno.Name = "txtApellidoMaterno"
         Me.txtApellidoMaterno.Size = New System.Drawing.Size(197, 25)
@@ -672,7 +672,7 @@ Partial Class frmMedico
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(52, 85)
+        Me.Label1.Location = New System.Drawing.Point(38, 85)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(69, 15)
         Me.Label1.TabIndex = 103
@@ -684,7 +684,7 @@ Partial Class frmMedico
         Me.txtApellidoPaterno.BackColor = System.Drawing.SystemColors.Window
         Me.txtApellidoPaterno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtApellidoPaterno.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtApellidoPaterno.Location = New System.Drawing.Point(136, 81)
+        Me.txtApellidoPaterno.Location = New System.Drawing.Point(122, 81)
         Me.txtApellidoPaterno.MaxLength = 60
         Me.txtApellidoPaterno.Name = "txtApellidoPaterno"
         Me.txtApellidoPaterno.Size = New System.Drawing.Size(197, 25)
@@ -697,7 +697,7 @@ Partial Class frmMedico
         Me.txtDni.BackColor = System.Drawing.SystemColors.Window
         Me.txtDni.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtDni.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDni.Location = New System.Drawing.Point(136, 50)
+        Me.txtDni.Location = New System.Drawing.Point(122, 50)
         Me.txtDni.MaxLength = 8
         Me.txtDni.Name = "txtDni"
         Me.txtDni.Size = New System.Drawing.Size(122, 25)
@@ -709,7 +709,7 @@ Partial Class frmMedico
         Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(94, 56)
+        Me.Label5.Location = New System.Drawing.Point(80, 56)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(25, 15)
         Me.Label5.TabIndex = 41
@@ -720,9 +720,9 @@ Partial Class frmMedico
         Me.grpAccion.Controls.Add(Me.btnCancelar)
         Me.grpAccion.Controls.Add(Me.btnGuardar)
         Me.grpAccion.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.grpAccion.Location = New System.Drawing.Point(3, 523)
+        Me.grpAccion.Location = New System.Drawing.Point(3, 445)
         Me.grpAccion.Name = "grpAccion"
-        Me.grpAccion.Size = New System.Drawing.Size(979, 45)
+        Me.grpAccion.Size = New System.Drawing.Size(951, 44)
         Me.grpAccion.TabIndex = 3
         Me.grpAccion.TabStop = False
         '
@@ -731,9 +731,9 @@ Partial Class frmMedico
         Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.btnCancelar.BackColor = System.Drawing.Color.White
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancelar.Location = New System.Drawing.Point(507, 14)
+        Me.btnCancelar.Location = New System.Drawing.Point(493, 14)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(118, 26)
+        Me.btnCancelar.Size = New System.Drawing.Size(118, 25)
         Me.btnCancelar.TabIndex = 29
         Me.btnCancelar.Text = "C&ancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
@@ -743,9 +743,9 @@ Partial Class frmMedico
         Me.btnGuardar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.btnGuardar.BackColor = System.Drawing.Color.White
         Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGuardar.Location = New System.Drawing.Point(381, 14)
+        Me.btnGuardar.Location = New System.Drawing.Point(367, 14)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(118, 26)
+        Me.btnGuardar.Size = New System.Drawing.Size(118, 25)
         Me.btnGuardar.TabIndex = 28
         Me.btnGuardar.Text = "&Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = False
@@ -769,9 +769,9 @@ Partial Class frmMedico
         Me.grpRemuneracion.Controls.Add(Me.Label18)
         Me.grpRemuneracion.Controls.Add(Me.cmbEspecialidad1)
         Me.grpRemuneracion.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.grpRemuneracion.Location = New System.Drawing.Point(3, 263)
+        Me.grpRemuneracion.Location = New System.Drawing.Point(3, 224)
         Me.grpRemuneracion.Name = "grpRemuneracion"
-        Me.grpRemuneracion.Size = New System.Drawing.Size(979, 254)
+        Me.grpRemuneracion.Size = New System.Drawing.Size(951, 215)
         Me.grpRemuneracion.TabIndex = 5
         Me.grpRemuneracion.TabStop = False
         Me.grpRemuneracion.Text = "Remuneración"
@@ -781,7 +781,7 @@ Partial Class frmMedico
         Me.Label17.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(403, 61)
+        Me.Label17.Location = New System.Drawing.Point(389, 61)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(83, 15)
         Me.Label17.TabIndex = 142
@@ -793,7 +793,7 @@ Partial Class frmMedico
         Me.txtNroColegiatura.BackColor = System.Drawing.SystemColors.Window
         Me.txtNroColegiatura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNroColegiatura.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNroColegiatura.Location = New System.Drawing.Point(492, 57)
+        Me.txtNroColegiatura.Location = New System.Drawing.Point(478, 57)
         Me.txtNroColegiatura.MaxLength = 350
         Me.txtNroColegiatura.Name = "txtNroColegiatura"
         Me.txtNroColegiatura.Size = New System.Drawing.Size(52, 25)
@@ -805,7 +805,7 @@ Partial Class frmMedico
         Me.Label16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(441, 32)
+        Me.Label16.Location = New System.Drawing.Point(427, 32)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(39, 15)
         Me.Label16.TabIndex = 141
@@ -817,7 +817,7 @@ Partial Class frmMedico
         Me.cmbGrado.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbGrado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbGrado.FormattingEnabled = True
-        Me.cmbGrado.Location = New System.Drawing.Point(492, 32)
+        Me.cmbGrado.Location = New System.Drawing.Point(478, 32)
         Me.cmbGrado.Name = "cmbGrado"
         Me.cmbGrado.Size = New System.Drawing.Size(154, 21)
         Me.cmbGrado.TabIndex = 25
@@ -827,7 +827,7 @@ Partial Class frmMedico
         Me.Label28.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label28.AutoSize = True
         Me.Label28.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(444, 128)
+        Me.Label28.Location = New System.Drawing.Point(430, 128)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(42, 15)
         Me.Label28.TabIndex = 152
@@ -838,7 +838,7 @@ Partial Class frmMedico
         Me.cmbEstado.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbEstado.FormattingEnabled = True
-        Me.cmbEstado.Location = New System.Drawing.Point(492, 126)
+        Me.cmbEstado.Location = New System.Drawing.Point(478, 126)
         Me.cmbEstado.Name = "cmbEstado"
         Me.cmbEstado.Size = New System.Drawing.Size(110, 21)
         Me.cmbEstado.TabIndex = 27
@@ -849,7 +849,7 @@ Partial Class frmMedico
         Me.txtRNE.BackColor = System.Drawing.SystemColors.Window
         Me.txtRNE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtRNE.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRNE.Location = New System.Drawing.Point(136, 157)
+        Me.txtRNE.Location = New System.Drawing.Point(122, 157)
         Me.txtRNE.MaxLength = 350
         Me.txtRNE.Name = "txtRNE"
         Me.txtRNE.Size = New System.Drawing.Size(122, 25)
@@ -861,7 +861,7 @@ Partial Class frmMedico
         Me.Label22.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(89, 162)
+        Me.Label22.Location = New System.Drawing.Point(75, 162)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(29, 15)
         Me.Label22.TabIndex = 140
@@ -872,7 +872,7 @@ Partial Class frmMedico
         Me.Label21.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(88, 128)
+        Me.Label21.Location = New System.Drawing.Point(74, 128)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(31, 15)
         Me.Label21.TabIndex = 138
@@ -884,7 +884,7 @@ Partial Class frmMedico
         Me.cmbTipo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbTipo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbTipo.FormattingEnabled = True
-        Me.cmbTipo.Location = New System.Drawing.Point(138, 126)
+        Me.cmbTipo.Location = New System.Drawing.Point(124, 126)
         Me.cmbTipo.Name = "cmbTipo"
         Me.cmbTipo.Size = New System.Drawing.Size(154, 21)
         Me.cmbTipo.TabIndex = 23
@@ -894,7 +894,7 @@ Partial Class frmMedico
         Me.Label20.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(42, 99)
+        Me.Label20.Location = New System.Drawing.Point(28, 99)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(80, 15)
         Me.Label20.TabIndex = 136
@@ -906,7 +906,7 @@ Partial Class frmMedico
         Me.cmbSituacionEspecialidad.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbSituacionEspecialidad.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbSituacionEspecialidad.FormattingEnabled = True
-        Me.cmbSituacionEspecialidad.Location = New System.Drawing.Point(138, 95)
+        Me.cmbSituacionEspecialidad.Location = New System.Drawing.Point(124, 95)
         Me.cmbSituacionEspecialidad.Name = "cmbSituacionEspecialidad"
         Me.cmbSituacionEspecialidad.Size = New System.Drawing.Size(154, 21)
         Me.cmbSituacionEspecialidad.TabIndex = 22
@@ -916,7 +916,7 @@ Partial Class frmMedico
         Me.Label19.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(41, 67)
+        Me.Label19.Location = New System.Drawing.Point(27, 67)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(81, 15)
         Me.Label19.TabIndex = 134
@@ -928,7 +928,7 @@ Partial Class frmMedico
         Me.cmbEspecialidad2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbEspecialidad2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbEspecialidad2.FormattingEnabled = True
-        Me.cmbEspecialidad2.Location = New System.Drawing.Point(138, 64)
+        Me.cmbEspecialidad2.Location = New System.Drawing.Point(124, 64)
         Me.cmbEspecialidad2.Name = "cmbEspecialidad2"
         Me.cmbEspecialidad2.Size = New System.Drawing.Size(233, 21)
         Me.cmbEspecialidad2.TabIndex = 21
@@ -938,7 +938,7 @@ Partial Class frmMedico
         Me.Label18.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(43, 37)
+        Me.Label18.Location = New System.Drawing.Point(29, 37)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(84, 15)
         Me.Label18.TabIndex = 132
@@ -950,7 +950,7 @@ Partial Class frmMedico
         Me.cmbEspecialidad1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cmbEspecialidad1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbEspecialidad1.FormattingEnabled = True
-        Me.cmbEspecialidad1.Location = New System.Drawing.Point(138, 33)
+        Me.cmbEspecialidad1.Location = New System.Drawing.Point(124, 33)
         Me.cmbEspecialidad1.Name = "cmbEspecialidad1"
         Me.cmbEspecialidad1.Size = New System.Drawing.Size(233, 21)
         Me.cmbEspecialidad1.TabIndex = 20
@@ -959,7 +959,7 @@ Partial Class frmMedico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(999, 633)
+        Me.ClientSize = New System.Drawing.Size(971, 554)
         Me.Controls.Add(Me.tbcOtrosPagos)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "frmMedico"

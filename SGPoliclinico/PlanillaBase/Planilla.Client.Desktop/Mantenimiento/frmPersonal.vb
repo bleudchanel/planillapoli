@@ -17,6 +17,7 @@ Public Class frmRemuneracionBasica
     Private _areas As IEnumerable(Of AreaServicio)
     Private _cargos As IEnumerable(Of Cargo)
     Private _fondos As IEnumerable(Of FondoPensiones)
+    Private _grados As List(Of String)
 
 #Region "Text Monto"
 
@@ -74,6 +75,14 @@ Public Class frmRemuneracionBasica
 
         ComboBoxBase()
         Me.ActiveControl = dgvPagoDctoBasico
+        _grados = New List(Of String)
+
+        _grados.Add("Técnico")
+        _grados.Add("Técnico Superior")
+        _grados.Add("Licenciado")
+        _grados.Add("Doctor")
+        _grados.Add("Doctora")
+        _grados.Add("Otro")
     End Sub
 
     Private Sub ComboBoxBase()
@@ -100,6 +109,22 @@ Public Class frmRemuneracionBasica
         cmbEstadoCivil.DisplayMember = "EstadoCivil"
         cmbEstadoCivil.ValueMember = "Id"
         cmbEstadoCivil.SelectedValue = 1
+
+        Dim dtGrado As New DataTable
+        dtGrado.Columns.Add("Id", GetType(String))
+        dtGrado.Columns.Add("Descripcion", GetType(String))
+        dtGrado.Rows.Add("Técnico", "Técnico")
+        dtGrado.Rows.Add("Técnico Superior", "Técnico Superior")
+        dtGrado.Rows.Add("Licenciado", "Licenciado")
+        dtGrado.Rows.Add("Doctor", "Doctor")
+        dtGrado.Rows.Add("Doctora", "Doctora")
+        dtGrado.Rows.Add("Otro", "Otro")
+        cmbGrado.DataSource = dtGrado
+        cmbGrado.ValueMember = "Id"
+        cmbGrado.DisplayMember = "Descripcion"
+
+
+
 
         _ubigeos = variableManager.GetUbigeo()
         Dim dtUbigeo As New DataTable
@@ -270,7 +295,15 @@ Public Class frmRemuneracionBasica
             dtpFecIngreso.Value = _personaActual.FecIngreso
             cmbDistrito.SelectedValue = _personaActual.IdUbigeo
             cmbEstudios.SelectedIndex = cmbEstudios.FindString(_personaActual.Estudios.Trim)
-            txtGrado.Text = _personaActual.Grado
+            If (_grados.Contains(_personaActual.Grado)) Then
+                cmbGrado.SelectedValue = _personaActual.Grado
+                txtGrado.Visible = False
+            Else
+                cmbGrado.SelectedValue = "Otro"
+                txtGrado.Text = _personaActual.Grado
+                txtGrado.Visible = True
+            End If
+
             txtNroColegiatura.Text = _personaActual.NumCol
             cmbArea.SelectedValue = _personaActual.IdAreaServicio
             cmbCargo.SelectedValue = _personaActual.IdCargo
@@ -328,7 +361,7 @@ Public Class frmRemuneracionBasica
             Dim dis = (From dist In _ubigeos Where dist.IdUbigeo = _personaActual.IdUbigeo Select dist).FirstOrDefault()
             _personaActual.CodDistrito = dis.CODDIS
             _personaActual.Estudios = cmbEstudios.Text
-            _personaActual.Grado = txtGrado.Text
+            _personaActual.Grado = If(cmbGrado.SelectedValue = "Otro", txtGrado.Text, cmbGrado.Text)
             _personaActual.NumCol = txtNroColegiatura.Text.Trim()
             _personaActual.IdAreaServicio = CInt(cmbArea.SelectedValue)
             Dim area = (From are In _areas Where are.IdAreaServicio = _personaActual.IdAreaServicio Select are).FirstOrDefault()
@@ -363,7 +396,9 @@ Public Class frmRemuneracionBasica
             Dim fondo = (From fon In _fondos Where fon.IdFondoPen = CInt(cmbFondoPen.SelectedValue) Select fon).FirstOrDefault()
             Dim nuevoPersonal As New Personal(txtDni.Text, txtApellidoPaterno.Text, txtApellidoMaterno.Text, txtNombres.Text, txtDireccion.Text,
                                               dis.IdUbigeo, dis.CODDIS, dtpFecNac.Value, txtTelefono.Text, txtCelular.Text, txtEmail.Text, txtSexo.Text, cmbEstadoCivil.SelectedValue,
-                                              txtNumHijos.Text, dtpFecIngreso.Value, cmbEstudios.Text, txtGrado.Text, txtNroColegiatura.Text, area.IdAreaServicio, area.CodAre,
+                                              txtNumHijos.Text, dtpFecIngreso.Value, cmbEstudios.Text,
+                                              If(cmbGrado.SelectedValue = "Otro", txtGrado.Text, cmbGrado.Text),
+                                              txtNroColegiatura.Text, area.IdAreaServicio, area.CodAre,
                                               cargo.IdCargo, cargo.CodCar, fondo.IdFondoPen, fondo.CodFon, cmbTipoComision.SelectedValue.ToString(), txtCUSPP.Text, txtEVida.Text, txtRemuneracionBasica.Text,
                                               txtAsignacionFamiliar.Text, txtRiesgoCaja.Text, txtSCTR.Text, txtHorasLaborales.Text, txtObservacion.Text, cmbEstado.SelectedValue.ToString(), dtpFechaBaja.Value,
                                               txtEntidadCTS.Text, txtCuentaCTS.Text, If(Me.chkCustomDiasHoras.CheckState = CheckState.Checked, 1, 0), If(Me.chkCustomDiasHoras.CheckState = CheckState.Checked, nudDias.Value, 0),
@@ -388,5 +423,22 @@ Public Class frmRemuneracionBasica
 
     Private Sub chkCustomDiasHoras_CheckedChanged(sender As Object, e As EventArgs) Handles chkCustomDiasHoras.CheckedChanged
         Me.grpCustom.Enabled = chkCustomDiasHoras.Checked
+    End Sub
+
+    Private Sub cmbGrado_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cmbGrado.SelectionChangeCommitted
+        If cmbGrado.SelectedValue = "Otro" Then
+            txtGrado.Visible = True
+            Me.ActiveControl = txtGrado
+        Else
+            txtGrado.Visible = False
+        End If
+    End Sub
+
+    Private Sub dgvPagoDctoBasico_KeyDown(sender As Object, e As KeyEventArgs) Handles dgvPagoDctoBasico.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            e.SuppressKeyPress = True
+            Me.btnModificar.PerformClick()
+
+        End If
     End Sub
 End Class
