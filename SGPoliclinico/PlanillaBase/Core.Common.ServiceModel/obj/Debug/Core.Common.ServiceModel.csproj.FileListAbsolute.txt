@@ -15,3 +15,9 @@ C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.ServiceModel
 C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.ServiceModel\obj\Debug\Core.Common.ServiceModel.csproj.CoreCompileInputs.cache
 C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.ServiceModel\obj\Debug\Core.Common.ServiceModel.dll
 C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.ServiceModel\obj\Debug\Core.Common.ServiceModel.pdb
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.ServiceModel\bin\Debug\Core.Common.ServiceModel.dll
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.ServiceModel\bin\Debug\Core.Common.ServiceModel.pdb
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.ServiceModel\obj\Debug\Core.Common.ServiceModel.csprojAssemblyReference.cache
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.ServiceModel\obj\Debug\Core.Common.ServiceModel.csproj.CoreCompileInputs.cache
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.ServiceModel\obj\Debug\Core.Common.ServiceModel.dll
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.ServiceModel\obj\Debug\Core.Common.ServiceModel.pdb

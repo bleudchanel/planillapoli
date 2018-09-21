@@ -28,3 +28,11 @@ C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Client.Entities
 C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Client.Entities\obj\Debug\Planilla.Client.Entities.csproj.CopyComplete
 C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Client.Entities\obj\Debug\Planilla.Client.Entities.dll
 C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Client.Entities\obj\Debug\Planilla.Client.Entities.pdb
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Client.Entities\bin\Debug\Planilla.Client.Entities.dll
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Client.Entities\bin\Debug\Planilla.Client.Entities.pdb
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Client.Entities\bin\Debug\FluentValidation.xml
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Client.Entities\obj\Debug\Planilla.Client.Entities.csprojAssemblyReference.cache
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Client.Entities\obj\Debug\Planilla.Client.Entities.csproj.CoreCompileInputs.cache
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Client.Entities\obj\Debug\Planilla.Client.Entities.csproj.CopyComplete
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Client.Entities\obj\Debug\Planilla.Client.Entities.dll
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Client.Entities\obj\Debug\Planilla.Client.Entities.pdb

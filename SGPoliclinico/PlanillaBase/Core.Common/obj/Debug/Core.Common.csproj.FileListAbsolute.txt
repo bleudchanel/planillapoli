@@ -60,3 +60,13 @@ C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\obj\Debug\Co
 C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\obj\Debug\Core.Common.csproj.CopyComplete
 C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\obj\Debug\Core.Common.dll
 C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\obj\Debug\Core.Common.pdb
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\bin\Debug\Core.Common.dll.config
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\bin\Debug\Core.Common.dll
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\bin\Debug\Core.Common.pdb
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\bin\Debug\Core.Common.Contracts.dll
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\bin\Debug\Core.Common.Contracts.pdb
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\obj\Debug\Core.Common.csprojAssemblyReference.cache
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\obj\Debug\Core.Common.csproj.CoreCompileInputs.cache
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\obj\Debug\Core.Common.csproj.CopyComplete
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\obj\Debug\Core.Common.dll
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Core.Common\obj\Debug\Core.Common.pdb

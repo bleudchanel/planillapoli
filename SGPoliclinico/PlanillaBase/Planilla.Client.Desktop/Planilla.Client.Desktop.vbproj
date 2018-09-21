@@ -227,6 +227,12 @@
     <Compile Include="Mantenimiento\frmResumenAnualPlanillas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Mantenimiento\frmSueldoMinimo.Designer.vb">
+      <DependentUpon>frmSueldoMinimo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\frmSueldoMinimo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="modPersonal.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -340,6 +346,9 @@
     <EmbeddedResource Include="Mantenimiento\frmResumenAnualPlanillas.resx">
       <DependentUpon>frmResumenAnualPlanillas.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\frmSueldoMinimo.resx">
+      <DependentUpon>frmSueldoMinimo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -371,7 +380,7 @@
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
     <None Include="My Project\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>

@@ -216,6 +216,10 @@ Public Class frmGenerarPlanilla
     'End Sub
 
     Private Sub btnGenerar_Click(sender As Object, e As EventArgs) Handles btnGenerar.Click
+        If MsgBox("La configuración actual del sueldo mínimo tiene un valor de : S/." & Planilla.Business.Entities.Properties.Settings.Default.SueldoMinimo & vbCrLf & " ¿Desea Continuar?" & vbCrLf &
+                  "Puede cambiar la configuración en el menú : Configuración/Sueldo Mínimo.", MsgBoxStyle.YesNo) = MsgBoxResult.No Then
+            Exit Sub
+        End If
         Try
             _planillasRemuneracion = planillaManager.GetPlanillaPeriodo(txtAnioAProgramar.Text, cmbMes.SelectedValue)
             Listar()

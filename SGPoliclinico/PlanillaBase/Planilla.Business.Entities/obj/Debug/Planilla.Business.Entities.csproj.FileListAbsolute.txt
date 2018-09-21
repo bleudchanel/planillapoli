@@ -70,3 +70,17 @@ C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Entiti
 C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Entities\obj\Debug\Planilla.Business.Entities.csproj.CopyComplete
 C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Entities\obj\Debug\Planilla.Business.Entities.dll
 C:\Users\Wilmer\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Entities\obj\Debug\Planilla.Business.Entities.pdb
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Entities\bin\Debug\Planilla.Business.Entities.dll.config
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Entities\bin\Debug\Planilla.Business.Entities.dll
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Entities\bin\Debug\Planilla.Business.Entities.pdb
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Entities\bin\Debug\Core.Common.Contracts.dll
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Entities\bin\Debug\Core.Common.dll
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Entities\bin\Debug\FluentValidation.dll
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Entities\bin\Debug\Core.Common.Contracts.pdb
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Entities\bin\Debug\Core.Common.pdb
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Entities\bin\Debug\Core.Common.dll.config
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Entities\obj\Debug\Planilla.Business.Entities.csprojAssemblyReference.cache
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Entities\obj\Debug\Planilla.Business.Entities.csproj.CoreCompileInputs.cache
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Entities\obj\Debug\Planilla.Business.Entities.csproj.CopyComplete
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Entities\obj\Debug\Planilla.Business.Entities.dll
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Entities\obj\Debug\Planilla.Business.Entities.pdb

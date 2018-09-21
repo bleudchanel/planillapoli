@@ -10,6 +10,7 @@ using System.ComponentModel.Composition;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace Planilla.Business
 {
@@ -231,11 +232,12 @@ namespace Planilla.Business
                 //decimal MontoComVar = (personal.RemBas * porcentajeComVar) ?? 0;
                 //decimal MontoPriSeg = (personal.RemBas * porcentajePriSeg) ?? 0;
                 //decimal totalDescuento = MontoOnp + MontoAporteObl + MontoComVar + MontoPriSeg;
-                
+                //string sueldo = ConfigurationManager.AppSettings["SueldoMinimo"];
+                //decimal sueldoMinimo = Decimal.Parse(sueldo);
                 decimal porcentajeSCTR = ((personal.SCTR == "N") ? 0 : aporteEmpleadorSCTR.Porcentaje) ?? 0;
                 decimal porcentajeESSALUD = (aporteEmpleadorESSALUD.Porcentaje) ?? 0;
-                decimal montoESSALUD = (personal.RemBas * aporteEmpleadorESSALUD.Porcentaje) ?? 0;
-                decimal montoSCTR = (personal.RemBas * porcentajeSCTR) ?? 0;
+                //decimal montoESSALUD = ((personal.RemBas) * aporteEmpleadorESSALUD.Porcentaje) ?? 0;
+                //decimal montoSCTR = ((personal.RemBas) * porcentajeSCTR) ?? 0;
                // decimal totalAporte = montoESSALUD + montoSCTR;
 
                 PlanillaRemuneracion planillaPersona = new PlanillaRemuneracion(0, Periodo, personal.IdPersonal, personal.CodPer, personal.IdCargo ?? null,

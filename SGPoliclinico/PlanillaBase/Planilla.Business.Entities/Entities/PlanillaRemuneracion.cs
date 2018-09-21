@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace Planilla.Business.Entities
 {
@@ -44,7 +45,7 @@ namespace Planilla.Business.Entities
             HE = hE;
             OtrIng = otrIng;
             TotIng = (RemBas + AsiFam + Subsidio + Gratif + RemVac + RieCaj + Reinte + HE + OtrIng);
-
+            decimal sueldo = Properties.Settings.Default.SueldoMinimo;
             //Descuentos
             PorONP = porONP;
             PorApoObl = porApoObl;
@@ -64,7 +65,7 @@ namespace Planilla.Business.Entities
             //Aportes
             PorEssalud = porEssalud;
             PorSCTR = porSCTR;
-            Essalud = Math.Round((TotIng ?? 0) * (PorEssalud ?? 0), 2, MidpointRounding.AwayFromZero);
+            Essalud = Math.Round(((TotIng ?? 0) > sueldo ? (TotIng ?? 0) : sueldo) * (PorEssalud ?? 0), 2, MidpointRounding.AwayFromZero);
             SCTR = Math.Round((TotIng ?? 0) * (PorSCTR ?? 0), 2, MidpointRounding.AwayFromZero);
             TotApo = Essalud + SCTR;
 
@@ -237,8 +238,8 @@ namespace Planilla.Business.Entities
             TotDes = (ONP + ApoObl + PriSeg + ComVar + Quinta + OtrDes);
 
             Neto = TotIng - TotDes;
-
-            Essalud = Math.Round((TotIng ?? 0) * (PorEssalud ?? 0), 2, MidpointRounding.AwayFromZero);
+            decimal sueldo = Properties.Settings.Default.SueldoMinimo;
+            Essalud = Math.Round(((TotIng ?? 0) > sueldo ? (TotIng ?? 0) : sueldo) * (PorEssalud ?? 0), 2, MidpointRounding.AwayFromZero);
             SCTR = Math.Round((TotIng ?? 0) * (PorSCTR ?? 0), 2, MidpointRounding.AwayFromZero);
             TotApo = Essalud + SCTR;
 

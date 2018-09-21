@@ -29,6 +29,7 @@ Partial Class frmPrincipal
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PersonaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PersonalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MédicoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TablaHonorariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EspecialidadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProcedimientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -58,7 +59,8 @@ Partial Class frmPrincipal
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.lblPrDatos = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.MédicoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConfiguraciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SueldoMínimoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -66,7 +68,7 @@ Partial Class frmPrincipal
         'MenuStrip
         '
         Me.MenuStrip.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SistemaToolStripMenuItem, Me.PersonaToolStripMenuItem, Me.TablaHonorariosToolStripMenuItem, Me.TablasPlanillasToolStripMenuItem, Me.TablaPlanillasToolStripMenuItem, Me.AFPNetToolStripMenuItem, Me.AnálisisYProyeccionesToolStripMenuItem, Me.SUNATToolStripMenuItem, Me.CTSToolStripMenuItem})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SistemaToolStripMenuItem, Me.PersonaToolStripMenuItem, Me.TablaHonorariosToolStripMenuItem, Me.TablasPlanillasToolStripMenuItem, Me.TablaPlanillasToolStripMenuItem, Me.AFPNetToolStripMenuItem, Me.AnálisisYProyeccionesToolStripMenuItem, Me.SUNATToolStripMenuItem, Me.CTSToolStripMenuItem, Me.ConfiguraciónToolStripMenuItem})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.Name = "MenuStrip"
         Me.MenuStrip.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
@@ -83,7 +85,7 @@ Partial Class frmPrincipal
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(111, 26)
         Me.SalirToolStripMenuItem.Text = "S&alir"
         '
         'PersonaToolStripMenuItem
@@ -96,8 +98,14 @@ Partial Class frmPrincipal
         'PersonalToolStripMenuItem
         '
         Me.PersonalToolStripMenuItem.Name = "PersonalToolStripMenuItem"
-        Me.PersonalToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
+        Me.PersonalToolStripMenuItem.Size = New System.Drawing.Size(139, 26)
         Me.PersonalToolStripMenuItem.Text = "Personal"
+        '
+        'MédicoToolStripMenuItem
+        '
+        Me.MédicoToolStripMenuItem.Name = "MédicoToolStripMenuItem"
+        Me.MédicoToolStripMenuItem.Size = New System.Drawing.Size(139, 26)
+        Me.MédicoToolStripMenuItem.Text = "Médico"
         '
         'TablaHonorariosToolStripMenuItem
         '
@@ -275,11 +283,18 @@ Partial Class frmPrincipal
         Me.lblPrDatos.Size = New System.Drawing.Size(37, 17)
         Me.lblPrDatos.Text = "Datos"
         '
-        'MédicoToolStripMenuItem
+        'ConfiguraciónToolStripMenuItem
         '
-        Me.MédicoToolStripMenuItem.Name = "MédicoToolStripMenuItem"
-        Me.MédicoToolStripMenuItem.Size = New System.Drawing.Size(180, 26)
-        Me.MédicoToolStripMenuItem.Text = "Médico"
+        Me.ConfiguraciónToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SueldoMínimoToolStripMenuItem})
+        Me.ConfiguraciónToolStripMenuItem.Name = "ConfiguraciónToolStripMenuItem"
+        Me.ConfiguraciónToolStripMenuItem.Size = New System.Drawing.Size(120, 25)
+        Me.ConfiguraciónToolStripMenuItem.Text = "Configuración"
+        '
+        'SueldoMínimoToolStripMenuItem
+        '
+        Me.SueldoMínimoToolStripMenuItem.Name = "SueldoMínimoToolStripMenuItem"
+        Me.SueldoMínimoToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
+        Me.SueldoMínimoToolStripMenuItem.Text = "Sueldo Mínimo"
         '
         'frmPrincipal
         '
@@ -337,4 +352,6 @@ Partial Class frmPrincipal
     Friend WithEvents GestiónDeCTSToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProyecciónDePagosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MédicoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ConfiguraciónToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SueldoMínimoToolStripMenuItem As ToolStripMenuItem
 End Class

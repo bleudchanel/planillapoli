@@ -4,7 +4,6 @@ Imports System.Threading
 Imports Microsoft.Office.Interop
 Imports System.Globalization
 Imports System.Configuration
-Imports Microsoft.Practices.EnterpriseLibrary.Data.Configuration
 Imports System.IO
 Imports System.Xml
 Imports System.Text

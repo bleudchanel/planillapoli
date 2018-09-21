@@ -285,6 +285,20 @@ Public Class frmPrincipal
         End If
     End Sub
 
+    Private Sub SueldoMínimoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SueldoMínimoToolStripMenuItem.Click
+        If SingletonForm(frmSueldoMinimo) = True Then
+            Dim ChildForm As New frmSueldoMinimo
+
+            ChildForm.StartPosition = FormStartPosition.Manual
+            ChildForm.Left = 0
+            ChildForm.Top = 0
+            ChildForm.MdiParent = Me
+            ChildForm.Show()
+        Else
+            DevolverEnfoque(frmSueldoMinimo)
+        End If
+    End Sub
+
 
 
 
