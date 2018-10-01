@@ -188,14 +188,16 @@ Public Class frmImprimirPlanilla
         dtBoletasPre.Columns.Add("PorSCTR")
 
         For Each _planilla In _planillasRemuneracion
+            Dim diasLab As Int16 = _planilla.DiasLab - (If(_planilla.DiasIncapacidad Is Nothing, 0, _planilla.DiasIncapacidad) +
+                If(_planilla.DiasSinGoceHaber Is Nothing, 0, _planilla.DiasSinGoceHaber) + If(_planilla.DiasVac Is Nothing, 0, _planilla.DiasVac))
             dtBoletasPre.Rows.Add(_planilla.CodPer,
                                   _planilla.NombrePersona,
                                   _planilla.FechaIngreso.ToString("dd/MM/yy"),
                                   _planilla.Dni,
                                   _planilla.Cargo,
                                    _planilla.Periodo,
-                                   _planilla.DiasLab,
-                                   _planilla.HorasLab * _planilla.DiasLab,
+                                   diasLab,
+                                   _planilla.HorasLab * diasLab,
                                    _planilla.AFP + " " + _planilla.CUSPP,
                                    Date.Now.ToString("dd/MM/yy"),
                                    If(_planilla.DiasVac Is Nothing, 0, _planilla.DiasVac),

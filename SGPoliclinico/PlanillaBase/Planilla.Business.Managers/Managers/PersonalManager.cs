@@ -58,6 +58,12 @@ namespace Planilla.Business.Managers
             return medicoRepository.Get();
         }
 
+        public void Baja()
+        {
+            IPersonalRepository personalRepository = _DataRepositoryFactory.GetDataRepository<IPersonalRepository>();
+            personalRepository.BajaPersonal();
+        }
+
         public IEnumerable<PlanillaRemuneracion> GetPlanillaPeriodo(int Anio, int Mes)
         {
             IEnumerable<PlanillaRemuneracion> resultado = new List<PlanillaRemuneracion>();
@@ -95,6 +101,12 @@ namespace Planilla.Business.Managers
         {
             IPlanillaRemuneracionRepository remuneracionRepository = _DataRepositoryFactory.GetDataRepository<IPlanillaRemuneracionRepository>();
             IVacacionesRepository vacacionesRepository = _DataRepositoryFactory.GetDataRepository<IVacacionesRepository>();
+            if (planillaRemuneracion.IniIncapacidad != null && planillaRemuneracion.FinIncapacidad != null)
+                planillaRemuneracion.DiasIncapacidad = Convert.ToInt32(((planillaRemuneracion.FinIncapacidad ?? DateTime.Now) - (planillaRemuneracion.IniIncapacidad ?? DateTime.Now)).TotalDays) + 1;
+            if (planillaRemuneracion.InicioSinGoceHaber != null && planillaRemuneracion.FinSinGoceHaber  != null)
+                planillaRemuneracion.DiasSinGoceHaber = Convert.ToInt32(((planillaRemuneracion.FinSinGoceHaber ?? DateTime.Now) - (planillaRemuneracion.InicioSinGoceHaber ?? DateTime.Now)).TotalDays) + 1;
+            if (planillaRemuneracion.IniVac != null && planillaRemuneracion.FinVac  != null)
+                planillaRemuneracion.DiasVac = Convert.ToInt32(((planillaRemuneracion.FinVac ?? DateTime.Now) - (planillaRemuneracion.IniVac ?? DateTime.Now)).TotalDays) + 1;
             var Persona = remuneracionRepository.Update(planillaRemuneracion);
             Persona.VacacionesPeriodo = vacacionesRepository.Update(planillaRemuneracion.VacacionesPeriodo);
             return Persona;

@@ -1,8 +1,11 @@
 ﻿Imports System.Windows.Forms
+Imports Planilla.Business.Entities
+Imports Planilla.Business.Managers
+Imports Planilla.Client.Utils.clsUtils
 
 Public Class frmPrincipal
 
-
+    Private personalManager As New PersonalManager
 
     Private Function SingletonForm(ByVal FormUnico As Form) As Boolean
         Dim Rpta As Boolean = True
@@ -31,6 +34,7 @@ Public Class frmPrincipal
     Private Sub frmPrincipal_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'modPlanilla.intPRFid = 1 ' Reemplazar
         'btnPeriodo.PerformClick()
+        personalManager.Baja()
     End Sub
 
     Private Sub PersonalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PersonalToolStripMenuItem.Click

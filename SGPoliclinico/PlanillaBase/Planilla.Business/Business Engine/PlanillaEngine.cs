@@ -41,7 +41,7 @@ namespace Planilla.Business
             List<PlanillaCTS> resultado = new List<PlanillaCTS>();
 
             var planillasPeriodo = planillaRemuneracionRepository.PlanillasEnPeriodoPorCTS(Mes, Anio);
-            IEnumerable<Personal> personalActivo = personalRepository.GetPersonalActivo();
+            IEnumerable<Personal> personalActivo = personalRepository.GetPersonalActivo(Anio, Mes);
             foreach(Personal personal in personalActivo)
             {
                 var planillas = planillasPeriodo.Where(o => o.IdPersonal == personal.IdPersonal && o.TipoPlan == "N");
@@ -71,7 +71,7 @@ namespace Planilla.Business
             List<PlanillaRemuneracion> resultado = new List<PlanillaRemuneracion>();
 
             var planillasPeriodo = planillaRemuneracionRepository.PlanillasEnPeriodoPorGrati(Mes, Anio);
-            IEnumerable<Personal> personalActivo = personalRepository.GetPersonalActivo();
+            IEnumerable<Personal> personalActivo = personalRepository.GetPersonalActivo(Anio, Mes);
             foreach (Personal personal in personalActivo)
             {
                 var planillas = planillasPeriodo.Where(o => o.IdPersonal == personal.IdPersonal && o.TipoPlan == "N");
@@ -213,7 +213,7 @@ namespace Planilla.Business
 
            
             List<PlanillaRemuneracion> remuneracion = new List<PlanillaRemuneracion>();
-            IEnumerable<Personal> personalActivo = personalRepository.GetPersonalActivo();
+            IEnumerable<Personal> personalActivo = personalRepository.GetPersonalActivo(Anio, Mes);
             foreach(Personal personal in personalActivo)
             {
                 FondoPensiones fondoPensiones = fondoRepository.Get(personal.IdFondoPen ?? 0);

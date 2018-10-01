@@ -23,7 +23,7 @@ namespace Planilla.Business.Entities
             diasLab, int? horasLab, DateTime? iniVac, DateTime? finVac, int? diasVac, 
             DateTime? iniIncapacidad, DateTime? finIncapacidad, int? diasIncapacidad, 
             DateTime? inicioSinGoceHaber, DateTime? finSinGoceHaber, int? diasSinGoceHaber, 
-            string cerrado, string tipoPlan)
+            string cerrado, string tipoPlan) : this()
         {
             IdPlanilla = idPlanilla;
             Periodo = periodo;
@@ -86,11 +86,21 @@ namespace Planilla.Business.Entities
             Aumento = 0;
             NuevaRem = 0;
             Corregido = "F";
+
+            // esIncapacidad = SiEsIncapacidad;
+            if (IniIncapacidad != null && FinIncapacidad != null)
+            {
+                esIncapacidad = true;
+            }
+            else
+            {
+                esIncapacidad = false;
+            }
         }
 
         public PlanillaRemuneracion()
         {
-
+           
         }
 
         public PlanillaRemuneracion(PlanillaRemuneracion planillaBase)
@@ -149,6 +159,8 @@ namespace Planilla.Business.Entities
             Aumento = planillaBase.Aumento;
             NuevaRem = planillaBase.RemBas ?? 0;
             Corregido = planillaBase.Corregido;
+            esIncapacidad = planillaBase.esIncapacidad;
+            Incapacidad = planillaBase.Incapacidad;
         }
 
         public void SetRemBas(decimal remBas)
@@ -239,7 +251,16 @@ namespace Planilla.Business.Entities
 
             Neto = TotIng - TotDes;
             decimal sueldo = Properties.Settings.Default.SueldoMinimo;
-            Essalud = Math.Round(((TotIng ?? 0) > sueldo ? (TotIng ?? 0) : sueldo) * (PorEssalud ?? 0), 2, MidpointRounding.AwayFromZero);
+
+            if(esIncapacidad == true)
+            {
+                Essalud = Math.Round((TotIng ?? 0) * (PorEssalud ?? 0), 2, MidpointRounding.AwayFromZero);
+            }
+            else
+            {
+                Essalud = Math.Round(((TotIng ?? 0) > sueldo ? (TotIng ?? 0) : sueldo) * (PorEssalud ?? 0), 2, MidpointRounding.AwayFromZero);
+            }       
+            
             SCTR = Math.Round((TotIng ?? 0) * (PorSCTR ?? 0), 2, MidpointRounding.AwayFromZero);
             TotApo = Essalud + SCTR;
 
@@ -346,7 +367,8 @@ namespace Planilla.Business.Entities
         public string TipoPlan { get; set; }
         [DataMember]
         public string Corregido { get; set; }
-
+        [DataMember]
+        public string Incapacidad { get; set; }
 
         public string NombrePersona { get; set; }
         public string ApellidoPaterno { get; set; }
@@ -360,6 +382,8 @@ namespace Planilla.Business.Entities
         public string Area { get; set; }
         public decimal Aumento { get; set; }
         public decimal NuevaRem { get; set; }
+
+        public bool esIncapacidad { get; set; }
 
         public Vacaciones VacacionesPeriodo { get; set; }
 

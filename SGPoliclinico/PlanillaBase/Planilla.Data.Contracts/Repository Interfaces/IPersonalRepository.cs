@@ -10,7 +10,8 @@ namespace Planilla.Data.Contracts
 {
     public interface IPersonalRepository : IDataRepository<Personal>
     {
-        IEnumerable<Personal> GetPersonalActivo();
+        IEnumerable<Personal> GetPersonalActivo(int Anio, int Mes);
         Personal AddPersonalComplete(Personal entity);
+        void BajaPersonal();
     }
 }

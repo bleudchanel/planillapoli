@@ -257,7 +257,7 @@ Public Class frmGenerarPlanilla
             Me.btnAddEjecucion.Enabled = False
             Me.btnGenerar.Enabled = False
             Me.btnCerrarPlanilla.Enabled = False
-
+            Me.lblIncapacidad.Text = _planillaActual.Incapacidad
             Me.dgvVacaciones.Rows.Add()
             With Me.dgvVacaciones.Rows(Me.dgvVacaciones.Rows.Count - 1)
                 .Cells(Vacaciones.Name).Value = "Programado"
@@ -460,6 +460,13 @@ Public Class frmGenerarPlanilla
     End Sub
 
     Private Sub btnIncapacidad_Click(sender As Object, e As EventArgs) Handles btnIncapacidad.Click
+        If MsgBox("¿Es una incapacidad por Maternidad? Si selecciona NO, se tratará como una Incapacidad por Salud.", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
+            _planillaActual.Incapacidad = "Incapacidad Por Maternidad"
+            lblIncapacidad.Text = "Incapacidad Por Maternidad"
+        Else
+            _planillaActual.Incapacidad = "Incapacidad Por Salud"
+            lblIncapacidad.Text = "Incapacidad Por Salud"
+        End If
         Me.grpIncapacidad.Enabled = True
         Me.ActiveControl = Me.dtpInicioIncapacidad
     End Sub
@@ -473,6 +480,7 @@ Public Class frmGenerarPlanilla
         MsgBox("Actualice Remuneración Básica. Presione ENTER luego de hacer un cambio.")
         _planillaActual.IniIncapacidad = dtpInicioIncapacidad.Value
         _planillaActual.FinIncapacidad = dtpFinIncapacidad.Value
+        _planillaActual.esIncapacidad = True
         Me.grpIncapacidad.Enabled = False
         Me.ActiveControl = Me.txtRemuneracionBasica
     End Sub
@@ -573,6 +581,18 @@ Public Class frmGenerarPlanilla
     Private Sub dtpFinVacaciones_KeyDown(sender As Object, e As KeyEventArgs) Handles dtpFinVacaciones.KeyDown
         If e.KeyCode = Keys.Enter Then
             btnGuardarVacaciones.PerformClick()
+        End If
+    End Sub
+
+    Private Sub btnRemoveIncapacidad_Click(sender As Object, e As EventArgs) Handles btnRemoveIncapacidad.Click
+        If MsgBox("¿Está seguro de que desea removar la Incapacidad?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
+            _planillaActual.IniIncapacidad = Nothing
+            _planillaActual.FinIncapacidad = Nothing
+            _planillaActual.Incapacidad = Nothing
+            _planillaActual.esIncapacidad = False
+            lblIncapacidad.Text = "Pendiente a remover."
+            Me.grpIncapacidad.Enabled = False
+            Me.ActiveControl = Me.txtRemuneracionBasica
         End If
     End Sub
 

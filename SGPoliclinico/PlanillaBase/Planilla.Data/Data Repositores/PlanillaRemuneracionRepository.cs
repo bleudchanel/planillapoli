@@ -48,10 +48,23 @@ namespace Planilla.Data
         {
             using (PlanillaContext entityContext = new PlanillaContext())
             {
-                return (from e in entityContext.PlanillaRemuneracionSet
+                var ans = (from e in entityContext.PlanillaRemuneracionSet
                         where e.Periodo == Periodo && e.TipoPlan == Tipo && (IdPersonal == 0 || e.IdPersonal == IdPersonal)
                         orderby e.CodPer ascending
                         select e).ToFullyLoaded();
+                foreach(var a in ans)
+                {
+                    if (a.IniIncapacidad != null && a.FinIncapacidad != null)
+                    {
+                        a.esIncapacidad = true;
+                    }
+                    else
+                    {
+                        a.esIncapacidad = false;
+                    }
+                }
+
+                return ans;
             }
         }
 

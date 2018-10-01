@@ -43,17 +43,32 @@ namespace Planilla.Data
                     select e).FirstOrDefault();
         }
 
-        public IEnumerable<Personal> GetPersonalActivo()
+        public IEnumerable<Personal> GetPersonalActivo(int Anio, int Mes)
         {
             using (PlanillaContext entityContext = new PlanillaContext())
             {
                 return (from e in entityContext.PersonalSet
-                        where e.Estado == "A"
+                        where e.Estado == "A" && e.FecBaja <= new DateTime(Anio,Mes,DateTime.DaysInMonth(Anio,Mes))
                         orderby e.CodPer descending
                         select e).ToFullyLoaded();
             }
         }
 
+        public void BajaPersonal()
+        {
+            using (PlanillaContext entityContext = new PlanillaContext())
+            {
+                var personal = (from e in entityContext.PersonalSet where e.Estado == "A" select e).ToFullyLoaded();
+                foreach(var persona in personal)
+                {
+                    if (persona.FecBaja >= new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month)))
+                    {
+                        persona.Estado = "B";
+                        Update(persona);
+                    }
+                }
+            }
+        }
 
         public Personal AddPersonalComplete(Personal entity)
         {
