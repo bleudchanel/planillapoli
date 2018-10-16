@@ -104,8 +104,6 @@ C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Data\bin\Debug\Cor
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Data\bin\Debug\Planilla.Business.Entities.pdb
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Data\bin\Debug\Planilla.Business.Entities.dll.config
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Data\bin\Debug\Planilla.Data.Contracts.pdb
-C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Data\bin\Debug\EntityFramework.xml
-C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Data\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Data\obj\Debug\Planilla.Data.csprojAssemblyReference.cache
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Data\obj\Debug\Planilla.Data.csproj.CoreCompileInputs.cache
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Data\obj\Debug\Planilla.Data.csproj.CopyComplete

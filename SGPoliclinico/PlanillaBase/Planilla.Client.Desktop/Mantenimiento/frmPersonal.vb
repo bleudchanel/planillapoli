@@ -293,7 +293,7 @@ Public Class frmRemuneracionBasica
             cmbEstadoCivil.SelectedValue = If(_personaActual.EstadoCivil Is Nothing, "S", _personaActual.EstadoCivil)  ''cmbEstadoCivil.FindString(_personaActual.EstadoCivil.Trim)
             txtNumHijos.Text = _personaActual.NumHij
             dtpFecIngreso.Value = _personaActual.FecIngreso
-            cmbDistrito.SelectedValue = _personaActual.IdUbigeo
+            cmbDistrito.SelectedValue = If(_personaActual.IdUbigeo Is Nothing, 0, _personaActual.IdUbigeo)
             cmbEstudios.SelectedIndex = cmbEstudios.FindString(_personaActual.Estudios.Trim)
             If (_grados.Contains(_personaActual.Grado)) Then
                 cmbGrado.SelectedValue = _personaActual.Grado
@@ -343,52 +343,63 @@ Public Class frmRemuneracionBasica
     Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
 
         If bolEsModificar = True Then
+            Try
+                _personaActual.DNI = Me.txtDni.Text
+                _personaActual.Nombre = txtNombres.Text
+                _personaActual.ApeMaterno = txtApellidoMaterno.Text
+                _personaActual.ApePaterno = txtApellidoPaterno.Text
+                _personaActual.Direccion = txtDireccion.Text
+                _personaActual.FecNac = dtpFecNac.Value
+                _personaActual.Telefono = txtTelefono.Text
+                _personaActual.Celular = txtCelular.Text
+                _personaActual.Email = txtEmail.Text
+                _personaActual.Sex = txtSexo.Text
+                _personaActual.EstadoCivil = cmbEstadoCivil.SelectedValue
+                _personaActual.NumHij = txtNumHijos.Text
+                _personaActual.FecIngreso = dtpFecIngreso.Value
+                If CInt(Me.cmbDistrito.SelectedValue) > 0 Then
+                    _personaActual.IdUbigeo = CInt(Me.cmbDistrito.SelectedValue)
+                End If
+                Dim dis = (From dist In _ubigeos Where dist.IdUbigeo = _personaActual.IdUbigeo Select dist).FirstOrDefault()
+                If IsNothing(dis) = False Then
+                    _personaActual.CodDistrito = dis.CODDIS
+                Else
+                    _personaActual.CodDistrito = "260101"
+                End If
 
-            _personaActual.DNI = Me.txtDni.Text
-            _personaActual.Nombre = txtNombres.Text
-            _personaActual.ApeMaterno = txtApellidoMaterno.Text
-            _personaActual.ApePaterno = txtApellidoPaterno.Text
-            _personaActual.Direccion = txtDireccion.Text
-            _personaActual.FecNac = dtpFecNac.Value
-            _personaActual.Telefono = txtTelefono.Text
-            _personaActual.Celular = txtCelular.Text
-            _personaActual.Email = txtEmail.Text
-            _personaActual.Sex = txtSexo.Text
-            _personaActual.EstadoCivil = cmbEstadoCivil.SelectedValue
-            _personaActual.NumHij = txtNumHijos.Text
-            _personaActual.FecIngreso = dtpFecIngreso.Value
-            _personaActual.IdUbigeo = CInt(Me.cmbDistrito.SelectedValue)
-            Dim dis = (From dist In _ubigeos Where dist.IdUbigeo = _personaActual.IdUbigeo Select dist).FirstOrDefault()
-            _personaActual.CodDistrito = dis.CODDIS
-            _personaActual.Estudios = cmbEstudios.Text
-            _personaActual.Grado = If(cmbGrado.SelectedValue = "Otro", txtGrado.Text, cmbGrado.Text)
-            _personaActual.NumCol = txtNroColegiatura.Text.Trim()
-            _personaActual.IdAreaServicio = CInt(cmbArea.SelectedValue)
-            Dim area = (From are In _areas Where are.IdAreaServicio = _personaActual.IdAreaServicio Select are).FirstOrDefault()
-            _personaActual.CodAre = area.CodAre
-            _personaActual.IdCargo = CInt(cmbCargo.SelectedValue)
-            Dim cargo = (From car In _cargos Where car.IdCargo = _personaActual.IdCargo Select car).FirstOrDefault()
-            _personaActual.CodCar = cargo.CodCar
-            _personaActual.IdFondoPen = CInt(cmbFondoPen.SelectedValue)
-            Dim fondo = (From fon In _fondos Where fon.IdFondoPen = _personaActual.IdFondoPen Select fon).FirstOrDefault()
-            _personaActual.CodFon = fondo.CodFon
-            _personaActual.TipComAFP = cmbTipoComision.SelectedValue.ToString()
-            _personaActual.CUSPP = txtCUSPP.Text
-            _personaActual.EVida = txtEVida.Text.Substring(0, 1)
-            _personaActual.RemBas = txtRemuneracionBasica.Text
-            _personaActual.AsiFam = txtAsignacionFamiliar.Text
-            _personaActual.RieCaj = txtRiesgoCaja.Text
-            _personaActual.SCTR = txtSCTR.Text.Substring(0, 1)
-            _personaActual.HorLab = txtHorasLaborales.Text
-            _personaActual.Estado = cmbEstado.SelectedValue.ToString()
-            _personaActual.EntidadCTS = txtEntidadCTS.Text.Trim()
-            _personaActual.NumCtaCTS = txtCuentaCTS.Text.Trim()
-            _personaActual.Observacion = txtObservacion.Text
-            _personaActual.FecBaja = dtpFechaBaja.Value
-            _personaActual.CustomDiasHoras = If(Me.chkCustomDiasHoras.CheckState = CheckState.Checked, 1, 0)
-            _personaActual.CustomDias = If(Me.chkCustomDiasHoras.CheckState = CheckState.Checked, nudDias.Value, 0)
-            _personaActual.CustomHoras = If(Me.chkCustomDiasHoras.CheckState = CheckState.Checked, nudHoras.Value, 0)
-            Dim pers = personalManager.RegistrarPersonal(_personaActual)
+                _personaActual.Estudios = cmbEstudios.Text
+                _personaActual.Grado = IIf(cmbGrado.SelectedValue = "Otro", txtGrado.Text, cmbGrado.Text)
+                _personaActual.NumCol = txtNroColegiatura.Text.Trim()
+                _personaActual.IdAreaServicio = CInt(cmbArea.SelectedValue)
+                Dim area = (From are In _areas Where are.IdAreaServicio = _personaActual.IdAreaServicio Select are).FirstOrDefault()
+                _personaActual.CodAre = area.CodAre
+                _personaActual.IdCargo = CInt(cmbCargo.SelectedValue)
+                Dim cargo = (From car In _cargos Where car.IdCargo = _personaActual.IdCargo Select car).FirstOrDefault()
+                _personaActual.CodCar = cargo.CodCar
+                _personaActual.IdFondoPen = CInt(cmbFondoPen.SelectedValue)
+                Dim fondo = (From fon In _fondos Where fon.IdFondoPen = _personaActual.IdFondoPen Select fon).FirstOrDefault()
+                _personaActual.CodFon = fondo.CodFon
+                _personaActual.TipComAFP = cmbTipoComision.SelectedValue.ToString()
+                _personaActual.CUSPP = txtCUSPP.Text
+                _personaActual.EVida = If(txtEVida.Text.Length > 0, txtEVida.Text.Substring(0, 1), "N")
+                _personaActual.RemBas = txtRemuneracionBasica.Text
+                _personaActual.AsiFam = txtAsignacionFamiliar.Text
+                _personaActual.RieCaj = txtRiesgoCaja.Text
+                _personaActual.SCTR = txtSCTR.Text.Substring(0, 1)
+                _personaActual.HorLab = txtHorasLaborales.Text
+                _personaActual.Estado = cmbEstado.SelectedValue.ToString()
+                _personaActual.EntidadCTS = txtEntidadCTS.Text.Trim()
+                _personaActual.NumCtaCTS = txtCuentaCTS.Text.Trim()
+                _personaActual.Observacion = txtObservacion.Text
+                _personaActual.FecBaja = dtpFechaBaja.Value
+                _personaActual.CustomDiasHoras = IIf(Me.chkCustomDiasHoras.CheckState = CheckState.Checked, 1, 0)
+                _personaActual.CustomDias = IIf(Me.chkCustomDiasHoras.CheckState = CheckState.Checked, nudDias.Value, 0)
+                _personaActual.CustomHoras = IIf(Me.chkCustomDiasHoras.CheckState = CheckState.Checked, nudHoras.Value, 0)
+                Dim pers = personalManager.RegistrarPersonal(_personaActual)
+            Catch ex As Exception
+                MsgBox(ex.Message & vbCrLf & ex.StackTrace)
+            End Try
+
         Else
             Dim dis = (From dist In _ubigeos Where dist.IdUbigeo = CInt(cmbDistrito.SelectedValue) Select dist).FirstOrDefault()
             Dim area = (From are In _areas Where are.IdAreaServicio = CInt(cmbArea.SelectedValue) Select are).FirstOrDefault()
@@ -397,12 +408,12 @@ Public Class frmRemuneracionBasica
             Dim nuevoPersonal As New Personal(txtDni.Text, txtApellidoPaterno.Text, txtApellidoMaterno.Text, txtNombres.Text, txtDireccion.Text,
                                               dis.IdUbigeo, dis.CODDIS, dtpFecNac.Value, txtTelefono.Text, txtCelular.Text, txtEmail.Text, txtSexo.Text, cmbEstadoCivil.SelectedValue,
                                               txtNumHijos.Text, dtpFecIngreso.Value, cmbEstudios.Text,
-                                              If(cmbGrado.SelectedValue = "Otro", txtGrado.Text, cmbGrado.Text),
+                                              IIf(cmbGrado.SelectedValue = "Otro", txtGrado.Text, cmbGrado.Text),
                                               txtNroColegiatura.Text, area.IdAreaServicio, area.CodAre,
                                               cargo.IdCargo, cargo.CodCar, fondo.IdFondoPen, fondo.CodFon, cmbTipoComision.SelectedValue.ToString(), txtCUSPP.Text, txtEVida.Text, txtRemuneracionBasica.Text,
                                               txtAsignacionFamiliar.Text, txtRiesgoCaja.Text, txtSCTR.Text, txtHorasLaborales.Text, txtObservacion.Text, cmbEstado.SelectedValue.ToString(), dtpFechaBaja.Value,
-                                              txtEntidadCTS.Text, txtCuentaCTS.Text, If(Me.chkCustomDiasHoras.CheckState = CheckState.Checked, 1, 0), If(Me.chkCustomDiasHoras.CheckState = CheckState.Checked, nudDias.Value, 0),
-                                              If(Me.chkCustomDiasHoras.CheckState = CheckState.Checked, nudHoras.Value, 0))
+                                              txtEntidadCTS.Text, txtCuentaCTS.Text, IIf(Me.chkCustomDiasHoras.CheckState = CheckState.Checked, 1, 0), IIf(Me.chkCustomDiasHoras.CheckState = CheckState.Checked, nudDias.Value, 0),
+                                              IIf(Me.chkCustomDiasHoras.CheckState = CheckState.Checked, nudHoras.Value, 0))
 
             Dim pers = personalManager.RegistrarPersonal(nuevoPersonal)
         End If

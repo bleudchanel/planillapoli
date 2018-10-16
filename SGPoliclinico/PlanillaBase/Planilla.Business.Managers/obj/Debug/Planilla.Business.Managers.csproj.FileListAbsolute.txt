@@ -111,9 +111,9 @@ C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Managers\
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Managers\bin\Debug\Planilla.Data.pdb
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Managers\bin\Debug\Planilla.Data.dll.config
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Managers\bin\Debug\Planilla.Business.pdb
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Managers\bin\Debug\Planilla.Business.dll.config
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Managers\obj\Debug\Planilla.Business.Managers.csprojAssemblyReference.cache
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Managers\obj\Debug\Planilla.Business.Managers.csproj.CoreCompileInputs.cache
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Managers\obj\Debug\Planilla.Business.Managers.csproj.CopyComplete
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Managers\obj\Debug\Planilla.Business.Managers.dll
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Managers\obj\Debug\Planilla.Business.Managers.pdb
-C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Managers\bin\Debug\Planilla.Business.dll.config

@@ -122,6 +122,7 @@ C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Bootstrap
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Bootstrapper\bin\Debug\EntityFramework.dll
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Bootstrapper\bin\Debug\FluentValidation.dll
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Bootstrapper\bin\Debug\Planilla.Business.pdb
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Bootstrapper\bin\Debug\Planilla.Business.dll.config
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Bootstrapper\bin\Debug\Planilla.Data.pdb
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Bootstrapper\bin\Debug\Planilla.Data.dll.config
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Bootstrapper\bin\Debug\Planilla.Business.Common.pdb
@@ -131,10 +132,8 @@ C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Bootstrap
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Bootstrapper\bin\Debug\Planilla.Data.Contracts.pdb
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Bootstrapper\bin\Debug\Core.Common.pdb
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Bootstrapper\bin\Debug\Core.Common.dll.config
-C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Bootstrapper\bin\Debug\EntityFramework.xml
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Bootstrapper\obj\Debug\Planilla.Business.Bootstrapper.csprojAssemblyReference.cache
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Bootstrapper\obj\Debug\Planilla.Business.Bootstrapper.csproj.CoreCompileInputs.cache
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Bootstrapper\obj\Debug\Planilla.Business.Bootstrapper.csproj.CopyComplete
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Bootstrapper\obj\Debug\Planilla.Business.Bootstrapper.dll
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Bootstrapper\obj\Debug\Planilla.Business.Bootstrapper.pdb
-C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Business.Bootstrapper\bin\Debug\Planilla.Business.dll.config

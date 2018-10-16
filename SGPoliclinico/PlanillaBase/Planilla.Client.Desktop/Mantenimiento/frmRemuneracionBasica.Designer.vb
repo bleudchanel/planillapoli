@@ -22,13 +22,13 @@ Partial Class frmRemuneracionBasica
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.tbcOtrosPagos = New System.Windows.Forms.TabControl()
         Me.tbpListar = New System.Windows.Forms.TabPage()
         Me.btnExcel = New System.Windows.Forms.Button()
@@ -142,6 +142,7 @@ Partial Class frmRemuneracionBasica
         Me.txtRemuneracionBasica = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.grpEstudios = New System.Windows.Forms.GroupBox()
+        Me.cmbGrado = New System.Windows.Forms.ComboBox()
         Me.txtNroColegiatura = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -150,7 +151,6 @@ Partial Class frmRemuneracionBasica
         Me.cmbEstudios = New System.Windows.Forms.ComboBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
-        Me.cmbGrado = New System.Windows.Forms.ComboBox()
         Me.tbcOtrosPagos.SuspendLayout()
         Me.tbpListar.SuspendLayout()
         CType(Me.dgvPagoDctoBasico, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -307,17 +307,17 @@ Partial Class frmRemuneracionBasica
         '
         'FecNac
         '
-        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle22.Format = "d"
-        Me.FecNac.DefaultCellStyle = DataGridViewCellStyle22
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.Format = "d"
+        Me.FecNac.DefaultCellStyle = DataGridViewCellStyle1
         Me.FecNac.HeaderText = "FecNac"
         Me.FecNac.Name = "FecNac"
         Me.FecNac.ReadOnly = True
         '
         'Cel
         '
-        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Cel.DefaultCellStyle = DataGridViewCellStyle23
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Cel.DefaultCellStyle = DataGridViewCellStyle2
         Me.Cel.HeaderText = "Cel"
         Me.Cel.Name = "Cel"
         Me.Cel.ReadOnly = True
@@ -353,9 +353,9 @@ Partial Class frmRemuneracionBasica
         '
         'FecIngreso
         '
-        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle24.Format = "d"
-        Me.FecIngreso.DefaultCellStyle = DataGridViewCellStyle24
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.Format = "d"
+        Me.FecIngreso.DefaultCellStyle = DataGridViewCellStyle3
         Me.FecIngreso.HeaderText = "FecIngreso"
         Me.FecIngreso.Name = "FecIngreso"
         Me.FecIngreso.ReadOnly = True
@@ -422,9 +422,9 @@ Partial Class frmRemuneracionBasica
         '
         'RemBas
         '
-        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle25.Format = "N2"
-        Me.RemBas.DefaultCellStyle = DataGridViewCellStyle25
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle4.Format = "N2"
+        Me.RemBas.DefaultCellStyle = DataGridViewCellStyle4
         Me.RemBas.HeaderText = "RemBas"
         Me.RemBas.Name = "RemBas"
         Me.RemBas.ReadOnly = True
@@ -432,9 +432,9 @@ Partial Class frmRemuneracionBasica
         '
         'AsiFam
         '
-        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle26.Format = "N2"
-        Me.AsiFam.DefaultCellStyle = DataGridViewCellStyle26
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle5.Format = "N2"
+        Me.AsiFam.DefaultCellStyle = DataGridViewCellStyle5
         Me.AsiFam.HeaderText = "AsiFam"
         Me.AsiFam.Name = "AsiFam"
         Me.AsiFam.ReadOnly = True
@@ -442,9 +442,9 @@ Partial Class frmRemuneracionBasica
         '
         'RiesgoCaja
         '
-        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle27.Format = "N2"
-        Me.RiesgoCaja.DefaultCellStyle = DataGridViewCellStyle27
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle6.Format = "N2"
+        Me.RiesgoCaja.DefaultCellStyle = DataGridViewCellStyle6
         Me.RiesgoCaja.HeaderText = "RiesgoCaja"
         Me.RiesgoCaja.Name = "RiesgoCaja"
         Me.RiesgoCaja.ReadOnly = True
@@ -479,9 +479,9 @@ Partial Class frmRemuneracionBasica
         '
         'FechaBaja
         '
-        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle28.Format = "d"
-        Me.FechaBaja.DefaultCellStyle = DataGridViewCellStyle28
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.Format = "d"
+        Me.FechaBaja.DefaultCellStyle = DataGridViewCellStyle7
         Me.FechaBaja.HeaderText = "FechaBaja"
         Me.FechaBaja.Name = "FechaBaja"
         Me.FechaBaja.ReadOnly = True
@@ -984,7 +984,7 @@ Partial Class frmRemuneracionBasica
         Me.grpCustom.Controls.Add(Me.Label33)
         Me.grpCustom.Controls.Add(Me.nudHoras)
         Me.grpCustom.Controls.Add(Me.nudDias)
-        Me.grpCustom.Location = New System.Drawing.Point(133, 167)
+        Me.grpCustom.Location = New System.Drawing.Point(133, 172)
         Me.grpCustom.Name = "grpCustom"
         Me.grpCustom.Size = New System.Drawing.Size(253, 43)
         Me.grpCustom.TabIndex = 162
@@ -1415,6 +1415,17 @@ Partial Class frmRemuneracionBasica
         Me.grpEstudios.TabStop = False
         Me.grpEstudios.Text = "Estudios"
         '
+        'cmbGrado
+        '
+        Me.cmbGrado.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.cmbGrado.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbGrado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cmbGrado.FormattingEnabled = True
+        Me.cmbGrado.Location = New System.Drawing.Point(344, 24)
+        Me.cmbGrado.Name = "cmbGrado"
+        Me.cmbGrado.Size = New System.Drawing.Size(389, 25)
+        Me.cmbGrado.TabIndex = 143
+        '
         'txtNroColegiatura
         '
         Me.txtNroColegiatura.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
@@ -1507,17 +1518,6 @@ Partial Class frmRemuneracionBasica
         Me.lblTitulo.Size = New System.Drawing.Size(222, 25)
         Me.lblTitulo.TabIndex = 1
         Me.lblTitulo.Text = "Mantenimiento Personal"
-        '
-        'cmbGrado
-        '
-        Me.cmbGrado.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.cmbGrado.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.cmbGrado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.cmbGrado.FormattingEnabled = True
-        Me.cmbGrado.Location = New System.Drawing.Point(344, 24)
-        Me.cmbGrado.Name = "cmbGrado"
-        Me.cmbGrado.Size = New System.Drawing.Size(389, 25)
-        Me.cmbGrado.TabIndex = 143
         '
         'frmRemuneracionBasica
         '

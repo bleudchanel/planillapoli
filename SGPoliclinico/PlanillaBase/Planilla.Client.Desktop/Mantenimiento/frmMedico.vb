@@ -329,4 +329,12 @@ Public Class frmMedico
             Me.btnModificar.PerformClick()
         End If
     End Sub
+
+    'Private Sub txtRUC_Click(sender As Object, e As EventArgs) Handles txtRUC.Click
+    '    txtRUC.SelectAll()
+    'End Sub
+
+    'Private Sub txtRUC_Enter(sender As Object, e As EventArgs) Handles txtRUC.Enter
+    '    txtRUC.SelectAll()
+    'End Sub
 End Class

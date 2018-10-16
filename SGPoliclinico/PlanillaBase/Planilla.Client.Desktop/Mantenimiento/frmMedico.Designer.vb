@@ -22,9 +22,9 @@ Partial Class frmMedico
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.tbcOtrosPagos = New System.Windows.Forms.TabControl()
@@ -273,17 +273,17 @@ Partial Class frmMedico
         '
         'FecNac
         '
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.Format = "d"
-        Me.FecNac.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.Format = "d"
+        Me.FecNac.DefaultCellStyle = DataGridViewCellStyle1
         Me.FecNac.HeaderText = "FecNac"
         Me.FecNac.Name = "FecNac"
         Me.FecNac.ReadOnly = True
         '
         'Cel
         '
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Cel.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Cel.DefaultCellStyle = DataGridViewCellStyle2
         Me.Cel.HeaderText = "Cel"
         Me.Cel.Name = "Cel"
         Me.Cel.ReadOnly = True
@@ -305,9 +305,9 @@ Partial Class frmMedico
         '
         'FecIngreso
         '
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.Format = "d"
-        Me.FecIngreso.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.Format = "d"
+        Me.FecIngreso.DefaultCellStyle = DataGridViewCellStyle3
         Me.FecIngreso.HeaderText = "FecIngreso"
         Me.FecIngreso.Name = "FecIngreso"
         Me.FecIngreso.ReadOnly = True
@@ -486,7 +486,7 @@ Partial Class frmMedico
         Me.txtRUC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtRUC.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRUC.Location = New System.Drawing.Point(755, 50)
-        Me.txtRUC.MaxLength = 1
+        Me.txtRUC.MaxLength = 11
         Me.txtRUC.Name = "txtRUC"
         Me.txtRUC.Size = New System.Drawing.Size(111, 25)
         Me.txtRUC.TabIndex = 16

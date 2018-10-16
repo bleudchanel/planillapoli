@@ -58,7 +58,8 @@ namespace Planilla.Business.Entities
             FecBaja = fecBaja;
             EntidadCTS = entidadCTS;
             NumCtaCTS = numCtaCTS;
-            CustomDiasHoras = customDiasHoras ;
+            
+            CustomDiasHoras = customDiasHoras;
             CustomDias = customDias;
             CustomHoras = customHoras;
         }
