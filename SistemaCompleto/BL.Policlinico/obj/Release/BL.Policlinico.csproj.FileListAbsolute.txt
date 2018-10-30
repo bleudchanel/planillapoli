@@ -1,0 +1,70 @@
+E:\Descargas\POLICLINICO_08022018\POLICLINICO\SGPoliclinico\BL.Policlinico\bin\Release\BL.Policlinico.dll
+E:\Descargas\POLICLINICO_08022018\POLICLINICO\SGPoliclinico\BL.Policlinico\bin\Release\BL.Policlinico.pdb
+E:\Descargas\POLICLINICO_08022018\POLICLINICO\SGPoliclinico\BL.Policlinico\bin\Release\DA.Policlinico.dll
+E:\Descargas\POLICLINICO_08022018\POLICLINICO\SGPoliclinico\BL.Policlinico\bin\Release\Entity.Policlinico.dll
+E:\Descargas\POLICLINICO_08022018\POLICLINICO\SGPoliclinico\BL.Policlinico\bin\Release\DA.Policlinico.pdb
+E:\Descargas\POLICLINICO_08022018\POLICLINICO\SGPoliclinico\BL.Policlinico\bin\Release\Entity.Policlinico.pdb
+E:\Descargas\POLICLINICO_08022018\POLICLINICO\SGPoliclinico\BL.Policlinico\obj\Release\BL.Policlinico.csprojResolveAssemblyReference.cache
+E:\Descargas\POLICLINICO_08022018\POLICLINICO\SGPoliclinico\BL.Policlinico\obj\Release\BL.Policlinico.dll
+E:\Descargas\POLICLINICO_08022018\POLICLINICO\SGPoliclinico\BL.Policlinico\obj\Release\BL.Policlinico.pdb
+E:\Descargas\POLICLINICO\SGPoliclinico\BL.Policlinico\bin\Release\BL.Policlinico.dll
+E:\Descargas\POLICLINICO\SGPoliclinico\BL.Policlinico\bin\Release\BL.Policlinico.pdb
+E:\Descargas\POLICLINICO\SGPoliclinico\BL.Policlinico\bin\Release\DA.Policlinico.dll
+E:\Descargas\POLICLINICO\SGPoliclinico\BL.Policlinico\bin\Release\Entity.Policlinico.dll
+E:\Descargas\POLICLINICO\SGPoliclinico\BL.Policlinico\bin\Release\itextsharp.dll
+E:\Descargas\POLICLINICO\SGPoliclinico\BL.Policlinico\bin\Release\DA.Policlinico.pdb
+E:\Descargas\POLICLINICO\SGPoliclinico\BL.Policlinico\bin\Release\Entity.Policlinico.pdb
+E:\Descargas\POLICLINICO\SGPoliclinico\BL.Policlinico\bin\Release\itextsharp.xml
+E:\Descargas\POLICLINICO\SGPoliclinico\BL.Policlinico\obj\Release\BL.Policlinico.csprojResolveAssemblyReference.cache
+E:\Descargas\POLICLINICO\SGPoliclinico\BL.Policlinico\obj\Release\BL.Policlinico.dll
+E:\Descargas\POLICLINICO\SGPoliclinico\BL.Policlinico\obj\Release\BL.Policlinico.pdb
+F:\a_proyecto_final\SGPoliclinico\BL.Policlinico\bin\Release\BL.Policlinico.dll
+F:\a_proyecto_final\SGPoliclinico\BL.Policlinico\bin\Release\BL.Policlinico.pdb
+F:\a_proyecto_final\SGPoliclinico\BL.Policlinico\bin\Release\DA.Policlinico.dll
+F:\a_proyecto_final\SGPoliclinico\BL.Policlinico\bin\Release\Entity.Policlinico.dll
+F:\a_proyecto_final\SGPoliclinico\BL.Policlinico\bin\Release\itextsharp.dll
+F:\a_proyecto_final\SGPoliclinico\BL.Policlinico\bin\Release\DA.Policlinico.pdb
+F:\a_proyecto_final\SGPoliclinico\BL.Policlinico\bin\Release\Entity.Policlinico.pdb
+F:\a_proyecto_final\SGPoliclinico\BL.Policlinico\bin\Release\itextsharp.xml
+F:\a_proyecto_final\SGPoliclinico\BL.Policlinico\obj\Release\BL.Policlinico.csprojResolveAssemblyReference.cache
+F:\a_proyecto_final\SGPoliclinico\BL.Policlinico\obj\Release\BL.Policlinico.dll
+F:\a_proyecto_final\SGPoliclinico\BL.Policlinico\obj\Release\BL.Policlinico.pdb
+C:\Users\TEX\Desktop\Proyecto\SGPoliclinico\BL.Policlinico\bin\Release\BL.Policlinico.dll
+C:\Users\TEX\Desktop\Proyecto\SGPoliclinico\BL.Policlinico\bin\Release\BL.Policlinico.pdb
+C:\Users\TEX\Desktop\Proyecto\SGPoliclinico\BL.Policlinico\bin\Release\DA.Policlinico.dll
+C:\Users\TEX\Desktop\Proyecto\SGPoliclinico\BL.Policlinico\bin\Release\Entity.Policlinico.dll
+C:\Users\TEX\Desktop\Proyecto\SGPoliclinico\BL.Policlinico\bin\Release\itextsharp.dll
+C:\Users\TEX\Desktop\Proyecto\SGPoliclinico\BL.Policlinico\bin\Release\DA.Policlinico.pdb
+C:\Users\TEX\Desktop\Proyecto\SGPoliclinico\BL.Policlinico\bin\Release\Entity.Policlinico.pdb
+C:\Users\TEX\Desktop\Proyecto\SGPoliclinico\BL.Policlinico\bin\Release\itextsharp.xml
+C:\Users\TEX\Desktop\Proyecto\SGPoliclinico\BL.Policlinico\obj\Release\BL.Policlinico.csprojResolveAssemblyReference.cache
+C:\Users\TEX\Desktop\Proyecto\SGPoliclinico\BL.Policlinico\obj\Release\BL.Policlinico.csproj.CoreCompileInputs.cache
+C:\Users\TEX\Desktop\Proyecto\SGPoliclinico\BL.Policlinico\obj\Release\BL.Policlinico.csproj.CopyComplete
+C:\Users\TEX\Desktop\Proyecto\SGPoliclinico\BL.Policlinico\obj\Release\BL.Policlinico.dll
+C:\Users\TEX\Desktop\Proyecto\SGPoliclinico\BL.Policlinico\obj\Release\BL.Policlinico.pdb
+C:\Users\TEX\Music\SGPoliclinico\BL.Policlinico\bin\Release\BL.Policlinico.dll
+C:\Users\TEX\Music\SGPoliclinico\BL.Policlinico\bin\Release\BL.Policlinico.pdb
+C:\Users\TEX\Music\SGPoliclinico\BL.Policlinico\bin\Release\DA.Policlinico.dll
+C:\Users\TEX\Music\SGPoliclinico\BL.Policlinico\bin\Release\Entity.Policlinico.dll
+C:\Users\TEX\Music\SGPoliclinico\BL.Policlinico\bin\Release\itextsharp.dll
+C:\Users\TEX\Music\SGPoliclinico\BL.Policlinico\bin\Release\DA.Policlinico.pdb
+C:\Users\TEX\Music\SGPoliclinico\BL.Policlinico\bin\Release\Entity.Policlinico.pdb
+C:\Users\TEX\Music\SGPoliclinico\BL.Policlinico\bin\Release\itextsharp.xml
+C:\Users\TEX\Music\SGPoliclinico\BL.Policlinico\obj\Release\BL.Policlinico.csprojResolveAssemblyReference.cache
+C:\Users\TEX\Music\SGPoliclinico\BL.Policlinico\obj\Release\BL.Policlinico.csproj.CoreCompileInputs.cache
+C:\Users\TEX\Music\SGPoliclinico\BL.Policlinico\obj\Release\BL.Policlinico.csproj.CopyComplete
+C:\Users\TEX\Music\SGPoliclinico\BL.Policlinico\obj\Release\BL.Policlinico.dll
+C:\Users\TEX\Music\SGPoliclinico\BL.Policlinico\obj\Release\BL.Policlinico.pdb
+C:\Users\TEX\Music\SGPoliclinico - copia\BL.Policlinico\bin\Release\BL.Policlinico.dll
+C:\Users\TEX\Music\SGPoliclinico - copia\BL.Policlinico\bin\Release\BL.Policlinico.pdb
+C:\Users\TEX\Music\SGPoliclinico - copia\BL.Policlinico\bin\Release\DA.Policlinico.dll
+C:\Users\TEX\Music\SGPoliclinico - copia\BL.Policlinico\bin\Release\Entity.Policlinico.dll
+C:\Users\TEX\Music\SGPoliclinico - copia\BL.Policlinico\bin\Release\itextsharp.dll
+C:\Users\TEX\Music\SGPoliclinico - copia\BL.Policlinico\bin\Release\DA.Policlinico.pdb
+C:\Users\TEX\Music\SGPoliclinico - copia\BL.Policlinico\bin\Release\Entity.Policlinico.pdb
+C:\Users\TEX\Music\SGPoliclinico - copia\BL.Policlinico\bin\Release\itextsharp.xml
+C:\Users\TEX\Music\SGPoliclinico - copia\BL.Policlinico\obj\Release\BL.Policlinico.csprojResolveAssemblyReference.cache
+C:\Users\TEX\Music\SGPoliclinico - copia\BL.Policlinico\obj\Release\BL.Policlinico.csproj.CoreCompileInputs.cache
+C:\Users\TEX\Music\SGPoliclinico - copia\BL.Policlinico\obj\Release\BL.Policlinico.csproj.CopyComplete
+C:\Users\TEX\Music\SGPoliclinico - copia\BL.Policlinico\obj\Release\BL.Policlinico.dll
+C:\Users\TEX\Music\SGPoliclinico - copia\BL.Policlinico\obj\Release\BL.Policlinico.pdb
