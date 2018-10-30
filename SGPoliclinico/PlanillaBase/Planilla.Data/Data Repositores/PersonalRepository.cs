@@ -58,15 +58,19 @@ namespace Planilla.Data
         {
             using (PlanillaContext entityContext = new PlanillaContext())
             {
-                var personal = (from e in entityContext.PersonalSet where e.Estado == "A" select e).ToFullyLoaded();
-                foreach(var persona in personal)
+                DateTime dateCompare = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month));
+                IEnumerable<Personal> personal = (from e in entityContext.PersonalSet where e.Estado == "A" && e.FecBaja >= dateCompare select e).ToFullyLoaded();
+                if (personal != null && personal.Count() > 0)
                 {
-                    if (persona.FecBaja >= new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month)))
+                    foreach (var persona in personal)
                     {
-                        persona.Estado = "B";
-                        Update(persona);
+                        if (persona.FecBaja >= new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month)))
+                        {
+                            persona.Estado = "B";
+                            Update(persona);
+                        }
                     }
-                }
+                }                
             }
         }
 

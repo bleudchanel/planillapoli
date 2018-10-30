@@ -76,6 +76,10 @@
       <Project>{8E671975-30D3-4C1C-9019-C7E299291489}</Project>
       <Name>Planilla.Data.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Planilla.Data\Planilla.Data.csproj">
+      <Project>{40cb3b06-579c-4e85-bbdf-4a064d771ca5}</Project>
+      <Name>Planilla.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

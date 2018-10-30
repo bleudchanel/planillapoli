@@ -26,3 +26,4 @@ C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.Contracts\bin\D
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.csproj.CoreCompileInputs.cache
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.dll
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.pdb
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.csprojAssemblyReference.cache

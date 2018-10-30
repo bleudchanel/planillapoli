@@ -4,6 +4,7 @@ using Planilla.Business.Bootstrapper;
 using Planilla.Business.Common;
 using Planilla.Business.Entities;
 using Planilla.Data.Contracts;
+using Planilla.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
@@ -142,15 +143,21 @@ namespace Planilla.Business.Managers
 
         public Medico RegistrarMedico(Medico medico)
         {
+            Medico medicoResult = new Medico();
+            MedicoSp medicoStored = new MedicoSp();
             IMedicoRepository medicoRepository = _DataRepositoryFactory.GetDataRepository<IMedicoRepository>();
             if (medico.IdMedico> 0)
             {
-                return medicoRepository.Update(medico);
+                medicoResult = medicoRepository.Update(medico);
+                
             }
             else
             {
-                return medicoRepository.AddPersonalComplete(medico);
+                medicoResult = medicoRepository.AddPersonalComplete(medico);
+                medicoStored.InsertMedicoExtra(medicoResult.IdMedico);
             }
+
+            return medicoResult;
         }
 
 
