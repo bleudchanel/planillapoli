@@ -151,6 +151,7 @@ Partial Class frmRemuneracionBasica
         Me.cmbEstudios = New System.Windows.Forms.ComboBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
+        Me.lblTotalRegistros = New System.Windows.Forms.Label()
         Me.tbcOtrosPagos.SuspendLayout()
         Me.tbpListar.SuspendLayout()
         CType(Me.dgvPagoDctoBasico, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -181,6 +182,7 @@ Partial Class frmRemuneracionBasica
         '
         'tbpListar
         '
+        Me.tbpListar.Controls.Add(Me.lblTotalRegistros)
         Me.tbpListar.Controls.Add(Me.btnExcel)
         Me.tbpListar.Controls.Add(Me.btnModificar)
         Me.tbpListar.Controls.Add(Me.btnNuevo)
@@ -1519,6 +1521,15 @@ Partial Class frmRemuneracionBasica
         Me.lblTitulo.TabIndex = 1
         Me.lblTitulo.Text = "Mantenimiento Personal"
         '
+        'lblTotalRegistros
+        '
+        Me.lblTotalRegistros.AutoSize = True
+        Me.lblTotalRegistros.Location = New System.Drawing.Point(255, 550)
+        Me.lblTotalRegistros.Name = "lblTotalRegistros"
+        Me.lblTotalRegistros.Size = New System.Drawing.Size(64, 15)
+        Me.lblTotalRegistros.TabIndex = 5
+        Me.lblTotalRegistros.Text = "0 registros."
+        '
         'frmRemuneracionBasica
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
@@ -1533,6 +1544,7 @@ Partial Class frmRemuneracionBasica
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.tbcOtrosPagos.ResumeLayout(False)
         Me.tbpListar.ResumeLayout(False)
+        Me.tbpListar.PerformLayout()
         CType(Me.dgvPagoDctoBasico, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tbpNuevo.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
@@ -1676,4 +1688,5 @@ Partial Class frmRemuneracionBasica
     Friend WithEvents nudHoras As NumericUpDown
     Friend WithEvents nudDias As NumericUpDown
     Friend WithEvents cmbGrado As ComboBox
+    Friend WithEvents lblTotalRegistros As Label
 End Class

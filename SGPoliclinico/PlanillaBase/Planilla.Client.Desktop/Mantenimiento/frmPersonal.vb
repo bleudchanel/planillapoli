@@ -245,6 +245,9 @@ Public Class frmRemuneracionBasica
             End With
             ''dgvPagoDctoBasico.DataSource = _personal
         Next
+
+        lblTotalRegistros.Text = _personal.Count() & " registros."
+
     End Sub
 
     Sub Controles_En_Load()

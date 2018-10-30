@@ -156,6 +156,9 @@ Public Class frmMedico
             End With
             ''dgvPagoDctoBasico.DataSource = _personal
         Next
+
+        lblTotalRegistros.Text = _medicos.Count() & " registros."
+
     End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click

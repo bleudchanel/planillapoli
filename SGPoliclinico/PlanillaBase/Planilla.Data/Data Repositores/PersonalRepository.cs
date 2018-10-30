@@ -59,18 +59,33 @@ namespace Planilla.Data
             using (PlanillaContext entityContext = new PlanillaContext())
             {
                 DateTime dateCompare = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month));
+                DateTime dateComparePost = dateCompare.AddMonths(1);
                 IEnumerable<Personal> personal = (from e in entityContext.PersonalSet where e.Estado == "A" && e.FecBaja >= dateCompare select e).ToFullyLoaded();
+                IEnumerable<Personal> personalInAlta = (from e in entityContext.PersonalSet where e.Estado == "B" && e.FecBaja >= dateComparePost select e).ToFullyLoaded();
                 if (personal != null && personal.Count() > 0)
                 {
                     foreach (var persona in personal)
                     {
-                        if (persona.FecBaja >= new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month)))
+                        if (persona.FecBaja >= dateCompare)
                         {
                             persona.Estado = "B";
                             Update(persona);
                         }
                     }
                 }                
+
+                if(personalInAlta != null && personalInAlta.Count() > 0)
+                {
+                    foreach (var personaIn in personalInAlta)
+                    {
+                        if (personaIn.FecBaja >= dateComparePost)
+                        {
+                            personaIn.Estado = "A";
+                            Update(personaIn);
+                        }
+                    }
+                }
+
             }
         }
 

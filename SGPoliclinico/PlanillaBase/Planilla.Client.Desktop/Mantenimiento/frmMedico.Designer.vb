@@ -100,6 +100,7 @@ Partial Class frmMedico
         Me.cmbEspecialidad2 = New System.Windows.Forms.ComboBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.cmbEspecialidad1 = New System.Windows.Forms.ComboBox()
+        Me.lblTotalRegistros = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.tbcOtrosPagos.SuspendLayout()
         Me.tbpListar.SuspendLayout()
@@ -147,6 +148,7 @@ Partial Class frmMedico
         '
         'tbpListar
         '
+        Me.tbpListar.Controls.Add(Me.lblTotalRegistros)
         Me.tbpListar.Controls.Add(Me.btnExcel)
         Me.tbpListar.Controls.Add(Me.btnModificar)
         Me.tbpListar.Controls.Add(Me.btnNuevo)
@@ -955,6 +957,15 @@ Partial Class frmMedico
         Me.cmbEspecialidad1.Size = New System.Drawing.Size(233, 21)
         Me.cmbEspecialidad1.TabIndex = 20
         '
+        'lblTotalRegistros
+        '
+        Me.lblTotalRegistros.AutoSize = True
+        Me.lblTotalRegistros.Location = New System.Drawing.Point(255, 470)
+        Me.lblTotalRegistros.Name = "lblTotalRegistros"
+        Me.lblTotalRegistros.Size = New System.Drawing.Size(64, 15)
+        Me.lblTotalRegistros.TabIndex = 6
+        Me.lblTotalRegistros.Text = "0 registros."
+        '
         'frmMedico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -967,6 +978,7 @@ Partial Class frmMedico
         Me.Panel1.PerformLayout()
         Me.tbcOtrosPagos.ResumeLayout(False)
         Me.tbpListar.ResumeLayout(False)
+        Me.tbpListar.PerformLayout()
         CType(Me.dgvPagoDctoBasico, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tbpNuevo.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
@@ -1054,4 +1066,5 @@ Partial Class frmMedico
     Friend WithEvents CodEsp2 As DataGridViewTextBoxColumn
     Friend WithEvents Estado As DataGridViewTextBoxColumn
     Friend WithEvents Tipo As DataGridViewTextBoxColumn
+    Friend WithEvents lblTotalRegistros As Label
 End Class
