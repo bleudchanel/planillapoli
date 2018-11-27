@@ -65,6 +65,12 @@ namespace Planilla.Business.Managers
             return procedimientoRepository.Get();
         }
 
+        public IEnumerable<Procedimiento> GetProcedimientosLaboratorio()
+        {
+            IProcedimientoRepository procedimientoRepository = _DataRepositoryFactory.GetDataRepository<IProcedimientoRepository>();
+            return procedimientoRepository.Get().Where(o => o.CodEsp == "E026").ToList();
+        }
+
         public IEnumerable<AreaAnalisis> GetAreaAnalisis()
         {
             IAreaAnalisisRepository analisisRepository = _DataRepositoryFactory.GetDataRepository<IAreaAnalisisRepository>();

@@ -561,3 +561,4 @@ C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Client.Desktop\obj
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Client.Desktop\obj\Debug\Planilla.Client.Desktop.exe
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Client.Desktop\obj\Debug\Planilla.Client.Desktop.xml
 C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Client.Desktop\obj\Debug\Planilla.Client.Desktop.pdb
+C:\Users\MSI\planillapoli\SGPoliclinico\PlanillaBase\Planilla.Client.Desktop\obj\Debug\Planilla.Client.Desktop.frmProcedimientoLaboratorio.resources

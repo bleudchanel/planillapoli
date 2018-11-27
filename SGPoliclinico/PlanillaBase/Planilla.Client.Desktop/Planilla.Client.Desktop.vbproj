@@ -203,6 +203,12 @@
     <Compile Include="Mantenimiento\frmProcedimiento.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Mantenimiento\frmProcedimientoLaboratorio.Designer.vb">
+      <DependentUpon>frmProcedimientoLaboratorio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\frmProcedimientoLaboratorio.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Mantenimiento\frmProgramacionVacaciones.Designer.vb">
       <DependentUpon>frmProgramacionVacaciones.vb</DependentUpon>
     </Compile>
@@ -336,6 +342,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\frmProcedimiento.resx">
       <DependentUpon>frmProcedimiento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\frmProcedimientoLaboratorio.resx">
+      <DependentUpon>frmProcedimientoLaboratorio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\frmProgramacionVacaciones.resx">
       <DependentUpon>frmProgramacionVacaciones.vb</DependentUpon>

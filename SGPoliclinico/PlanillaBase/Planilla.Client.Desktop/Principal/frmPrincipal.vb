@@ -303,6 +303,20 @@ Public Class frmPrincipal
         End If
     End Sub
 
+    Private Sub ProcedimientosDeLaboratorioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProcedimientosDeLaboratorioToolStripMenuItem.Click
+        If SingletonForm(frmProcedimientoLaboratorio) = True Then
+            Dim ChildForm As New frmProcedimientoLaboratorio
+
+            ChildForm.StartPosition = FormStartPosition.Manual
+            ChildForm.Left = 0
+            ChildForm.Top = 0
+            ChildForm.MdiParent = Me
+            ChildForm.Show()
+        Else
+            DevolverEnfoque(frmProcedimientoLaboratorio)
+        End If
+    End Sub
+
 
 
 
